@@ -1,0 +1,40 @@
+.card {
+  background-color: #FECE2B;
+  border-radius: 20px;
+  height: 250px;
+  margin: 0.5rem;
+  flex-basis: 19%;
+  flex-shrink: 1;
+  display: grid;
+}
+
+.card .title {
+  grid-column-end: span 1;
+  margin: 5px;
+}
+
+.card .delete {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 2px;
+  margin-right: 5px;
+  margin-left: auto;
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+.card-image {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.centered {
+  display: block;
+  text-align: center;
+}
+
+h2.centered {
+  display: inline;
+}
