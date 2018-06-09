@@ -1,12 +1,7 @@
-main {
-  padding: 20px;
-}
-
 .validation-errors {
-  margin-left: 20px;
 }
 
-.float i {
-  margin-top: 3px;
-  font-size: 2em;
+.board {
+  display: flex;
+  flex-wrap: wrap;
 }

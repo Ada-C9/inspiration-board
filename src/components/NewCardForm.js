@@ -50,24 +50,22 @@ class NewCardForm extends Component {
 
   render() {
     return (
-      <div id="add-card-form" className={`form ${this.props.visibility}`}>
+      <div id="add-card-form">
 
-        <div className="modal-content">
-          <h2>Add New Card..</h2>
-          <div className="validationErrors">
-            {this.state.errorMessages}
-          </div>
-          <div >
-            <form onSubmit={this.onSubmit} className="new-student-form" >
-              <label htmlFor="text">Text</label>
-              <textarea name="text" onChange={this.onFieldChange} value={this.state.text} />
-              <label htmlFor="emoji">Emoji</label>
-              <select name="emoji" onChange={this.onFieldChange} value={this.state.emoji}>
-                {this.generateEmojis()}
-              </select>
-              <button type="submit">Add Card</button>
-            </form>
-          </div>
+        <h2>Add A New Note</h2>
+        <div className="validation-errors">
+          {this.state.errorMessages}
+        </div>
+        <div >
+          <form onSubmit={this.onSubmit} className="new-student-form" >
+            <label htmlFor="text">Text</label>
+            <textarea name="text" onChange={this.onFieldChange} value={this.state.text} />
+            <label htmlFor="emoji">Emoji</label>
+            <select name="emoji" onChange={this.onFieldChange} value={this.state.emoji}>
+              {this.generateEmojis()}
+            </select>
+            <button type="submit">Add Card</button>
+          </form>
         </div>
 
       </div>

@@ -8,12 +8,14 @@ class Card extends Component {
   render() {
     return (
       <div className="card">
-        <h2 className="centered title">{this.props.text}</h2>
+        <div className="card__content">
+          <p className="card__text">{this.props.text}</p>
+          <p className="card__emoji">{this.props.emoji && this.props.emoji.length > 0 ? emoji.getUnicode(this.props.emoji): ""}</p>
+        </div>
         <span
           data-card-id={this.props.id}
           onClick={(event) => this.props.deleteCardCallback(event.target.dataset.cardId)}
-          className="delete">×</span>
-        <p className="emoji">{this.props.emoji && this.props.emoji.length > 0 ? emoji.getUnicode(this.props.emoji): ""}</p>
+          className="card__delete">×</span>
       </div>
     )
   }

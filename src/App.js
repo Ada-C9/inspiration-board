@@ -5,15 +5,13 @@ import Board from './components/Board';
 class App extends Component {
   render() {
     return (
-      <div>
-        <header>
-          <h1>Ada&apos;s Inspiration Board</h1>
-        </header>
+      <section>
+        <h1 className="header"><span className="header__text">Inspiration Board</span></h1>
         <Board
           url="https://inspiration-board.herokuapp.com/boards/"
           boardName={`Ada-Lovelace`}
           />
-      </div>
+      </section>
     );
   }
 }
