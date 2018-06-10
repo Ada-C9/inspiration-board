@@ -4,10 +4,18 @@
 }
 
 body {
-	font-family: 'Open Sans', Helvetica, sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Permanent Marker', Helvetica, sans-serif;
 }
 
 .header {
+  padding: 4rem;
+}
+
+.header__h1 {
   margin: auto 0;
 
   text-align: center;
@@ -23,5 +31,5 @@ body {
   font-weight: 800;
   font-size: 3rem;
 
-  transform: rotate(-3deg);
+  transform: rotate(-3deg) skew(-3deg);
 }

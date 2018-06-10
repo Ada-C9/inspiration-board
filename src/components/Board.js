@@ -70,7 +70,7 @@ class Board extends Component {
     return (
       <div>
         <strong>{field}:</strong>
-        <ul className="validation-errors">
+        <ul className="validation-errors-display__list">
           {list}
         </ul>
       </div>
@@ -175,11 +175,12 @@ class Board extends Component {
   render() {
     return (
       <div>
-        <header>{this.state.message}</header>
-          <NewCardForm
-            addCardCallback={this.addCard}
-            hideFormCallback={this.hideCard}
-            />
+        <section className="validation-errors-display">{this.state.message}</section>
+
+        <NewCardForm
+          addCardCallback={this.addCard}
+          hideFormCallback={this.hideCard}
+          />
 
         <main className="board">
           {this.getCards()}
