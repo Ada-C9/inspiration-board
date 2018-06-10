@@ -44,6 +44,7 @@ Possible optional enhancements include:
 - Allowing the user to switch between bards with a drop-down list
 - Add user interaction testing
 - Allow the `NewCardForm` to post to different boards on the API.
+- Try to deploy the app on Github pages [(nice tutorial, here!)](https://codeburst.io/deploy-react-to-github-pages-to-create-an-amazing-website-42d8b09cd4d)
 
 ## What we're looking for
 You can see what your instructors are looking for [here](./feedback.md)
