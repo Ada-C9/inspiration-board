@@ -20,6 +20,19 @@ The API is hosted at **https://inspiration-board.herokuapp.com/**.  You can find
 
 You should spend time exploring the API with Postman to get a feel for how to make requests and how the data is returned.
 
+### A Note About Styles
+
+We have provided styles for you in `.css` files. Styling is not a major learning goal for this project, so please limit the amount of time you spend on styling.
+
+To ease the use of our styles, the project conforms to a naming methodology/naming convention standard known as [BEM, or Block Element Modifier](http://getbem.com/). Essentially, you can count on the provided styles to conform to the following naming rules:
+- There aren't any, or rarely any element/tag selectors, and all styles selectors on classes. That means there are are a lot more classes to set, but it relies less on assuming a specific HTML structure before understanding how to use it
+- Classes are named in [block__element--modifier](http://getbem.com/naming/) format:
+  - The first section will describe the semantic block that the style applies to
+  - The second section (after two underscores) will describe the specific element within that block that the style applies to
+  - The third section (after two hyphens) will describe any sort of modifier (ie `enabled`, `success`, `green`) for that block and element that the style applies to
+
+Again, please limit the time you spend on styling, and reach out often and frequently.
+
 ## Wave 1
 
 Create `Card` and `Board` components and use the provided hardcoded data to populate the board.
