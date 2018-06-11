@@ -16,18 +16,31 @@ class Board extends Component {
     };
   }
 
+	componentDidMount(){
+		this.setState({
+			cards: CARD_DATA.cards
+		})
+	}
+
   render() {
+		const cardCollection = this.state.cards.map((card, index) =>{
+			return <Card key={index}
+				text={card.text}
+				emoji={card.emoji}
+				/>
+		});
     return (
       <div>
-        Board
+        this is a board!
+				{cardCollection}
       </div>
     )
   }
 
 }
 
-Board.propTypes = {
-
-};
+// Board.propTypes = {
+//
+// };
 
 export default Board;
