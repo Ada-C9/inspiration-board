@@ -28,13 +28,26 @@ class Board extends Component {
       });
   }
 
+  deleteCard = (id) => {
+    console.log(`${this.props.url}${this.props.boardName}/cards/${id}`);
+    axios.delete(`${this.props.url}${this.props.boardName}/cards/${id}`)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
   renderCards = () => {
     const cardList = this.state.cards.map( (card, index) => {
       return(
         <Card
           key = { index }
+          id = { card.card.id }
           text = { card.card.text }
           emoji = { card.card.emoji }
+          deleteCardCallback = { this.deleteCard }
         />
       );
     });
@@ -49,7 +62,6 @@ class Board extends Component {
       </div>
     )
   }
-
 }
 
 Board.propTypes = {
