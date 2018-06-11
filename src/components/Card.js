@@ -10,10 +10,14 @@ class Card extends Component {
     emoji: PropTypes.string
   }
   render() {
+
+    let convertEmoji =  emoji.getUnicode(this.props.emoji || "100");
+
     return (
+
       <div className="card">
-        <strong>{this.props.text}</strong>
-        <p>{this.props.emoji}</p>
+        <strong className="card__content card__content-text" >{this.props.text}</strong>
+        <p className="card__content card__content-emoji">{convertEmoji}</p>
       </div>
     )
   }

@@ -35,8 +35,6 @@ class Board extends Component {
   }
 
   render() {
-    // console.log("CARD_DATA.cards");
-    // console.log(CARD_DATA.cards);
 
     const cards = this.state.cards.map((message, index) => {
       return <Card key={index}
@@ -45,7 +43,7 @@ class Board extends Component {
        })
 
     return (
-      <div>
+      <div className="board">
         Board
         { cards }
       </div>
