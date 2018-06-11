@@ -18,6 +18,7 @@ class Card extends Component {
       <div className="card">
         <strong className="card__content card__content-text" >{this.props.text}</strong>
         <p className="card__content card__content-emoji">{convertEmoji}</p>
+        <button className="card__content card__delete">Take this note!</button>
       </div>
     )
   }
