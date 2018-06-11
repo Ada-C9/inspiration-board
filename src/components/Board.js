@@ -5,7 +5,7 @@ import axios from 'axios';
 import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
-import CARD_DATA from '../data/card-data.json';
+// import CARD_DATA from '../data/card-data.json';
 
 class Board extends Component {
   constructor(props) {
@@ -28,28 +28,23 @@ class Board extends Component {
       });
   }
 
-  deleteCardFromList = (id) => {
-    const cardIndex = this.state.cards.findIndex(card => card.card.id === id);
-    // console.log(cardIndex);
-    // console.log(this.state.cards[cardIndex]);
-    const tempCards = this.state.cards;
-    tempCards.splice(cardIndex, 1);
-
-    this.setState({
-      cards: tempCards
-    });
-  }
-
   deleteCardRequest = (id) => {
     console.log(`${this.props.url}${this.props.boardName}/cards/${id}`);
     axios.delete(`${this.props.url}${this.props.boardName}/cards/${id}`)
       .then((response) => {
         console.log(response);
-        this.deleteCardFromList(id);  
+        this.deleteCardFromState(id);
       })
       .catch((error) => {
         console.log(error);
       });
+  }
+
+  deleteCardFromState = (id) => {
+    const cardIndex = this.state.cards.findIndex(card => card.card.id === id);
+    const tempCards = this.state.cards;
+    tempCards.splice(cardIndex, 1);
+    this.setState({ cards: tempCards });
   }
 
   renderCards = () => {
@@ -64,7 +59,6 @@ class Board extends Component {
         />
       );
     });
-
     return cardList;
   }
 
@@ -73,7 +67,7 @@ class Board extends Component {
       <div className = "board">
         { this.renderCards() }
       </div>
-    )
+    );
   }
 }
 
