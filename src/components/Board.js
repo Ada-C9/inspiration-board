@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import emoji from 'emoji-dictionary';
 
 import './Board.css';
 import Card from './Card';
@@ -12,14 +13,21 @@ class Board extends Component {
     super();
 
     this.state = {
-      cards: [],
+      cards: this.getBootstrappedCards(),
     };
+  }
+
+  getBootstrappedCards = () => {
+    return CARD_DATA.cards;
   }
 
   render() {
     return (
       <div>
-        Board
+        <div>
+          {this.state.cards[1].text}
+          {emoji.getUnicode(this.state.cards[1].Emoji)}
+        </div>
       </div>
     )
   }
