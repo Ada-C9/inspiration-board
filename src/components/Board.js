@@ -8,18 +8,35 @@ import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
 class Board extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      cards: [],
+      cards: CARD_DATA["cards"],
     };
+  }
+
+  renderCards = () => {
+    console.log('Rendering cards')
+    const cardList = this.state.cards.map((card, index) => {
+      return (
+        <Card
+          key={index}
+          text={card.text}
+          emoji={card.emoji}
+          />
+      );
+    });
+    return cardList;
   }
 
   render() {
     return (
       <div>
-        Board
+        <section>
+          <p>{this.state.error}</p>
+          {this.renderCards()}
+        </section>
       </div>
     )
   }
