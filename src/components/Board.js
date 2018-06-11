@@ -38,6 +38,7 @@ class Board extends Component {
     })
     .catch((error) => {
       console.log(error);
+      this.props.updateStatusCallback(`There was a problem loading cards: ${error.message}`, 'error');
     })
   }
 
