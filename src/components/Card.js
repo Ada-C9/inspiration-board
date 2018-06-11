@@ -8,7 +8,7 @@ class Card extends Component {
   renderText = () => {
     if (this.props.text) {
       return(
-        <p>{ this.props.text }</p>
+        <p className="card__content-text">{ this.props.text }</p>
       )
     }
   }
@@ -16,15 +16,17 @@ class Card extends Component {
   renderEmoji = () => {
     if (this.props.emoji) {
       return(
-        <p>{ emoji.getUnicode(this.props.emoji) }</p>
+        <p className="card__content-emoji">{ emoji.getUnicode(this.props.emoji) }</p>
       )
     }
   }
   render() {
     return (
       <div className="card">
-        { this.renderText() }
-        { this.renderEmoji() }
+        <div className="card__content">
+          { this.renderText() }
+          { this.renderEmoji() }
+        </div>
       </div>
     )
   }
