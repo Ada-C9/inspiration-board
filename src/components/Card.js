@@ -16,10 +16,20 @@ class Card extends Component {
   render() {
     let face = emoji.getUnicode(this.props.emoji || 'hugging face')
     return (
-      <div className="card">
-        {this.props.text}
-        {face}
+      <div className="card" >
+
+        <div className="card__content">
+          <p className="card__content-text">
+            {this.props.text}
+          </p>
+          <p className="card__content-emoji">
+            {face}
+          </p>
+        </div>
+        <button className="card__delete">delete</button>
+
       </div>
+
     )
   }
 }

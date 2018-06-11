@@ -41,7 +41,7 @@ componentDidMount() {
       />
     });
     return (
-      <div>
+      <div className="board">
         Board
         { cards }
       </div>
