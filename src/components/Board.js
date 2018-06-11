@@ -32,8 +32,7 @@ class Board extends Component {
 
   render() {
     return (
-      <div>
-        Board
+      <div className = "board">
         { this.renderCards() }
       </div>
     )
