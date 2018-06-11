@@ -7,12 +7,12 @@ import './Card.css';
 class Card extends Component {
   static propTypes = {
     text: PropTypes.string,
-    emoji: PropTypes.emoji
+    emoji: PropTypes.string
   }
   // Card.propTypes = {
   //
   // };
-  
+
   render() {
     return (
       <div className="card">
