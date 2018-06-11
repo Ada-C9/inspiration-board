@@ -3,6 +3,23 @@ import './App.css';
 import Board from './components/Board';
 
 class App extends Component {
+
+  const cards = [
+    {
+       "card": {
+           "id": 93,
+           "text": "Go Get'em!",
+           "emoji": "beer"
+       }
+   },
+   {
+       "card": {
+           "id": 41,
+           "text": "Skate ipsum dolor sit amet",
+           "emoji": "dog"
+       }
+   }]
+   
   render() {
     return (
       <section>
