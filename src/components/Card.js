@@ -6,14 +6,19 @@ import './Card.css';
 
 class Card extends Component {
 
-
+deleteCard = () => {
+console.log('button clicked')
+}
 
   render() {
     return (
-      <div className="card">
-      {this.props.text}
-      {emoji.getUnicode(`${this.props.emoji}`)}
-      </div>
+      <section className="card">
+        <article className="card__content">
+          <div className="card__content-text">{this.props.text}</div>
+          <div className="card__content-emoji">{emoji.getUnicode(`${this.props.emoji}`)}</div>
+        </article>
+        <button onClick={this.deleteCard} className="card__delete">X</button>
+      </section>
     )
   }
 }

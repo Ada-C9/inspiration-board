@@ -33,10 +33,10 @@ class Board extends Component {
 
   render() {
     return (
-      <div>
-        Board
+      <section className="board">
+
         {this.renderCardList()}
-      </div>
+      </section >
     )
   }
 
