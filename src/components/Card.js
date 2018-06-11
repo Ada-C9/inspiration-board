@@ -7,8 +7,10 @@ class Card extends Component {
   render() {
     return (
       <article className="card">
-        <p>{this.props.text}</p>
-        <p>{this.props.emoji}</p>
+        <div className="content">
+          <p className="text">{this.props.text}</p>
+          <p className="emoji">{this.props.emoji}</p>
+        </div>
       </article>
     )
   }
