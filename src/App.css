@@ -3,42 +3,33 @@
   box-sizing: border-box;
 }
 
-.board {
-  background: #a0e;
-  display: flex;
-  flex-wrap: wrap;
+body {
+  font-family: 'Raleway', sans-serif;
 }
 
-header {
+h1, h2 {
+  font-family: 'Permanent Marker', Helvetica, sans-serif;
+}
+
+.header {
+  padding: 4rem;
+}
+
+.header__h1 {
+  margin: auto 0;
+
   text-align: center;
-  padding: 10px;
-  font-size: 1.5em;
 }
 
-/* CSS Button */
+.header__text {
+  padding: 1rem;
 
-*{padding:0;margin:0;}
+  display: inline-block;
+  background-color: #222;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 3rem;
 
-body{
-	font-family:Verdana, Geneva, sans-serif;
-	font-size:18px;
-	background-color:#CCC;
-}
-
-.float{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:40px;
-	background-color:#0C9;
-	color:#FFF;
-  border-width: 0;
-	border-radius:50px;
-	text-align:center;
-	box-shadow: 2px 2px 3px #999;
-}
-
-.my-float{
-	margin-top:22px;
+  transform: rotate(-3deg) skew(-3deg);
 }
