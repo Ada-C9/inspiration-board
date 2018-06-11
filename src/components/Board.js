@@ -17,7 +17,7 @@ class Board extends Component {
   }
 
   componentDidMount = () => {
-    console.log(`${this.props.url}${this.props.boardName}/cards`);
+    // console.log(`${this.props.url}${this.props.boardName}/cards`);
     axios.get(`${this.props.url}${this.props.boardName}/cards`)
       .then((response) => {
         console.log(response.data);
@@ -29,7 +29,7 @@ class Board extends Component {
   }
 
   deleteCardRequest = (id) => {
-    console.log(`${this.props.url}${this.props.boardName}/cards/${id}`);
+    // console.log(`${this.props.url}${this.props.boardName}/cards/${id}`);
     axios.delete(`${this.props.url}${this.props.boardName}/cards/${id}`)
       .then((response) => {
         console.log(response);
@@ -41,9 +41,9 @@ class Board extends Component {
   }
 
   deleteCardFromState = (id) => {
-    const cardIndex = this.state.cards.findIndex(card => card.card.id === id);
+    const allCards = this.state.cards;
     const tempCards = this.state.cards;
-    tempCards.splice(cardIndex, 1);
+    tempCards.splice(allCards.findIndex(card => card.card.id === id), 1);
     this.setState({ cards: tempCards });
   }
 
