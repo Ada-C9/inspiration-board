@@ -17,9 +17,19 @@ class Board extends Component {
   }
 
   render() {
+
+    const cards = CARD_DATA[0].map((card, index) => {
+         return (
+          <Card key={index}
+            text={card.text}
+            emoji={card.emoji} />
+          )
+       });
+
     return (
       <div>
         Board
+        { cards }
       </div>
     )
   }
