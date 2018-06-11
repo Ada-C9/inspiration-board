@@ -7,10 +7,16 @@ import './Card.css';
 class Card extends Component {
   render() {
     return (
-      <div className="card">
-        Inspiration so much
-        💯
-      </div>
+      <section>
+        <div className="card">
+          Inspiration so much
+          💯
+        </div>
+        <div className="card">
+          more card
+          🎃
+        </div>
+      </section>
     )
   }
 }
