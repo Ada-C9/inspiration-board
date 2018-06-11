@@ -16,10 +16,26 @@ class Board extends Component {
     };
   }
 
+
+
+  renderCardList = () => {
+      const componentList = this.props.cardList.map((card, index) => {
+        return (
+          <Card
+           key={index}
+           text={card.text}
+           emoji={card.emoji}
+          />
+        );
+      });
+      return componentList;
+  }
+
   render() {
     return (
       <div>
         Board
+        {this.renderCardList()}
       </div>
     )
   }
@@ -31,3 +47,4 @@ Board.propTypes = {
 };
 
 export default Board;
+  // {this.renderBoardList()}
