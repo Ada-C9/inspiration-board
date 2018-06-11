@@ -8,18 +8,30 @@ import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
 class Board extends Component {
-  constructor() {
+
+  constructor(props) {
     super();
 
     this.state = {
-      cards: [],
+      cards: props.data,
     };
   }
 
   render() {
+    const cards = this.state.cards.map((card, index) => {
+      return (
+        <Card
+        key={index}
+        id={card.card.id}
+        text={card.card.text}
+        emoji={card.card.emoji}
+        />
+      );
+    });
+
     return (
       <div>
-        Board
+        { cards }
       </div>
     )
   }
@@ -27,7 +39,7 @@ class Board extends Component {
 }
 
 Board.propTypes = {
-
+  data: PropTypes.array.isRequired
 };
 
 export default Board;
