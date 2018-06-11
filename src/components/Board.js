@@ -5,9 +5,13 @@ import axios from 'axios';
 import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
-import CARD_DATA from '../data/card-data.json';
+// import CARD_DATA from '../data/card-data.json';
 
 class Board extends Component {
+  static propTypes = {
+    url: PropTypes.string.isRequired
+  }
+
   constructor() {
     super();
 
@@ -16,16 +20,29 @@ class Board extends Component {
     };
   }
 
-  render() {
-    console.log(CARD_DATA.cards);
+  componentDidMount() {
+    axios.get(this.props.url)
+    .then((response) => {
+      console.log("response.data");
+      console.log(response.data);
+      const cards =  response.data
+      this.setState({ cards: cards });
 
-    const cards = CARD_DATA.cards.map((card, index) => {
-         return (
-          <Card key={index}
-            text={card.text}
-            emoji={card.emoji} />
-          )
-       });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  }
+
+  render() {
+    // console.log("CARD_DATA.cards");
+    // console.log(CARD_DATA.cards);
+
+    const cards = this.state.cards.map((message, index) => {
+      return <Card key={index}
+         text={message.card.text}
+         emoji={message.card.emoji} />
+       })
 
     return (
       <div>
