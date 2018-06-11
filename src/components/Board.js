@@ -23,19 +23,18 @@ class Board extends Component {
     });
   }
 
-
   render() {
-    if (this.state.cards.length > 0) {
+    const cardRenders = this.state.cards.map(card => {
       return (
-        <div>
-        <Card text={this.state.cards[1].text} emoji={this.state.cards[1].emoji} />
-        </div>
+        <Card text={card.text} emoji={card.emoji} />
       )
-    }
-    else
-    return null
+    })
+    return (
+      <div className="board">
+        {cardRenders}
+      </div>
+    )
   }
-
 }
 
 Board.propTypes = {
