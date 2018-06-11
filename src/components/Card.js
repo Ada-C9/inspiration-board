@@ -5,17 +5,24 @@ import emoji from 'emoji-dictionary';
 import './Card.css';
 
 class Card extends Component {
+  static propTypes = {
+    text: PropTypes.string,
+    emoji: PropTypes.emoji
+  }
+  // Card.propTypes = {
+  //
+  // };
+  
   render() {
     return (
       <div className="card">
-        Card
+        {this.props.text}
+        {this.props.emoji}
       </div>
     )
   }
 }
 
-Card.propTypes = {
 
-};
 
 export default Card;
