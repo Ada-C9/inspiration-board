@@ -5,7 +5,7 @@ import axios from 'axios';
 import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
-import CARD_DATA from '../data/card-data.json';
+// import CARD_DATA from '../data/card-data.json';
 
 class Board extends Component {
   constructor() {
@@ -16,8 +16,27 @@ class Board extends Component {
     };
   }
 
+  componentDidMount() {
+    axios.get(`${this.props.url}${this.props.boardName}/cards`)
+      .then((response) => {
+        const cards = this.state.cards;
+        response.data.forEach((card) => {
+          const newCard = {};
+          newCard.id = card.card.id;
+          newCard.text = card.card.text;
+          newCard.emoji = card.card.emoji;
+          cards.push(newCard);
+        })
+
+        this.setState({ cards })
+      })
+      .catch((error) => {
+        this.setState({ error: error.message})
+      });
+  }
+
   renderCardComponents = () => {
-    const cards = CARD_DATA.cards.map((card, index) => {
+    const cards = this.state.cards.map((card, index) => {
       return(
         <Card
           key={index}
@@ -40,7 +59,8 @@ class Board extends Component {
 }
 
 Board.propTypes = {
-
+  url: PropTypes.string.isRequired,
+  boardName: PropTypes.string.isRequired
 };
 
 export default Board;
