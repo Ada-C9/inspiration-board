@@ -25,12 +25,14 @@ class Card extends Component {
 
   render() {
     return (
-      <div className="card">
-        <p>
+      <section className="card">
+        <div className="card__content">
+          <p className="card__content-text">
           { this.state.text }
-          <span>{ this.state.emoji }</span>
-        </p>
-      </div>
+          <span className="card__content-emoji">{ this.state.emoji }</span>
+          </p>
+        </div>
+      </section>
     )
   }
 }

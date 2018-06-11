@@ -145,9 +145,9 @@ class Board extends Component {
       />
     });
     return (
-      <div>
+      <section className="board">
         { cards }
-      </div>
+      </section>
     )
   }
 
