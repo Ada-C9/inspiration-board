@@ -13,7 +13,10 @@ class Card extends Component {
 	render() {
 		return (
 			<div className="card">
-				<section>{this.props.text}</section>
+				<section className="card__content">
+					<p className="card__content-text">{this.props.text}</p>
+					<div className="card__content-emoji">{this.props.emoji}</div>
+				</section>
 				<section>{this.props.emoji}</section>
 			</div>
 		)

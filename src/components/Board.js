@@ -30,8 +30,7 @@ class Board extends Component {
 				/>
 		});
     return (
-      <div>
-        this is a board!
+      <div className="board">
 				{cardCollection}
       </div>
     )
