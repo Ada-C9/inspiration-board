@@ -10,26 +10,17 @@ class Card extends Component {
     emoji: PropTypes.string
   };
 
-  constructor(props) {
-    super();
-    let emojiSymbol = '';
-    if (props.emoji != null) {
-      emojiSymbol = emoji.getUnicode(props.emoji)
-    }
-
-    this.state = {
-      text: props.text,
-      emoji: emojiSymbol
-    };
-  }
-
   render() {
+    let emojiSymbol = '';
+    if (this.props.emoji != null) {
+      emojiSymbol = emoji.getUnicode(this.props.emoji);
+    }
     return (
       <section className="card">
         <div className="card__content">
           <p className="card__content-text">
-          { this.state.text }
-          <span className="card__content-emoji">{ this.state.emoji }</span>
+          { this.props.text }
+          <span className="card__content-emoji">{ emojiSymbol }</span>
           </p>
         </div>
       </section>
