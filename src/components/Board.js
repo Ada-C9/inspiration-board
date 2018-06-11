@@ -19,7 +19,7 @@ class Board extends Component {
   render() {
     return (
       <div>
-        Im in Board
+        <Card />
       </div>
     )
   }
