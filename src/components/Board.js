@@ -12,6 +12,7 @@ class Board extends Component {
     super();
 
     this.state = {
+      boardName: 'taco',
       cards: this.getBootstrappedCards(),
     };
   }
@@ -31,7 +32,7 @@ class Board extends Component {
   }
 
   componentDidMount = () => {
-    const BOARD_URL = "https://inspiration-board.herokuapp.com/boards/taco/cards"
+    const BOARD_URL = `https://inspiration-board.herokuapp.com/boards/${this.state.boardName}/cards`
 
     axios.get(BOARD_URL)
       .then((response) => {
@@ -42,13 +43,22 @@ class Board extends Component {
       });
   }
 
+  deleteCard = (cardId) => {
+    console.log(cardId);
+    const DELETE_URL = `https://inspiration-board.herokuapp.com/boards/${this.state.boardName}/cards/${cardId}`
+    console.log(DELETE_URL);
+
+  }
+
   getCards = () => {
     return this.state.cards.map((cardData, index) => {
       return (
         <Card
           key={index}
+          id={cardData.card.id}
           text={cardData.card.text}
           emoji={cardData.card.emoji}
+          onDeleteClick={this.deleteCard}
         />
       )
     })
