@@ -8,8 +8,8 @@ class Card extends Component {
 
   getEmoji = () => {
     if (this.props.emoji) {
-      this.image = emoji.getUnicode(this.props.emoji);
-      return <p className="emoji">{this.image}</p>
+      this.emoji = emoji.getUnicode(this.props.emoji);
+      return <p className="emoji">{this.emoji}</p>
     }
   }
 
