@@ -1,7 +1,7 @@
 .card {
   background-color: #F4FF81;
 
-  padding: 1em 0;
+  padding: 1em;
   margin: 0.5rem;
 
   min-height: 250px;
@@ -44,4 +44,10 @@
 .card__delete {
   align-self: start;
   font-family: 'Permanent Marker', Helvetica, sans-serif;
+}
+
+.card button {
+  align-self: flex-end;
+	text-align: center;
+	font-size: 1rem;
 }
