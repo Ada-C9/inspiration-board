@@ -21,18 +21,31 @@ class Board extends Component {
     axios.get(`${this.props.url}${this.props.boardName}/cards`)
       .then((response) => {
         console.log(response.data);
-        this.setState({ cards: response.data })
+        this.setState({ cards: response.data });
       })
       .catch((error) => {
         console.log(error);
       });
   }
 
-  deleteCard = (id) => {
+  deleteCardFromList = (id) => {
+    const cardIndex = this.state.cards.findIndex(card => card.card.id === id);
+    // console.log(cardIndex);
+    // console.log(this.state.cards[cardIndex]);
+    const tempCards = this.state.cards;
+    tempCards.splice(cardIndex, 1);
+
+    this.setState({
+      cards: tempCards
+    });
+  }
+
+  deleteCardRequest = (id) => {
     console.log(`${this.props.url}${this.props.boardName}/cards/${id}`);
     axios.delete(`${this.props.url}${this.props.boardName}/cards/${id}`)
       .then((response) => {
         console.log(response);
+        this.deleteCardFromList(id);  
       })
       .catch((error) => {
         console.log(error);
@@ -47,7 +60,7 @@ class Board extends Component {
           id = { card.card.id }
           text = { card.card.text }
           emoji = { card.card.emoji }
-          deleteCardCallback = { this.deleteCard }
+          deleteCardCallback = { this.deleteCardRequest }
         />
       );
     });
