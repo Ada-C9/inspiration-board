@@ -12,14 +12,30 @@ class Board extends Component {
     super();
 
     this.state = {
-      cards: [],
+      cards: [{
+        "text": "Make sure you pet a dog this week!"
+      }],
     };
   }
 
   render() {
+    console.log("I'm inside!");
+
+    const attr_cards = this.state.cards
+
+    const cards = attr_cards.map((card, index) => {
+      console.log("inside cards");
+      return <Card key={index} text={card.text} emoji={card.emoji}/>
+    });
+
     return (
       <div>
-        Board
+      Board
+        <table>
+          <tbody>
+          { cards }
+          </tbody>
+        </table>
       </div>
     )
   }
