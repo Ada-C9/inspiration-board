@@ -17,24 +17,42 @@ class Board extends Component {
   }
 
 
+  componentDidMount = () => {
+    // console.log('Component did mount was called');
+
+    // axios.get('').then().catch();
+    axios.get('https://inspiration-board.herokuapp.com/boards/leti/cards')
+      .then( (response) => {
+        console.log(response); //to see how the data looks like and decide what we want.
+        this.setState({
+          cards: response.data
+        });
+      })
+      .catch( (error) => {
+        this.setState({
+          error: error.message
+        })
+      });
+  }
 
   renderCardList = () => {
-      const componentList = this.props.cardList.map((card, index) => {
+    console.log(`this.state.cards = ${this.state.cards}`)
+      const componentList = this.state.cards.map((card, index) => {
+        console.log(card.card.text)
         return (
           <Card
            key={index}
-           text={card.text}
-           emoji={card.emoji}
+           text={card.card.text}
+           emoji={card.card.emoji}
           />
         );
       });
       return componentList;
-  }
+    }
 
   render() {
     return (
       <section className="board">
-
         {this.renderCardList()}
       </section >
     )

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import Board from './components/Board';
-import cards from './data/card-data.json';
+// import cards from './data/card-data.json';
 
-import Card from './components/Card';
+// import Card from './components/Card';
 
 class App extends Component {
 
   render() {
-      console.log(cards);
     return (
       <section>
         <header className="header">
@@ -17,7 +16,7 @@ class App extends Component {
         <Board
           url="https://inspiration-board.herokuapp.com/boards/"
           boardName={`leti`}
-          cardList={cards.cards}/>
+          />
 
       </section>
     );
