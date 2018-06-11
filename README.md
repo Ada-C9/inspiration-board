@@ -50,6 +50,8 @@ Create `Card` and `Board` components and use the provided hardcoded data to popu
 - Build the Card component to display a single inspirational quote and optional emoji.
 - Build a `Board` component which renders a list of Cards from hardcoded data
 
+Note there is a package installed called [`emoji-dictionary`](https://github.com/IonicaBizau/emoji-dictionary) which you can elect to use to display the emojis listed.
+
 ## Wave 2
 
 In wave 2 you will add API functionality.
