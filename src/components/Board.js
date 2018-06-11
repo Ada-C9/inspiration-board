@@ -16,10 +16,24 @@ class Board extends Component {
     };
   }
 
+  cardList = () => {
+    const cardList = CARD_DATA.cards.map((card, index) => {
+      return (
+        <Card
+          key={index}
+          text={card.text}
+          emoji={card.emoji}
+        />
+      )
+    });
+    return cardList;
+  }
+
+
   render() {
     return (
       <div>
-        <Card />
+        {this.cardList()}
       </div>
     )
   }
