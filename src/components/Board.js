@@ -49,7 +49,7 @@ class Board extends Component {
           key={index}
           text={cardData.card.text}
           emoji={cardData.card.emoji}
-          />
+        />
       )
     })
   }
@@ -58,7 +58,8 @@ class Board extends Component {
   render() {
     return (
       <div className="board">
-          {this.getCards()}
+        <NewCardForm />
+        {this.getCards()}
       </div>
     )
   }
