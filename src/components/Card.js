@@ -12,9 +12,14 @@ class Card extends Component {
 
   constructor(props) {
     super();
+    let emojiSymbol = '';
+    if (props.emoji != null) {
+      emojiSymbol = emoji.getUnicode(props.emoji)
+    }
+
     this.state = {
       text: props.text,
-      emoji: emoji.getUnicode(props.emoji)
+      emoji: emojiSymbol
     };
   }
 
