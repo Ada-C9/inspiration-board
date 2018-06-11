@@ -6,14 +6,20 @@ import './Card.css';
 
 class Card extends Component {
 
+  displayEmoji = () => {
+    if (this.props.emoji) {
+      return emoji.getUnicode(this.props.emoji)
+    }
+  };
 
   render() {
     console.log('Rendering a card')
-    const displayEmoji = require("emoji-dictionary");
     return (
       <div className="card">
-        <p><strong>Message:</strong>{this.props.text}</p>
-        <p>{this.props.emoji}</p>
+        <div className="card__content">
+          <p className="card__content-text">{this.props.text}</p>
+          <p className="card__content-emoji">{this.displayEmoji()}</p>
+        </div>
       </div>
     )
   }
@@ -21,7 +27,7 @@ class Card extends Component {
 
 Card.propTypes = {
   text: PropTypes.string.isRequired,
-  enoji: PropTypes.string,
+  emoji: PropTypes.string,
 };
 
 export default Card;

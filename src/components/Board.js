@@ -33,8 +33,8 @@ class Board extends Component {
   render() {
     return (
       <div>
-        <section>
-          <p>{this.state.error}</p>
+        <section className="board">
+          
           {this.renderCards()}
         </section>
       </div>
