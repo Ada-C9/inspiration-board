@@ -16,12 +16,24 @@ class Board extends Component {
     };
   }
 
+  componentDidMount() {
+    const cards = []
+    this.setState({
+      cards: CARD_DATA.cards
+    });
+  }
+
+
   render() {
-    return (
-      <div>
-        Board
-      </div>
-    )
+    if (this.state.cards.length > 0) {
+      return (
+        <div>
+        <Card text={this.state.cards[1].text} emoji={this.state.cards[1].emoji} />
+        </div>
+      )
+    }
+    else
+    return null
   }
 
 }
