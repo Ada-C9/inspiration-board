@@ -11,15 +11,20 @@ class Board extends Component {
   constructor() {
     super();
 
-    this.state = {
-      cards: [],
-    };
+    this.state = CARD_DATA
+    ;
   }
 
+
   render() {
+
+    const cardComponents = this.state.cards.map((card, index)  =>
+  {
+    return <Card text={card.text} emoji={card.emoji} key={ index }/>
+  })
     return (
       <div>
-        Board
+        {cardComponents}
       </div>
     )
   }
