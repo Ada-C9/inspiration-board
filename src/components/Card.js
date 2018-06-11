@@ -8,7 +8,8 @@ class Card extends Component {
   render() {
     return (
       <div className="card">
-        Card
+        Inspiration so much
+        💯
       </div>
     )
   }
