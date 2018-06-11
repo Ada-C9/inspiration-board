@@ -12,8 +12,25 @@ class Board extends Component {
     super(props);
 
     this.state = {
-      cards: CARD_DATA["cards"],
+      cards: [],
     };
+  }
+
+  componentDidMount = () => {
+    console.log('Component did mount was called')
+
+    axios.get('https://inspiration-board.herokuapp.com/boards/angelap/cards')
+    .then((response) => {
+      this.setState({ cards: response.data });
+      console.log(response.data)
+    })
+    .catch((error) => {
+      console.log('Error is happening');
+      console.log(error);
+      this.setState({ error: error.message});
+      return error;
+
+    });
   }
 
   renderCards = () => {
@@ -22,19 +39,27 @@ class Board extends Component {
       return (
         <Card
           key={index}
-          text={card.text}
-          emoji={card.emoji}
+          text={card["card"].text}
+          emoji={card["card"].emoji}
           />
       );
     });
     return cardList;
   }
 
+  deleteCard = (card) => {
+    const cards = this.state.cards;
+
+    cards.delete(card);
+    this.setState({
+      cards,
+    });
+  }
+
   render() {
     return (
       <div>
         <section className="board">
-          
           {this.renderCards()}
         </section>
       </div>

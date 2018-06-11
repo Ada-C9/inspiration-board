@@ -19,15 +19,16 @@ class Card extends Component {
         <div className="card__content">
           <p className="card__content-text">{this.props.text}</p>
           <p className="card__content-emoji">{this.displayEmoji()}</p>
+          <button className="card__delete">Delete</button>
+          </div>
         </div>
-      </div>
-    )
+      )
+    }
   }
-}
 
-Card.propTypes = {
-  text: PropTypes.string.isRequired,
-  emoji: PropTypes.string,
-};
+  Card.propTypes = {
+    text: PropTypes.string.isRequired,
+    emoji: PropTypes.string,
+  };
 
-export default Card;
+  export default Card;
