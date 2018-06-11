@@ -8,21 +8,33 @@ import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
 class Board extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       cards: [],
     };
   }
 
+  componentDidMount = () => {
+    console.log(`${this.props.url}${this.props.boardName}/cards`);
+    axios.get(`${this.props.url}${this.props.boardName}/cards`)
+      .then((response) => {
+        console.log(response.data);
+        this.setState({ cards: response.data })
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
   renderCards = () => {
-    const cardList = CARD_DATA.cards.map( (card, index) => {
+    const cardList = this.state.cards.map( (card, index) => {
       return(
         <Card
           key = { index }
-          text = { card.text }
-          emoji = { card.emoji }
+          text = { card.card.text }
+          emoji = { card.card.emoji }
         />
       );
     });
@@ -41,7 +53,8 @@ class Board extends Component {
 }
 
 Board.propTypes = {
-
+  url: PropTypes.string.isRequired,
+  boardName: PropTypes.string.isRequired
 };
 
 export default Board;
