@@ -7,6 +7,7 @@ import Card from './Card';
 import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
+
 class Board extends Component {
   constructor() {
     super();
@@ -16,10 +17,22 @@ class Board extends Component {
     };
   }
 
+  showCards = () => {
+    const cards = CARD_DATA.cards.map((card, index) => {
+      return(
+        <Card key={index}
+          quote={card.text}
+          emoji={card.emoji}
+        />
+      );
+    });
+    return cards
+  }
+
   render() {
     return (
       <div>
-        Board
+      {this.showCards()}
       </div>
     )
   }
@@ -27,7 +40,7 @@ class Board extends Component {
 }
 
 Board.propTypes = {
-
+  cards: PropTypes.array.isRequired,
 };
 
 export default Board;
