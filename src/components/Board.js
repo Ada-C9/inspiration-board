@@ -17,8 +17,9 @@ class Board extends Component {
   }
 
   render() {
+    console.log(CARD_DATA.cards);
 
-    const cards = CARD_DATA[0].map((card, index) => {
+    const cards = CARD_DATA.cards.map((card, index) => {
          return (
           <Card key={index}
             text={card.text}
