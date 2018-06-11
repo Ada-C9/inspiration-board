@@ -44,7 +44,6 @@ class Board extends Component {
 
   getCards = () => {
     return this.state.cards.map((cardData, index) => {
-      console.log(cardData.card);
       return (
         <Card
           key={index}
