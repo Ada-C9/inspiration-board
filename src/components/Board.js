@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
-import emoji from 'emoji-dictionary';
 
 import './Board.css';
 import Card from './Card';
@@ -21,13 +20,23 @@ class Board extends Component {
     return CARD_DATA.cards;
   }
 
+  getCards = () => {
+    return this.state.cards.map((cardData, index) => {
+      return (
+        <Card
+          key={index}
+          text={cardData.text}
+          emoji={cardData.emoji}
+          />
+      )
+    })
+  }
+
+
   render() {
     return (
-      <div>
-        <div>
-          {this.state.cards[1].text}
-          {emoji.getUnicode(this.state.cards[1].Emoji)}
-        </div>
+      <div className="board">
+          {this.getCards()}
       </div>
     )
   }
