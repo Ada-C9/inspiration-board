@@ -25,8 +25,6 @@ class Board extends Component {
     };
   }
 
-
-
   renderCardsList = () => {
     return this.state.cards.map((card, index) => {
       return (
@@ -46,7 +44,6 @@ class Board extends Component {
         </div>
     )
   }
-
 }
 
 Board.propTypes = {
