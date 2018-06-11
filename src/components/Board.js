@@ -17,16 +17,39 @@ class Board extends Component {
   }
 
   getBootstrappedCards = () => {
-    return CARD_DATA.cards;
+    let initialCards = [];
+    CARD_DATA.cards.forEach((card) => {
+      initialCards.push(
+        {card: {
+          "text": card.text,
+          "emoji": card.emoji
+        }}
+      )
+    })
+
+    return initialCards
+  }
+
+  componentDidMount = () => {
+    const BOARD_URL = "https://inspiration-board.herokuapp.com/boards/taco/cards"
+
+    axios.get(BOARD_URL)
+      .then((response) => {
+        this.setState({cards: response.data});
+
+      }).catch((error) => {
+        console.log(error.message);
+      });
   }
 
   getCards = () => {
     return this.state.cards.map((cardData, index) => {
+      console.log(cardData.card);
       return (
         <Card
           key={index}
-          text={cardData.text}
-          emoji={cardData.emoji}
+          text={cardData.card.text}
+          emoji={cardData.card.emoji}
           />
       )
     })
