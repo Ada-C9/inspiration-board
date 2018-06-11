@@ -4,12 +4,21 @@ import emoji from 'emoji-dictionary';
 import './Card.css';
 
 class Card extends Component {
+
+
+  getEmoji = () => {
+    if (this.props.emoji) {
+      this.image = emoji.getUnicode(this.props.emoji);
+      return <p className="emoji">{this.image}</p>
+    }
+  }
+
   render() {
     return (
       <article className="card">
         <div className="content">
           <p className="text">{this.props.text}</p>
-          <p className="emoji">{this.props.emoji}</p>
+          {this.getEmoji()}
         </div>
       </article>
     )
