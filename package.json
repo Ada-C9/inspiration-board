@@ -7,6 +7,7 @@
     "emoji-dictionary": "^1.0.9",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-foundation": "^0.9.5",
     "react-scripts": "1.1.4"
   },
   "scripts": {

@@ -7,6 +7,7 @@ class Card extends Component {
   render() {
     return (
       <div className="card">
+        {console.log(this.props)}
         {this.props.quote} {emoji.getUnicode(`${this.props.emoji}`)}
       </div>
     )
@@ -14,7 +15,7 @@ class Card extends Component {
 }
 
 Card.propTypes = {
-  quote: PropTypes.string.isRequired,
+  quote: PropTypes.string,
   emoji: PropTypes.string,
 };
 
