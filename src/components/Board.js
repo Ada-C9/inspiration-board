@@ -12,26 +12,46 @@ class Board extends Component {
     super();
 
     this.state = {
-      cards: [
-        {
-          text:"foo",
-          emoji:'grinning'
-        },
-        {
-          text:"bar",
-          emoji:'cry'
-        }
-      ],
+      cards: [],
+      // cards: [
+      //   {
+      //     text:"foo",
+      //     emoji:'grinning'
+      //   },
+      //   {
+      //     text:"bar",
+      //     emoji:'cry'
+      //   }
+      // ],
     };
   }
 
+  componentDidMount() {
+    axios.get('https://inspiration-board.herokuapp.com/boards/kirsten/cards')
+      .then((response) => {
+        console.log('inside shit');
+        console.log(response.data);
+        this.setState({
+          cards: response.data
+        });
+      })
+      .catch((error) => {
+        this.setState({
+          error: error.message
+        });
+      });
+  }
+
   renderCardsList = () => {
+    console.log('the fuck is wrong??');
+    console.log(this.state.cards);
     return this.state.cards.map((card, index) => {
+      console.log(card.card);
       return (
         <Card
           key={index}
-          text={card.text}
-          emoji={card.emoji}
+          text={card.card.text}
+          emoji={card.card.emoji}
         />
       )
     });
