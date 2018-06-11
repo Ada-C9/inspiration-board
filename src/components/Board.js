@@ -27,9 +27,8 @@ class Board extends Component {
   }
 
   componentDidMount() {
-    axios.get('https://inspiration-board.herokuapp.com/boards/kirsten/cards')
+    axios.get('https://inspiration-board.herokuapp.com/boards/{boardName}/cards')
       .then((response) => {
-        console.log('inside shit');
         console.log(response.data);
         this.setState({
           cards: response.data
@@ -43,10 +42,7 @@ class Board extends Component {
   }
 
   renderCardsList = () => {
-    console.log('the fuck is wrong??');
-    console.log(this.state.cards);
     return this.state.cards.map((card, index) => {
-      console.log(card.card);
       return (
         <Card
           key={index}
