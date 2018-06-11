@@ -10,10 +10,11 @@ import CARD_DATA from '../data/card-data.json';
 
 class Board extends Component {
   static propTypes = {
-    boardName: PropTypes.string.boardName
+    boardName: PropTypes.string.isRequired,
+    updateStatusCallback: PropTypes.func.isRequired
   };
 
-  constructor(props) {
+  constructor() {
     super();
 
     this.state = {
@@ -22,14 +23,17 @@ class Board extends Component {
   }
 
   componentDidMount() {
+    this.props.updateStatusCallback(`Loading cards for ${this.props.boardName}`, 'success');
+
     const BOARD_URL = `https://inspiration-board.herokuapp.com/boards/${this.props.boardName}/cards`;
 
     axios.get(BOARD_URL)
     .then((response) => {
       console.log(response);
-      const cards = response.data.slice(0, 100);
+      this.props.updateStatusCallback(`Successfully loaded cards for ${this.props.boardName}`, 'success');
+      const cardData = response.data.slice(0, 100);
       this.setState({
-        cards: cards
+        cards: cardData
       });
     })
     .catch((error) => {
