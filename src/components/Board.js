@@ -12,8 +12,20 @@ class Board extends Component {
     super(props);
 
     this.state = {
-      cards: CARD_DATA['cards'],
+      cards: [],
     };
+  }
+
+  componentDidMount = () => {
+    console.log('Component did mount was called');
+
+    axios.get('https://inspiration-board.herokuapp.com/boards/mariko/cards')
+      .then( (response) => {
+        this.setState({ cards: response.data });
+    })
+      .catch( (error) => {
+        this.setState({ error: error.message });
+    });
   }
 
   renderCardList = () => {
@@ -21,8 +33,8 @@ class Board extends Component {
       return (
         <Card
           key={index}
-          text={card.text}
-          emoji={card.emoji}
+          text={card['card'].text}
+          emoji={card['card'].emoji}
           />
       );
     });
