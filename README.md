@@ -8,6 +8,8 @@ In this project you will use a provided API to provide an inspiration board fron
 
 This is a [Stage 2](https://github.com/Ada-Developers-Academy/pedagogy/blob/master/rule-of-three.md#stage-2) individual project. You will be submitting a PR for this project at the end.
 
+The project is due Monday June 18th 9am
+
 ## Learning Goals
 This project should enable you to demonstrate learning in:
 - Using an API within a React app
