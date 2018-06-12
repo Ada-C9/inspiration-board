@@ -56,45 +56,54 @@ class Board extends Component {
       console.log(response);
       console.log(typeof id);
 
- let updatedArray = this.state.cards.filter((card)=> {
-   console.log(typeof card.id);
-   return card.id != id});
-   console.log(updatedArray);
+      let updatedArray = this.state.cards.filter((card)=> {
+        console.log(typeof card.id);
+        return card.id != id});
+        console.log(updatedArray);
 
+        this.setState({cards: updatedArray})
+        console.log(this.state.cards);
 
- // for (let i =0; i < this.state.cards.length; i++)
- //   if (this.state.cards[i].id === id) {
- //      updatedArray = this.state.cards.splice(i,1);
- //      break;
- //   }
-      this.setState({cards: updatedArray})
-      console.log(this.state.cards);
+      })
 
-    })
-
-  }
-
-  render() {
-    const cards = this.state.cards.map((card, index) => {
-      return <Card key={index}
-      text = {card.text}
-      emoji = {card.emoji}
-      id = {card.id}
-      deleteFromApiCallback = {this.deleteFromApi}
-      />
     }
-  )
+
+    addCard = (card) => {
+      let url_boards = this.props.url;
+      let board_name = this.props.boardName;
+      let updatedCards = this.state.cards;
+      axios.post(`${url_boards}${board_name}/cards`, card).then((response) =>{
+        console.log(response.data.card.id);
+        card.id = response.data.card.id
+        console.log(card);
+        updatedCards.push(card);
+
+        this.setState({cards: updatedCards});
+
+      })
+    }
+
+    render() {
+      const cards = this.state.cards.map((card, index) => {
+        return <Card key={index}
+        text = {card.text}
+        emoji = {card.emoji}
+        id = {card.id}
+        deleteFromApiCallback = {this.deleteFromApi}
+        />
+      }
+    )
 
 
-  return (
-    <main>
-    <NewCardForm/>
-    <div className="board">
-    {cards}
-    </div>
-    </main>
-  )
-}
+    return (
+      <main>
+      <NewCardForm addCardCallback={this.addCard}/>
+      <div className="board">
+      {cards}
+      </div>
+      </main>
+    )
+  }
 
 }
 
