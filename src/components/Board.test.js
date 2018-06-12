@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 
 describe('Board', () => {
   test('that it matches an existing snapshot', () => {
-    const wrapper = shallow(<Board boardId={1}  />);
+    const wrapper = shallow(<Board boardId={4}  />);
     expect(wrapper).toMatchSnapshot();
   })
 })
