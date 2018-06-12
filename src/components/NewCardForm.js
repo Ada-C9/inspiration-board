@@ -15,22 +15,40 @@ class NewCardForm extends Component {
     }
   }
 
+  onInputChange = (event) => {
+    event.preventDefault();
+    console.log(event);
+
+    let updatedMessage = {};
+      updatedMessage[event.target.text] = event.target.value,
+      updatedMessage[event.target.emoji] = event.target.value
+      this.setState(updatedMessage);
+
+  }
+
   render(){
     return (
-    <form>
-    <div>
-        <label htmlFor="text">Message</label>
-        <input type="text"
-        name="text"
-        value={this.state.text}
-        />
+    <form onFormSubmit={this.onSubmitForm} className="new-card-form new-card-form__form" >
+      <div>
+          <label htmlFor="text" className="new-card-form__form-label">Message</label>
+          <input type="text"
+          name="text"
+          value={this.state.text}
+          onChange={this.onInputChange}
+          className="new-card-form__form-textarea"
+          />
       </div>
       <div>
-          <label htmlFor="emoji">Emoji</label>
+          <label htmlFor="emoji" className="new-card-form__form-label">Emoji</label>
           <input type="emoji"
           name="emoji"
           value={this.state.text}
+          onChange={this.onInputChange}
+          className="new-card-form__form-select"
           />
+        </div>
+        <div >
+        <input type="submit" className="new-card-form__form-button"/>
         </div>
 
 
