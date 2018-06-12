@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Board from './components/Board';
-import cardData from './data/card-data.json'
+// import Data from './data/card-data.json'
 import Status from './components/Status';
 
 class App extends Component {
