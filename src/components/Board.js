@@ -23,7 +23,7 @@ class Board extends Component {
         this.setState({ cards: response.data });
       })
       .catch( (error) => {
-        console.log(error);
+        // console.log(error);
       });
   }
 
