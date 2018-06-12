@@ -68,9 +68,8 @@ class Board extends Component {
     axios.post(postUrl, card)
     .then((response) => {
       console.log(response);
-      const newCard = response.data.card
       const cards = this.state.cards
-      cards.unshift({'card':newCard})
+      cards.unshift(response.data)
       this.setState({
         cards,
         message: 'Successfully Added New Card'

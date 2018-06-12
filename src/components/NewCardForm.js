@@ -41,20 +41,23 @@ class NewCardForm extends Component {
 
   render () {
     return(
-      <form onSubmit={this.onFormSubmit}>
-        <div>
-        <label htmlFor='text'>Note: </label>
-        <input name='text' value={this.state.text} type='text' onChange={this.onFieldChange}/>
-        </div>
-        <div>
-        <label htmlFor='emoji'>Emoji: </label>
-        <input name='emoji' value={this.state.emoji} type='text' onChange={this.onFieldChange}/>
-        </div>
-        <input type='submit' value='Add a Note' />
-      </form>
+      <div className='new-card-form'>
+        <h2 className='new-card-dorm__header'>Add a Card</h2>
+        <form className='new-card-form__form' onSubmit={this.onFormSubmit}>
+          <div className='new-card-form__form-label'>
+          <label htmlFor='text'>Note: </label>
+          <input name='text' value={this.state.text} type='text' onChange={this.onFieldChange}/>
+          </div>
+          <div className='new-card-form__form-label'>
+          <label htmlFor='emoji'>Emoji: </label>
+          <input name='emoji' value={this.state.emoji} type='text' onChange={this.onFieldChange}/>
+          </div>
+          <input className='new-card-form__form-button' type='submit' value='Add a Note' />
+        </form>
+      </div>
+
     );
   }
-
 }
 
 NewCardForm.propTypes = {
