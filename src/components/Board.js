@@ -46,6 +46,7 @@ class Board extends Component {
   }
 
   addCard = (card) => {
+      console.log(`card:${card}`);
       let updatedCards = this.state.cards;
       updatedCards.push(card);
 
@@ -88,10 +89,12 @@ class Board extends Component {
   });
 
     return (
-      <div className="board">
-
-        {cardsList}
-      </div>
+      <section>
+        <NewCardForm addCardCallback={this.addCard} />
+        <div className="board">
+          {cardsList}
+        </div>
+      </section>
     );
   }
 
