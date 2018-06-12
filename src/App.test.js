@@ -11,4 +11,13 @@ describe('App', () => {
     ReactDOM.unmountComponentAtNode(div);
   });
 
+  test('that it renders App with shallow rendering', () => {
+  const wrapper = shallow(<App />);
+
+  expect(wrapper).toMatchSnapshot();
+  wrapper.unmount();
+
+});
+
+
 });
