@@ -27,6 +27,7 @@ class Card extends Component {
 	render() {
 		return (
 			<div className="card">
+				<div className="card__delete">X</div>
 				<section className="card__content">
 					{this.getText()}
 					{this.getEmoji()}

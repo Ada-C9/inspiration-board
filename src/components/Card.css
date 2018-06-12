@@ -12,6 +12,7 @@
 
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: .5fr 5fr;
   align-items: center;
 }
 
@@ -43,5 +44,6 @@
 
 .card__delete {
   align-self: start;
+  grid-column-start: 3;
   font-family: 'Permanent Marker', Helvetica, sans-serif;
 }
