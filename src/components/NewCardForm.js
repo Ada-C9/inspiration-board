@@ -33,7 +33,8 @@ class NewCardForm extends Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
-    this.props.onSubmitForm(this.state)
+    this.props.onSubmitForm(this.state);
+    this.setState({text: '', emoji: ''});
   }
 
   render () {
@@ -51,14 +52,24 @@ class NewCardForm extends Component {
           >
           Card Text:
           </label>
-          <input type='text' name='text' className="new-card-form__form-textarea" onChange={this.onFormChange}/>
+          <input
+            type='text'
+            name='text'
+            className="new-card-form__form-textarea"
+            onChange={this.onFormChange}
+            value={this.state.text}
+            />
           <label
             htmlFor='emoji'
             className="new-card-form__form-label"
           >
             Emoji:
           </label>
-          <select name='emoji' className="new-card-form__form-select" onChange={this.onFormChange}>
+          <select
+            name='emoji'
+            className="new-card-form__form-select"
+            onChange={this.onFormChange}
+            value={this.state.emoji}>
             {this.getEmojiOptions()}
           </select>
           <input className="new-card-form__form-button" type="submit"/>

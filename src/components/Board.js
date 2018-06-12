@@ -55,8 +55,8 @@ class Board extends Component {
     const NEW_PET_URL = BASE_URL + this.state.boardName + "/cards"
     axios.post(NEW_PET_URL, data)
       .then((response) => {
-        let newState = this.state.cards.concat(response.data)
-        this.setState({cards: newState})
+        let newState = this.state.cards.concat(response.data);
+        this.setState({cards: newState});
 
       }).catch((error) => {
         console.log(error.message);
@@ -94,7 +94,7 @@ class Board extends Component {
 }
 
 Board.propTypes = {
-
+  updateStatusCallback: PropTypes.func.isRequired
 };
 
 export default Board;
