@@ -5,36 +5,41 @@ import axios from 'axios';
 import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
-import CARD_DATA from '../data/card-data.json';
+// import CARD_DATA from '../data/card-data.json';
 
-const BASE_URL = "https://inspiration-board.herokuapp.com/boards/"
+// const BASE_URL = "https://inspiration-board.herokuapp.com/boards/"
 
 class Board extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      boardName: 'taco',
-      cards: this.getBootstrappedCards(),
+      boardName: props.boardName,
+      cards: [],
+      status: {
+        type: '',
+        messages: {}
+      }
     };
   }
 
-  getBootstrappedCards = () => {
-    let initialCards = [];
-    CARD_DATA.cards.forEach((card) => {
-      initialCards.push(
-        {card: {
-          "text": card.text,
-          "emoji": card.emoji
-        }}
-      )
-    })
-
-    return initialCards
-  }
+  // getBootstrappedCards = () => {
+  //   let initialCards = [];
+  //   CARD_DATA.cards.forEach((card, ) => {
+  //     initialCards.push(
+  //       {card: {
+  //         "id":
+  //         "text": card.text,
+  //         "emoji": card.emoji
+  //       }}
+  //     )
+  //   })
+  //
+  //   return initialCards
+  // }
 
   componentDidMount = () => {
-    const BOARD_URL = BASE_URL + this.state.boardName + "/cards"
+    const BOARD_URL = this.props.url + this.state.boardName + "/cards"
 
     axios.get(BOARD_URL)
       .then((response) => {
@@ -46,20 +51,50 @@ class Board extends Component {
   }
 
   deleteCard = (cardId) => {
-    console.log(cardId);
-    const DELETE_URL = `https://inspiration-board.herokuapp.com/boards/${this.state.boardName}/cards/${cardId}`
-    console.log(DELETE_URL);
+    const DELETE_URL = this.props.url + this.state.boardName + `/cards/${cardId}`
+    axios.delete(DELETE_URL)
+      .then((response) => {
+        let newState = this.state.cards.filter((card) => {return card.id !== response.data.card.id })
+
+        this.setState({
+          cards: newState,
+          status: {
+            type: 'success',
+            messages: {
+              "success": "Card successfully deleted"
+            }
+          }
+        });
+      }).catch((error) => {
+
+      });
   }
 
   createNewPet = (data) => {
-    const NEW_PET_URL = BASE_URL + this.state.boardName + "/cards"
+    const NEW_PET_URL = this.props.url + this.state.boardName + "/cards"
     axios.post(NEW_PET_URL, data)
       .then((response) => {
-        let newState = this.state.cards.concat(response.data);
-        this.setState({cards: newState});
+        // let newState = this.state.cards.concat(response.data);
+        let newState = Array.from(this.state.cards);
+        newState.splice(0, 0, response.data);
+        this.setState({
+          cards: newState,
+          status: {
+            type: 'success',
+            messages: {
+              "success": "Card successfully added"
+            }
+          }
+        });
 
       }).catch((error) => {
-        console.log(error.message);
+        let errorMessages = error.response.data.errors;
+        this.setState({status:
+          {
+            type: 'error',
+            messages: errorMessages
+          }
+        });
       });
   }
 
@@ -81,20 +116,29 @@ class Board extends Component {
 
 
   render() {
+    const statusMessage = Object.keys(this.state.status.messages).map((field, index) => {
+      return <li key={index}>{this.state.status.messages[field]}</li>
+    });
     return (
-      <main>
+      <section>
+        <div className="validation-errors-display">
+          <ul className="validation-errors-display__list">
+            {statusMessage}
+          </ul>
+        </div>
         <NewCardForm onSubmitForm={this.createNewPet}/>
         <div className="board">
           {this.getCards()}
         </div>
-      </main>
+      </section>
     )
   }
 
 }
 
 Board.propTypes = {
-  updateStatusCallback: PropTypes.func.isRequired
+  url: PropTypes.string,
+  boardName: PropTypes.string,
 };
 
 export default Board;
