@@ -4,6 +4,7 @@ import emoji from 'emoji-dictionary';
 
 import './Card.css';
 
+
 class Card extends Component {
   static propTypes = {
     text: PropTypes.string.isRequired,
@@ -12,10 +13,14 @@ class Card extends Component {
 
   render() {
     return (
-      <div className="card">
-        {this.props.text}
+      <section className="card">
+        <div className="card__content-text card__content">
+          {this.props.text}
+        </div>
+        <div className="card__content-emoji card__content">
         {emoji.getUnicode(`${this.props.emoji}`)}
-      </div>
+        </div>
+      </section>
     )
   }
 }
