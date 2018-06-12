@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewCardForm snapshot 1`] = `
+<div
+  className="new-card-form"
+>
+  <h3
+    className="new-card-form__header"
+  >
+    Add New Card
+  </h3>
+  <form
+    className="new-card-form__form"
+    onSubmit={[Function]}
+  >
+    <div>
+      <label
+        className="new-card-form__form-label"
+        htmlFor="text"
+      >
+        Name:
+      </label>
+      <input
+        name="text"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label
+        className="new-card-form__form-label"
+        htmlFor="emoji"
+      >
+        Emoji:
+      </label>
+      <input
+        name="emoji"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <input
+      className="new-card-form__form-button"
+      type="submit"
+      value="Add Card"
+    />
+  </form>
+</div>
+`;

@@ -5,7 +5,7 @@ import Card from './Card';
 describe('Card', () => {
   test('snapshot', () => {
     const wrapper = shallow(<Card
-      id = {0}
+      id = { 0 }
       text = ''
       emoji = ''
       deleteCardCallback = {()=>{}}
