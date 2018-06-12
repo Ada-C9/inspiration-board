@@ -12,13 +12,13 @@ class Card extends Component {
 	}
 
 	getEmoji = () => {
-		if (this.props.emoji !== undefined && this.props.emoji != null) {
+		if (this.props.emoji != null) {
 			return <div className="card__content-emoji">{emoji.getUnicode(this.props.emoji)}</div>
 		}
 	}
 
 	getText = () => {
-		if (this.props.text !== undefined && this.props.text != null) {
+		if (this.props.text != null) {
 			return <p className="card__content-text">{this.props.text}</p>
 		}
 	}
