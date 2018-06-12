@@ -11,14 +11,17 @@ class Card extends Component {
 
    }
 
+
   render() {
+    console.log(this.props)
+    
     const text = this.props.text
-    const emoji = this.props.emoji
+    const myEmoji = emoji.getUnicode(this.props.emoji || "smile");
 
     return (
       <div className="card">
         <p>{text}</p>
-        <p>{emoji}</p>
+        <p>{myEmoji}</p>
       </div>
     )
   }
