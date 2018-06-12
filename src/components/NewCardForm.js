@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import emoji from 'emoji-dictionary';
 import './NewCardForm.css';
 
-const EMOJI_LIST = ["100", "1234", "grinning", "grimacing", "grin", "joy", "rofl", "smiley", "smile", "sweat_smile", "laughing", "innocent", "wink", "blush", "slightly_smiling_face", "upside_down_face", "relaxed", "yum", "relieved", "heart_eyes", "kissing_heart", "kissing", "kissing_smiling_eyes", "kissing_closed_eyes", "stuck_out_tongue_winking_eye", "zany", "raised_eyebrow", "monocle", "stuck_out_tongue_closed_eyes", "stuck_out_tongue", "money_mouth_face", "nerd_face", "sunglasses", "star_struck", "clown_face", "cowboy_hat_face", "hugs", "smirk", "no_mouth", "neutral_face", "expressionless", "unamused", "roll_eyes", "thinking", "lying_face", "hand_over_mouth", "shushing", "symbols_over_mouth", "exploding_head", "flushed", "disappointed", "worried", "angry", "rage", "pensive", "confused", "slightly_frowning_face", "frowning_face", "persevere", "confounded", "tired_face", "weary", "triumph", "open_mouth", "scream", "fearful", "cold_sweat", "hushed", "frowning", "anguished", "cry", "disappointed_relieved", "drooling_face", "sleepy", "sweat", "sob", "dizzy_face", "astonished", "zipper_mouth_face", "nauseated_face", "sneezing_face", "vomiting", "mask", "face_with_thermometer", "face_with_head_bandage", "sleeping", "zzz", "poop", "smiling_imp", "imp", "japanese_ogre", "japanese_goblin", "skull", "ghost", "alien", "robot", "smiley_cat", "smile_cat", "joy_cat", "heart_eyes_cat"]
+const EMOJI_LIST = ["grinning", "grimacing", "grin", "joy", "rofl", "smiley", "smile", "sweat_smile", "laughing", "innocent", "wink", "blush", "slightly_smiling_face", "upside_down_face", "relaxed", "yum", "relieved", "heart_eyes", "kissing_heart", "kissing", "kissing_smiling_eyes", "kissing_closed_eyes", "stuck_out_tongue_winking_eye", "zany", "raised_eyebrow", "monocle", "stuck_out_tongue_closed_eyes", "stuck_out_tongue", "money_mouth_face", "nerd_face", "sunglasses", "star_struck", "clown_face", "cowboy_hat_face", "hugs", "smirk", "no_mouth", "neutral_face", "expressionless", "unamused", "roll_eyes", "thinking", "lying_face", "hand_over_mouth", "shushing", "symbols_over_mouth", "exploding_head", "flushed", "disappointed", "worried", "angry", "rage", "pensive", "confused", "slightly_frowning_face", "frowning_face", "persevere", "confounded", "tired_face", "weary", "triumph", "open_mouth", "scream", "fearful", "cold_sweat", "hushed", "frowning", "anguished", "cry", "disappointed_relieved", "drooling_face", "sleepy", "sweat", "sob", "dizzy_face", "astonished", "zipper_mouth_face", "nauseated_face", "sneezing_face", "vomiting", "mask", "face_with_thermometer", "face_with_head_bandage", "sleeping", "zzz", "poop", "smiling_imp", "imp", "skull", "ghost", "alien", "robot", "smiley_cat", "smile_cat", "joy_cat", "heart_eyes_cat"]
 
 
 class NewCardForm extends Component {
@@ -30,6 +30,13 @@ class NewCardForm extends Component {
   onFormSubmit = (event) => {
     event.preventDefault();
     this.props.addCardCallback(this.state);
+
+    this.setState({
+      card: {
+        text: '',
+        emoji: ''
+      }
+    });
   }
 
   render () {
