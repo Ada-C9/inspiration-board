@@ -45,7 +45,7 @@ class NewCardForm extends Component {
           <div>
             <label
               className = "new-card-form__form-label"
-              htmlFor = 'text'> Name:
+              htmlFor = 'text'>Name:
             </label>
             <input name = 'text' value = { this.state.text } type = 'text'
               onChange = { this.onFieldChange }
@@ -54,7 +54,7 @@ class NewCardForm extends Component {
           <div>
             <label
               className = "new-card-form__form-label"
-              htmlFor = 'emoji'> Emoji:
+              htmlFor = 'emoji'>Emoji:
             </label>
             <input name = 'emoji' value = { this.state.emoji } type = 'text'
               onChange = { this.onFieldChange }

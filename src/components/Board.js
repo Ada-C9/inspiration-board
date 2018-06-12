@@ -34,7 +34,8 @@ class Board extends Component {
         this.deleteCardFromState(id);
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error.message);
+        this.setState({ message: error.message });
       });
   }
 
@@ -42,7 +43,10 @@ class Board extends Component {
     const allCards = this.state.cards;
     const tempCards = this.state.cards;
     tempCards.splice(allCards.findIndex(card => card.card.id === id), 1);
-    this.setState({ cards: tempCards });
+    this.setState({
+      cards: tempCards,
+      message: 'Card Deleted'
+    });
   }
 
   addCardRequest = (card) => {
@@ -53,16 +57,24 @@ class Board extends Component {
       })
       .catch((error)=> {
         console.log(error.message);
+        this.setState({ message: error.message });
       })
   }
 
   addCardToState = (card) => {
     const allCards = this.state.cards;
-    allCards.push( { "card": card } );
+    allCards.unshift( { "card": card } );
     this.setState({
-      cards: allCards
+      cards: allCards,
+      message: 'Card Added'
     });
   }
+
+  // displayMessage = (message) => {
+  //   this.setState({
+  //     message: message
+  //   })
+  // }
 
   renderCards = () => {
     const cardList = this.state.cards.map( (card, index) => {
@@ -82,6 +94,12 @@ class Board extends Component {
   render() {
     return (
       <div>
+        <header className = "validation-errors-display">
+          <p
+            className = "validation-errors-display__list" >
+            { this.state.message }
+          </p>
+        </header>
         <NewCardForm addCardCallback = { this.addCardRequest }/>
         <div className = "board">
           { this.renderCards() }
