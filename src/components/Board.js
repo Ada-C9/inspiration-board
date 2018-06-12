@@ -43,10 +43,17 @@ class Board extends Component {
 
     axios.get(BOARD_URL)
       .then((response) => {
-        this.setState({cards: response.data});
+        this.setState({
+          cards: response.data,
+        });
 
       }).catch((error) => {
-        console.log(error.message);
+        this.setState({status:
+          {
+            type: 'error',
+            messages: {"error": 'Unable to load cards'}
+          }
+        });
       });
   }
 
@@ -66,7 +73,13 @@ class Board extends Component {
           }
         });
       }).catch((error) => {
-
+        let errorMessages = error.response.data.errors;
+        this.setState({status:
+          {
+            type: 'error',
+            messages: errorMessages
+          }
+        });
       });
   }
 
