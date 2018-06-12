@@ -46,6 +46,8 @@ class Board extends Component {
     const cards = this.state.cards.map((cardInfo, index) => {
       return <Card
         key={index}
+        boardName={this.props.boardName}
+        id={cardInfo.card.id}
         text={cardInfo.card.text}
         emoji={cardInfo.card.emoji}
       />
