@@ -6,15 +6,36 @@ import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
+import Status from './Status';
 
 class Board extends Component {
 
-  constructor(props) {
+  constructor() {
     super();
 
     this.state = {
-      cards: props.data,
+      cards: [],
+      status: {
+        message: '',
+        type: ''
+      }
     };
+  }
+
+  componentDidMount() {
+    axios.get(`${this.props.url}${this.props.boardname}/cards`)
+      .then((response) => {
+        this.setState({ cards: response.data });
+      })
+
+      .catch((error) => {
+        this.setState({
+          status: {
+            message: `Failed to load messages: ${error.message}`,
+            type: 'error'
+          }
+        })
+      });
   }
 
   render() {
@@ -31,6 +52,10 @@ class Board extends Component {
 
     return (
       <div>
+        <Status
+          message={this.state.status.message}
+          type={this.state.status.type}
+        />
         { cards }
       </div>
     )
@@ -39,7 +64,8 @@ class Board extends Component {
 }
 
 Board.propTypes = {
-  data: PropTypes.array.isRequired
+  url: PropTypes.string.isRequired,
+  boardName: PropTypes.string.isRequired
 };
 
 export default Board;
