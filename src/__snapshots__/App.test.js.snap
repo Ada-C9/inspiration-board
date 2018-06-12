@@ -16,7 +16,7 @@ exports[`App that the app renders shallowing 1`] = `
     </h1>
   </header>
   <Board
-    boardName="Ada-Lovelace"
+    boardName="brenda"
     url="https://inspiration-board.herokuapp.com/boards/"
   />
 </section>
