@@ -26,7 +26,6 @@ class Board extends Component {
     axios.get(`${this.props.url}${this.props.boardName}/cards`)
     .then((response) => {
       this.props.updateStatusCallback(`Successfully loaded board, ${this.props.boardName}`)
-
       const cards = response.data;
       this.setState({ cards: cards });
     })
@@ -41,12 +40,10 @@ class Board extends Component {
 
       .then((response) => {
         this.props.updateStatusCallback(`Successfully added card to board ${this.props.boardName}`)
-
         let updatedCards = this.state.cards;
         updatedCards.push(response.data);
         this.setState({ cards: updatedCards });
       })
-
       .catch((error) =>{
         console.log(error.message)
         this.props.updateStatusCallback(error.messages, 'error')
@@ -54,12 +51,9 @@ class Board extends Component {
   }
 
   removeCard = (id) => {
-    console.log(id)
     axios.delete(`${this.props.url}${this.props.boardName}/cards/${id}`)
       .then((response) =>{
-
-        console.log(response);
-
+        this.props.updateStatusCallback('Successfully deleted card')
         let updatedCards = this.state.cards;
         updatedCards.pop(response.data);
         this.setState({ cards: updatedCards });
@@ -82,13 +76,13 @@ class Board extends Component {
 
     return (
       <section>
+
         <div className="board-header">
           Board: {this.props.boardName}
         </div>
         <div className="board">
           {cards}
         </div>
-
         <div>
           <NewCardForm addCardCallback={this.addCard}/>
         </div>

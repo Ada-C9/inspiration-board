@@ -13,7 +13,6 @@ class Card extends Component {
   };
 
   removeCard = () => {
-    console.log(this.props.id)
     this.props.deleteCallback(this.props.id)
   }
 
@@ -22,9 +21,9 @@ class Card extends Component {
     return (
       <section className="card">
         <article className="card__content">
-          <span className="card__content-text">
+          <div className="card__content-text">
             {this.props.text}
-          </span>
+          </div>
 
           <div className="card__content-emoji">
             {emoji.getUnicode(`${this.props.emoji}`)}

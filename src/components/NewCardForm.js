@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import emoji from 'emoji-dictionary';
 import './NewCardForm.css';
 
-const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog"]
+const EMOJI_LIST = ["100", "1234", "grinning", "grimacing", "grin", "joy", "rofl", "smiley", "smile", "sweat_smile", "laughing", "innocent", "wink", "blush", "slightly_smiling_face", "upside_down_face", "relaxed", "yum", "relieved", "heart_eyes", "kissing_heart", "kissing", "kissing_smiling_eyes", "kissing_closed_eyes", "stuck_out_tongue_winking_eye", "zany", "raised_eyebrow", "monocle", "stuck_out_tongue_closed_eyes", "stuck_out_tongue", "money_mouth_face", "nerd_face", "sunglasses", "star_struck", "clown_face", "cowboy_hat_face", "hugs", "smirk", "no_mouth", "neutral_face", "expressionless", "unamused", "roll_eyes", "thinking", "lying_face", "hand_over_mouth", "shushing", "symbols_over_mouth", "exploding_head", "flushed", "disappointed", "worried", "angry", "rage", "pensive", "confused", "slightly_frowning_face", "frowning_face", "persevere", "confounded", "tired_face", "weary", "triumph", "open_mouth", "scream", "fearful", "cold_sweat", "hushed", "frowning", "anguished", "cry", "disappointed_relieved", "drooling_face", "sleepy", "sweat", "sob", "dizzy_face", "astonished", "zipper_mouth_face", "nauseated_face", "sneezing_face", "vomiting", "mask", "face_with_thermometer", "face_with_head_bandage", "sleeping", "zzz", "poop", "smiling_imp", "imp", "japanese_ogre", "japanese_goblin", "skull", "ghost", "alien", "robot", "smiley_cat", "smile_cat", "joy_cat", "heart_eyes_cat"]
+
 
 class NewCardForm extends Component {
   static propTypes = {
@@ -42,14 +43,15 @@ class NewCardForm extends Component {
 
     return (
       <section className="new-card-form">
-      <form className="new-card-form__form" onSubmit={this.onFormSubmit}>
+      <form className="form" onSubmit={this.onFormSubmit}>
 
         <div className="new-card-form__header">
           NEW CARD FORM
         </div>
 
-        <div className="new-card-form__form-label">
-          <label htmlFor="text">Message </label>
+        <div className="new-card-form__label">
+          <label
+          htmlFor="text">Message </label>
           <input
           type="text"
           name="text"
@@ -57,9 +59,9 @@ class NewCardForm extends Component {
           onChange={this.onInput}/>
         </div>
 
-        <div>
-          Emoji <select
-          className="new-card-form__form-select"
+        <div className="new-card-form__select">
+          Emoji
+          <select
           value={this.state.value}
           onChange={this.onInput}
           name="emoji">
@@ -67,7 +69,10 @@ class NewCardForm extends Component {
           </select>
         </div>
 
-        <div><input className="new-card-form__form-button" type="submit"/></div>
+        <div>
+          <input className="new-card-form__form-button" type="submit"/>
+        </div>
+
       </form>
       </section>
     );
