@@ -8,18 +8,16 @@ import './NewCardForm.css';
 class NewCardForm extends Component {
   constructor(){
     super();
+    
     this.state = {
-      text: '',
-      emoji: ''
+      text: "",
+      emoji: ""
     }
   }
 
   onFieldChange = (event) => {
     const fieldName = event.target.name;
-
     const val = event.target.value;
-    // const fieldValue = fieldName === 'age' ? parseInt(val, 10) : val;
-
     const updateState = {};
     updateState[fieldName] = val;
     this.setState(updateState);
@@ -28,10 +26,9 @@ class NewCardForm extends Component {
   onFormSubmit = (event) => {
     event.preventDefault();
     this.props.addCardCallback(this.state);
-    // call clear form function
     this.setState({
-      text: '',
-      emoji: ''
+      text: "",
+      emoji: ""
     })
   }
 
@@ -45,22 +42,22 @@ class NewCardForm extends Component {
           <div>
             <label
               className = "new-card-form__form-label"
-              htmlFor = 'text'>Name:
+              htmlFor = "text">Name:
             </label>
-            <input name = 'text' value = { this.state.text } type = 'text'
+            <input name = "text" value = { this.state.text } type = "text"
               onChange = { this.onFieldChange }
             />
           </div>
           <div>
             <label
               className = "new-card-form__form-label"
-              htmlFor = 'emoji'>Emoji:
+              htmlFor = "emoji">Emoji:
             </label>
-            <input name = 'emoji' value = { this.state.emoji } type = 'text'
+            <input name = "emoji" value = { this.state.emoji } type = "text"
               onChange = { this.onFieldChange }
             />
           </div>
-          <input className = "new-card-form__form-button" type = 'submit' value = 'Add Card'/>
+          <input className = "new-card-form__form-button" type = "submit" value = "Add Card"/>
         </form>
       </div>
     );

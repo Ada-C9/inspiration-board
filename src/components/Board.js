@@ -18,22 +18,22 @@ class Board extends Component {
 
   componentDidMount = () => {
     axios.get(`${this.props.url}${this.props.boardName}/cards`)
-      .then((response) => {
+      .then( (response) => {
         console.log(response.data);
         this.setState({ cards: response.data });
       })
-      .catch((error) => {
+      .catch( (error) => {
         console.log(error);
       });
   }
 
   deleteCardRequest = (id) => {
     axios.delete(`${this.props.url}${this.props.boardName}/cards/${id}`)
-      .then((response) => {
+      .then( (response) => {
         console.log(response);
         this.deleteCardFromState(id);
       })
-      .catch((error) => {
+      .catch( (error) => {
         console.log(error.message);
         this.setState({ message: error.message });
       });
@@ -45,17 +45,17 @@ class Board extends Component {
     tempCards.splice(allCards.findIndex(card => card.card.id === id), 1);
     this.setState({
       cards: tempCards,
-      message: 'Card Deleted'
+      message: "Card Deleted"
     });
   }
 
   addCardRequest = (card) => {
     axios.post(`${this.props.url}${this.props.boardName}/cards/`, card)
-      .then((response) => {
+      .then( (response) => {
         console.log(response.data.card);
         this.addCardToState(response.data.card);
       })
-      .catch((error)=> {
+      .catch( (error)=> {
         console.log(error.message);
         this.setState({ message: error.message });
       })
@@ -66,15 +66,9 @@ class Board extends Component {
     allCards.unshift( { "card": card } );
     this.setState({
       cards: allCards,
-      message: 'Card Added'
+      message: "Card Added"
     });
   }
-
-  // displayMessage = (message) => {
-  //   this.setState({
-  //     message: message
-  //   })
-  // }
 
   renderCards = () => {
     const cardList = this.state.cards.map( (card, index) => {
@@ -95,8 +89,7 @@ class Board extends Component {
     return (
       <div>
         <header className = "validation-errors-display">
-          <p
-            className = "validation-errors-display__list" >
+          <p className = "validation-errors-display__list">
             { this.state.message }
           </p>
         </header>
