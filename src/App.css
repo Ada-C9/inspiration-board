@@ -33,3 +33,24 @@ h1, h2 {
 
   transform: rotate(-3deg) skew(-3deg);
 }
+
+.logo {
+	display: inline;
+	width: 150px;
+	height: 150px;
+	animation: logo-spin infinite 20s linear;
+}
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+	to { transform: rotate(360deg);}
+}
+
+.status {
+	border-bottom: dashed 2px grey;
+	padding-bottom: 10px;
+	margin-bottom: 30px;
+	color: red;
+	font-weight: bold;
+  font-style: oblique;
+}
