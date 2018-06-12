@@ -22,9 +22,8 @@ class Board extends Component {
     this.props.updateStatusCallback("loading cards...", "success");
     axios.get(CARDS_URL)
     .then((response) => {
-      console.log(response.data)
+
       this.setState({ cards: response.data });
-      console.log(this.state)
 
       this.props.updateStatusCallback("successfully loaded cards", "success");
     })
@@ -44,10 +43,24 @@ class Board extends Component {
     });
   }
 
+  addCard = (card) => {
+    axios.post(CARDS_URL, card)
+      .then((response) => {
+        this.props.updateStatusCallback(`successfully added card ${ card.text }`, "success");
+
+        let updatedCards = this.state.cards;
+        updatedCards.push(card);
+
+        this.setState({ cards: updatedCards });
+      })
+      .catch((error) => {
+        this.props.updateStatusCallback(`Error adding card ${ card.name }`, 'error');
+      });
+  }
+
   render() {
-    console.log(this.state.cards)
+
     const cards = this.state.cards.map((card, index) => {
-      console.log(card.card);
       return(
         <Card key={index}
         text={card.card.text}
@@ -57,8 +70,8 @@ class Board extends Component {
     });
 
     return (
-      <div>
-        {console.log(cards)}
+      <div className="board">
+        <NewCardForm addCardCallback={this.addCard}/>
         { cards }
       </div>
     )

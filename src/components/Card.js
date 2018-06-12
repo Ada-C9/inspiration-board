@@ -7,7 +7,6 @@ import './Card.css';
 class Card extends React.Component {
 
   render() {
-    {console.log('test')}
     return (
       <section>
         <div className="card">
