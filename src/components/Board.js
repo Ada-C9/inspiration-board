@@ -12,7 +12,8 @@ import CARD_DATA from '../data/card-data.json';
 class Board extends Component {
   static propTypes = {
     url: PropTypes.string.isRequired,
-    boardName: PropTypes.string.isRequired
+    boardName: PropTypes.string.isRequired,
+    updateStatuscallback: PropTypes.func.isRequired
   }
 
   constructor() {
@@ -34,8 +35,8 @@ class Board extends Component {
     let board_name = this.props.boardName;
 
     axios.get(`${url_boards}/${board_name}/cards`).then((response) =>{
-      console.log("success");
-      console.log(response);
+
+      this.props.updateStatusCallback(`Successfully all cards from ${board_name}!`, 'success');
 
       const my_data = response.data.map((card) =>{
         return {text: card.card.text,
@@ -54,6 +55,7 @@ class Board extends Component {
     axios.delete(`${url_boards}/${board_name}/cards/${id}`).then((response) =>{
       console.log("success");
       console.log(response);
+      this.props.updateStatusCallback(`Successfully removed card ${id} from ${board_name}´s board!`, 'success')
       console.log(typeof id);
 
       let updatedArray = this.state.cards.filter((card)=> {
@@ -74,6 +76,9 @@ class Board extends Component {
       let updatedCards = this.state.cards;
       axios.post(`${url_boards}${board_name}/cards`, card).then((response) =>{
         console.log(response.data.card.id);
+
+        this.props.updateStatusCallback(`Successfully added a new card to ${board_name}´s board!`, 'success')
+
         card.id = response.data.card.id
         console.log(card);
         updatedCards.push(card);
@@ -81,7 +86,11 @@ class Board extends Component {
         this.setState({cards: updatedCards});
 
       })
+      .catch((error) => {
+        this.props.updateStatusCallback(error.message, 'error');
+      });
     }
+
 
     render() {
       const cards = this.state.cards.map((card, index) => {
