@@ -8,7 +8,14 @@ class Card extends Component {
 
 static propTypes = {
   text: PropTypes.string.isRequired,
-  emoji: PropTypes.string
+  emoji: PropTypes.string,
+  id: PropTypes.number.isRequired,
+  deleteFromApiCallback: PropTypes.func
+}
+
+onClickRemoveCard = (event) => {
+console.log(event.target.name);
+this.props.deleteFromApiCallback(event.target.name)
 }
 
   render() {
@@ -22,6 +29,7 @@ static propTypes = {
         <section className="card__content">
           <p className="card__content-text">{this.props.text}</p>
           <p className="card__content-emoji">{emoji.getUnicode(my_emoji)}</p>
+          <button className="card__delete" name={this.props.id} onClick={this.onClickRemoveCard}>Delete</button>
         </section>
       </div>
     )

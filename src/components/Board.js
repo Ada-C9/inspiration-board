@@ -28,8 +28,6 @@ class Board extends Component {
   }
 
 
-
-
   componentDidMount() {
 
     let url_boards = this.props.url;
@@ -39,23 +37,25 @@ class Board extends Component {
       console.log("success");
       console.log(response);
 
-
-
       const my_data = response.data.map((card) =>{
         return {text: card.card.text,
-          emoji: card.card.emoji
+          emoji: card.card.emoji,
+          id: card.card.id
         };
-
-
       });
-
-console.log(my_data);
-
       this.setState({cards: my_data})
-
-
     })
+  }
 
+
+  deleteFromApi = (id) => {
+    let url_boards = this.props.url;
+    let board_name = this.props.boardName;
+    console.log(id);
+    axios.delete(`${url_boards}/${board_name}/cards/${id}`).then((response) =>{
+      console.log("success");
+      console.log(response);
+    })
 
   }
 
@@ -64,15 +64,20 @@ console.log(my_data);
       return <Card key={index}
       text = {card.text}
       emoji = {card.emoji}
+      id = {card.id}
+      deleteFromApiCallback = {this.deleteFromApi}
       />
     }
     )
 
 
     return (
-      <div className="board">
-      {cards}
-      </div>
+      <main>
+        <NewCardForm/>
+        <div className="board">
+          {cards}
+        </div>
+      </main>
     )
   }
 
