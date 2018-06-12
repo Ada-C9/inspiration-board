@@ -5,7 +5,10 @@ import axios from 'axios';
 import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
-import CARD_DATA from '../data/card-data.json';
+
+
+
+const CARDS_URL = 'https://inspiration-board.herokuapp.com/boards/brenda/cards'
 
 class Board extends Component {
   constructor() {
@@ -34,12 +37,33 @@ class Board extends Component {
     axios.delete(`https://inspiration-board.herokuapp.com/boards/brenda/cards/${id}`)
     .then((response) => {
       console.log(response);
-      window.location.reload();
+      this.componentDidMount();
     })
     .catch( (error) => {
       this.setState({ error: error.message });
     });
   }
+
+
+  addCard = (card) => {
+
+      let updatedCards = this.state.cards;
+
+      this.setState({cards: updatedCards});
+
+      axios.post(CARDS_URL, card)
+        .then((response) => {
+          console.log(response);
+          updatedCards.push(card);
+          this.props.updateStatusCallback(`Sucessfully added card ${card.name}!` , 'success');
+
+        })
+
+        .catch((error) => {
+          this.props.updateStatusCallback(`Error adding card ${card.name}.`,`error`)
+
+        });
+    }
 
   cardList = () => {
     // const cardList = CARD_DATA.cards.map((card, index) => {
@@ -63,6 +87,7 @@ class Board extends Component {
       <div className="board">
         <p>{this.state.error}</p>
           {this.cardList()}
+          <NewCardForm addCardCallback={this.addCard}/>
       </div>
     )
   }
@@ -70,6 +95,9 @@ class Board extends Component {
 }
 
 Board.propTypes = {
+  url: PropTypes.string,
+  boardName: PropTypes.string,
+  updateStatusCallback: PropTypes.func
 
 };
 
