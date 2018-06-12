@@ -53,15 +53,20 @@ class Board extends Component {
       })
   }
 
-  deleteCard = (id) => {
-    axios.delete(`${this.props.url}${this.props.boardName}/cards` + `:${id}`)
+  removeCard = (id) => {
+    console.log(id)
+    axios.delete(`${this.props.url}${this.props.boardName}/cards/${id}`)
       .then((response) =>{
+
         console.log(response);
 
+        let updatedCards = this.state.cards;
+        updatedCards.pop(response.data);
+        this.setState({ cards: updatedCards });
       })
       .catch((error) => {
         console.log(error.message);
-        console.log(id)
+        this.props.updateStatusCallback(error.messages, 'error')
       })
   }
 
@@ -71,7 +76,8 @@ class Board extends Component {
       return <Card key={index}
       text={note.card.text}
       emoji={note.card.emoji}
-      deleteCallback={this.deleteCard(note.card.id)} />
+      deleteCallback={this.removeCard}
+      id={note.card.id} />
     })
 
     return (
