@@ -26,6 +26,7 @@ class NewCardForm extends Component {
   }
 
   onFormSubmit = (event) => {
+    console.log(event);
     event.preventDefault();
     console.log(this.state);
     this.props.addCardCallback(this.state);
@@ -37,7 +38,7 @@ class NewCardForm extends Component {
     });
   }
 
-  generateEmojis = () => {
+  emojis = () => {
     const emojiChoices = EMOJI_LIST.map((emojiText) => {
       return (
         <option key={emojiText} value={emojiText}>{emojiText.length > 0 ? emoji.getUnicode(emojiText): ""}</option>
@@ -55,14 +56,15 @@ class NewCardForm extends Component {
       {this.state.errorMessages}
     </div>
     <div >
-      <form onFormSubmit={this.onFormSubmit} className="new-card-form__form" >
-        <label htmlFor="text" className="new-card-form__form-label">Write a note <FaPencil/><FaPencil/><FaPencil/></label>
+      <form onSubmit={this.onFormSubmit} className="new-card-form__form" >
+        <label htmlFor="text" className="new-card-form__form-label">Write a note <FaPencil/><FaPencil/>
+        <FaPencil/></label>
           <textarea name="text" onChange={this.onInputChange} value={this.state.text}
           className="new-card-form__form-textarea" />
         <label htmlFor="emoji" className="new-card-form__form-label">Emoji</label>
           <select name="emoji" onChange={this.onInputChange} value={this.state.emoji}
           className="new-card-form__form-select">
-          {this.generateEmojis()}
+          {this.emojis()}
 
         </select>
         <button type="submit" className="new-card-form__form-button">Submit Card</button>
