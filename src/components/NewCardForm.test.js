@@ -40,4 +40,48 @@ describe('NewCardForm', () => {
 
     });
   });
+
+  test('NewCardForm can submit', () => {
+    const mockAddCardCallback = jest.fn();
+    const wrapper = shallow(<NewCardForm
+      addCardCallback = { mockAddCardCallback }
+      />);
+
+    const inputFields = [
+      {
+        name: 'text',
+        value: 'You can do this!'
+      },
+      {
+        name: 'emoji',
+        value: 'smile'
+      }
+    ]
+
+    inputFields.forEach( (field) => {
+      wrapper.find(`[name="${field.name}"]`).simulate('change', {
+        target: {
+          name: field.name,
+          value: field.value
+        }
+      });
+    });
+
+    wrapper.find('form').simulate('submit', {
+      preventDefault: () => {}
+    });
+
+    wrapper.update();
+
+    inputFields.forEach( (field) => {
+      const nameField = wrapper.find(`[name="${field.name}"]`);
+      expect(nameField.getElement().props.value).toEqual('');
+    });
+
+    expect(mockAddCardCallback).toHaveBeenCalled();
+    expect(mockAddCardCallback.mock.calls[0][0]).toEqual({
+      text: 'You can do this!',
+      emoji: 'smile'
+    });
+  });
 });
