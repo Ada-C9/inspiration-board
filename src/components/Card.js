@@ -8,19 +8,27 @@ import './Card.css';
 class Card extends Component {
   static propTypes = {
     text: PropTypes.string.isRequired,
-    emoji: PropTypes.string
+    emoji: PropTypes.string,
+    deleteCallback: PropTypes.func
   };
+
+  onCardDelete = () => {
+    this.props.deleteCallback(this.props.index, this.props.id);
+    // console.log(this.state);
+
+  }
 
   render() {
     return (
-      <section className="card">
-        <div className="card__content-text card__content">
-          {this.props.text}
-        </div>
-        <div className="card__content-emoji card__content">
-        {emoji.getUnicode(`${this.props.emoji}`)}
-        </div>
-      </section>
+      <div className="card">
+        <p className="card__content-text card__content">
+          {this.props.text}</p>
+        <p className="card__content-emoji card__content">
+        {emoji.getUnicode(`${this.props.emoji}`)}</p>
+        <p>
+        <button className="card__delete" onClick={this.onCardDelete}>Delete</button>
+        </p>
+      </div>
     )
   }
 }
