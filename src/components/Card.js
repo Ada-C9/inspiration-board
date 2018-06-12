@@ -11,8 +11,11 @@ class Card extends React.Component {
     return (
       <section>
         <div className="card">
-          {this.props.text}
-          {this.getEmoji(this.props.emoji)}
+          <button className="card__delete">Delete</button>
+          <div className="card__content">
+            <div className="card__content-text">{this.props.text}</div>
+            <div className="card__content-emoji">{this.getEmoji(this.props.emoji)}</div>
+          </div>
         </div>
       </section>
     )
@@ -20,7 +23,6 @@ class Card extends React.Component {
 
   getEmoji = (emojicon) => {
     return emoji.getUnicode(emojicon)
-    //do something in here to get emoji.getUnicode(this.props.emoji) to work
   }
 }
 
