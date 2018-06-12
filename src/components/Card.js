@@ -22,10 +22,11 @@ class Card extends Component {
     console.log('Rendering a card')
     return (
       <div className="card">
+        <button className="card__delete" onClick={this.removeCard}>X</button>
         <div className="card__content">
+
           <p className="card__content-text">{this.props.text}</p>
           <p className="card__content-emoji">{this.displayEmoji()}</p>
-          <button className="card__delete" onClick={this.removeCard}>Delete</button>
           </div>
         </div>
       )

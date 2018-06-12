@@ -49,6 +49,25 @@ class Board extends Component {
     return cardList;
   }
 
+  addCard = (note) => {
+    const cards = this.state.cards;
+    axios.post('https://inspiration-board.herokuapp.com/boards/angela/cards', note)
+      .then((response) => {
+        cards.push(note);
+        this.setState({
+          cards,
+          message: `Sucessfully Added a new Card`
+        });
+      })
+      .catch((error) => {
+        console.log(error)
+        this.setState({
+          message: error.message,
+        });
+      })
+
+  }
+
   deleteCard = (id) => {
     console.log(id)
     axios.delete(`https://inspiration-board.herokuapp.com/boards/angelap/cards/${id}`)
@@ -70,7 +89,9 @@ class Board extends Component {
       <div>
         <section className="board">
           <p>{this.state.error}</p>
+          <p>{this.state.message}</p>
           {this.renderCards()}
+          <NewCardForm addCardCallBack={this.addCard} />
         </section>
       </div>
     )
