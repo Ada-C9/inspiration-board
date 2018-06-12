@@ -46,11 +46,7 @@ class Board extends Component {
   }
 
   addCard = (card) => {
-      console.log(`card:${card}`);
-      let updatedCards = this.state.cards;
-      updatedCards.push(card);
-
-      this.setState({ cards: updatedCards });
+      console.log(card);
 
       axios.post(CARDS, card)
         .then((response) => {
@@ -58,7 +54,7 @@ class Board extends Component {
           this.props.updateStatusCallback(`Successfully added new card: '${ card.text }'!`, 'success');
 
           let updatedCards = this.state.cards;
-          updatedCards.push(card);
+          updatedCards.unshift(response.data);
 
           this.setState({ cards: updatedCards });
         })
