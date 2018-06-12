@@ -6,13 +6,18 @@ import './NewCardForm.css';
 const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog"]
 
 class NewCardForm extends Component {
+  static propTypes = {
+    addCardCallback: PropTypes.func.isRequired,
+  };
 
   constructor() {
     super();
     this.state = {
+      id: 1,
       text: '',
       emoji: ''
     };
+    console.log(this.state);
   }
 
   onInputChange = (event) => {
@@ -23,6 +28,12 @@ class NewCardForm extends Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
+    console.log(this.state);
+    const newCard = {
+      card: this.state
+    };
+    console.log(newCard);
+    this.props.addCardCallback(newCard);
   }
 
   render() {

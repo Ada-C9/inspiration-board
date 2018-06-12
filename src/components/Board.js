@@ -42,6 +42,14 @@ class Board extends Component {
     })
   }
 
+  addCard = (newCard) => {
+    const updatedCards = this.state.cards;
+    updatedCards.push(newCard);
+    this.setState({
+      cards: updatedCards
+    });
+  }
+
   render() {
     const cards = this.state.cards.map((cardInfo, index) => {
       return <Card
@@ -55,7 +63,7 @@ class Board extends Component {
     return (
       <section className="board">
         { cards }
-        <NewCardForm />
+        <NewCardForm addCardCallback={ this.addCard } />
       </section>
     )
   }
