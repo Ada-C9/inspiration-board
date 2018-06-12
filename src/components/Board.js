@@ -6,35 +6,26 @@ import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
-import Status from './Status';
 
 class Board extends Component {
-
   constructor() {
     super();
 
     this.state = {
       cards: [],
-      status: {
-        message: '',
-        type: ''
-      }
     };
   }
 
   componentDidMount() {
-    axios.get(`${this.props.url}${this.props.boardname}/cards`)
+    this.props.updateStatusCallback('Loading the board...', 'success');
+    axios.get(`${this.props.url}${this.props.boardName}/cards`)
       .then((response) => {
+        this.props.updateStatusCallback('Board successfully loaded', 'success');
         this.setState({ cards: response.data });
       })
 
       .catch((error) => {
-        this.setState({
-          status: {
-            message: `Failed to load messages: ${error.message}`,
-            type: 'error'
-          }
-        })
+        this.props.updateStatusCallback(error.message, 'error');
       });
   }
 
@@ -52,10 +43,6 @@ class Board extends Component {
 
     return (
       <div>
-        <Status
-          message={this.state.status.message}
-          type={this.state.status.type}
-        />
         { cards }
       </div>
     )
@@ -65,7 +52,8 @@ class Board extends Component {
 
 Board.propTypes = {
   url: PropTypes.string.isRequired,
-  boardName: PropTypes.string.isRequired
+  boardName: PropTypes.string.isRequired,
+  updateStatusCallback: PropTypes.func.isRequired
 };
 
 export default Board;
