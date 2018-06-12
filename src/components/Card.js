@@ -37,6 +37,7 @@ Card.propTypes = {
   text: PropTypes.string,
   emoji: PropTypes.string,
   id: PropTypes.number.isRequired,
+  deleteCard: PropTypes.func,
 
 };
 
