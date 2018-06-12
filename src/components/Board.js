@@ -40,9 +40,9 @@ class Board extends Component {
 
     axios.post(`${this.props.url}${this.props.boardName}/cards`)
       .then((response) => {
-        console.log(response.data)
         const cards = response.data;
         this.setState({ cards: cards });
+        console.log(cards)
       })
       .catch((error) =>{
         console.log(error.message)
@@ -58,10 +58,13 @@ class Board extends Component {
 
     return (
       <section>
-        Board: {this.props.boardName}
-        <div>
+        <div className="board-header">
+          Board: {this.props.boardName}
+        </div>
+        <div className="board">
           {cards}
         </div>
+
         <div>
           <NewCardForm addCardCallback={this.addCard}/>
         </div>

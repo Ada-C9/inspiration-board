@@ -12,3 +12,8 @@
   list-style-type: none;
   padding: 0;
 }
+
+.board-header {
+  text-align: center;
+  text-transform: uppercase;
+}

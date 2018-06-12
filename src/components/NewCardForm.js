@@ -25,7 +25,6 @@ class NewCardForm extends Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state)
     this.props.addCardCallback(this.state);
   }
 
@@ -39,18 +38,25 @@ class NewCardForm extends Component {
     })
 
     return (
-      <form onSubmit={this.onFormSubmit}>
-        <div>
+      <section className="new-card-form">
+      <form className="new-card-form__form" onSubmit={this.onFormSubmit}>
+
+        <div className="new-card-form__header">
+          NEW CARD FORM
+        </div>
+        
+        <div className="new-card-form__form-label">
           <label htmlFor="text">Message </label>
           <input
           type="text"
           name="text"
-          value={this.state.value}
+          value={this.state.card.text}
           onChange={this.onInput}/>
         </div>
 
         <div>
           Emoji <select
+          className="new-card-form__form-select"
           value={this.state.value}
           onChange={this.onInput}
           name="emoji">
@@ -58,8 +64,9 @@ class NewCardForm extends Component {
           </select>
         </div>
 
-        <div><input type="submit"/></div>
+        <div><input className="new-card-form__form-button" type="submit"/></div>
       </form>
+      </section>
     );
   }
 }
