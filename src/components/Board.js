@@ -16,10 +16,47 @@ class Board extends Component {
     };
   }
 
+  componentDidMount = () => {
+    axios.get('https://inspiration-board.herokuapp.com/boards/brittany/cards')
+      .then( (response) => {
+        this.setState({
+          cards: response.data,
+        });
+      })
+      .catch( (error) => {
+        this.setState({
+          error: error.message,
+        });
+      });
+  }
+
+  renderCards = () => {
+    const cards = this.state.cards.map( (card, index) => {
+      return (
+        <Card
+          key={index}
+          text={card.card.text}
+          emoji={card.card.emoji}
+          />
+      );
+    });
+
+    return cards;
+  }
+
+  renderError = () => {
+    if (this.state.error) {
+      return (
+        <p>{this.state.error}</p>
+      );
+    }
+  }
+
   render() {
     return (
       <div>
-        Board
+        {this.renderError()}
+        {this.renderCards()}
       </div>
     )
   }
