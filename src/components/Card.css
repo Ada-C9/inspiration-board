@@ -42,6 +42,7 @@
 }
 
 .card__delete {
+  justify-self: end;
   align-self: start;
   font-family: 'Permanent Marker', Helvetica, sans-serif;
 }

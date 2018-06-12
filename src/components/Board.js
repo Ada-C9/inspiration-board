@@ -16,25 +16,68 @@ class Board extends Component {
     };
   }
 
+
+  componentDidMount= () => {
+    console.log('Component did mount');
+
+    axios.get('https://inspiration-board.herokuapp.com/boards/steffany/cards')
+      .then( (response) => {
+        console.log(response.data);
+        this.setState({
+          cards: response.data
+        });
+      })
+      .catch( (error) => {
+        this.setState({
+          error: error.message,
+        });
+      });
+  }
+
+
+  deleteCard = (id, key) => {
+    console.log(id);
+    axios.delete(`https://inspiration-board.herokuapp.com/boards/steffany/cards/${id}`)
+      .then( (response) => {
+        console.log(response);
+      })
+
+    let cardArray = this.state.cards
+    cardArray.splice(key, 1)
+
+    this.setState({
+      cards: cardArray
+    });
+  }
+
+  addCard = (card) => {
+     //do a post request
+  }
+
   renderCardList = () => {
   console.log('Rendering Card List')
-  const cardList = CARD_DATA.cards.map((card, index) => {
+  const cardList = this.state.cards.map((card, index) => {
     return (
       <Card
+        id={card.card.id}
         key={index}
-        text={card.text}
-        emoji={card.emoji}
+        text={card.card.text}
+        emoji={card.card.emoji}
+        deleteThisCard={this.deleteCard}
       />
     )
   })
+  console.log(cardList)
   return cardList;
 }
 
   render() {
     return (
-      <div>
+      <div className="board">
         {this.renderCardList()}
+        <NewCardForm addCardCallback={this.addCard}/>
       </div>
+
     )
   }
 

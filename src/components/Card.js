@@ -11,19 +11,29 @@ class Card extends Component {
     }
   }
 
+  deleteCard = () => {
+    console.log(this.props.id)
+    this.props.deleteThisCard(this.props.id, this.props.key)
+  }
+
   render() {
     return (
       <div className="card">
-        <p>{this.props.text}</p>
-        <p>{this.showEmoji()}</p>
+      <span onClick={this.deleteCard} className="card__delete">x</span>
+        <section className="card__content">
+          <p className="card__content-text">{this.props.text}</p>
+          <p className="card__content-emoji">{this.showEmoji()}</p>
+        </section>
       </div>
     )
   }
 }
 
 Card.propTypes = {
+  id: PropTypes.number.isRequired,
   text: PropTypes.string,
-  emoji: PropTypes.string
+  emoji: PropTypes.string,
+  deleteThisCard: PropTypes.func
 };
 
 export default Card;
