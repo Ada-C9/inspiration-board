@@ -26,7 +26,7 @@ class Board extends Component {
     console.log(cards);
 
     return (
-      <div>
+      <div className="board">
         { cards }
       </div>
     )
