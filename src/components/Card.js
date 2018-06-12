@@ -19,14 +19,19 @@ class Card extends Component {
   //   };
   // }
 
-  onDeleteSubmit = (event) => {
+  onDeleteClick = (event) => {
     event.preventDefault();
     console.log('delete button clicked');
-    console.log(event);
-    axios.delete(` https://inspiration-board.herokuapp.com/boards/kiera-thomasson/cards/{this.props.id}`)// QUESTION: Where can I get the id from if it is an api
+    console.log(event.target.value);
+    let target = event.target.value;
+    axios.delete( 'https://inspiration-board.herokuapp.com/boards/kiera-thomasson/cards/'+ target)
       .then((response) => {
         console.log(response);
         console.log(response.data);
+
+      })
+      .catch((error) => {
+        console.log(error);
       })
   }
 
@@ -43,10 +48,8 @@ class Card extends Component {
             {face}
           </p>
         </div>
-        <form onSubmit={this.onDeleteSubmit}>
-          <button className="card__delete" type='submit'>delete</button>
-        </form>
 
+          <button onClick={this.onDeleteClick} className="card__delete" type='submit' value={this.props.id}>delete</button>
 
       </div>
 

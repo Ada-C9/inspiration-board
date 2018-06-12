@@ -32,6 +32,8 @@ componentDidMount() {
     })
 }
 
+
+
   render() {
     const cards = this.state.cards.map((post,index) => {
       return <Card
@@ -39,6 +41,7 @@ componentDidMount() {
       id={ post.card.id }
       text={ post.card.text }
       emoji={ post.card.emoji }
+      onDeleteCallback={post.card.onDeleteSubmit}
 
       />
     });
