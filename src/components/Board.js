@@ -7,6 +7,8 @@ import Card from './Card';
 import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
+const BASE_URL = "https://inspiration-board.herokuapp.com/boards/"
+
 class Board extends Component {
   constructor() {
     super();
@@ -32,7 +34,7 @@ class Board extends Component {
   }
 
   componentDidMount = () => {
-    const BOARD_URL = `https://inspiration-board.herokuapp.com/boards/${this.state.boardName}/cards`
+    const BOARD_URL = BASE_URL + this.state.boardName + "/cards"
 
     axios.get(BOARD_URL)
       .then((response) => {
@@ -47,8 +49,21 @@ class Board extends Component {
     console.log(cardId);
     const DELETE_URL = `https://inspiration-board.herokuapp.com/boards/${this.state.boardName}/cards/${cardId}`
     console.log(DELETE_URL);
-
   }
+
+  createNewPet = (data) => {
+    const NEW_PET_URL = BASE_URL + this.state.boardName + "/cards"
+    axios.post(NEW_PET_URL, data)
+      .then((response) => {
+        let newState = this.state.cards.concat(response.data)
+        this.setState({cards: newState})
+
+      }).catch((error) => {
+        console.log(error.message);
+      });
+  }
+
+
 
   getCards = () => {
     return this.state.cards.map((cardData, index) => {
@@ -67,10 +82,12 @@ class Board extends Component {
 
   render() {
     return (
-      <div className="board">
-        <NewCardForm />
-        {this.getCards()}
-      </div>
+      <main>
+        <NewCardForm onSubmitForm={this.createNewPet}/>
+        <div className="board">
+          {this.getCards()}
+        </div>
+      </main>
     )
   }
 

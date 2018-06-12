@@ -25,11 +25,25 @@ class NewCardForm extends Component {
     })
   }
 
+  onFormChange = (event) => {
+    let updatedInput = {};
+    updatedInput[event.target.name] = event.target.value;
+    this.setState(updatedInput);
+  }
+
+  onFormSubmit = (event) => {
+    event.preventDefault();
+    this.props.onSubmitForm(this.state)
+  }
+
   render () {
     return (
       <section className="new-card-form">
         <h3 className="new-card-form__header">Add a new card: </h3>
-        <form className="new-card-form__form">
+        <form
+          className="new-card-form__form"
+          onSubmit={this.onFormSubmit}
+        >
           <label
             htmlFor='text'
             className="new-card-form__form-label"
@@ -37,15 +51,17 @@ class NewCardForm extends Component {
           >
           Card Text:
           </label>
-          <input type='text' name='text' className="new-card-form__form-textarea"/>
+          <input type='text' name='text' className="new-card-form__form-textarea" onChange={this.onFormChange}/>
           <label
             htmlFor='emoji'
             className="new-card-form__form-label"
-          >Emoji: </label>
-          <select name='emoji' className="new-card-form__form-select">
+          >
+            Emoji:
+          </label>
+          <select name='emoji' className="new-card-form__form-select" onChange={this.onFormChange}>
             {this.getEmojiOptions()}
           </select>
-          <button className="new-card-form__form-button">Add Card!</button>
+          <input className="new-card-form__form-button" type="submit"/>
         </form>
 
       </section>
