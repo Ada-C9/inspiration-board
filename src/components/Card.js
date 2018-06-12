@@ -16,11 +16,12 @@ class Card extends Component {
       <section className="card">
         <article className="content">
 
-          <div    className="content-text">
+          <div className="content-text">
             {this.props.text}
           </div>
+
           <div className="content-emoji">
-            {emoji.getUnicode(`:${this.props.emoji}:`)}
+            {emoji.getUnicode(`${this.props.emoji}`)}
           </div>
 
         </article>

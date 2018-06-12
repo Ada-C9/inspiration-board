@@ -33,25 +33,42 @@ class Board extends Component {
     })
   }
 
+  addCard = (card) => {
+    let updatedCards = this.state.cards;
+    updatedCards.push(card);
+    this.setState({ cards: updatedCards });
+
+    axios.post(`${this.props.url}${this.props.boardName}/cards`)
+      .then((response) => {
+        console.log(response.data)
+        const cards = response.data;
+        this.setState({ cards: cards });
+      })
+      .catch((error) =>{
+        console.log(error.message)
+      })
+  }
+
   render() {
     const cards = this.state.cards.map((note, index) =>{
       return <Card key={index}
       text={note.card.text}
       emoji={note.card.emoji} />
-    });
+    })
 
     return (
-      <div>
+      <section>
         Board: {this.props.boardName}
-        {cards}
-      </div>
+        <div>
+          {cards}
+        </div>
+        <div>
+          <NewCardForm addCardCallback={this.addCard}/>
+        </div>
+      </section>
     )
   }
 
 }
-
-Board.propTypes = {
-
-};
 
 export default Board;
