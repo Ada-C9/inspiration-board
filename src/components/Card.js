@@ -14,13 +14,6 @@ class Card extends Component {
     index: PropTypes.number
   }
 
-  // constructor(){
-  //   super();
-  //   this.state = {
-  //     id: '',
-  //   };
-  // }
-
   onDeleteClick = (event) => {
     console.log('delete button clicked');
     console.log(event.target.value);
