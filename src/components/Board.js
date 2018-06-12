@@ -56,9 +56,18 @@ class Board extends Component {
 
     let deleteURL = url + this.props.boardName + '/cards' + '/' + cardID;
 
-    // need to rebuild cards list without the removed card
-    // must call the API
-    this.setState({cards: []});
+    axios.delete(deleteURL);
+
+
+    let cards = this.state.cards;
+
+    for (let i = 0; i < cards.length; i++) {
+      if (cards[i].card.id == cardID) {
+        cards.splice(i, 1)
+
+        this.setState({cards: cards});
+      }
+    }
   }
 
   render() {
