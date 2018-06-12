@@ -42,6 +42,7 @@
 }
 
 .card__delete {
-  align-self: start;
-  font-family: 'Permanent Marker', Helvetica, sans-serif;
+  align-self:flex-end;
+  font-size: 20pt;
+  /* font-family: 'Permanent Marker', Helvetica, sans-serif; */
 }
