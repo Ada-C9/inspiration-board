@@ -17,7 +17,6 @@ class Board extends Component {
   }
 
   componentDidMount = () => {
-    // console.log(`${this.props.url}${this.props.boardName}/cards`);
     axios.get(`${this.props.url}${this.props.boardName}/cards`)
       .then((response) => {
         console.log(response.data);
@@ -29,7 +28,6 @@ class Board extends Component {
   }
 
   deleteCardRequest = (id) => {
-    // console.log(`${this.props.url}${this.props.boardName}/cards/${id}`);
     axios.delete(`${this.props.url}${this.props.boardName}/cards/${id}`)
       .then((response) => {
         console.log(response);
@@ -47,6 +45,25 @@ class Board extends Component {
     this.setState({ cards: tempCards });
   }
 
+  addCardRequest = (card) => {
+    axios.post(`${this.props.url}${this.props.boardName}/cards/`, card)
+      .then((response) => {
+        console.log(response.data.card);
+        this.addCardToState(response.data.card);
+      })
+      .catch((error)=> {
+        console.log(error.message);
+      })
+  }
+
+  addCardToState = (card) => {
+    const allCards = this.state.cards;
+    allCards.push( { "card": card } );
+    this.setState({
+      cards: allCards
+    });
+  }
+
   renderCards = () => {
     const cardList = this.state.cards.map( (card, index) => {
       return(
@@ -60,29 +77,6 @@ class Board extends Component {
       );
     });
     return cardList;
-  }
-
-  addCardRequest = (card) => {
-    console.log(`${this.props.url}${this.props.boardName}/cards/`);
-    axios.post(`${this.props.url}${this.props.boardName}/cards/`, card)
-      .then((response) => {
-        console.log(response.data.card);
-        this.addCardToState(response.data.card);
-      })
-      .catch((error)=> {
-        console.log(error.message);
-      })
-  }
-
-  addCardToState = (card) => {
-    const allCards = this.state.cards;
-    const newCard = {
-      "card": card
-    }
-    allCards.push(newCard);
-    this.setState({
-      cards: allCards
-    });
   }
 
   render() {
