@@ -51,10 +51,25 @@ class Board extends Component {
   deleteFromApi = (id) => {
     let url_boards = this.props.url;
     let board_name = this.props.boardName;
-    console.log(id);
     axios.delete(`${url_boards}/${board_name}/cards/${id}`).then((response) =>{
       console.log("success");
       console.log(response);
+      console.log(typeof id);
+
+ let updatedArray = this.state.cards.filter((card)=> {
+   console.log(typeof card.id);
+   return card.id != id});
+   console.log(updatedArray);
+
+
+ // for (let i =0; i < this.state.cards.length; i++)
+ //   if (this.state.cards[i].id === id) {
+ //      updatedArray = this.state.cards.splice(i,1);
+ //      break;
+ //   }
+      this.setState({cards: updatedArray})
+      console.log(this.state.cards);
+
     })
 
   }
@@ -68,18 +83,18 @@ class Board extends Component {
       deleteFromApiCallback = {this.deleteFromApi}
       />
     }
-    )
+  )
 
 
-    return (
-      <main>
-        <NewCardForm/>
-        <div className="board">
-          {cards}
-        </div>
-      </main>
-    )
-  }
+  return (
+    <main>
+    <NewCardForm/>
+    <div className="board">
+    {cards}
+    </div>
+    </main>
+  )
+}
 
 }
 
