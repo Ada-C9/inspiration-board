@@ -16,13 +16,25 @@ class Board extends Component {
     };
   }
 
+  componentDidMount = () => {
+    axios.get('https://inspiration-board.herokuapp.com/boards/brenda/cards')
+    .then( (response) => {
+      console.log(response);
+      this.setState({ cards: response.data });
+    })
+    .catch( (error) => {
+      this.setState({ error: error.message });
+    });
+  }
+
   cardList = () => {
-    const cardList = CARD_DATA.cards.map((card, index) => {
+    // const cardList = CARD_DATA.cards.map((card, index) => {
+    const cardList = this.state.cards.map((card, index) => {
       return (
         <Card
           key={index}
-          text={card.text}
-          emoji={card.emoji}
+          text={card.card.text}
+          emoji={card.card.emoji}
         />
       )
     });
@@ -33,7 +45,8 @@ class Board extends Component {
   render() {
     return (
       <div className="board">
-        {this.cardList()}
+        <p>{this.state.error}</p>
+          {this.cardList()}
       </div>
     )
   }
