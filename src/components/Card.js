@@ -8,8 +8,10 @@ class Card extends Component {
   render() {
     return (
       <div className="card">
-        <div>{ this.props.text }</div>
-        <div>{ emoji.getUnicode(`${this.props.emoji}`) }</div>
+        <div className="card__content">
+          <h1 className="card__content-text">{ this.props.text }</h1>
+          <h1 className="card__content-emoji">{ emoji.getUnicode(`${this.props.emoji}`) }</h1>
+        </div>
       </div>
     )
   }
