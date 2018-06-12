@@ -6,7 +6,7 @@ import '../styles/Card.css';
 
 class Card extends Component {
   deleteClickHandler = () => {
-    this.props.boardCallBack(this.props.key)
+    this.props.deleteCallBack(this.props.index, this.props.id)
   }
 
 

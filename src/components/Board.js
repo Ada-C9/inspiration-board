@@ -4,12 +4,12 @@ import axios from 'axios';
 
 import '../styles/Board.css';
 import Card from './Card';
-// import NewCardForm from './NewCardForm';
+import NewCardForm from './NewCardForm';
 // import CARD_DATA from '../data/card-data.json';
 
 
-const ALL_CARDS_URL = 'https://inspiration-board.herokuapp.com/boards/majapapaya/cards'
-// https://inspiration-board.herokuapp.com/boards/:board_name/cards/:card_id
+const ALL_CARDS_URL = 'https://inspiration-board.herokuapp.com/boards/papaya/cards'
+const BASE_URL = 'https://inspiration-board.herokuapp.com/boards/'
 
 class Board extends Component {
   constructor() {
@@ -23,8 +23,8 @@ class Board extends Component {
 componentDidMount(){
   axios.get(ALL_CARDS_URL)
   .then((response) =>{
-    this.props.updateStatusCallback(`Successfully loaded cards`)
     console.log(response.data);
+    this.props.updateStatusCallback(`Successfully loaded cards`)
     this.setState({cards: response.data})
   })
   .catch((error)=>{
@@ -33,28 +33,55 @@ componentDidMount(){
 
 }
 
-// put delete requst in here
-deleteCard = (index) => {
-  let updatedCards = this.state.cards;
-  updatedCards.splice(index, 1);
-  this.setState({cards: updatedCards})
+addCard = (card) => {
+  axios.post(ALL_CARDS_URL, card)
+  .then((response)=>{
+    this.props.updateStatusCallback(`Successfully posted card`)
 
+    let updatedCards = this.state.cards;
+    updatedCards.push(card);
+    this.setState({cards: updatedCards})
+  })
+  .catch((error)=>{
+    this.props.updateStatusCallback(error.message, 'error')
+  })
 }
 
-componentDidUpdate(){
-  axios.post()
+// put delete requst in here
+deleteCard = (banana, id) => {
+  let updatedCards = this.state.cards;
+  updatedCards.splice(banana, 1);
+  this.setState({cards: updatedCards})
+
+  let DELETE_URL = BASE_URL + `papaya/cards/${id}`
+  axios.delete(DELETE_URL)
+  .then((response) =>{
+    this.props.updateStatusCallback(`Successfully deleted card`)
+
+  })
+  .catch((error)=>{
+    this.props.updateStatusCallback(error.message, 'error')
+  })
 }
 
 
 // parse cards collection from state into card components
-
   render() {
     const cards = this.state.cards.map((card, index) => {
-      return <Card key={index} text={card.card.text} emoji={card.card.emoji} boardCallBack={this.deleteCard} />
+      // console.log(index);
+      return <Card key={index} index={index}
+      id={card.card.id}
+      text={card.card.text}
+      emoji={card.card.emoji}
+      deleteCallBack={this.deleteCard}
+       />
     })
     return (
-      <section className="board">
-        {cards}
+      <section>
+        <NewCardForm addCallBack={this.addCard} />
+        <section className="board">
+          {cards}
+        </section>
       </section>
     )
   }
