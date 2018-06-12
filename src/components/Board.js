@@ -52,8 +52,8 @@ class Board extends Component {
   addCardRequest = (card) => {
     axios.post(`${this.props.url}${this.props.boardName}/cards/`, card)
       .then( (response) => {
-        console.log(response.data.card);
-        this.addCardToState(response.data.card);
+        console.log(response.data);
+        this.addCardToState(response.data);
       })
       .catch( (error)=> {
         console.log(error.message);
@@ -63,7 +63,7 @@ class Board extends Component {
 
   addCardToState = (card) => {
     const allCards = this.state.cards;
-    allCards.unshift( { "card": card } );
+    allCards.unshift(card);
     this.setState({
       cards: allCards,
       message: "Card Added"
