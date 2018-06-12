@@ -10,21 +10,13 @@ class Card extends Component {
     boardName: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
     text: PropTypes.string.isRequired,
-    emoji: PropTypes.string
+    emoji: PropTypes.string,
+    removeCardCallback: PropTypes.func.isRequired
   };
 
-  deleteCard = () => {
-    console.log(`deleting ${this.props.id}`);
-    const DELETE_URL = `https://inspiation-board.herokuapp.com/boards/${this.props.boardName}/cards/${this.props.id}`
-
-    axios.delete(DELETE_URL)
-    .then((response) => {
-      console.log('in here');
-    })
-    .catch((error) => {
-      console.log('in error');
-    })
-  }
+  removeThisCard = () => {
+    this.props.removeCardCallback(this.props.id);
+  };
 
   render() {
 
@@ -40,7 +32,7 @@ class Card extends Component {
           { this.props.text }
           <span className="card__content-emoji">{ emojiSymbol }</span>
           </p>
-          <button onClick={this.deleteCard} >delete</button>
+          <button onClick={ this.removeThisCard } >delete</button>
         </div>
       </section>
     )

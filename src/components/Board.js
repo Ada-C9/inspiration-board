@@ -70,6 +70,19 @@ class Board extends Component {
       });
   }
 
+  removeCard = (id) => {
+    const DELETE_URL = `https://inspiration-board.herokuapp.com/boards/${this.props.boardName}/cards/${id}`;
+    this.props.updateStatusCallback(`Removing card ${id}`, 'success');
+
+    axios.delete(DELETE_URL)
+      .then((response) => {
+        this.props.updateStatusCallback(`Successfully removed card ${id}`, 'success');
+      })
+      .catch((error) => {
+        this.props.updateStatusCallback(`Encountered an error trying to remove card ${id}: ${error.message}`, 'success');
+      });
+  }
+
   render() {
     const cards = this.state.cards.map((cardInfo, index) => {
       return <Card
@@ -78,6 +91,7 @@ class Board extends Component {
         id={cardInfo.card.id}
         text={cardInfo.card.text}
         emoji={cardInfo.card.emoji}
+        removeCardCallback={ this.removeCard }
       />
     });
     return (
