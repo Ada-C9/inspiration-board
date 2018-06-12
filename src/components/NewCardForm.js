@@ -28,12 +28,15 @@ class NewCardForm extends Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state);
     const newCard = {
       card: this.state
     };
-    console.log(newCard);
     this.props.addCardCallback(newCard);
+    this.setState({
+      id: 1,
+      text: '',
+      emoji: ''
+    });
   }
 
   render() {
@@ -50,6 +53,7 @@ class NewCardForm extends Component {
           <input
             type="text"
             name="text"
+            value={this.state.text}
             onChange={ this.onInputChange }
           />
         </div>
@@ -57,6 +61,7 @@ class NewCardForm extends Component {
           <label htmlFor="emoji">Emoji (optional)</label>
           <select
             name="emoji"
+            value={this.state.emoji}
             onChange={ this.onInputChange }
           >
             { emoji_options }
