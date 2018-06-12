@@ -48,6 +48,7 @@ class Board extends Component {
     // this.setState({
     //   cards: updatedCards
     // });
+    console.log(newCard);
     this.props.updateStatusCallback(`Creating new card`, 'success');
     const POST_URL = `https://inspiration-board.herokuapp.com/boards/${this.props.boardName}/cards`
     axios.post(POST_URL, newCard)
@@ -73,10 +74,21 @@ class Board extends Component {
   removeCard = (id) => {
     const DELETE_URL = `https://inspiration-board.herokuapp.com/boards/${this.props.boardName}/cards/${id}`;
     this.props.updateStatusCallback(`Removing card ${id}`, 'success');
+    console.log(id);
 
     axios.delete(DELETE_URL)
       .then((response) => {
         this.props.updateStatusCallback(`Successfully removed card ${id}`, 'success');
+        console.log(this.state.cards);
+        const updatedCards = this.state.cards.filter((cardInfo) => {
+          if (cardInfo.card.id != id) {
+            return cardInfo
+          }
+        });
+        console.log(updatedCards);
+        this.setState({
+          cards: updatedCards
+        });
       })
       .catch((error) => {
         this.props.updateStatusCallback(`Encountered an error trying to remove card ${id}: ${error.message}`, 'success');
