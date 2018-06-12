@@ -7,24 +7,52 @@ import Card from './Card';
 import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
+const CARDS = 'https://inspiration-board.herokuapp.com/boards/Ada-Lovelace/cards';
+
 class Board extends Component {
+
+  static propTypes = {
+    // updateStatusCallback: PropTypes.func.isRequired
+  };
+
   constructor() {
     super();
 
     this.state = {
-      cards: CARD_DATA.cards
+      cards: []
     };
   }
 
-  render() {
+  componentDidMount() {
+    // this.props.updateStatusCallback('Loading cards...', 'success');
+    axios.get(CARDS)
 
-    const cardsList = this.state.cards.map((card) => {
+    .then((response) => {
+      console.log('Success!');
+      console.log(response);
+
+      this.setState({ cards: response.data });
+
+      // this.props.updateStatusCallback('Successfully loaded!', 'SUCCESS')
+    })
+    .catch((error) => {
+      console.log('Error!');
+      console.log(error);
+
+      // this.props.updateStatusCallback(error.message, 'error');
+    });
+  }
+
+  render() {
+    console.log(this.state.cards);
+    const cardsList = this.state.cards.map((card, index) => {
       return <Card
-        key={card.id}
-        text={card.text}
-        emoji={card.emoji}
+        key={index}
+        text={card.card.text}
+        emoji={card.card.emoji}
       />
   });
+
     return (
       <div>
         {cardsList}
@@ -33,9 +61,5 @@ class Board extends Component {
   }
 
 }
-
-Board.propTypes = {
-
-};
 
 export default Board;
