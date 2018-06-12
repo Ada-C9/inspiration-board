@@ -11,7 +11,6 @@ class Card extends Component {
     }
   }
 
-
   getEmoji = () => {
     if (this.props.emoji) {
       this.emoji = emoji.getUnicode(this.props.emoji);
@@ -27,7 +26,7 @@ class Card extends Component {
     return (
       <article className="card">
         <button className="delete" id={this.props.id} onClick={this.deleteClicked}>
-          x
+          <span>x</span>
         </button>
         <div className="content">
           <p className="text">{this.props.text}</p>
@@ -41,7 +40,7 @@ class Card extends Component {
 Card.propTypes = {
  text: PropTypes.string,
  emoji: PropTypes.string,
- id: PropTypes.number,
+ id: PropTypes.number.isRequired,
  deleteCardCallback: PropTypes.func
 };
 

@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import './Board.css';
 import Card from './Card';
-// import NewCardForm from './NewCardForm';
-// import CARD_DATA from '../data/card-data.json';
+import NewCardForm from './NewCardForm';
 
-const URL = 'https://inspiration-board.herokuapp.com/boards/alexandria/cards/'
+const URL = 'https://inspiration-board.herokuapp.com/boards/alexandriab/cards/'
 
 class Board extends Component {
   constructor() {
@@ -34,8 +33,9 @@ class Board extends Component {
   deleteCard = (cardIndex) => {
     axios.delete(URL + cardIndex)
       .then((response) => {
+        let updatedData = this.state.cards
         this.setState({
-          cards: 
+          cards: updatedData
         })
       })
       .catch((error) => {
@@ -62,9 +62,14 @@ class Board extends Component {
 
   render() {
     return (
-      <div className="board">
-        {this.renderCardList()}
-      </div>
+      <section>
+        <div className="board">
+          {this.renderCardList()}
+        </div>
+        <div>
+          <NewCardForm/>
+        </div>
+      </section>
     )
   }
 
