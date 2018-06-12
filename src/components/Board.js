@@ -36,13 +36,14 @@ componentDidMount() {
     const cards = this.state.cards.map((post,index) => {
       return <Card
       key={ index }
+      id={ post.card.id }
       text={ post.card.text }
       emoji={ post.card.emoji }
+
       />
     });
     return (
       <div className="board">
-        Board
         { cards }
       </div>
     )
