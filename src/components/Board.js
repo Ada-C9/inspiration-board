@@ -7,12 +7,13 @@ import Card from './Card';
 import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
+
 const CARDS = 'https://inspiration-board.herokuapp.com/boards/Ada-Lovelace/cards';
 
 class Board extends Component {
 
   static propTypes = {
-    // updateStatusCallback: PropTypes.func.isRequired
+    updateStatusCallback: PropTypes.func.isRequired
   };
 
   constructor() {
@@ -24,7 +25,7 @@ class Board extends Component {
   }
 
   componentDidMount() {
-    // this.props.updateStatusCallback('Loading cards...', 'success');
+    this.props.updateStatusCallback('Loading cards...', 'success');
     axios.get(CARDS)
 
     .then((response) => {
@@ -33,16 +34,27 @@ class Board extends Component {
 
       this.setState({ cards: response.data });
 
-      // this.props.updateStatusCallback('Successfully loaded!', 'SUCCESS')
+      this.props.updateStatusCallback('Successfully loaded!', 'SUCCESS')
     })
     .catch((error) => {
       console.log('Error!');
       console.log(error);
 
-      // this.props.updateStatusCallback(error.message, 'error');
+      this.props.updateStatusCallback(error.message, 'error');
     });
   }
 
+  deleteCard() {
+
+    axios.delete(URL, {params: {card: ''}})
+      .then((response) => {
+        console.log('Success!');
+      })
+      .catch((error) => {
+        console.log('Error!');
+      })
+  }
+  
   render() {
     console.log(this.state.cards);
     const cardsList = this.state.cards.map((card, index) => {
@@ -55,6 +67,7 @@ class Board extends Component {
 
     return (
       <div>
+
         {cardsList}
       </div>
     );
