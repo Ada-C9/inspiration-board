@@ -8,13 +8,20 @@ class Card extends Component {
   render() {
     return (
       <div className="card">
-        Card
+        <ul>
+        <li>{this.props.id}</li>
+        <li>{this.props.text}</li>
+        <li>{emoji.getUnicode(`${this.props.emoji}`)}</li>
+        </ul>
       </div>
     )
   }
 }
 
 Card.propTypes = {
+  id: PropTypes.number.isRequired,
+  text: PropTypes.string.isRequired,
+  emoji: PropTypes.string
 
 };
 

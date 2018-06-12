@@ -1,8 +1,29 @@
 import React, { Component } from 'react';
 import './App.css';
 import Board from './components/Board';
+import Status from './components/Status'
 
 class App extends Component {
+  // constructor(){
+  //   super();
+  //
+  //   this.state = {
+  //     cards: [],
+  //     status: {
+  //       message: 'loaded page',
+  //       type: 'Success'
+  //     }
+  //   };
+  // }
+  //
+  // updateStatus = (message, type) => {
+  //   this.setState({
+  //     status: {
+  //       message: message,
+  //       type: type
+  //     }
+  //   })
+  // }
   render() {
     return (
       <section>
