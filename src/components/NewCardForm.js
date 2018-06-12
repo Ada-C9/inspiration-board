@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import emoji from 'emoji-dictionary';
+// import emoji from 'emoji-dictionary';
 import './NewCardForm.css';
 
-const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog"]
+// const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog"]
 
 class NewCardForm extends Component {
   constructor(){
@@ -28,6 +28,11 @@ class NewCardForm extends Component {
   onFormSubmit = (event) => {
     event.preventDefault();
     this.props.addCardCallback(this.state);
+    // call clear form function
+    this.setState({
+      text: '',
+      emoji: ''
+    })
   }
 
   render(){
@@ -49,7 +54,7 @@ class NewCardForm extends Component {
           <div>
             <label
               className = "new-card-form__form-label"
-              htmlFor = 'emoji'> Emoji: 
+              htmlFor = 'emoji'> Emoji:
             </label>
             <input name = 'emoji' value = { this.state.emoji } type = 'text'
               onChange = { this.onFieldChange }
