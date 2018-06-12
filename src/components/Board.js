@@ -55,6 +55,7 @@ class Board extends Component {
     return (
       <section className="board">
         { cards }
+        <NewCardForm />
       </section>
     )
   }
