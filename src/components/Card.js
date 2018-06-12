@@ -4,6 +4,12 @@ import emoji from 'emoji-dictionary';
 import './Card.css';
 
 class Card extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+    }
+  }
 
 
   getEmoji = () => {
@@ -13,9 +19,16 @@ class Card extends Component {
     }
   }
 
+  deleteClicked = () => {
+    this.props.deleteCardCallback(this.props.id);
+  }
+
   render() {
     return (
       <article className="card">
+        <button className="delete" id={this.props.id} onClick={this.deleteClicked}>
+          x
+        </button>
         <div className="content">
           <p className="text">{this.props.text}</p>
           {this.getEmoji()}
@@ -27,7 +40,9 @@ class Card extends Component {
 
 Card.propTypes = {
  text: PropTypes.string,
- emoji: PropTypes.string
+ emoji: PropTypes.string,
+ id: PropTypes.number,
+ deleteCardCallback: PropTypes.func
 };
 
 export default Card;
