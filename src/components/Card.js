@@ -5,16 +5,16 @@ import emoji from 'emoji-dictionary';
 import './Card.css';
 
 class Card extends Component {
-  static PropTypes = {
+  static propTypes = {
     text: PropTypes.string.isRequired,
-    emoji: PropTypes.string
+    emoji: PropTypes.string,
+    deleteCallback: PropTypes.func
   };
-
 
   render() {
     return (
       <section className="card">
-      
+
         <article className="card__content">
           <div className="card__content-text">
             {this.props.text}
@@ -25,6 +25,7 @@ class Card extends Component {
           </div>
 
           <div className="card__delete">
+            <button onClick={this.props.deleteCallback} type="button">Delete!</button>
           </div>
         </article>
 

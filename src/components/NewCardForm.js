@@ -6,9 +6,12 @@ import './NewCardForm.css';
 const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog"]
 
 class NewCardForm extends Component {
+  static propTypes = {
+    addCardCallback: PropTypes.func.isRequired
+  }
+
   constructor() {
     super();
-
     this.state = {
       card: {
         text: '',
@@ -20,7 +23,7 @@ class NewCardForm extends Component {
   onInput = (event) => {
     let updatedMessage = {};
     updatedMessage[event.target.name] = event.target.value
-    this.setState({ card: updatedMessage })
+    this.setState(updatedMessage)
   }
 
   onFormSubmit = (event) => {
@@ -44,13 +47,13 @@ class NewCardForm extends Component {
         <div className="new-card-form__header">
           NEW CARD FORM
         </div>
-        
+
         <div className="new-card-form__form-label">
           <label htmlFor="text">Message </label>
           <input
           type="text"
           name="text"
-          value={this.state.card.text}
+          value={this.state.value}
           onChange={this.onInput}/>
         </div>
 

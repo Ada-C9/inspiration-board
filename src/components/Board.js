@@ -7,15 +7,16 @@ import Card from './Card';
 import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
+
 class Board extends Component {
-  static PropTypes = {
+  static propTypes = {
     url: PropTypes.string.isRequired,
-    boardName: PropTypes.string.isRequired
+    boardName: PropTypes.string.isRequired,
+    updateStatusCallback: PropTypes.func.isRequired
   }
 
   constructor() {
     super();
-
     this.state = {
       cards: [],
     };
@@ -24,36 +25,53 @@ class Board extends Component {
   componentDidMount() {
     axios.get(`${this.props.url}${this.props.boardName}/cards`)
     .then((response) => {
-      console.log(response.data);
+      this.props.updateStatusCallback(`Successfully loaded board, ${this.props.boardName}`)
+
       const cards = response.data;
       this.setState({ cards: cards });
     })
     .catch((error) => {
       console.log(error.message)
+      this.props.updateStatusCallback(error.messages, 'error')
     })
   }
 
   addCard = (card) => {
-    let updatedCards = this.state.cards;
-    updatedCards.push(card);
-    this.setState({ cards: updatedCards });
+    axios.post(`${this.props.url}${this.props.boardName}/cards`, card)
 
-    axios.post(`${this.props.url}${this.props.boardName}/cards`)
       .then((response) => {
-        const cards = response.data;
-        this.setState({ cards: cards });
-        console.log(cards)
+        this.props.updateStatusCallback(`Successfully added card to board ${this.props.boardName}`)
+
+        let updatedCards = this.state.cards;
+        updatedCards.push(response.data);
+        this.setState({ cards: updatedCards });
       })
+
       .catch((error) =>{
         console.log(error.message)
+        this.props.updateStatusCallback(error.messages, 'error')
+      })
+  }
+
+  deleteCard = (id) => {
+    axios.delete(`${this.props.url}${this.props.boardName}/cards` + `:${id}`)
+      .then((response) =>{
+        console.log(response);
+
+      })
+      .catch((error) => {
+        console.log(error.message);
+        console.log(id)
       })
   }
 
   render() {
+
     const cards = this.state.cards.map((note, index) =>{
       return <Card key={index}
       text={note.card.text}
-      emoji={note.card.emoji} />
+      emoji={note.card.emoji}
+      deleteCallback={this.deleteCard(note.card.id)} />
     })
 
     return (
