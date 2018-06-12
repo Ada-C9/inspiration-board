@@ -7,6 +7,7 @@ import Card from './Card';
 import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
+const BOARD_URL = "https://inspiration-board.herokuapp.com/boards/karinna/cards"
 class Board extends Component {
   constructor() {
     super();
@@ -17,16 +18,25 @@ class Board extends Component {
   }
 
 	componentDidMount(){
-		this.setState({
-			cards: CARD_DATA.cards
+
+		axios.get(BOARD_URL)
+
+		.then((response) =>{
+			this.setState({
+				cards: response.data
+			})
 		})
+		.catch((error) => {
+
+		});
+
 	}
 
   render() {
-		const cardCollection = this.state.cards.map((card, index) =>{
+		const cardCollection = this.state.cards.map((obj, index) =>{
 			return <Card key={index}
-				text={card.text}
-				emoji={card.emoji}
+				text={obj.card.text}
+				emoji={obj.card.emoji}
 				/>
 		});
     return (
@@ -38,8 +48,5 @@ class Board extends Component {
 
 }
 
-// Board.propTypes = {
-//
-// };
 
 export default Board;
