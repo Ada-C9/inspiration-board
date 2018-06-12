@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
-
 import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
-import CARD_DATA from '../data/card-data.json';
+// import CARD_DATA from '../data/card-data.json';
 
-const CARDS_URL = 'https://inspiration-board.herokuapp.com/boards/Ada-Lovelace/cards'
+const CARDS_URL = 'https://inspiration-board.herokuapp.com/boards/watson/cards'
 
 class Board extends Component {
   constructor(props) {
@@ -43,13 +42,14 @@ class Board extends Component {
     });
   }
 
+
   addCard = (card) => {
     axios.post(CARDS_URL, card)
       .then((response) => {
         this.props.updateStatusCallback(`successfully added card ${ card.text }`, "success");
 
         let updatedCards = this.state.cards;
-        updatedCards.push(card);
+        updatedCards.push(response.data);
 
         this.setState({ cards: updatedCards });
       })
