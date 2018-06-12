@@ -27,14 +27,30 @@ class Board extends Component {
     });
   }
 
+
+  deleteCard = (id) => {
+
+    console.log(`https://inspiration-board.herokuapp.com/boards/brenda/cards/${id}`);
+    axios.delete(`https://inspiration-board.herokuapp.com/boards/brenda/cards/${id}`)
+    .then((response) => {
+      console.log(response);
+      window.location.reload();
+    })
+    .catch( (error) => {
+      this.setState({ error: error.message });
+    });
+  }
+
   cardList = () => {
     // const cardList = CARD_DATA.cards.map((card, index) => {
     const cardList = this.state.cards.map((card, index) => {
       return (
         <Card
           key={index}
+          id={card.card.id}
           text={card.card.text}
           emoji={card.card.emoji}
+          deleteCard={this.deleteCard}
         />
       )
     });
