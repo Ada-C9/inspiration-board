@@ -54,6 +54,15 @@ class Board extends Component {
       .then((response) => {
         this.props.updateStatusCallback(`New card created!`, 'success');
         console.log(response);
+        const updatedCards = this.state.cards;
+        console.log(updatedCards);
+        updatedCards.unshift({
+          card: response.data.card
+        });
+        console.log(updatedCards);
+        this.setState({
+          cards: updatedCards
+        });
       })
       .catch((error) => {
         this.props.updateStatusCallback(`Something went wrong trying to create a new card: ${error.message}`, 'success');
