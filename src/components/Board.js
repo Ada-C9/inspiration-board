@@ -8,8 +8,12 @@ import NewCardForm from './NewCardForm';
 // import CARD_DATA from '../data/card-data.json';
 
 
-const CARDS_URL = "https://inspiration-board.herokuapp.com/boards/cards/cards";
+const CARDS_URL = "https://inspiration-board.herokuapp.com/boards/wenjie/cards";
 class Board extends Component {
+	static propTypes = {
+		updateStatusCallback: PropTypes.func
+	}
+
 	constructor() {
 		super();
 
@@ -34,6 +38,23 @@ class Board extends Component {
 		})
 	}
 
+	createNewNote = (card) => {
+    axios.post(CARDS_URL, card)
+		.then((response) => {
+      console.log(response);
+      this.props.updateStatusCallback(`Successfully created card ${ card.text }`, 'success');
+
+			let newCards = this.state.cards;
+			let newCard = {};
+			newCard["card"] = card;
+			newCards.push(newCard);
+			this.setState({ cards: newCards })
+		})
+		.catch((error) => {
+			this.props.updateStatusCallback( error.message, 'error')
+		});
+	}
+
 	render() {
 		const cards = this.state.cards.map( (card, index) => {
 			return <Card
@@ -47,7 +68,7 @@ class Board extends Component {
 
 			<div >
         <section>
-					<NewCardForm />
+					<NewCardForm createNoteCallback={ this.createNewNote }/>
 				</section>
 				<section className='board'>
 					{ cards }
