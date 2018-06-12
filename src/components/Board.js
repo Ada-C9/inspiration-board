@@ -7,35 +7,48 @@ import Card from './Card';
 import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
+const BOARDS_URL = 'https://inspiration-board.herokuapp.com/boards/Ada-Lovelace/cards';
+
 class Board extends Component {
   constructor() {
     super();
 
     this.state = {
-      cards: [{
-        "text": "Make sure you pet a dog this week!"
-      }],
+      cards: [],
     };
+  }
+
+  componentDidMount() {
+    axios.get(BOARDS_URL)
+    .then((response)=> {
+      console.log("waz happnin");
+      console.log(response);
+
+      const data = response.data.slice(0,100);
+      this.setState({cards: data})
+    })
+    .catch((error) => {
+      this.setState({ error: error.message})
+    })
   }
 
   render() {
     console.log("I'm inside!");
 
-    const attr_cards = this.state.cards
+    const attrCards = this.state.cards
+    // const attr_cards = CARD_DATA["cards"]
 
-    const cards = attr_cards.map((card, index) => {
-      console.log("inside cards");
-      return <Card key={index} text={card.text} emoji={card.emoji}/>
+    const cards = attrCards.map((cardInfo, index) => {
+      console.log("inside card mapping");
+      return <Card key={index} text={cardInfo.card.text} emoji={cardInfo.card.emoji} />
     });
 
     return (
       <div>
       Board
-        <table>
-          <tbody>
-          { cards }
-          </tbody>
-        </table>
+
+      { cards }
+
       </div>
     )
   }
