@@ -35,16 +35,32 @@ class Board extends Component {
           key={index}
           text={card['card'].text}
           emoji={card['card'].emoji}
+          id={card['card'].id}
+          deleteCard={this.deleteCard}
+
           />
       );
     });
     return componentsList;
   }
 
+  deleteCard = (id) => {
+    axios.delete(`https://inspiration-board.herokuapp.com/boards/mariko/cards/${id}`)
+      .then( (response) => {
+        console.log(response);
+        this.componentDidMount();
+
+       })
+      .catch( (error) => {
+        this.setState({ error: error.message });
+});
+  }
+
   render() {
     return (
       <div className='board'>
         {this.renderCardList()}
+
       </div>
     )
   }
