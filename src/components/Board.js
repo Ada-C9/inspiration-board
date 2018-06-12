@@ -24,6 +24,7 @@ componentDidMount(){
   axios.get(ALL_CARDS_URL)
   .then((response) =>{
     this.props.updateStatusCallback(`Successfully loaded cards`)
+    console.log(response.data);
     this.setState({cards: response.data})
   })
   .catch((error)=>{
