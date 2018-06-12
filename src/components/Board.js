@@ -39,20 +39,29 @@ class Board extends Component {
       return (
         <Card
           key={index}
+          id={card["card"].id}
           text={card["card"].text}
           emoji={card["card"].emoji}
+          deleteCard={this.deleteCard}
           />
       );
     });
     return cardList;
   }
 
-  deleteCard = (card) => {
-    const cards = this.state.cards;
+  deleteCard = (id) => {
+    console.log(id)
+    axios.delete(`https://inspiration-board.herokuapp.com/boards/angelap/cards/${id}`)
+    .then((response) => {
+      this.componentDidMount();
+      console.log(response)
+    })
+    .catch((error) => {
+      console.log('Unable to delete card');
+      console.log(error);
+      this.setState({ error: error.message});
+      return error;
 
-    cards.delete(card);
-    this.setState({
-      cards,
     });
   }
 
@@ -60,6 +69,7 @@ class Board extends Component {
     return (
       <div>
         <section className="board">
+          <p>{this.state.error}</p>
           {this.renderCards()}
         </section>
       </div>
