@@ -10,6 +10,8 @@ class Card extends Component {
     text: PropTypes.string,
     emoji: PropTypes.string,
     id: PropTypes.number,
+    deleteCardCallback: PropTypes.func,
+    index: PropTypes.number
   }
 
   // constructor(){
@@ -20,19 +22,11 @@ class Card extends Component {
   // }
 
   onDeleteClick = (event) => {
-    event.preventDefault();
     console.log('delete button clicked');
     console.log(event.target.value);
-    let target = event.target.value;
-    axios.delete( 'https://inspiration-board.herokuapp.com/boards/kiera-thomasson/cards/'+ target)
-      .then((response) => {
-        console.log(response);
-        console.log(response.data);
-
-      })
-      .catch((error) => {
-        console.log(error);
-      })
+    let index = event.target.value;
+    let id = event.target.id
+    this.props.deleteCardCallback( index, id);
   }
 
   render() {
@@ -49,7 +43,12 @@ class Card extends Component {
           </p>
         </div>
 
-          <button onClick={this.onDeleteClick} className="card__delete" type='submit' value={this.props.id}>delete</button>
+          <button
+            onClick={this.onDeleteClick}
+            className="card__delete"
+            type='submit'
+            id={this.props.id}
+            value={this.props.index}>delete</button>
 
       </div>
 
