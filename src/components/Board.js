@@ -82,8 +82,8 @@ class Board extends Component {
     });
     return (
       <section className="board">
+      <NewCardForm addCardCallback={ this.addCard } />
         { cards }
-        <NewCardForm addCardCallback={ this.addCard } />
       </section>
     )
   }
