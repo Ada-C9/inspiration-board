@@ -40,9 +40,9 @@ class NewCardForm extends Component {
   }
 
   render() {
-    const emoji_options = EMOJI_LIST.map((emoji, index) => {
-      return <option key={index} >
-        { emoji }
+    const emoji_options = EMOJI_LIST.map((emojiCode, index) => {
+      return <option key={index} value={emojiCode} >
+        { emoji.getUnicode(emojiCode) }
       </option>;
     });
     return (
