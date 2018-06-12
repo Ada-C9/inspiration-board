@@ -9,9 +9,11 @@ class Card extends Component {
     console.log('Rendering');
     return (
       <section className="card">
-      <p> {this.props.text} </p>
+      <div className="card__content">
+      <div className="card__content-text" > {this.props.text} </div>
       <br/>
-      <p> {emoji.getUnicode(`${this.props.emoji}`)} </p>
+      <div className="card__content-emoji" > {emoji.getUnicode(`${this.props.emoji}`)} </div>
+      </div>
       </section>
     )
   }

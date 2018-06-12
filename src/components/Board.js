@@ -8,6 +8,7 @@ import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
 class Board extends Component {
+
   constructor(props) {
     super(props);
 
@@ -15,7 +16,6 @@ class Board extends Component {
       cards: [],
     };
   }
-
 
   componentDidMount = () => {
     console.log('Component did mount was called');
@@ -69,7 +69,7 @@ class Board extends Component {
 }
 
 Board.propTypes = {
-  cards: PropTypes.array.isRequired
+
 };
 
 export default Board;
