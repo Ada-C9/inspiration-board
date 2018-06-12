@@ -14,11 +14,11 @@ class Card extends Component {
       }
     }
     return (
-      <div className="card">
-        <p className="content-text">
+      <div className="card card__content">
+        <p className="card__content-text">
           {this.props.text}</p>
-        <p className="content-emoji"> {getEmoji(this.props.emoji)}</p>
-        <button>Delete</button>
+        <p className="card__content-emoji"> {getEmoji(this.props.emoji)}</p>
+        <button className="card__delete">Delete</button>
       </div>
     )
   }

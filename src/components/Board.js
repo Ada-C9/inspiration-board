@@ -8,12 +8,13 @@ import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
 
-const CARDS = 'https://inspiration-board.herokuapp.com/boards/Ada-Lovelace/cards';
+const CARDS = `https://inspiration-board.herokuapp.com/boards/Ada-Lovelace/cards`;
 
 class Board extends Component {
 
   static propTypes = {
-    updateStatusCallback: PropTypes.func.isRequired
+    updateStatusCallback: PropTypes.func.isRequired,
+    boardName: PropTypes.string.isRequired
   };
 
   constructor() {
@@ -44,6 +45,27 @@ class Board extends Component {
     });
   }
 
+  addCard = (card) => {
+      let updatedCards = this.state.cards;
+      updatedCards.push(card);
+
+      this.setState({ cards: updatedCards });
+
+      axios.post(CARDS, card)
+        .then((response) => {
+          console.log(response);
+          this.props.updateStatusCallback(`Successfully added new card: '${ card.text }'!`, 'success');
+
+          let updatedCards = this.state.cards;
+          updatedCards.push(card);
+
+          this.setState({ cards: updatedCards });
+        })
+        .catch((error) => {
+          this.props.updateStatusCallback(`Error adding card with '${ card.text }' to the board.`, 'error')
+        });
+    }
+
   deleteCard() {
 
     axios.delete(URL, {params: {card: ''}})
@@ -54,7 +76,7 @@ class Board extends Component {
         console.log('Error!');
       })
   }
-  
+
   render() {
     console.log(this.state.cards);
     const cardsList = this.state.cards.map((card, index) => {
@@ -66,7 +88,7 @@ class Board extends Component {
   });
 
     return (
-      <div>
+      <div className="board">
 
         {cardsList}
       </div>
