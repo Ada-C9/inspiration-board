@@ -13,7 +13,6 @@ class NewCardForm extends Component {
   constructor() {
     super();
     this.state = {
-      id: 1,
       text: '',
       emoji: ''
     };
@@ -28,10 +27,11 @@ class NewCardForm extends Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
-    const newCard = {
-      card: this.state
-    };
-    this.props.addCardCallback(newCard);
+    // const newCard = {
+    //   card: this.state
+    // };
+    // this.props.addCardCallback(newCard);
+    this.props.addCardCallback(this.state);
     this.setState({
       id: 1,
       text: '',

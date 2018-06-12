@@ -43,11 +43,22 @@ class Board extends Component {
   }
 
   addCard = (newCard) => {
-    const updatedCards = this.state.cards;
-    updatedCards.push(newCard);
-    this.setState({
-      cards: updatedCards
-    });
+    // const updatedCards = this.state.cards;
+    // updatedCards.push(newCard);
+    // this.setState({
+    //   cards: updatedCards
+    // });
+    this.props.updateStatusCallback(`Creating new card`, 'success');
+    const POST_URL = `https://inspiration-board.herokuapp.com/boards/${this.props.boardName}/cards`
+    axios.post(POST_URL, newCard)
+      .then((response) => {
+        this.props.updateStatusCallback(`New card created!`, 'success');
+        console.log(response);
+      })
+      .catch((error) => {
+        this.props.updateStatusCallback(`Something went wrong trying to create a new card: ${error.message}`, 'success');
+        console.log(error);
+      });
   }
 
   render() {
