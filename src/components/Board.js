@@ -54,7 +54,7 @@ class Board extends Component {
         });
       })
       .catch((error) => {
-        this.props.updateStatusCallback(`Something went wrong trying to create a new card: ${error.message}`, 'success');
+        this.props.updateStatusCallback(`Something went wrong trying to create a new card: ${error.message}`, 'error');
       });
   }
 
@@ -75,7 +75,7 @@ class Board extends Component {
         });
       })
       .catch((error) => {
-        this.props.updateStatusCallback(`Encountered an error trying to remove card ${id}: ${error.message}`, 'success');
+        this.props.updateStatusCallback(`Encountered an error trying to remove card ${id}: ${error.message}`, 'error');
       });
   }
 
