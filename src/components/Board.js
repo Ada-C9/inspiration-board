@@ -30,6 +30,22 @@ class Board extends Component {
   }
 
 
+  addCard = (cardInfo) => {
+    console.log(cardInfo, 'here');
+
+    axios.post(CARDS_URL, cardInfo)
+    .then((response) => {
+      let updatedData = this.state.cards;
+      let cardObject = {card: cardInfo};
+      updatedData.push(cardObject);
+      this.setState({cards: updatedData});
+    })
+    .catch((error) => {
+      this.setState({error: error.message });
+    });
+
+  }
+
   render() {
 
     console.log(this.state.cards)
@@ -48,6 +64,8 @@ class Board extends Component {
     return (
       <div>
         {cardComponents}
+
+      < NewCardForm addCardCallback={this.addCard} />
       </div>
     )
   }
