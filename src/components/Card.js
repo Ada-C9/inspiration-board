@@ -8,15 +8,15 @@ class Card extends Component {
   render() {
     return (
       <div className="card">
-        <h1>{ this.props.text }</h1>
-        <h2>{ this.props.emoji }</h2>
+        <div>{ this.props.text }</div>
+        <div>{ emoji.getUnicode(`${this.props.emoji}`) }</div>
       </div>
     )
   }
 }
 
 Card.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   emoji: PropTypes.string
 };
 
