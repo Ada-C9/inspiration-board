@@ -5,7 +5,6 @@ import axios from 'axios';
 import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
-import CARD_DATA from '../data/card-data.json';
 
 
 class Board extends Component {
@@ -41,11 +40,6 @@ class Board extends Component {
   }
 
   addCard = (newCard) => {
-    // const updatedCards = this.state.cards;
-    // updatedCards.push(newCard);
-    // this.setState({
-    //   cards: updatedCards
-    // });
     this.props.updateStatusCallback(`Creating new card`, 'success');
     const POST_URL = `https://inspiration-board.herokuapp.com/boards/${this.props.boardName}/cards`
     axios.post(POST_URL, newCard)
@@ -69,7 +63,7 @@ class Board extends Component {
     this.props.updateStatusCallback(`Removing card ${id}`, 'success');
 
     axios.delete(DELETE_URL)
-      .then((response) => {
+      .then(() => {
         this.props.updateStatusCallback(`Successfully removed card ${id}`, 'success');
         const updatedCards = this.state.cards.filter((cardInfo) => {
           if (cardInfo.card.id != id) {
@@ -105,9 +99,5 @@ class Board extends Component {
   }
 
 }
-
-Board.propTypes = {
-
-};
 
 export default Board;
