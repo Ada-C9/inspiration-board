@@ -16,7 +16,6 @@ class NewCardForm extends Component {
       text: '',
       emoji: ''
     };
-    console.log(this.state);
   }
 
   onInputChange = (event) => {

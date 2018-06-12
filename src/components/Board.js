@@ -29,7 +29,6 @@ class Board extends Component {
 
     axios.get(BOARD_URL)
     .then((response) => {
-      console.log(response);
       this.props.updateStatusCallback(`Successfully loaded cards for ${this.props.boardName}`, 'success');
       const cardData = response.data.slice(0, 100);
       this.setState({
@@ -37,7 +36,6 @@ class Board extends Component {
       });
     })
     .catch((error) => {
-      console.log(error);
       this.props.updateStatusCallback(`There was a problem loading cards: ${error.message}`, 'error');
     })
   }
@@ -48,44 +46,36 @@ class Board extends Component {
     // this.setState({
     //   cards: updatedCards
     // });
-    console.log(newCard);
     this.props.updateStatusCallback(`Creating new card`, 'success');
     const POST_URL = `https://inspiration-board.herokuapp.com/boards/${this.props.boardName}/cards`
     axios.post(POST_URL, newCard)
       .then((response) => {
         this.props.updateStatusCallback(`New card created!`, 'success');
-        console.log(response);
         const updatedCards = this.state.cards;
-        console.log(updatedCards);
         updatedCards.unshift({
           card: response.data.card
         });
-        console.log(updatedCards);
         this.setState({
           cards: updatedCards
         });
       })
       .catch((error) => {
         this.props.updateStatusCallback(`Something went wrong trying to create a new card: ${error.message}`, 'success');
-        console.log(error);
       });
   }
 
   removeCard = (id) => {
     const DELETE_URL = `https://inspiration-board.herokuapp.com/boards/${this.props.boardName}/cards/${id}`;
     this.props.updateStatusCallback(`Removing card ${id}`, 'success');
-    console.log(id);
 
     axios.delete(DELETE_URL)
       .then((response) => {
         this.props.updateStatusCallback(`Successfully removed card ${id}`, 'success');
-        console.log(this.state.cards);
         const updatedCards = this.state.cards.filter((cardInfo) => {
           if (cardInfo.card.id != id) {
             return cardInfo
           }
         });
-        console.log(updatedCards);
         this.setState({
           cards: updatedCards
         });
