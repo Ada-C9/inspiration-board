@@ -7,7 +7,7 @@ import './Card.css';
 class Card extends Component {
 
 	static propTypes = {
-		id: PropTypes.number,
+		index: PropTypes.number,
 		text: PropTypes.string,
 		emoji: PropTypes.string
 	}

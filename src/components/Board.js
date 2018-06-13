@@ -59,7 +59,14 @@ class Board extends Component {
 		axios.delete(`${BOARD_URL}/${card.props.id}`)
 		.then((response) => {
 			console.log("IT WORKED");
+			let updatedCards = this.state.cards;
 
+			updatedCards.splice(card.props.index,1)
+
+
+			this.setState({
+				cards: updatedCards
+			})
 
 		})
 		.catch((error) => {
@@ -75,6 +82,7 @@ class Board extends Component {
 				text={obj.card.text}
 				emoji={obj.card.emoji}
 				id={obj.card.id}
+				index={index}
 				deleteCardCallback={this.deleteCard}
 				/>
 		});
