@@ -44,4 +44,11 @@
 .card__delete {
   align-self: start;
   font-family: 'Permanent Marker', Helvetica, sans-serif;
+  background-color: inherit;
+  border: none;
+  font-size: 1em;
+}
+
+.card__delete:hover {
+  color: red;
 }
