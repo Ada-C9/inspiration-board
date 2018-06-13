@@ -15,6 +15,8 @@ class App extends Component {
   }
 }
 
+
+
 updateStatus = (message, type) => {
   this.setState({
     status: {

@@ -5,6 +5,7 @@ import axios from 'axios';
 import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
+import ChooseBoardForm from './ChooseBoardForm';
 import CARD_DATA from '../data/card-data.json';
 
 
@@ -12,7 +13,7 @@ import CARD_DATA from '../data/card-data.json';
 class Board extends Component {
   static propTypes = {
     url: PropTypes.string.isRequired,
-    boardName: PropTypes.string.isRequired,
+    //boardName: PropTypes.string.isRequired,
     updateStatuscallback: PropTypes.func.isRequired
   }
 
@@ -24,15 +25,44 @@ class Board extends Component {
       status: {
         message: "successfuly loaded",
         type: "success"
-      }
+      },
+      boardName: "dikla"
     };
   }
+
+  getBoardName = (board) => {
+    // Start an axios call to load board data
+    // in the callback, use set state to set both
+    // the card list and the board name
+    let url_boards = this.props.url;
+    let board_name = board.board;
+    axios.get(`${url_boards}/${board_name}/cards`).then((response) =>{
+    this.props.updateStatusCallback(`Successfully all cards from ${board_name}!`, 'success');
+
+    const my_data = response.data.map((card) =>{
+      return {text: card.card.text,
+        emoji: card.card.emoji,
+        id: card.card.id
+      };
+    });
+    this.setState({cards: my_data})
+  })
+  .catch((error) => {
+    this.props.updateStatusCallback(error.message, 'error');
+  });
+
+  const my_board = board.board;
+  this.setState({boardName: my_board});
+  console.log(this.state.boardName);
+
+}
+
 
 
   componentDidMount() {
 
     let url_boards = this.props.url;
-    let board_name = this.props.boardName;
+    let board_name = this.state.boardName;
 
     axios.get(`${url_boards}/${board_name}/cards`).then((response) =>{
 
@@ -112,6 +142,7 @@ class Board extends Component {
 
     return (
       <main>
+      <ChooseBoardForm getBoardNameCallback={this.getBoardName}/>
       <NewCardForm addCardCallback={this.addCard}/>
       <div className="board">
       {cards}
