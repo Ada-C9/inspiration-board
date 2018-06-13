@@ -49,9 +49,13 @@ class Board extends Component {
 
   render() {
     return (
-      <div className="board">
-        <NewCardForm />
-        { this.renderCardComponents() }
+      <div>
+        <div>
+          <NewCardForm />
+        </div>
+        <div className="board">
+          { this.renderCardComponents() }
+        </div>
       </div>
     )
   }

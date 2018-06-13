@@ -23,6 +23,14 @@ class NewCardForm extends Component {
     this.setState(updateState);
   }
 
+  displayEmojiList = () => {
+    const options = EMOJI_LIST.map((keyword, index) => {
+      const unicode = emoji.getUnicode(keyword);
+      return <option key={ index } value={ keyword }>{ unicode }</option>
+    });
+    return options;
+  }
+
   seeState = () => {
     console.log(this.state.text);
     console.log(this.state.emoji);
@@ -37,8 +45,11 @@ class NewCardForm extends Component {
         </div>
         <div>
           <label htmlFor="emoji">Emoji: </label>
-          <select name="emoji" value={this.state.emoji} type="number" onChange={ this.onFieldChange }/>
+          <select name="emoji" value={this.state.emoji} onChange={ this.onFieldChange }>
+            { this.displayEmojiList()}
+          </select>
         </div>
+        <input type="submit" value="create card"/>
       </form>
     )
   }
