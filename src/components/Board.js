@@ -14,7 +14,7 @@ class Board extends Component {
 
     this.state = {
       cards: [],
-      boardURL: 'https://inspiration-board.herokuapp.com/boards/Ada-Lovelace/cards'
+      boardURL: 'https://inspiration-board.herokuapp.com/boards/cheer/cards'
     };
   }
 
@@ -54,12 +54,34 @@ class Board extends Component {
     return boardCards;
   }
 
+  addCard = (card) => {
+    const cardList = this.state.cards;
+
+    axios.post(`${this.state.boardURL}`, card)
+
+    .then( (response) => {
+      cardList.unshift(card.card.id);
+      console.log( response.data );
+      this.setState({
+        cardList,
+        message: `Successfully Added Card: ${card.text}`
+      });
+    })
+    .catch( (error) => {
+      console.log("Get error");
+      console.log(error);
+      this.setState({
+        error: error.message
+      });
+    });
+
+  }
 
   deleteCard = (id) => {
 
     console.log(id)
 
-    axios.delete(`https://inspiration-board.herokuapp.com/boards/Ada-Lovelace/cards${id}`)
+    axios.delete(`https://inspiration-board.herokuapp.com/boards/Ada-Lovelace/cards/${id}`)
     .then((response) => {
       this.componentDidMount();
       console.log(response)
@@ -72,6 +94,7 @@ class Board extends Component {
         error: error.message
       });
     });
+
   }
 
   render() {
@@ -83,6 +106,7 @@ class Board extends Component {
       <div>
       {this.renderBoardCards()}
       </div>
+      <NewCardForm addCardCallback={this.addCard} />
       </section>
     )
   }
