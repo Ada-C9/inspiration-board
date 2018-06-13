@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
 import './App.css';
 import Board from './components/Board';
 import Status from './components/Status';
@@ -66,15 +65,17 @@ class App extends Component {
           message={ this.state.status.message }
           type={ this.state.status.type }
         />
-        <form>
+
+        <section className="board-selection">
           <select
-            className="new-card-form__form-select"
+            className="board-selection__select"
             onChange={ this.onBoardSelectionChange }
             value={ this.state.boardName }
           >
             {boardOptions}
           </select>
-        </form>
+        </section>
+
         <Board
           url={ this.state.boardsUrl }
           boardName={ this.state.boardName }
