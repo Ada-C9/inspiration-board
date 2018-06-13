@@ -3,14 +3,31 @@ import PropTypes from 'prop-types';
 import emoji from 'emoji-dictionary';
 
 import './Card.css';
+import axios from 'axios/index';
 
 class Card extends Component {
 
+  onClickX = (event) => {
+    console.log(this.props.index);
+      this.props.removeCardCallback(this.props.index);
+
+
+  };
+  // removeCard = event => {
+  //   // event.preventDefault();
+  //
+  //   axios.delete(`https://inspiration-board.herokuapp.com/boards/kirsten/cards/${this.props.id}`)
+  //     .then((response) => {
+  //       console.log(response);
+  //       console.log(response.data);
+  //     })
+  // };
   render() {
    const getEmoji = this.props.emoji ? emoji.getUnicode(this.props.emoji) : "";
     return (
       <article className="card">
-        <span className="card__delete">X</span>
+        <p onClick={this.onClickX}
+              className="card__delete">x</p>
         <section className="card__content">
           <p className="card__content-text">{this.props.text}</p>
           <p className="card__content-emoji">{getEmoji}</p>
@@ -21,8 +38,11 @@ class Card extends Component {
 }
 
 Card.propTypes = {
+  index: PropTypes.number.isRequired,
   text: PropTypes.string.isRequired,
-  emoji: PropTypes.string
+  emoji: PropTypes.string,
+  removeCardCallback: PropTypes.func.isRequired
 };
 
 export default Card;
+
