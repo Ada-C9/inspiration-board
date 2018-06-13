@@ -54,11 +54,17 @@ class Board extends Component {
     });
   }
 
-https://inspiration-board.herokuapp.com/boards/Hannah-Cameron/cards/?text=you are amazing&emoji=heart_eyes
+// https://inspiration-board.herokuapp.com/boards/Hannah-Cameron/cards/?text=you are amazing&emoji=heart_eyes
 
   addCard = (message) => {
-    let addUrl = URL + `${mesage}`
+    let addUrl = URL + `?text=${mesage.text}&emoji=${message.emoji}`
     axios.post(addUrl)
+    .then((response) => {
+      
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   }
 
   render() {
@@ -75,6 +81,7 @@ https://inspiration-board.herokuapp.com/boards/Hannah-Cameron/cards/?text=you ar
     return (
       <div className="board">
         <h3>Positivity Board! </h3>
+        <NewCardForm addCardCallback={this.addCard}/>
         { cards }
       </div>
     )
