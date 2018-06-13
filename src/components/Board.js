@@ -5,6 +5,7 @@ import axios from 'axios';
 import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
+import Dropdown from './Dropdown'
 // import CARD_DATA from '../data/card-data.json';
 
 class Board extends Component {
@@ -13,11 +14,12 @@ class Board extends Component {
 
     this.state = {
       cards: [],
+      boardName: 'phoebe'
     };
   }
 
   componentDidMount = () => {
-    axios.get(`${this.props.url}${this.props.boardName}/cards`)
+    axios.get(`${this.props.url}${this.state.boardName}/cards`)
       .then( (response) => {
         console.log(response.data);
         this.setState({ cards: response.data });
@@ -28,7 +30,7 @@ class Board extends Component {
   }
 
   deleteCardRequest = (id) => {
-    axios.delete(`${this.props.url}${this.props.boardName}/cards/${id}`)
+    axios.delete(`${this.props.url}${this.state.boardName}/cards/${id}`)
       .then( (response) => {
         console.log(response);
         this.deleteCardFromState(id);
@@ -50,7 +52,7 @@ class Board extends Component {
   }
 
   addCardRequest = (card) => {
-    axios.post(`${this.props.url}${this.props.boardName}/cards/`, card)
+    axios.post(`${this.props.url}${this.state.boardName}/cards/`, card)
       .then( (response) => {
         console.log(response.data);
         this.addCardToState(response.data);
@@ -85,6 +87,13 @@ class Board extends Component {
     return cardList;
   }
 
+  getName = (name) => {
+    this.setState({
+      boardName: name
+    });
+    console.log(`Boardname: ${name}`);
+  }
+
   render() {
     return (
       <div>
@@ -93,6 +102,9 @@ class Board extends Component {
             { this.state.message }
           </p>
         </header>
+        <Dropdown
+          getName = { this.getName }
+        />
         <NewCardForm addCardCallback = { this.addCardRequest }/>
         <div className = "board">
           { this.renderCards() }
