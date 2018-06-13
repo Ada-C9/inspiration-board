@@ -37,15 +37,15 @@ class Board extends Component {
     console.log('Rendering cards')
 
     const cardList = this.state.cards.map((card, index) => {
-
+      let singleCard = card["card"]
       return (
         <Card
           key={index}
-          id={card["card"].id}
-          text={card["card"].text}
-          emoji={card["card"].emoji}
+          id={singleCard.id}
+          text={singleCard.text}
+          emoji={singleCard.emoji}
           deleteCard={this.deleteCard}
-        />
+          />
       );
     });
     return cardList;
@@ -54,21 +54,21 @@ class Board extends Component {
   addCard = (note) => {
     const cards = this.state.cards;
     axios.post(`https://inspiration-board.herokuapp.com/boards/angelap/cards/`, note)
-      .then((response) => {
-        note.id = response.data.card.id;
-        cards.push(note);
-        console.log(note);
-        this.setState({
-          cards,
-          message: `Sucessfully Added a new Card`
-        });
-      })
-      .catch((error) => {
-        console.log(error)
-        this.setState({
-          message: error.message,
-        });
-      })
+    .then((response) => {
+      note.id = response.data.card.id;
+      cards.push({card: note});
+      console.log(note);
+      this.setState({
+        cards,
+        message: `Sucessfully Added a new Card`
+      });
+    })
+    .catch((error) => {
+      console.log(error)
+      this.setState({
+        message: error.message,
+      });
+    })
 
   }
 
@@ -88,9 +88,11 @@ class Board extends Component {
     });
   }
 
+
+
   render() {
     return (
-      <div>
+      <div>  
         <NewCardForm addCardCallBack={this.addCard} />
         <section className="board">
           <p>{this.state.error}</p>
