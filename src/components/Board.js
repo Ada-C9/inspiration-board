@@ -49,6 +49,7 @@ class Board extends Component {
         this.setState({
           cards: updatedCards,
         })
+        console.log(this.state.cards);
       })
       .catch((error) => {
         this.setState({
