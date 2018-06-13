@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import emoji from 'emoji-dictionary';
-
 import './Card.css';
 
 class Card extends Component {
 	static propTypes = {
 		text: PropTypes.string,
 		emoji: PropTypes.string,
+		id: PropTypes.number,
 		deleteCardCallback: PropTypes.func
 	}
 
-	deleteCard = () => {
-
+	handleClick = (event) => {
+		console.log(this.props.id);
+    this.props.deleteCardCallback(this.props)
 	}
 
 	render() {
@@ -24,7 +25,7 @@ class Card extends Component {
 					<p className="card__content-text">{ this.props.text }</p>
 					<p className="card__content-emoji">{ myEmoji }</p>
 				</section>
-				<button onClick={ this.deleteCard }>Take it!</button>
+				<button onClick={ this.handleClick }>Take it!</button>
 			</div>
 		)
 	}

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import emoji from 'emoji-dictionary';
 import './NewCardForm.css';
 
-const EMOJI_LIST = ["smile", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog", "cat", "100", "bird"];
+const EMOJI_LIST = ["smile", "heart_eyes", "beer", "clap",
+"sparkling_heart", "heart_eyes_cat", "dog", "cat", "100", "bird"];
 
 class NewCardForm extends Component {
 	static propTypes = {
@@ -15,7 +15,7 @@ class NewCardForm extends Component {
 
 		this.state = {
 			text: '',
-			emoji: ''
+			emoji: '',
 		}
 	}
 

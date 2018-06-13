@@ -29,26 +29,37 @@ class Board extends Component {
 	componentDidMount() {
 		axios.get(CARDS_URL)
 		.then( (response) => {
-			console.log(response.data);
 			this.setState({ cards: response.data})
 		})
 		.catch( (error) => {
-			console.log(error);
 			this.setState({ message: error.message, type: 'error'})
 		})
 	}
 
-	createNewNote = (card) => {
+	createNewCard = (card) => {
     axios.post(CARDS_URL, card)
 		.then((response) => {
-      console.log(response);
       this.props.updateStatusCallback(`Successfully created card ${ card.text }`, 'success');
 
+			// TODO:  make the new card display at the top
 			let newCards = this.state.cards;
-			let newCard = {};
-			newCard["card"] = card;
+			let newCard = {card: card};
 			newCards.push(newCard);
 			this.setState({ cards: newCards })
+		})
+		.catch((error) => {
+			this.props.updateStatusCallback( error.message, 'error')
+		});
+	}
+
+	deleteCard = (card) => {
+		console.log(`Before delete: ${this.state.cards}`);
+		axios.delete(`${CARDS_URL}/${card.id}`)
+		.then((response) => {
+      this.props.updateStatusCallback(`Successfully removed card ${ card.id }`, 'success')
+
+			//  use array.shift() to remove the first element
+      this.componentDidMount();
 		})
 		.catch((error) => {
 			this.props.updateStatusCallback( error.message, 'error')
@@ -61,6 +72,8 @@ class Board extends Component {
 				key={ index }
 				text={ card.card.text }
 				emoji={ card.card.emoji }
+				id={ card.card.id }
+				deleteCardCallback={ this.deleteCard }
 			/>
 		})
 
@@ -68,7 +81,7 @@ class Board extends Component {
 
 			<div >
         <section>
-					<NewCardForm createNoteCallback={ this.createNewNote }/>
+					<NewCardForm createNoteCallback={ this.createNewCard }/>
 				</section>
 				<section className='board'>
 					{ cards }
