@@ -46,6 +46,9 @@ class Board extends Component {
       });
       this.setState({cards: my_data})
     })
+    .catch((error) => {
+      this.props.updateStatusCallback(error.message, 'error');
+    });
   }
 
 
@@ -67,6 +70,9 @@ class Board extends Component {
         console.log(this.state.cards);
 
       })
+      .catch((error) => {
+        this.props.updateStatusCallback(error.message, 'error');
+      });
 
     }
 
