@@ -57,10 +57,14 @@ class Board extends Component {
 // https://inspiration-board.herokuapp.com/boards/Hannah-Cameron/cards/?text=you are amazing&emoji=heart_eyes
 
   addCard = (message) => {
-    let addUrl = URL + `?text=${mesage.text}&emoji=${message.emoji}`
+    let addUrl = URL + `?text=${message.text}&emoji=${message.emoji}`
     axios.post(addUrl)
     .then((response) => {
-      
+      console.log(response);
+      let newCard = response.data
+      let newSet = this.state.cards
+      newSet.push(newCard)
+      this.setState({ cards: newSet })
     })
     .catch((error) => {
       console.log(error);
