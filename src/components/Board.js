@@ -5,11 +5,11 @@ import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
 
-const URL = 'https://inspiration-board.herokuapp.com/boards/alexandriad/cards/'
+const URL = 'https://inspiration-board.herokuapp.com/boards/alexandriahh/cards/'
 
 class Board extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       cards: [],
@@ -30,11 +30,16 @@ class Board extends Component {
       });
   }
 
-  deleteCard = (cardIndex) => {
-    axios.delete(URL + cardIndex)
+  deleteCard = (cardId) => {
+    axios.delete(URL + cardId)
       .then((response) => {
         let cards = this.state.cards
-        let updatedCards = cards.filter(card => card !== response.data);
+        let updatedCards = cards.filter(function(i) {
+          return i !== response.data;
+        });
+        console.log(cards);
+        console.log(response.data);
+        console.log(updatedCards);
         this.setState({
           cards: updatedCards
         })
@@ -51,7 +56,6 @@ class Board extends Component {
       .then((response) => {
         let updatedCards = this.state.cards;
         updatedCards.push({'card': card});
-        console.log(updatedCards);
         this.setState({
           cards: updatedCards,
           message: 'Card successfully added!'
@@ -94,9 +98,5 @@ class Board extends Component {
   }
 
 }
-
-Board.propTypes = {
-
-};
 
 export default Board;

@@ -24,6 +24,15 @@ class NewCardForm extends Component {
     this.setState(updateState);
   }
 
+  selectDropdown = (event) => {
+    const dropdownName = event.target.name;
+    const dropdownValue = event.target.value;
+    const updateState = {}
+
+    updateState[dropdownName] = dropdownValue;
+    this.setState(updateState);
+  }
+
   emojiDropdown = () => {
     const options = EMOJI_LIST.map((icon, index) => {
       this.emoji = emoji.getUnicode(icon)
@@ -36,15 +45,6 @@ class NewCardForm extends Component {
     return options;
   }
 
-  selectDropdown = (event) => {
-    const dropdownName = event.target.name;
-    const dropdownValue = event.target.value;
-    const updateState = {}
-
-    updateState[dropdownName] = dropdownValue;
-    this.setState(updateState);
-  }
-
   clearForm = () => {
     this.setState({
       text: '',
@@ -54,43 +54,45 @@ class NewCardForm extends Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
-
     this.props.addCardCallback(this.state);
-
     this.clearForm();
   }
 
   render() {
     return (
-      <form onSubmit={this.onFormSubmit}>
-        <div>
-          <label htmlFor="text">
-            Message:
-            <input
-              name="text"
-              value={this.state.message}
-              onChange={this.onFieldChange}
-              type="text"
-              id="text"
-            />
-          </label>
-        </div>
-        <div>
-          <label htmlFor="emoji">
-            Emoji:
-            <select name="emoji" value={this.state.emoji} onChange={this.selectDropdown}>
-              {this.emojiDropdown()}
-            </select>
-          </label>
-        </div>
-        <input type="submit" value="Add Card" />
+      <form className="new-card-form" onSubmit={this.onFormSubmit}>
+        <section className="form">
+          <div>
+            <label className="form-label" htmlFor="text">
+              Message:
+              <input className="form-textarea"
+                name="text"
+                value={this.state.message}
+                onChange={this.onFieldChange}
+                type="text"
+                id="text"
+              />
+            </label>
+          </div>
+          <div>
+            <label className="form-label" htmlFor="emoji">
+              Emoji:
+              <select className="form-select" name="emoji" value={this.state.emoji} onChange={this.selectDropdown}>
+                {this.emojiDropdown()}
+              </select>
+            </label>
+          </div>
+          <input type="submit" value="Add Card" />
+        </section>
       </form>
     )
   }
 }
 
 NewCardForm.propTypes = {
-  addCardCallback: PropTypes.func.isRequired
+  addCardCallback: PropTypes.func.isRequired,
+  text: PropTypes.string,
+  emoji: PropTypes.string
 }
 
 export default NewCardForm;
