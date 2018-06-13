@@ -13,6 +13,15 @@ describe('NewCardForm', () => {
     const wrapper = shallow(<NewCardForm addCardCallback={() => {}} />);
     let textField = wrapper.find('input[name="text"]');
 
-    
+    textField.simulate('change', {
+      target: {
+        name: 'text',
+        value: 'yolo'
+      },
+    });
+
+    wrapper.update();
+    textField = wrapper.find('input[name="text"]');
+    expect(textField.getElement().props.value).toEqual('yolo');
   })
 });
