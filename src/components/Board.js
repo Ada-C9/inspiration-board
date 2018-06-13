@@ -11,8 +11,9 @@ const BOARD_URL = 'https://inspiration-board.herokuapp.com/boards/kiera-thomasso
 
 class Board extends Component {
   static propTypes = {
-    updateStatusCallback: PropTypes.func.isRequired
+    updateStatusCallback: PropTypes.func
   };
+
   constructor() {
     super();
 
@@ -58,8 +59,23 @@ class Board extends Component {
       // this.props.updateStatusCallback(`Error deleting card`,'error')
     })
   };
+// display logic first top to bottom
+//
+  addCard = (props) => {
+    axios.post(BOARD_URL, props)
+    .then((response) =>{
+      console.log(response.data, "responsedata");
 
+      let currentCards = this.state.cards;
 
+      currentCards.push(response.data);
+
+      this.setState({cards: currentCards});
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+  }
 
 
   render() {
@@ -77,6 +93,7 @@ class Board extends Component {
     return (
       <div className="board">
         { cards }
+        <NewCardForm  addCardCallback={this.addCard}/>
       </div>
     )
   }

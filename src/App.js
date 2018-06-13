@@ -3,6 +3,7 @@ import './App.css';
 import Board from './components/Board';
 import Status from './components/Status';
 
+
 class App extends Component {
   constructor(){
     super();
@@ -35,6 +36,7 @@ class App extends Component {
           type={this.state.status.type}
         /> */}
         <Board  />
+
       </section>
     );
   }
