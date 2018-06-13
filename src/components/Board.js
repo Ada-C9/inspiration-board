@@ -5,7 +5,6 @@ import axios from 'axios';
 import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
-// import CARD_DATA from '../data/card-data.json';
 
 class Board extends Component {
   constructor() {
@@ -51,6 +50,7 @@ class Board extends Component {
   render() {
     return (
       <div className="board">
+        <NewCardForm />
         { this.renderCardComponents() }
       </div>
     )
