@@ -54,7 +54,6 @@ class Board extends Component {
       this.props.updateStatusCallback('Successfully deleted card...', 'success')
     })
     .catch((error) => {
-      this.setState({ error: error.message });
       this.props.updateStatusCallback(error.message, 'error')
     });
   }

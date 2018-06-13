@@ -22,15 +22,15 @@ class Card extends Component {
 
   render() {
     return (
-      <div className="card">
-        <p className="card__content-text card__content">
-          {this.props.text}</p>
-        <p className="card__content-emoji card__content">
+      <section className="card">
+      <button className="card__delete" onClick={this.onCardDelete}>x</button>
+      <div className="card__content">
+        <h1 className="card__content-text">
+          {this.props.text}</h1>
+        <p className="card__content-emoji">
         {emoji.getUnicode(`${this.props.emoji}`)}</p>
-        <p>
-        <button className="card__delete" onClick={this.onCardDelete}>Delete</button>
-        </p>
       </div>
+      </section>
     )
   }
 }
