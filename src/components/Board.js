@@ -22,13 +22,13 @@ class Board extends Component {
     };
   }
 
-  getBoardData = () => {
+  getBoardData = (boardName) => {
     this.props.updateStatusCallback(`Loading cards for ${this.props.boardName}`, 'success');
-    const BOARD_URL = `${this.props.url + this.props.boardName}/cards`;
+    const BOARD_URL = `${this.props.url + boardName}/cards`;
 
     axios.get(BOARD_URL)
     .then((response) => {
-      this.props.updateStatusCallback(`Successfully loaded cards for ${this.props.boardName}`, 'success');
+      this.props.updateStatusCallback(`Successfully loaded cards for ${boardName}`, 'success');
       const cardData = response.data.slice(0, 100);
       this.setState({
         cards: cardData
@@ -40,7 +40,7 @@ class Board extends Component {
   }
 
   componentDidMount() {
-    this.getBoardData();
+    this.getBoardData(this.props.boardName);
   }
 
   UNSAFE_componentWillReceiveProps(nextProps) {
@@ -48,7 +48,7 @@ class Board extends Component {
       this.setState({
         boardName: nextProps.boardName
       });
-      this.getBoardData();
+      this.getBoardData(nextProps.boardName);
     }
   }
 
@@ -60,7 +60,6 @@ class Board extends Component {
 
     axios.post(BOARD_URL, newCard)
       .then((response) => {
-        console.log(this.props.boardName);
         this.props.updateStatusCallback(`New card created!`, 'success');
         const updatedCards = this.state.cards;
         updatedCards.unshift({
@@ -97,7 +96,6 @@ class Board extends Component {
   }
 
   render() {
-    console.log(this.props.boardName);
     const cards = this.state.cards.map((cardInfo) => {
       return <Card
         key={cardInfo.card.id}
