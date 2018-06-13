@@ -9,9 +9,9 @@ import NewCardForm from './NewCardForm';
 
 class Board extends Component {
   static propTypes = {
-    url: PropTypes.string.isRequired,
-    boardName: PropTypes.string.isRequired,
-    updateStatusCallback: PropTypes.func.isRequired
+    url: PropTypes.string,
+    boardName: PropTypes.string,
+    updateStatusCallback: PropTypes.func
   }
 
   constructor() {

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Board matches snapshot 1`] = `
+<section>
+  <div
+    className="board-header"
+  >
+    Board: 
+    board name
+  </div>
+  <div
+    className="board"
+  />
+  <div>
+    <NewCardForm
+      addCardCallback={[Function]}
+    />
+  </div>
+</section>
+`;
+
+exports[`Board matches snapshot with non-error type 1`] = `
+<section>
+  <div
+    className="board-header"
+  >
+    Board: 
+  </div>
+  <div
+    className="board"
+  />
+  <div>
+    <NewCardForm
+      addCardCallback={[Function]}
+    />
+  </div>
+</section>
+`;
