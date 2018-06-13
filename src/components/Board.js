@@ -17,19 +17,6 @@ class Board extends Component {
     };
   }
 
-  showCards = () => {
-    const list = this.state.cards.map((card, index) => {
-      return (
-        <Card
-          key={index}
-          quote={card.text}
-          emoji={card.emoji}
-        />
-      );
-    });
-    return list
-  }
-
   componentDidMount = () => {
     axios.get('https://inspiration-board.herokuapp.com/boards/<Abinnet-Ainalem>/cards')
     .then ((response) => {
@@ -44,15 +31,48 @@ class Board extends Component {
     });
   }
 
+  removeCard = (cardId) => {
+    axios.delete(`https://inspiration-board.herokuapp.com/boards/<Abinnet-Ainalem>/cards${cardId}`)
+    .then ((response) => {
+      this.setState({
+        message: response.status
+      })
+    })
+    .catch((error) => {
+      this.setState({
+        error: error.message
+      })
+    });
+  }
+
+  showCards = () => {
+    console.log('this state cards');
+    console.log(this.state.cards);
+    const list = this.state.cards.map((card, index) => {
+      console.log(`this is card with index ${index}`);
+      console.log(card);
+      return (
+        <Card
+          key={index}
+          quote={card.card.text}
+          emoji={card.card.emoji}
+        />
+      );
+    });
+    console.log(list);
+    return list
+  }
+
 
   render() {
-    console.log(this.state.cards);
-
     return (
-      <div>
+      <div className="board">
         <div className="callout-colors-example">
           <Callout color={Colors.WARNING}>
           <h5>{this.state.error}</h5>
+          </Callout>
+          <Callout color={Colors.WARNING}>
+          <h5>{this.state.message}</h5>
           </Callout>
         </div>
         {this.showCards()}
