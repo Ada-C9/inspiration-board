@@ -4,18 +4,18 @@ import { shallow } from 'enzyme';
 
 describe('Board', () =>{
   test('matches snapshot', () =>{
-    const statusComponent = shallow(
+    const boardComponent = shallow(
       <Board
       url= 'some url'
       boardName= 'board name'
       updateStatusCallback={()=>{}} />
     );
-    expect(statusComponent).toMatchSnapshot();
-    statusComponent.unmount();
+    expect(boardComponent).toMatchSnapshot();
+    boardComponent.unmount();
   });
 
   test('removes a card with clicked', () => {
-    
+
   });
   test('adds a card when submitted', () => {
 

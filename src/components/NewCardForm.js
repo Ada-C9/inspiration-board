@@ -50,37 +50,35 @@ class NewCardForm extends Component {
 
     return (
       <section className="new-card-form">
-      <form className="form" onSubmit={this.onFormSubmit}>
+        <form className="form" onSubmit={this.onFormSubmit}>
 
-        <div className="new-card-form__header">
-          NEW CARD FORM
-        </div>
+          <div className="new-card-form__header">
+            NEW CARD FORM
+          </div>
 
-        <div className="new-card-form__label">
-          <label
-          htmlFor="text">Message </label>
-          <input
-          type="text"
-          name="text"
-          value={this.state.value}
-          onChange={this.onInput}/>
-        </div>
+          <div className="new-card-form__label">
+            <label htmlFor="text">Message </label>
+            <input
+            type="text"
+            name="text"
+            value={this.state.value}
+            onChange={this.onInput}/>
+          </div>
 
-        <div className="new-card-form__select">
-          Emoji
-          <select
-          value={this.state.value}
-          onChange={this.onInput}
-          name="emoji">
-            {emojiList}
-          </select>
-        </div>
+          <div className="new-card-form__select">
+            Emoji
+            <select
+              value={this.state.value}
+              onChange={this.onInput}
+              name="emoji">
+              {emojiList}
+            </select>
+          </div>
 
-        <div>
-          <input className="new-card-form__form-button" type="submit"/>
-        </div>
-
-      </form>
+          <div>
+            <input className="new-card-form__form-button" type="submit"/>
+          </div>
+        </form>
       </section>
     );
   }

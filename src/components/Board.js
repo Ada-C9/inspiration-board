@@ -49,12 +49,16 @@ class Board extends Component {
       })
   }
 
+
+
   removeCard = (id) => {
     axios.delete(`${this.props.url}${this.props.boardName}/cards/${id}`)
       .then((response) =>{
         this.props.updateStatusCallback('Successfully deleted card')
         let updatedCards = this.state.cards;
-        updatedCards.pop(response.data);
+        let index = updatedCards.findIndex(response.data)
+
+        updatedCards.pop(index);
         this.setState({ cards: updatedCards });
       })
       .catch((error) => {
