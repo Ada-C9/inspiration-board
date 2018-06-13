@@ -37,12 +37,10 @@ class NewCardForm extends Component {
     });
   }
 
-
-
   render() {
     return (
       <form className="new-card-form" onSubmit={this.onFormSubmit}>
-        <p className="new-card-form__header">Post a thing</p>
+        <h1 className="new-card-form__header">Post a thing</h1>
         <div>
           <label className="new-card-form__form-label"  htmlFor="text">Text</label>
           <input className="new-card-form__form-textarea" type="text"

@@ -27,7 +27,9 @@ class Card extends React.Component {
 
 Card.propTypes = {
   text: PropTypes.string,
-  emoji: PropTypes.string
+  emoji: PropTypes.string,
+  cardID: PropTypes.number
+
 };
 
 export default Card;

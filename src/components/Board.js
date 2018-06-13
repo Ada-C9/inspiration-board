@@ -60,11 +60,12 @@ class Board extends Component {
 
   render() {
 
-    const cards = this.state.cards.map((card, index) => {
+    const cards = this.state.cards.map((cardObj, index) => {
       return(
         <Card key={index}
-        text={card.card.text}
-        emoji={card.card.emoji}
+        text={cardObj.card.text}
+        emoji={cardObj.card.emoji}
+        cardID={cardObj.card.id}
         />
     )
     });
