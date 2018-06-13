@@ -7,7 +7,7 @@ import Card from './Card';
 import NewCardForm from './NewCardForm';
 // import CARD_DATA from '../data/card-data.json';
 
-const DELETE_URL = 'https://inspiration-board.herokuapp.com/boards/Hannah-Cameron/cards/'
+const URL = 'https://inspiration-board.herokuapp.com/boards/Hannah-Cameron/cards/'
 
 class Board extends Component {
   static propTypes = {
@@ -37,9 +37,9 @@ class Board extends Component {
   }
 
   deleteCard = (cardId, index) => {
-    let url = DELETE_URL + `${cardId}`
-    console.log(url);
-    axios.delete(url)
+    let deleteUrl = URL + `${cardId}`
+    console.log(deleteUrl);
+    axios.delete(deleteUrl)
     .then((response) => {
       console.log(response);
 
@@ -52,6 +52,13 @@ class Board extends Component {
     .catch((error) => {
       console.log(error);
     });
+  }
+
+https://inspiration-board.herokuapp.com/boards/Hannah-Cameron/cards/?text=you are amazing&emoji=heart_eyes
+
+  addCard = (message) => {
+    let addUrl = URL + `${mesage}`
+    axios.post(addUrl)
   }
 
   render() {
@@ -67,7 +74,7 @@ class Board extends Component {
 
     return (
       <div className="board">
-        Board
+        <h3>Positivity Board! </h3>
         { cards }
       </div>
     )
