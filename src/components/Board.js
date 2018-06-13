@@ -97,14 +97,15 @@ class Board extends Component {
   render() {
     return (
       <div>
+        <Dropdown
+          getName = { this.getName }
+        />
         <header className = "validation-errors-display">
           <p className = "validation-errors-display__list">
             { this.state.message }
           </p>
         </header>
-        <Dropdown
-          getName = { this.getName }
-        />
+        <p>Board: { this.state.boardName }</p>
         <NewCardForm addCardCallback = { this.addCardRequest }/>
         <div className = "board">
           { this.renderCards() }

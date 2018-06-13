@@ -20,7 +20,6 @@ class Dropdown extends Component {
         this.setState({
           names: nameArray
         });
-        // console.log(this.state.names);
       })
       .catch( (error) => {
         console.log(error);
@@ -32,17 +31,18 @@ class Dropdown extends Component {
     this.setState({
       value: event.target.value
     });
-    this.props.getName(this.state.value);
+
+    this.props.getName(event.target.value);
   }
 
   render(){
     return(
       <select value={this.state.value} onChange = { this.changeValue }>
         {
-          this.state.names.map((name)=>{
+          this.state.names.map( (name) => {
             return(
-              <option key ={name} value = { name }>
-                {name}
+              <option key = { name } value = { name }>
+                { name }
               </option>
             );
           })
