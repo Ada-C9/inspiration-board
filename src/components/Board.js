@@ -9,14 +9,16 @@ import NewCardForm from './NewCardForm';
 
 class Board extends Component {
   static propTypes = {
+    url: PropTypes.string.isRequired,
     boardName: PropTypes.string.isRequired,
     updateStatusCallback: PropTypes.func.isRequired
   };
 
-  constructor() {
+  constructor(props) {
     super();
-
+    const URL = `${props.url + props.boardName}/cards/`;
     this.state = {
+      boardUrl: URL,
       cards: []
     };
   }
@@ -24,9 +26,7 @@ class Board extends Component {
   componentDidMount() {
     this.props.updateStatusCallback(`Loading cards for ${this.props.boardName}`, 'success');
 
-    const BOARD_URL = `https://inspiration-board.herokuapp.com/boards/${this.props.boardName}/cards`;
-
-    axios.get(BOARD_URL)
+    axios.get(this.state.boardUrl)
     .then((response) => {
       this.props.updateStatusCallback(`Successfully loaded cards for ${this.props.boardName}`, 'success');
       const cardData = response.data.slice(0, 100);
@@ -41,8 +41,8 @@ class Board extends Component {
 
   addCard = (newCard) => {
     this.props.updateStatusCallback(`Creating new card`, 'success');
-    const POST_URL = `https://inspiration-board.herokuapp.com/boards/${this.props.boardName}/cards`
-    axios.post(POST_URL, newCard)
+
+    axios.post(this.state.boardUrl, newCard)
       .then((response) => {
         this.props.updateStatusCallback(`New card created!`, 'success');
         const updatedCards = this.state.cards;
@@ -59,7 +59,7 @@ class Board extends Component {
   }
 
   removeCard = (id) => {
-    const DELETE_URL = `https://inspiration-board.herokuapp.com/boards/${this.props.boardName}/cards/${id}`;
+    const DELETE_URL = `${this.state.boardUrl + id}`;
     this.props.updateStatusCallback(`Removing card ${id}`, 'success');
 
     axios.delete(DELETE_URL)
