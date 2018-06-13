@@ -64,7 +64,12 @@ class Board extends Component {
         this.props.updateStatusCallback(`successfully deleted card`, "success");
 
         let updatedCards = this.state.cards
-        updatedCards.splice(updatedCards.findIndex(card => cardID === cardID), 1)
+
+        let targetCard = updatedCards.findIndex((card) => {
+          return card.card.id === cardID;
+        });
+
+        updatedCards.splice(targetCard, 1)
 
         this.setState({ cards: updatedCards });
 
