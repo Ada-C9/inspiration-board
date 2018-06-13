@@ -9,6 +9,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      boardName: 'Ada-Lovelace',
       boards: [],
       boardsUrl: 'https://inspiration-board.herokuapp.com/boards/',
       status: {
@@ -33,7 +34,6 @@ class App extends Component {
     axios.get(this.state.boardsUrl)
       .then((response) => {
         this.updateStatus('Successfully retrieved all boards', 'success');
-        console.log(response);
         let updatedBoards = response.data.map((boardInfo) => {
           return boardInfo.board;
         });
@@ -46,12 +46,19 @@ class App extends Component {
       });
   }
 
+  onBoardSelectionChange = (event) => {
+    let updatedBoardName = {
+      boardName: event.target.value
+    };
+    this.setState(updatedBoardName);
+  }
+
   render() {
     const boardOptions = this.state.boards.map((board) => {
       return <option key={board.id}>{board.name}</option>
     });
     return (
-      <section className="new-card-form__form-select">
+      <section>
         <header className="header">
           <h1 className="header__h1"><span className="header__text">Inspiration Board</span></h1>
         </header>
@@ -60,13 +67,17 @@ class App extends Component {
           type={ this.state.status.type }
         />
         <form>
-          <select>
+          <select
+            className="new-card-form__form-select"
+            onChange={ this.onBoardSelectionChange }
+            value={ this.state.boardName }
+          >
             {boardOptions}
           </select>
         </form>
         <Board
           url={ this.state.boardsUrl }
-          boardName={`Ada-Lovelace`}
+          boardName={ this.state.boardName }
           updateStatusCallback={ this.updateStatus }
           />
       </section>

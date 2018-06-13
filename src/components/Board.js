@@ -16,17 +16,17 @@ class Board extends Component {
 
   constructor(props) {
     super();
-    const URL = `${props.url + props.boardName}/cards/`;
     this.state = {
-      boardUrl: URL,
+      boardName: props.boardName,
       cards: []
     };
   }
 
-  componentDidMount() {
+  getBoardData = () => {
     this.props.updateStatusCallback(`Loading cards for ${this.props.boardName}`, 'success');
+    const BOARD_URL = `${this.props.url + this.props.boardName}/cards`;
 
-    axios.get(this.state.boardUrl)
+    axios.get(BOARD_URL)
     .then((response) => {
       this.props.updateStatusCallback(`Successfully loaded cards for ${this.props.boardName}`, 'success');
       const cardData = response.data.slice(0, 100);
@@ -39,11 +39,28 @@ class Board extends Component {
     })
   }
 
+  componentDidMount() {
+    this.getBoardData();
+  }
+
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    if (nextProps.boardName !== this.state.boardName) {
+      this.setState({
+        boardName: nextProps.boardName
+      });
+      this.getBoardData();
+    }
+  }
+
   addCard = (newCard) => {
     this.props.updateStatusCallback(`Creating new card`, 'success');
 
-    axios.post(this.state.boardUrl, newCard)
+    const BOARD_URL = `${this.props.url + this.props.boardName}/cards`;
+
+
+    axios.post(BOARD_URL, newCard)
       .then((response) => {
+        console.log(this.props.boardName);
         this.props.updateStatusCallback(`New card created!`, 'success');
         const updatedCards = this.state.cards;
         updatedCards.unshift({
@@ -59,14 +76,14 @@ class Board extends Component {
   }
 
   removeCard = (id) => {
-    const DELETE_URL = `${this.state.boardUrl + id}`;
+    const DELETE_URL = `${this.props.url + this.props.boardName}/cards/${id}`;
     this.props.updateStatusCallback(`Removing card ${id}`, 'success');
 
     axios.delete(DELETE_URL)
       .then(() => {
         this.props.updateStatusCallback(`Successfully removed card ${id}`, 'success');
         const updatedCards = this.state.cards.filter((cardInfo) => {
-          if (cardInfo.card.id != id) {
+          if (cardInfo.card.id !== id) {
             return cardInfo
           }
         });
@@ -80,6 +97,7 @@ class Board extends Component {
   }
 
   render() {
+    console.log(this.props.boardName);
     const cards = this.state.cards.map((cardInfo) => {
       return <Card
         key={cardInfo.card.id}
