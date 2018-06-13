@@ -28,11 +28,15 @@ class App extends Component {
   render() {
     return (
       <section>
-        <header className="header">
-          <h1 className="header__h1"><span className="header__text">Inspiration Board</span></h1>
+        <header className='header'>
+          <h1 className='header__h1'><span className='header__text'>Inspiration Board</span></h1>
         </header>
 
-        <Status message={this.state.status.message} types={this.state.status.type} />
+        <ul className='validation-errors-display'>
+          <li className='validation-errors-display__list'>
+            <Status message={this.state.status.message} types={this.state.status.type} />
+          </li>
+        </ul>
 
         <Board
           boardName={`Brandy-Austin`}

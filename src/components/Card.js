@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import emoji from 'emoji-dictionary';
+// import emoji from 'emoji-dictionary';
 import './Card.css';
 
 class Card extends Component {
@@ -13,7 +13,7 @@ class Card extends Component {
 
   deleteHelper = () => {
     let cardID = this.props.id;
-    this.props.deleteCardCallback(cardID)
+    this.props.deleteCardCallback(cardID);
   }
 
   render() {

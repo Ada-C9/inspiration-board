@@ -5,8 +5,7 @@ import axios from 'axios';
 import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
-import CARD_DATA from '../data/card-data.json';
-import Status from './Status';
+// import CARD_DATA from '../data/card-data.json';
 
 const EMOJI = require("emoji-dictionary");
 
@@ -27,34 +26,41 @@ class Board extends Component {
   }
 
   componentDidMount() {
-    console.log('in componentDidMount()');
-    console.log(this.props.boardName);
 
-    let boardURL = url + this.props.boardName + '/cards'
+    let boardURL = `${url}${this.props.boardName}/cards`
 
     axios.get(boardURL)
       .then((response) => {
-        console.log('success');
-        console.log(response);
 
         this.props.updateStatusCallback('successfully loaded cards', 'success');
 
-        const cards = response.data.slice(0,100);
+        let cardInfo = response.data.slice(0,100);
+
+
+        let cards = [];
+
+        let i;
+        for (i = 0; i < cardInfo.length; i++) {
+          let card = {};
+
+          card["id"] = cardInfo[i].card.id
+          card["text"] = cardInfo[i].card.text
+          card["emoji"] = cardInfo[i].card.emoji
+
+          cards.push(card);
+        }
+
         this.setState({cards: cards});
       })
       .catch((error) => {
-        console.log('error');
-        console.log(error);
 
         this.props.updateStatusCallback(error.message, 'error');
       });
   }
 
   deleteCard = (cardID) => {
-    console.log('in deleteCard()');
-    console.log(cardID);
 
-    let deleteURL = url + this.props.boardName + '/cards' + '/' + cardID;
+    let deleteURL = `${url}${this.props.boardName}/cards/${cardID}`;
 
     axios.delete(deleteURL);
 
@@ -62,7 +68,7 @@ class Board extends Component {
     let cards = this.state.cards;
 
     for (let i = 0; i < cards.length; i++) {
-      if (cards[i].card.id == cardID) {
+      if (cards[i].id === cardID) {
         cards.splice(i, 1)
 
         this.setState({cards: cards});
@@ -70,27 +76,39 @@ class Board extends Component {
     }
   }
 
+  addCard = (card) => {
+    let updatedCards = this.state.cards;
+    updatedCards.push(card);
+    this.setState({cards: updatedCards});
+  }
+
   render() {
 
     const cards = this.state.cards.map((card, index) => {
 
       let uniEmoji = null;
-      if (card.card.emoji) {
-        uniEmoji = EMOJI.getUnicode(card.card.emoji);
+      if (card.emoji) {
+        uniEmoji = EMOJI.getUnicode(card.emoji);
       }
 
       return (
       <Card key={index}
-        id={card.card.id}
-        text={card.card.text}
+        id={card.id}
+        text={card.text}
         emoji={uniEmoji}
         deleteCardCallback={this.deleteCard} />
       )
     });
 
     return (
-      <section className='board'>
-        {cards}
+      <section>
+
+        <NewCardForm addCardCallback={this.addCard} />
+
+        <div className='board'>
+          {cards}
+        </div>
+
       </section>
     )
   }
