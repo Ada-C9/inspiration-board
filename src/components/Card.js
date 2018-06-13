@@ -5,12 +5,22 @@ import emoji from 'emoji-dictionary';
 import './Card.css';
 
 class Card extends React.Component {
+  constructor(props) {
+    super();
+  }
+
+  onDelete = (event) => {
+    event.preventDefault();
+    let cardID = this.cardID;
+    this.props.deleteCardCallback(this.props.cardID);
+  }
 
   render() {
+    {console.log(this.props)}
     return (
       <section>
         <div className="card">
-          <button className="card__delete">Delete</button>
+          <button className="card__delete" onClick={this.onDelete}>Delete Card</button>
           <div className="card__content">
             <div className="card__content-text">{this.props.text}</div>
             <div className="card__content-emoji">{this.getEmoji(this.props.emoji)}</div>
@@ -28,8 +38,8 @@ class Card extends React.Component {
 Card.propTypes = {
   text: PropTypes.string,
   emoji: PropTypes.string,
-  cardID: PropTypes.number
-
+  cardID: PropTypes.number,
+  deleteCard: PropTypes.func
 };
 
 export default Card;

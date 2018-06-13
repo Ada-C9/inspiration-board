@@ -96,7 +96,7 @@ ReactWrapper {
                                                       <button
                                                                         class="card__delete"
                                                       >
-                                                                        Delete
+                                                                        Delete Card
                                                       </button>
                                                       <div
                                                                         class="card__content"
@@ -219,7 +219,7 @@ ReactWrapper {
                                                 <button
                                                                 class="card__delete"
                                                 >
-                                                                Delete
+                                                                Delete Card
                                                 </button>
                                                 <div
                                                                 class="card__content"
@@ -324,7 +324,7 @@ ReactWrapper {
           "_debugOwner": [Circular],
           "_debugSource": Object {
             "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
-            "lineNumber": 11,
+            "lineNumber": 14,
           },
           "alternate": null,
           "child": FiberNode {
@@ -333,7 +333,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
-              "lineNumber": 12,
+              "lineNumber": 15,
             },
             "alternate": null,
             "child": FiberNode {
@@ -342,7 +342,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
-                "lineNumber": 13,
+                "lineNumber": 16,
               },
               "alternate": null,
               "child": null,
@@ -353,15 +353,17 @@ ReactWrapper {
               "key": null,
               "lastEffect": null,
               "memoizedProps": Object {
-                "children": "Delete",
+                "children": "Delete Card",
                 "className": "card__delete",
+                "onClick": undefined,
               },
               "memoizedState": null,
               "mode": 0,
               "nextEffect": null,
               "pendingProps": Object {
-                "children": "Delete",
+                "children": "Delete Card",
                 "className": "card__delete",
+                "onClick": undefined,
               },
               "ref": null,
               "return": [Circular],
@@ -372,7 +374,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
-                  "lineNumber": 14,
+                  "lineNumber": 17,
                 },
                 "alternate": null,
                 "child": FiberNode {
@@ -381,7 +383,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
-                    "lineNumber": 15,
+                    "lineNumber": 18,
                   },
                   "alternate": null,
                   "child": null,
@@ -411,7 +413,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
-                      "lineNumber": 16,
+                      "lineNumber": 19,
                     },
                     "alternate": null,
                     "child": null,
@@ -521,7 +523,7 @@ ReactWrapper {
               "stateNode": <button
                 class="card__delete"
 >
-                Delete
+                Delete Card
 </button>,
               "tag": 5,
               "treeBaseTime": 0,
@@ -538,8 +540,9 @@ ReactWrapper {
               "children": Array [
                 <button
                   className="card__delete"
+                  onClick={undefined}
 >
-                  Delete
+                  Delete Card
 </button>,
                 <div
                   className="card__content"
@@ -565,8 +568,9 @@ ReactWrapper {
               "children": Array [
                 <button
                   className="card__delete"
+                  onClick={undefined}
 >
-                  Delete
+                  Delete Card
 </button>,
                 <div
                   className="card__content"
@@ -595,7 +599,7 @@ ReactWrapper {
               <button
                             class="card__delete"
               >
-                            Delete
+                            Delete Card
               </button>
               <div
                             class="card__content"
@@ -629,8 +633,9 @@ ReactWrapper {
 >
               <button
                             className="card__delete"
+                            onClick={undefined}
               >
-                            Delete
+                            Delete Card
               </button>
               <div
                             className="card__content"
@@ -657,8 +662,9 @@ ReactWrapper {
 >
               <button
                             className="card__delete"
+                            onClick={undefined}
               >
-                            Delete
+                            Delete Card
               </button>
               <div
                             className="card__content"
@@ -687,7 +693,7 @@ ReactWrapper {
                         <button
                                     class="card__delete"
                         >
-                                    Delete
+                                    Delete Card
                         </button>
                         <div
                                     class="card__content"
@@ -804,7 +810,7 @@ ReactWrapper {
                                                       <button
                                                                         class="card__delete"
                                                       >
-                                                                        Delete
+                                                                        Delete Card
                                                       </button>
                                                       <div
                                                                         class="card__content"
@@ -927,7 +933,7 @@ ReactWrapper {
                                                 <button
                                                                 class="card__delete"
                                                 >
-                                                                Delete
+                                                                Delete Card
                                                 </button>
                                                 <div
                                                                 class="card__content"
@@ -1063,7 +1069,7 @@ ReactWrapper {
                 <button
                         class="card__delete"
                 >
-                        Delete
+                        Delete Card
                 </button>
                 <div
                         class="card__content"
@@ -1089,8 +1095,9 @@ ReactWrapper {
 >
           <button
                     className="card__delete"
+                    onClick={undefined}
           >
-                    Delete
+                    Delete Card
           </button>
           <div
                     className="card__content"
@@ -1117,7 +1124,7 @@ ReactWrapper {
             <button
                         class="card__delete"
             >
-                        Delete
+                        Delete Card
             </button>
             <div
                         class="card__content"
@@ -1140,8 +1147,9 @@ ReactWrapper {
             "children": Array [
               <button
                 className="card__delete"
+                onClick={undefined}
 >
-                Delete
+                Delete Card
 </button>,
               <div
                 className="card__content"
@@ -1166,17 +1174,18 @@ ReactWrapper {
               "instance": <button
                 class="card__delete"
 >
-                Delete
+                Delete Card
 </button>,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Delete",
+                "children": "Delete Card",
                 "className": "card__delete",
+                "onClick": undefined,
               },
               "ref": null,
               "rendered": Array [
-                "Delete",
+                "Delete Card",
               ],
               "type": "button",
             },
@@ -1343,7 +1352,7 @@ ReactWrapper {
                                                             <button
                                                                                 class="card__delete"
                                                             >
-                                                                                Delete
+                                                                                Delete Card
                                                             </button>
                                                             <div
                                                                                 class="card__content"
@@ -1466,7 +1475,7 @@ ReactWrapper {
                                                       <button
                                                                         class="card__delete"
                                                       >
-                                                                        Delete
+                                                                        Delete Card
                                                       </button>
                                                       <div
                                                                         class="card__content"
@@ -1571,7 +1580,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
-              "lineNumber": 11,
+              "lineNumber": 14,
             },
             "alternate": null,
             "child": FiberNode {
@@ -1580,7 +1589,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
-                "lineNumber": 12,
+                "lineNumber": 15,
               },
               "alternate": null,
               "child": FiberNode {
@@ -1589,7 +1598,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
-                  "lineNumber": 13,
+                  "lineNumber": 16,
                 },
                 "alternate": null,
                 "child": null,
@@ -1600,15 +1609,17 @@ ReactWrapper {
                 "key": null,
                 "lastEffect": null,
                 "memoizedProps": Object {
-                  "children": "Delete",
+                  "children": "Delete Card",
                   "className": "card__delete",
+                  "onClick": undefined,
                 },
                 "memoizedState": null,
                 "mode": 0,
                 "nextEffect": null,
                 "pendingProps": Object {
-                  "children": "Delete",
+                  "children": "Delete Card",
                   "className": "card__delete",
+                  "onClick": undefined,
                 },
                 "ref": null,
                 "return": [Circular],
@@ -1619,7 +1630,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
-                    "lineNumber": 14,
+                    "lineNumber": 17,
                   },
                   "alternate": null,
                   "child": FiberNode {
@@ -1628,7 +1639,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
-                      "lineNumber": 15,
+                      "lineNumber": 18,
                     },
                     "alternate": null,
                     "child": null,
@@ -1658,7 +1669,7 @@ ReactWrapper {
                       "_debugOwner": [Circular],
                       "_debugSource": Object {
                         "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
-                        "lineNumber": 16,
+                        "lineNumber": 19,
                       },
                       "alternate": null,
                       "child": null,
@@ -1768,7 +1779,7 @@ ReactWrapper {
                 "stateNode": <button
                   class="card__delete"
 >
-                  Delete
+                  Delete Card
 </button>,
                 "tag": 5,
                 "treeBaseTime": 0,
@@ -1785,8 +1796,9 @@ ReactWrapper {
                 "children": Array [
                   <button
                     className="card__delete"
+                    onClick={undefined}
 >
-                    Delete
+                    Delete Card
 </button>,
                   <div
                     className="card__content"
@@ -1812,8 +1824,9 @@ ReactWrapper {
                 "children": Array [
                   <button
                     className="card__delete"
+                    onClick={undefined}
 >
-                    Delete
+                    Delete Card
 </button>,
                   <div
                     className="card__content"
@@ -1842,7 +1855,7 @@ ReactWrapper {
                 <button
                                 class="card__delete"
                 >
-                                Delete
+                                Delete Card
                 </button>
                 <div
                                 class="card__content"
@@ -1876,8 +1889,9 @@ ReactWrapper {
 >
                 <button
                                 className="card__delete"
+                                onClick={undefined}
                 >
-                                Delete
+                                Delete Card
                 </button>
                 <div
                                 className="card__content"
@@ -1904,8 +1918,9 @@ ReactWrapper {
 >
                 <button
                                 className="card__delete"
+                                onClick={undefined}
                 >
-                                Delete
+                                Delete Card
                 </button>
                 <div
                                 className="card__content"
@@ -1934,7 +1949,7 @@ ReactWrapper {
                             <button
                                           class="card__delete"
                             >
-                                          Delete
+                                          Delete Card
                             </button>
                             <div
                                           class="card__content"
@@ -2051,7 +2066,7 @@ ReactWrapper {
                                                             <button
                                                                                 class="card__delete"
                                                             >
-                                                                                Delete
+                                                                                Delete Card
                                                             </button>
                                                             <div
                                                                                 class="card__content"
@@ -2174,7 +2189,7 @@ ReactWrapper {
                                                       <button
                                                                         class="card__delete"
                                                       >
-                                                                        Delete
+                                                                        Delete Card
                                                       </button>
                                                       <div
                                                                         class="card__content"
@@ -2310,7 +2325,7 @@ ReactWrapper {
                     <button
                               class="card__delete"
                     >
-                              Delete
+                              Delete Card
                     </button>
                     <div
                               class="card__content"
@@ -2336,8 +2351,9 @@ ReactWrapper {
 >
             <button
                         className="card__delete"
+                        onClick={undefined}
             >
-                        Delete
+                        Delete Card
             </button>
             <div
                         className="card__content"
@@ -2364,7 +2380,7 @@ ReactWrapper {
               <button
                             class="card__delete"
               >
-                            Delete
+                            Delete Card
               </button>
               <div
                             class="card__content"
@@ -2387,8 +2403,9 @@ ReactWrapper {
               "children": Array [
                 <button
                   className="card__delete"
+                  onClick={undefined}
 >
-                  Delete
+                  Delete Card
 </button>,
                 <div
                   className="card__content"
@@ -2413,17 +2430,18 @@ ReactWrapper {
                 "instance": <button
                   class="card__delete"
 >
-                  Delete
+                  Delete Card
 </button>,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Delete",
+                  "children": "Delete Card",
                   "className": "card__delete",
+                  "onClick": undefined,
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Delete",
+                  "Delete Card",
                 ],
                 "type": "button",
               },

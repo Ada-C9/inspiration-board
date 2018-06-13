@@ -8,7 +8,7 @@ const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_
 
 class NewCardForm extends Component {
   static propTypes = {
-    //addCardCallback: PropTypes.func.isRequired
+    addCardCallback: PropTypes.func.isRequired
   }
 
   constructor() {
