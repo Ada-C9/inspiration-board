@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import './Status.css';
 
 class Status extends React.Component {
   static propTypes = {
@@ -9,7 +10,7 @@ class Status extends React.Component {
 
   render() {
     return(
-      <section className={`status ${this.props.type}`}>
+      <section className={`${this.props.type}`}>
         {this.props.message}
       </section>
     );
