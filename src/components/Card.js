@@ -6,8 +6,25 @@ import './Card.css';
 
 class Card extends Component {
 
-deleteCard = () => {
+deleteCard = (event) => {
 console.log('button clicked')
+console.log(event)
+// axios.post('https://inspiration-board.herokuapp.com/boards/leti/cards/:card_id', card)
+//   .then((response) => {
+//     // pet successfully added
+//     petList.push(pet);
+//     this.setState({
+//       petList,
+//       message: `Successfully Added ${pet.name}`
+//     });
+//   })
+//   .catch((error) => {
+//     // not successfull
+//     this.setState({
+//       message: error.message,
+//     });
+//
+//   })
 }
 
   render() {
@@ -28,5 +45,3 @@ Card.propTypes = {
 };
 
 export default Card;
-
-// https://inspiration-board.herokuapp.com/boards/:board_name/cards/:card_id
