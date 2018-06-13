@@ -80,9 +80,9 @@ class Board extends Component {
   }
 
   render() {
-    const cards = this.state.cards.map((cardInfo, index) => {
+    const cards = this.state.cards.map((cardInfo) => {
       return <Card
-        key={index}
+        key={cardInfo.card.id}
         boardName={this.props.boardName}
         id={cardInfo.card.id}
         text={cardInfo.card.text}
