@@ -14,9 +14,6 @@ describe('Card', () => {
   });
 
 
-
-
-
   test('that it renders App with shallow rendering', () => {
     const wrapper = shallow(<Card />);
     expect(wrapper).toMatchSnapshot();

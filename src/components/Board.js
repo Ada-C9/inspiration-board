@@ -6,7 +6,7 @@ import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
 
-const CARDS_URL ="https://inspiration-board.herokuapp.com/boards/Cara/cards";
+const CARDS_URL ="https://inspiration-board.herokuapp.com/boards/Cara/cards/";
 
 
 class Board extends Component {
@@ -26,6 +26,19 @@ class Board extends Component {
     })
     .catch((error) =>{
         this.setState({error: error.message});
+    });
+  }
+
+  removeCard = (id) =>{
+    // console.log(cardKey,'cardKey')
+    axios.delete(CARDS_URL+id)
+    .then((response) => {
+      let updatedData = this.state.cards;
+      this.setState({cards: updatedData});
+      this.componentDidMount();
+    })
+    .catch((error) => {
+      this.setState({error: error.message });
     });
   }
 
@@ -56,7 +69,8 @@ class Board extends Component {
       text={card.card.text}
       emoji={card.card.emoji}
       key={ index }
-
+      id={card.card.id}
+      removeCardCallback={this.removeCard}
     />
   })
 
