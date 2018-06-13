@@ -5,18 +5,6 @@ import NewCardForm from './NewCardForm';
 
 
 describe('NewCardForm', () => {
-  // beforeAll(()=>{
-  //   const inputFields = [
-  //     {
-  //       name: 'text',
-  //       value: 'You can do this!'
-  //     },
-  //     {
-  //       name: 'emoji',
-  //       value: 'smile'
-  //     }
-  //   ]
-  // });
 
   test('snapshot', () => {
     const wrapper = shallow(<NewCardForm addCardCallback = {()=>{}}/>);
@@ -52,7 +40,6 @@ describe('NewCardForm', () => {
 
       expect(nameField.getElement().props.value)
         .toEqual(field.value);
-
     });
   });
 
