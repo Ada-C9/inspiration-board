@@ -37,22 +37,28 @@ class NewCardForm extends Component {
     });
   }
 
+
   render() {
     return (
       <form onSubmit={this.onFormSubmit}>
         <div>
-          <label htmlFor='text'>SomeText: </label>
+          <label htmlFor='text'>Text: </label>
           <input type='text'
-          name='text'
-          value={this.state.text}
-          onChange={this.onInputChange}/>
+            name='text'
+            value={this.state.text}
+            onChange={this.onInputChange}
+          />
         </div>
         <div>
-          <label htmlFor='emoji'>Emoji: </label>
-          <input type='text'
-          name='emoji'
-          value={this.state.emoji}
-          onChange={this.onInputChange}/>
+          <label htmlFor='emoji'>Emoji:
+          <select name='emoji' value={this.state.emoji} onChange={this.onInputChange}>
+            <option value=""></option>
+            <option value="beer">Beer</option>
+            <option value="heart_eyes">Heart Eyes</option>
+            <option value="clap">Clap</option>
+            <option value="dog">Dog</option>
+          </select>
+          </label>
         </div>
         <div>
           <input type="submit"/>

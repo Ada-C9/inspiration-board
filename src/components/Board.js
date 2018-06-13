@@ -19,7 +19,7 @@ class Board extends Component {
   componentDidMount() {
     this.props.updateStatusCallback('Loading cards...', 'success');
 
-    axios.get(`${this.props.url}` + `${this.props.boardName}` + '/cards')
+    axios.get(this.props.url + this.props.boardName + '/cards')
       .then((response) => {
         console.log('Success!');
         console.log(response);
@@ -38,10 +38,10 @@ class Board extends Component {
   }
 
   addCard = (card) => {
-    axios.post(`${this.props.url}` + `${this.props.boardName}` + '/cards', card)
+    axios.post(this.props.url + this.props.boardName + '/cards', card)
       .then((response) => {
         console.log(response);
-        this.props.updateStatusCallback(`Successfully added card ${ card.id }!`, 'success');
+        this.props.updateStatusCallback(`Successfully added card ${ response.data.card.id }!`, 'success');
 
         let updatedCards = this.state.cards;
         updatedCards.push({ card: card });
@@ -49,8 +49,31 @@ class Board extends Component {
         this.setState({ cards: updatedCards });
       })
       .catch((error) => {
+        console.log('Error :(');
+        console.log(error);
+
         this.props.updateStatusCallback('Error adding card.', 'error');
       });
+  }
+
+  deleteCard = (card) => {
+    axios.delete(this.props.url + this.props.boardName + '/cards/' + card.id)
+    .then((response) => {
+      console.log(response);
+      this.props.updateStatusCallback(`Successfully deleted card ${ response.data.card.id }!`, 'success');
+
+      let updatedCards = this.state.cards;
+      let index = updatedCards.indexOf(card)
+      updatedCards.splice(index, 1);
+
+      this.setState({ cards: updatedCards });
+    })
+    .catch((error) => {
+      console.log('Error :(');
+      console.log(error);
+
+      this.props.updateStatusCallback('Error deleting card', 'error');
+    });
   }
 
   render() {
@@ -61,14 +84,13 @@ class Board extends Component {
           emoji={ item.card.emoji }
           />
     });
-    console.log(cards);
 
     return (
       <div>
         <div className="board">
           { cards }
         </div>
-        <NewCardForm addCardCallback={this.addCard} />
+        <NewCardForm addCardCallback={this.addCard} deleteCardCallback={this.deleteCard}/>
       </div>
     )
   }
