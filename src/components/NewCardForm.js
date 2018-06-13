@@ -11,27 +11,57 @@ class NewCardForm extends Component {
 
     this.state = {
       message:"",
-      emoji:" "
+      emoji:""
     }
   }
 
+  onFieldChange = (event) => {
+    const fieldName = event.target.name;
+    const fieldValue = event.target.value;
+    const updateState = {};
+
+    updateState[fieldName] = fieldValue;
+    this.setState(updateState);
+  };
+
+  emojiDropdown = () => {
+    let options = EMOJI_LIST.map((icon, index) => {
+      this.emoji = emoji.getUnicode(icon)
+
+      return <option key={index} value={`${icon}`}>{this.emoji}</option>;
+    })
+
+    return options
+
+  }
+
+  // getEmoji = (emojiIcon) => {
+  //   this.emoji = emoji.getUnicode(emojiIcon);
+  //   return this.emoji;
+  // };
 
   render() {
     return (
       <form>
         <div>
-          <label htmlFor="message">Message: </label>
-          <input
-            name="message"
-            value={this.state.message}
-          />
+          <label htmlFor="message">
+            Message:
+            <input
+              name="message"
+              value={this.state.message}
+              onChange={this.onFieldChange}
+              type="text"
+              id="message"
+            />
+          </label>
         </div>
         <div>
-          <label htmlFor="emoji">Emoji: </label>
-          <input
-            name={this.state.emoji}
-            value=" "
-          />
+          <label htmlFor="emoji">
+            Emoji:
+            <select value={this.state.emoji}>
+              {this.emojiDropdown()}
+            </select>
+          </label>
         </div>
         <input type="submit" value="Add Card" />
       </form>
