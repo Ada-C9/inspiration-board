@@ -13,7 +13,7 @@ getBoardNameCallback: PropTypes.func.isRequired
     super();
 
     this.state = {
-      board: "",
+      board: "wini",
     };
   }
 

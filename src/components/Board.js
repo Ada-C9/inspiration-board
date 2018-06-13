@@ -34,52 +34,65 @@ class Board extends Component {
     // Start an axios call to load board data
     // in the callback, use set state to set both
     // the card list and the board name
+
+
+
     let url_boards = this.props.url;
     let board_name = board.board;
-    axios.get(`${url_boards}/${board_name}/cards`).then((response) =>{
-    this.props.updateStatusCallback(`Successfully all cards from ${board_name}!`, 'success');
 
-    const my_data = response.data.map((card) =>{
-      return {text: card.card.text,
-        emoji: card.card.emoji,
-        id: card.card.id
-      };
+    console.log(board_name);
+
+    axios.get(`${url_boards}/${board_name}/cards`)
+    .then((response) =>{
+      this.props.updateStatusCallback(`Successfully all cards from ${board_name}!`, 'success');
+      console.log(response);
+      const my_data = response.data.map((card) =>{
+        return {
+          text: card.card.text,
+          emoji: card.card.emoji,
+          id: card.card.id
+        };
+      });
+
+    const my_board = board.board;
+    this.setState({
+      boardName: my_board,
+      cards: my_data
     });
-    this.setState({cards: my_data})
+    console.log(this.state);
+
   })
   .catch((error) => {
     this.props.updateStatusCallback(error.message, 'error');
   });
 
-  const my_board = board.board;
-  this.setState({boardName: my_board});
-  console.log(this.state.boardName);
+
 
 }
 
 
 
-  componentDidMount() {
-
-    let url_boards = this.props.url;
-    let board_name = this.state.boardName;
-
-    axios.get(`${url_boards}/${board_name}/cards`).then((response) =>{
-
-      this.props.updateStatusCallback(`Successfully all cards from ${board_name}!`, 'success');
-
-      const my_data = response.data.map((card) =>{
-        return {text: card.card.text,
-          emoji: card.card.emoji,
-          id: card.card.id
-        };
-      });
-      this.setState({cards: my_data})
-    })
-    .catch((error) => {
-      this.props.updateStatusCallback(error.message, 'error');
-    });
-  }
+  // componentDidMount() {
+  //
+  //   let url_boards = this.props.url;
+  //   let board_name = this.state.boardName;
+  //
+  //   axios.get(`${url_boards}/${board_name}/cards`).then((response) =>{
+  //
+  //     this.props.updateStatusCallback(`Successfully all cards from ${board_name}!`, 'success');
+  //
+  //     const my_data = response.data.map((card) =>{
+  //       return {text: card.card.text,
+  //         emoji: card.card.emoji,
+  //         id: card.card.id
+  //       };
+  //     });
+  //     this.setState({cards: my_data})
+  //   })
+  //   .catch((error) => {
+  //     this.props.updateStatusCallback(error.message, 'error');
+  //   });
+  // }
 
 
   deleteFromApi = (id) => {
@@ -108,19 +121,20 @@ class Board extends Component {
 
     addCard = (card) => {
       let url_boards = this.props.url;
-      let board_name = this.props.boardName;
+      let board_name = this.state.boardName;
       let updatedCards = this.state.cards;
+      console.log(`${url_boards}${board_name}/cards`);
       axios.post(`${url_boards}${board_name}/cards`, card).then((response) =>{
         console.log(response.data.card.id);
 
         this.props.updateStatusCallback(`Successfully added a new card to ${board_name}´s board!`, 'success')
 
         card.id = response.data.card.id
-        console.log(card);
         updatedCards.push(card);
+        console.log(card);
 
         this.setState({cards: updatedCards});
-
+        console.log(this.state.cards);
       })
       .catch((error) => {
         this.props.updateStatusCallback(error.message, 'error');

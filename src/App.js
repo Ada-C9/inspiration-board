@@ -38,7 +38,6 @@ updateStatus = (message, type) => {
 
         <Board
           url="https://inspiration-board.herokuapp.com/boards/"
-          boardName={`wini`}
           updateStatusCallback={this.updateStatus}
           />
       </section>
