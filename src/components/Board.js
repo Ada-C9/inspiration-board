@@ -27,8 +27,8 @@ class Board extends Component {
 
   componentDidMount() {
     this.props.updateStatusCallback('Loading cards...', 'success');
-    axios.get(CARDS)
 
+    axios.get(CARDS)
     .then((response) => {
       console.log('Success!');
       console.log(response);
@@ -63,14 +63,28 @@ class Board extends Component {
         });
     }
 
-  deleteCard() {
-
-    axios.delete(URL, {params: {card: ''}})
+  deleteCard = (id) => {
+    console.log(id);
+    axios.delete(CARDS + `/${id}`)
       .then((response) => {
-        console.log('Success!');
+        this.props.updateStatusCallback('Successfully deleted!')
+
+        let updatedCards = this.state.cards
+
+
+        let index = updatedCards.findIndex((card) => {
+          console.log(card.card.id);
+          return card.card.id === id;
+        });
+
+        updatedCards.splice(index, 1)
+
+        this.setState({ cards: updatedCards })
+
       })
       .catch((error) => {
-        console.log('Error!');
+
+        console.log('Error - Delete!');
       })
   }
 
@@ -79,8 +93,10 @@ class Board extends Component {
     const cardsList = this.state.cards.map((card, index) => {
       return <Card
         key={index}
+        id={card.card.id}
         text={card.card.text}
         emoji={card.card.emoji}
+        deleteCardCallback={this.deleteCard}
       />
   });
 
