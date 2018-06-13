@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import emoji from 'emoji-dictionary';
+
 
 import './Board.css';
 import Card from './Card';
@@ -8,22 +10,26 @@ import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
 const BOARD_URL = "https://inspiration-board.herokuapp.com/boards/karinna/cards"
-class Board extends Component {
-  constructor() {
-    super();
 
-    this.state = {
-      cards: [],
-    };
-  }
+class Board extends Component {
+	constructor() {
+		super();
+
+		this.state = {
+			cards: [],
+		};
+	}
 
 	componentDidMount(){
 
 		axios.get(BOARD_URL)
 
 		.then((response) =>{
+			console.log(response.data);
+
 			this.setState({
 				cards: response.data
+
 			})
 		})
 		.catch((error) => {
@@ -32,19 +38,60 @@ class Board extends Component {
 
 	}
 
-  render() {
+	addCard = (card) => {
+		card.emoji = emoji.getName(card.emoji)
+
+		axios.post(BOARD_URL, card)
+
+		.then((response) => {
+			let updatedCards = this.state.cards;
+			updatedCards.push({card});
+			this.setState({ cards: updatedCards });
+		})
+		.catch((error) => {
+
+		});
+
+	}
+
+	deleteCard = (card) => {
+		console.log(card);
+		axios.delete(`${BOARD_URL}/${card.props.id}`)
+		.then((response) => {
+			console.log("IT WORKED");
+
+
+		})
+		.catch((error) => {
+			console.log("IT DID NOT WORK :(");
+
+		});
+	}
+
+	render() {
+
 		const cardCollection = this.state.cards.map((obj, index) =>{
 			return <Card key={index}
 				text={obj.card.text}
 				emoji={obj.card.emoji}
+				id={obj.card.id}
+				deleteCardCallback={this.deleteCard}
 				/>
 		});
-    return (
-      <div className="board">
-				{cardCollection}
-      </div>
-    )
-  }
+
+		return (
+			<section>
+				<div className="new-card-form">
+					<NewCardForm
+						addCardCallback={this.addCard}
+						/>
+				</div>
+				<div className="board">
+					{cardCollection}
+				</div>
+			</section>
+		)
+	}
 
 }
 

@@ -7,6 +7,7 @@ import './Card.css';
 class Card extends Component {
 
 	static propTypes = {
+		id: PropTypes.number,
 		text: PropTypes.string,
 		emoji: PropTypes.string
 	}
@@ -23,11 +24,20 @@ class Card extends Component {
 		}
 	}
 
+	onButtonClick = () => {
+		this.props.deleteCardCallback(this)
+	}
+
 
 	render() {
 		return (
 			<div className="card">
-				<div className="card__delete">X</div>
+				<button
+					className="card__delete"
+					onClick={this.onButtonClick}
+					>
+					X
+				</button>
 				<section className="card__content">
 					{this.getText()}
 					{this.getEmoji()}
