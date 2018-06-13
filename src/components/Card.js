@@ -6,7 +6,6 @@ import './Card.css';
 
 class Card extends Component {
   static propTypes = {
-    boardName: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
     text: PropTypes.string.isRequired,
     emoji: PropTypes.string,
