@@ -37,7 +37,7 @@ class App extends Component {
         />
         <Board
         url="https://inspiration-board.herokuapp.com/boards/"
-        boardName={`Ada-Lovelace`}
+        boardName={`sam`}
         updateStatusCallback={this.updateStatus}
         />
       </section>

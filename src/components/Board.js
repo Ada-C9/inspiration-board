@@ -17,15 +17,50 @@ class Board extends Component {
   }
 
   componentDidMount() {
-    this.props.updateStatusCallback('Loading the board...', 'success');
+    this.props.updateStatusCallback(`Loading board: ${this.props.boardName}`, 'success');
     axios.get(`${this.props.url}${this.props.boardName}/cards`)
       .then((response) => {
         this.props.updateStatusCallback('Board successfully loaded', 'success');
-        this.setState({ cards: response.data });
+        this.setState({
+          cards: response.data
+        });
       })
 
       .catch((error) => {
         this.props.updateStatusCallback(error.message, 'error');
+      });
+  }
+
+  addCard = (newCard) => {
+    axios.post(`${this.props.url}${this.props.boardName}/cards`, newCard)
+    .then((response) => {
+      this.props.updateStatusCallback('New card successfully added', 'success');
+
+      let updatedCards = this.state.cards;
+      updatedCards.push({
+        card: response.data.card
+      });
+
+      this.setState({
+        cards: updatedCards
+      });
+    })
+    .catch((error) => {
+      this.props.updateStatusCallback('Card could not be added', 'error');
+    });
+  }
+
+  deleteCard = (id) => {
+    axios.delete(`${this.props.url}${this.props.boardName}/cards/${id}`)
+      .then(() => {
+        let updatedCards = this.state.cards;
+        updatedCards.splice(id, 1);
+        this.setState({
+          cards: updatedCards
+        });
+      })
+      .catch((error) => {
+        this.props.updateStatusCallback(`Card could not be deleted: ${error.message}`, 'error');
       });
   }
 
@@ -37,12 +72,14 @@ class Board extends Component {
         id={card.card.id}
         text={card.card.text}
         emoji={card.card.emoji}
+        deleteCardCallback={this.deleteCard}
         />
       );
     });
 
     return (
-      <div>
+      <div className='board'>
+        <NewCardForm addCardCallback={this.addCard}/>
         { cards }
       </div>
     )

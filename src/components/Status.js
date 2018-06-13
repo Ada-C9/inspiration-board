@@ -5,7 +5,7 @@ class Status extends React.Component {
   static propTypes = {
     message: PropTypes.string,
     type: PropTypes.string
-  }
+  };
 
   render() {
     return(
