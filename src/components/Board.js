@@ -8,8 +8,8 @@ import NewCardForm from './NewCardForm';
 const URL = 'https://inspiration-board.herokuapp.com/boards/alexandriac/cards/'
 
 class Board extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       cards: [],
@@ -46,6 +46,26 @@ class Board extends Component {
       });
   }
 
+  addCard = (card) => {
+    axios.post(URL, card)
+      .then((response) => {
+        let updatedCards = this.state.cards;
+        updatedCards.push(card);
+        console.log(this.state.cards);
+        console.log(card);
+        this.setState({
+          cards: updatedCards,
+          message: 'Card successfully added!'
+        });
+      })
+      .catch((error) => {
+        this.setState({
+          error: error.message,
+        });
+      })
+
+  }
+
   renderCardList = () => {
     const cardList = this.state.cards.map((card) => {
       return (
@@ -65,7 +85,7 @@ class Board extends Component {
     return (
       <section>
         <div>
-          <NewCardForm/>
+          <NewCardForm addCardCallback={this.addCard}/>
         </div>
         <div className="board">
           {this.renderCardList()}

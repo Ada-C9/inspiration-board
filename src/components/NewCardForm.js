@@ -10,8 +10,8 @@ class NewCardForm extends Component {
     super()
 
     this.state = {
-      message:"",
-      emoji:""
+      text: '',
+      emoji: ''
     }
   }
 
@@ -22,43 +22,63 @@ class NewCardForm extends Component {
 
     updateState[fieldName] = fieldValue;
     this.setState(updateState);
-  };
-
-  emojiDropdown = () => {
-    let options = EMOJI_LIST.map((icon, index) => {
-      this.emoji = emoji.getUnicode(icon)
-
-      return <option key={index} value={`${icon}`}>{this.emoji}</option>;
-    })
-
-    return options
-
   }
 
-  // getEmoji = (emojiIcon) => {
-  //   this.emoji = emoji.getUnicode(emojiIcon);
-  //   return this.emoji;
-  // };
+  emojiDropdown = () => {
+    const options = EMOJI_LIST.map((icon, index) => {
+      this.emoji = emoji.getUnicode(icon)
+      return (
+        <option key={index} value={`${icon}`}>
+          {this.emoji}
+        </option>
+      );
+    });
+    return options;
+  }
+
+  selectDropdown = (event) => {
+    const dropdownName = event.target.name;
+    const dropdownValue = event.target.value;
+    const updateState = {}
+
+    updateState[dropdownName] = dropdownValue;
+    this.setState(updateState);
+  }
+
+  clearForm = () => {
+    this.setState({
+      text: '',
+      emoji: ''
+    });
+  }
+
+  onFormSubmit = (event) => {
+    event.preventDefault();
+
+    this.props.addCardCallback(this.state);
+
+    this.clearForm();
+  }
 
   render() {
     return (
-      <form>
+      <form onSubmit={this.onFormSubmit}>
         <div>
-          <label htmlFor="message">
+          <label htmlFor="text">
             Message:
             <input
-              name="message"
+              name="text"
               value={this.state.message}
               onChange={this.onFieldChange}
               type="text"
-              id="message"
+              id="text"
             />
           </label>
         </div>
         <div>
           <label htmlFor="emoji">
             Emoji:
-            <select value={this.state.emoji}>
+            <select name="emoji" value={this.state.emoji} onChange={this.selectDropdown}>
               {this.emojiDropdown()}
             </select>
           </label>
@@ -67,6 +87,10 @@ class NewCardForm extends Component {
       </form>
     )
   }
+}
+
+NewCardForm.propTypes = {
+  addCardCallback: PropTypes.func.isRequired
 }
 
 export default NewCardForm;
