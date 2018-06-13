@@ -20,7 +20,7 @@ class Board extends Component {
     this.props.updateStatusCallback(`Loading board: ${this.props.boardName}`, 'success');
     axios.get(`${this.props.url}${this.props.boardName}/cards`)
       .then((response) => {
-        this.props.updateStatusCallback('Board successfully loaded', 'success');
+        this.props.updateStatusCallback(`Board "${this.props.boardName}" successfully loaded` , 'success');
         this.setState({
           cards: response.data
         });
@@ -79,8 +79,8 @@ class Board extends Component {
 
     return (
       <div className='board'>
-        <NewCardForm addCardCallback={this.addCard}/>
         { cards }
+        <NewCardForm addCardCallback={this.addCard}/>
       </div>
     )
   }
