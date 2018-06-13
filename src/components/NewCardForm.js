@@ -11,7 +11,7 @@ class NewCardForm extends Component {
 
     this.state = {
       text:'',
-      emoji:  '',
+      emoji: '',
     };
   }
 
@@ -66,7 +66,7 @@ class NewCardForm extends Component {
             type="text"
             className="new-card-form__form-textarea"/>
         </div>
-        <input type="submit" value="Add a Note" className="new-card-form__form-button" />
+        <input type="submit" value="Add Card" className="new-card-form__form-button" />
       </form>
       </div>
     );
