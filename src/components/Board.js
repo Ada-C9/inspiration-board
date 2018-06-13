@@ -23,6 +23,16 @@ class Board extends Component {
     };
   }
 
+  // need a callback function that we will then pass to the NewCardForm
+  addCard = (card) => {
+    // assuming card is a JS object with all neccessary parts for a card
+      let updatedCards = this.state.cards;
+      updatedCards.push(card);
+
+      // then update state to updated cards collection
+      this.setState({ cards: updatedCards });
+  }
+
   render() {
     const cards = this.state.cards.map((card, index) => {
       return <Card key={index}
@@ -31,8 +41,8 @@ class Board extends Component {
     });
     return (
       <div className="board">
-      <section>
-      <NewCardForm />
+      <section className="new-card-form">
+      <NewCardForm addCardCallback={this.addCard}/>
       </section>
       { cards }
       </div>
