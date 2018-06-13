@@ -16,7 +16,7 @@ class NewCardForm extends Component {
   }
 
   onFieldChange = (event) => {
-    const fieldName = event.target.text;
+    const fieldName = event.target.name;
     const fieldValue = event.target.value;
     const updateState = {};
     updateState[fieldName] = fieldValue;
@@ -49,7 +49,7 @@ class NewCardForm extends Component {
       <p className="new-card-form__header">Create new card:</p>
       <form onSubmit={this.onFormSubmit} className="new-card-form__form" >
         <div>
-          <label hmtlFor="text" className="new-card-form__form-label">Text: </label>
+          <label hmtlfor="text" className="new-card-form__form-label">Text: </label>
           <input
             name="text"
             value={this.state.text}
@@ -58,7 +58,7 @@ class NewCardForm extends Component {
             className="new-card-form__form-textarea"/>
         </div>
         <div>
-          <label hmtlFor="emoji" className="new-card-form__form-label" >Emoji: </label>
+          <label hmtlfor="emoji" className="new-card-form__form-label" >Emoji: </label>
           <input
             name="emoji"
             value={this.state.emoji}
