@@ -7,7 +7,11 @@ import Card from './Card';
 import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
-const BOARDS_URL = 'https://inspiration-board.herokuapp.com/boards/Ada-Lovelace/cards';
+const BOARDS_URL = 'https://inspiration-board.herokuapp.com/boards/marylamkin/cards';
+
+const DELETE_URL = 'https://inspiration-board.herokuapp.com/boards/Ada-Lovelace/cards/';
+
+const CARD_URL = 'https://inspiration-board.herokuapp.com/boards/:board_name/cards';
 
 class Board extends Component {
   constructor() {
@@ -16,6 +20,25 @@ class Board extends Component {
     this.state = {
       cards: [],
     };
+  }
+
+  deleteCard = (cardId) => {
+    // console.log(card.id);
+    axios.delete(`${DELETE_URL}${cardId}`)
+      .then((response) => {
+      console.log(response);
+      for (let i = 0; i < this.state.cards.length; i++) {
+        if (this.state.cards[i].card.id === cardId) {
+          this.state.cards.splice(i, 1);
+          this.setState({cards: this.state.cards});
+          break;
+        }
+      }
+
+      })
+      .catch((error) => {
+        this.setState({ error: error.message })
+      })
   }
 
   componentDidMount() {
@@ -32,6 +55,7 @@ class Board extends Component {
     })
   }
 
+
   render() {
     console.log("I'm inside!");
 
@@ -40,7 +64,11 @@ class Board extends Component {
 
     const cards = attrCards.map((cardInfo, index) => {
       console.log("inside card mapping");
-      return <Card key={index} text={cardInfo.card.text} emoji={cardInfo.card.emoji} />
+      return <Card
+      onDeleteCard={this.deleteCard}
+      key={index}
+      id={cardInfo.card.id}
+      text={cardInfo.card.text} emoji={cardInfo.card.emoji} />
     });
 
     return (
@@ -56,7 +84,7 @@ class Board extends Component {
 }
 
 Board.propTypes = {
-
+  deleteCard: PropTypes.func.isRequired
 };
 
 export default Board;

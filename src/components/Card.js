@@ -5,6 +5,12 @@ import emoji from 'emoji-dictionary';
 import './Card.css';
 
 class Card extends Component {
+
+  deleteOnSubmit = (event) => {
+    // console.log(this.props.id);
+    this.props.onDeleteCard(this.props.id);
+  }
+
   render() {
     const emojis = this.props.emoji
 
@@ -12,8 +18,14 @@ class Card extends Component {
       <div className="card">
       Card
 
+      {this.props.id}
       {this.props.text}
       {emoji.getUnicode(`${emojis}`)}
+
+      <button
+      type="submit"
+      onClick={this.deleteOnSubmit}>Delete</button>
+
       </div>
     )
   }
