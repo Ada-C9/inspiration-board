@@ -58,6 +58,7 @@ class Board extends Component {
         this.setState({
           cards: updatedCards
         });
+        window.location.reload(); 
       })
       .catch((error) => {
         this.props.updateStatusCallback(`Card could not be deleted: ${error.message}`, 'error');
