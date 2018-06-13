@@ -14,26 +14,27 @@ class Board extends Component {
 
     this.state = {
       cards: [],
+      boardURL: 'https://inspiration-board.herokuapp.com/boards/Ada-Lovelace/cards'
     };
   }
 
   componentDidMount = () => {
     console.log('Component did mount was called');
 
-    axios.get('https://inspiration-board.herokuapp.com/boards/Ada-Lovelace/cards')
+    axios.get(`${this.state.boardURL}`)
     .then( (response) => {
       console.log( response.data );
       this.setState({
         cards: response.data
       });
-    } )
+    })
     .catch( (error) => {
-      console.log("Error");
+      console.log("Get error");
       console.log(error);
       this.setState({
         error: error.message
       });
-    } );
+    });
   }
 
 
@@ -43,8 +44,10 @@ class Board extends Component {
       return (
         <Card
         key={index}
+        id={card.card.id}
         text={card.card.text}
         emoji={card.card.emoji}
+        deleteCard={this.deleteCard}
         />
       );
     });
@@ -52,6 +55,24 @@ class Board extends Component {
   }
 
 
+  deleteCard = (id) => {
+
+    console.log(id)
+
+    axios.delete(`https://inspiration-board.herokuapp.com/boards/Ada-Lovelace/cards${id}`)
+    .then((response) => {
+      this.componentDidMount();
+      console.log(response)
+      console.log(response.data)
+    })
+    .catch( (error) => {
+      console.log("Delete error");
+      console.log(error);
+      this.setState({
+        error: error.message
+      });
+    });
+  }
 
   render() {
     return (
@@ -69,7 +90,7 @@ class Board extends Component {
 }
 
 Board.propTypes = {
-
+  cards: PropTypes.array.isRequired,
 };
 
 export default Board;
