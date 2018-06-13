@@ -15,7 +15,7 @@ class Card extends Component {
       <div className="card">
         <p className="card__content card__content-text">{this.props.text}</p>
         <p className="card__content card__content-emoji">{emoji.getUnicode(`${this.props.emoji}`)}</p>
-        <button className="card__delete " onClick={this.deleteClickHandler}>Delete</button>
+        <p><button className="card__delete " onClick={this.deleteClickHandler}>Delete</button></p>
       </div>
     )
   }

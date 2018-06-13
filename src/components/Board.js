@@ -39,7 +39,7 @@ addCard = (card) => {
     this.props.updateStatusCallback(`Successfully posted card`)
 
     let updatedCards = this.state.cards;
-    updatedCards.push(card);
+    updatedCards.push(response.data);
     this.setState({cards: updatedCards})
   })
   .catch((error)=>{
@@ -48,16 +48,18 @@ addCard = (card) => {
 }
 
 // put delete requst in here
-deleteCard = (banana, id) => {
-  let updatedCards = this.state.cards;
-  updatedCards.splice(banana, 1);
-  this.setState({cards: updatedCards})
+deleteCard = (index, id) => {
+
 
   let DELETE_URL = BASE_URL + `papaya/cards/${id}`
+
   axios.delete(DELETE_URL)
   .then((response) =>{
     this.props.updateStatusCallback(`Successfully deleted card`)
-
+    // this.forceUpdate();
+    let updatedCards = this.state.cards;
+    updatedCards.splice(index, 1);
+    this.setState({cards: updatedCards})
   })
   .catch((error)=>{
     this.props.updateStatusCallback(error.message, 'error')
