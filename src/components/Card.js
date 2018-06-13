@@ -11,7 +11,7 @@ class Card extends Component {
     event.preventDefault();
     console.log(`this.props.id = ${this.props.id}`)
     this.props.deleteCardCallback(this.props.id, this.props.index)
-  }
+  } 
 
 
   render() {
