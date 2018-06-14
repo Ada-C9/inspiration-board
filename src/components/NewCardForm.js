@@ -51,6 +51,9 @@ class NewCardForm extends Component {
           value={this.state.text}
           onChange={this.onInputChange}/>
         </div>
+
+        
+
         <div><input type="submit"/>
         </div>
       </form>

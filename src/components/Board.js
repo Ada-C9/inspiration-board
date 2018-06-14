@@ -11,6 +11,8 @@ const BOARDS_URL = 'https://inspiration-board.herokuapp.com/boards/Emilce/cards'
 
 const DELETE_URL = 'https://inspiration-board.herokuapp.com/boards/Emilce/cards/';
 
+ // https://inspiration-board.herokuapp.com/boards/:board_name/cards/:card_id
+
 const CARD_URL = 'https://inspiration-board.herokuapp.com/boards/Emilce/cards';
 
 class Board extends Component {
@@ -23,7 +25,8 @@ class Board extends Component {
   }
 
   deleteCard = (cardId) => {
-    // console.log(card.id);
+    console.log( "This is card:"+ cardId);
+    console.log(`${DELETE_URL}${cardId}`);
     axios.delete(`${DELETE_URL}${cardId}`)
     .then((response) => {
       console.log(response);
@@ -31,6 +34,8 @@ class Board extends Component {
         if (this.state.cards[i].card.id === cardId) {
           this.state.cards.splice(i, 1);
           this.setState({cards: this.state.cards});
+
+          console.log(`deleting card ${this.state.cards[i].card.id}`);
           break;
         }
       }
@@ -45,10 +50,10 @@ class Board extends Component {
     console.log("adding card");
     axios.post(CARD_URL, card)
       .then((response) => {
-        console.log(response);
+        console.log("THIS IS RESPONSE",response);
 
         let updatedCards = this.state.cards;
-        updatedCards.push(card);
+        updatedCards.push(response.data);
 
         this.setState({ cards: updatedCards });
       })
@@ -57,7 +62,7 @@ class Board extends Component {
   componentDidMount() {
     axios.get(BOARDS_URL)
     .then((response)=> {
-      console.log("waz happnin");
+      console.log("getting board data");
       console.log(response);
 
       const data = response.data.slice(0,100);
@@ -70,10 +75,8 @@ class Board extends Component {
 
 
   render() {
-    console.log("I'm inside!");
-
     const attrCards = this.state.cards
-    // const attr_cards = CARD_DATA["cards"]
+    console.log("attr cards: ",  attrCards);
 
     const cards = attrCards.map((cardInfo, index) => {
       console.log("inside card mapping");
