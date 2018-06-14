@@ -7,11 +7,11 @@ import Card from './Card';
 import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
-const BOARDS_URL = 'https://inspiration-board.herokuapp.com/boards/marylamkin/cards';
+const BOARDS_URL = 'https://inspiration-board.herokuapp.com/boards/Emilce/cards';
 
-const DELETE_URL = 'https://inspiration-board.herokuapp.com/boards/Ada-Lovelace/cards/';
+const DELETE_URL = 'https://inspiration-board.herokuapp.com/boards/Emilce/cards/';
 
-const CARD_URL = 'https://inspiration-board.herokuapp.com/boards/:board_name/cards';
+const CARD_URL = 'https://inspiration-board.herokuapp.com/boards/Emilce/cards';
 
 class Board extends Component {
   constructor() {
@@ -25,7 +25,7 @@ class Board extends Component {
   deleteCard = (cardId) => {
     // console.log(card.id);
     axios.delete(`${DELETE_URL}${cardId}`)
-      .then((response) => {
+    .then((response) => {
       console.log(response);
       for (let i = 0; i < this.state.cards.length; i++) {
         if (this.state.cards[i].card.id === cardId) {
@@ -35,9 +35,22 @@ class Board extends Component {
         }
       }
 
-      })
-      .catch((error) => {
-        this.setState({ error: error.message })
+    })
+    .catch((error) => {
+      this.setState({ error: error.message })
+    })
+  }
+
+  addCard = (card) => {
+    console.log("adding card");
+    axios.post(CARD_URL, card)
+      .then((response) => {
+        console.log(response);
+
+        let updatedCards = this.state.cards;
+        updatedCards.push(card);
+
+        this.setState({ cards: updatedCards });
       })
   }
 
@@ -72,12 +85,20 @@ class Board extends Component {
     });
 
     return (
+
+      <section>
+
+      <div>
+      <NewCardForm addCardCallback={this.addCard}/>
+      </div>
+
       <div>
       Board
 
       { cards }
-
       </div>
+
+      </section>
     )
   }
 

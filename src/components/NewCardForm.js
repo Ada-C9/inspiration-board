@@ -7,7 +7,7 @@ const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_
 
 class NewCardForm extends Component {
   static propTypes = {
-
+    addCardCallback: PropTypes.func.isRequired
   };
 
   constructor() {
@@ -17,7 +17,45 @@ class NewCardForm extends Component {
       text: '',
       emoji: ''
     }
+  }
 
+  onInputChange = (event) => {
+    let updatedInput = {};
+    updatedInput[event.target.text] = event.target.value;
 
+    this.setState(updatedInput)
+;  }
+
+  onFormSubmit = (event) => {
+    event.preventDefault();
+    console.log("on form submit");
+
+    this.props.addCardCallback(this.state);
+
+    console.log(this.state);
+    this.setState({
+      text: '',
+      emoji: ''
+    });
+    console.log(this.state);
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.onFormSubmit}>
+        <div>
+          <label
+          htmlFor="text">Message</label>
+          <input type="text"
+          id="text"
+          value={this.state.text}
+          onChange={this.onInputChange}/>
+        </div>
+        <div><input type="submit"/>
+        </div>
+      </form>
+    );
   }
 }
+
+export default NewCardForm;
