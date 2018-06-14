@@ -12,7 +12,6 @@ function convertToemoji(anEmoji){
 }
 
 
-
 class Card extends Component {
    findID = () => {
       console.log(this.props.id)
@@ -24,7 +23,7 @@ class Card extends Component {
     return (
       <div className="card">
         <section className="card__content">
-        <button className="card__delete" onClick={this.findID}>Delete</button>
+        <button className="card__delete" onClick={this.findID}>x</button>
         <p className="card__content-text">{this.props.text}</p>
         <p className="card__content-emoji">{convertToemoji(this.props.emoji)}</p>
         </section>
