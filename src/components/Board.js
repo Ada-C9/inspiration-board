@@ -55,11 +55,20 @@ class Board extends Component {
    const cards = this.state.cards;
    const newCard = {'card': card};
 
-   cards.push(newCard);
-   this.setState({
-     cards,
-   });
- }
+   axios.post('https://inspiration-board.herokuapp.com/boards/brittany/cards', card)
+       .then((response) => {
+         cards.push(newCard);
+         this.setState({
+           cards,
+           message: 'New card added!'
+         });
+       })
+       .catch((error) => {
+         this.setState({
+           message: error.message,
+         });
+       });
+   }
 
   render() {
     return (
