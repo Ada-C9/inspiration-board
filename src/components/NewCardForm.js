@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './NewCardForm.css';
+import emoji from 'emoji-dictionary';
+
 
 const EMOJI_LIST = ["smile", "heart_eyes", "beer", "clap",
 "sparkling_heart", "heart_eyes_cat", "dog", "cat", "100", "bird"];
@@ -36,8 +38,8 @@ class NewCardForm extends Component {
 
 	render() {
 		const emojis = EMOJI_LIST.map( (emo, index) => {
-			return  <option key={ index }>
-				{ emo }</option>
+			return  <option key={ index } value={ emo }>
+				{ emoji.getUnicode( emo || "smile") }</option>
 			})
 
 			return(
@@ -54,7 +56,7 @@ class NewCardForm extends Component {
 						<label htmlFor="emoji">Emoji
 							<select
 								name="emoji"
-								value={ this.state.emoji }
+								value={ this.state.emoji.value }
 								onChange={ this.onInputChange }>
 								{ emojis }
 							</select>

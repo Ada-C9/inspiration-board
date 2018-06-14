@@ -38,3 +38,8 @@
   border: 1px solid black;
   font-size: 1em;
 }
+
+input {
+	animation: pulse 5s infinite;
+
+}
