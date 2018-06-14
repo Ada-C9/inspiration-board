@@ -83,7 +83,6 @@ class Board extends Component {
 
       })
       .catch((error) => {
-
         console.log('Error - Delete!');
       })
   }
