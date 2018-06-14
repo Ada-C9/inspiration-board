@@ -7,8 +7,7 @@ import './NewCardForm.css';
 const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog",
  "star_struck", "exploding_head", "thinking", "rofl", "clinking_glasses"]
 
-const emoji1 = require("emoji-dictionary");
-console.log(emoji1.getName("🥂"));
+
 
 class NewCardForm extends Component {
   static propTypes = {
@@ -36,7 +35,7 @@ class NewCardForm extends Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
-    this.props.addCardCallback(this.state);
+    this.props.addCardCallback(this.state, 'Just Good Vibes');
     console.log(this.state);
 
     this.setState({
@@ -64,6 +63,7 @@ class NewCardForm extends Component {
           <input
           type="text"
           name="text"
+          placeholder = "Just Good Vibes"
           value={this.state.text}
           onChange={this.onInputChange}
           className="new-card-form__form-textarea"/>
