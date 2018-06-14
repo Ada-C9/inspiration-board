@@ -10,7 +10,7 @@ exports[`NewCardForm that it matches an existing snapshot 1`] = `
     <h1
       className="new-card-form__header"
     >
-      Add a card 
+      Create a card 
     </h1>
     <form
       className="new-card-form__form"
@@ -18,75 +18,109 @@ exports[`NewCardForm that it matches an existing snapshot 1`] = `
     >
       <div>
         <label
+          className="new-card-form__form-label"
           htmlFor="text"
         >
-          Text 
+          Text  
         </label>
         <input
+          className="new-card-form__form-textarea"
           name="text"
           onChange={[Function]}
+          placeholder="Just Good Vibes"
           type="text"
           value=""
         />
       </div>
       <div>
         <label
+          className="new-card-form__form-label"
           htmlFor="emoji"
         >
-          Emoji
-          <select
-            name="emoji"
-            onChange={[Function]}
-            type="text"
-            value=""
-          >
-            <option
-              key="0"
-              value=""
-            />
-            <option
-              key="1"
-              value="heart_eyes"
-            >
-              😍
-            </option>
-            <option
-              key="2"
-              value="beer"
-            >
-              🍺
-            </option>
-            <option
-              key="3"
-              value="clap"
-            >
-              👏
-            </option>
-            <option
-              key="4"
-              value="sparkling_heart"
-            >
-              💖
-            </option>
-            <option
-              key="5"
-              value="heart_eyes_cat"
-            >
-              😻
-            </option>
-            <option
-              key="6"
-              value="dog"
-            >
-              🐶
-            </option>
-          </select>
+          Emoji 
         </label>
+        <select
+          className="new-card-form__form-select"
+          name="emoji"
+          onChange={[Function]}
+          type="text"
+          value=""
+        >
+          <option
+            key="0"
+            value=""
+          />
+          <option
+            key="1"
+            value="heart_eyes"
+          >
+            😍
+          </option>
+          <option
+            key="2"
+            value="beer"
+          >
+            🍺
+          </option>
+          <option
+            key="3"
+            value="clap"
+          >
+            👏
+          </option>
+          <option
+            key="4"
+            value="sparkling_heart"
+          >
+            💖
+          </option>
+          <option
+            key="5"
+            value="heart_eyes_cat"
+          >
+            😻
+          </option>
+          <option
+            key="6"
+            value="dog"
+          >
+            🐶
+          </option>
+          <option
+            key="7"
+            value="star_struck"
+          >
+            🤩
+          </option>
+          <option
+            key="8"
+            value="exploding_head"
+          >
+            🤯
+          </option>
+          <option
+            key="9"
+            value="thinking"
+          >
+            🤔
+          </option>
+          <option
+            key="10"
+            value="rofl"
+          >
+            🤣
+          </option>
+          <option
+            key="11"
+            value="clinking_glasses"
+          >
+            🥂
+          </option>
+        </select>
       </div>
-      <div
-        className=""
-      >
+      <div>
         <input
+          className="new-card-form__form-button"
           type="submit"
         />
          
