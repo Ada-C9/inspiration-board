@@ -39,9 +39,14 @@ getBoardNameCallback: PropTypes.func.isRequired
 
   render(){
 
-    let boardOptions = BOARD_LIST.map((my_board, key) => {
-      return <option key ={key} value={my_board} >{my_board}</option>
-    })
+console.log(this.props.boards);
+
+let boardOptions = BOARD_LIST.map((my_board, key) => {
+return <option key ={key} value={my_board} >{my_board}</option>
+})
+
+
+
 
     return (
       <form onSubmit={this.onFormSubmit}>
