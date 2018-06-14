@@ -20,10 +20,10 @@ class NewCardForm extends Component {
   }
 
   onInputChange = (event) => {
-    let updatedInput = {};
-    updatedInput[event.target.text] = event.target.value;
+    // let updatedInput = {};
+    // updatedInput["text"] = event.target.value;
 
-    this.setState(updatedInput)
+    this.setState({text: event.target.value})
 ;  }
 
   onFormSubmit = (event) => {
