@@ -47,10 +47,7 @@ addCard = (card) => {
   })
 }
 
-// put delete requst in here
 deleteCard = (index, id) => {
-
-
   let DELETE_URL = BASE_URL + `papaya/cards/${id}`
 
   axios.delete(DELETE_URL)
@@ -80,7 +77,7 @@ deleteCard = (index, id) => {
     })
     return (
       <section>
-        <NewCardForm addCallBack={this.addCard} />
+        <NewCardForm addCardcallback={this.addCard} />
         <section className="board">
           {cards}
         </section>
