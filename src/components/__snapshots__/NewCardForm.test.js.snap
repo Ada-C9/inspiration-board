@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewCardForm that it matches an existing snapshot 1`] = `
+<NewCardForm
+  addCardCallback={[Function]}
+>
+  <article
+    className="new-card-form"
+  >
+    <h2
+      className="new-card-form__header"
+    >
+      Create New Card
+    </h2>
+    <form
+      className="new-card-form__form"
+      onSubmit={[Function]}
+    >
+      <div>
+        <label
+          className="new-card-form__form-label"
+          htmlFor="text"
+        >
+          Words: 
+        </label>
+        <input
+          name="text"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </div>
+      <div>
+        <input
+          className="new-card-form__form-button"
+          type="submit"
+        />
+      </div>
+    </form>
+  </article>
+</NewCardForm>
+`;

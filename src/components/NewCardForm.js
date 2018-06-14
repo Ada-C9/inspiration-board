@@ -27,7 +27,7 @@ class NewCardForm extends Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state);
+    // console.log(this.state);
     // here we connect the collection of cards on the Board and the form itself via callback and callback fxn
     this.props.addCardCallback(this.state);
     // want to clear out form after submitting update, so reset state to default
@@ -35,7 +35,6 @@ class NewCardForm extends Component {
       text: ''
     });
   }
-
 
   render() {
     return (
