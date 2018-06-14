@@ -16,69 +16,101 @@ class Board extends Component {
     };
   }
 
-
   componentDidMount = () => {
     // console.log('Component did mount was called');
     // axios.get('').then().catch();
     axios.get('https://inspiration-board.herokuapp.com/boards/leti/cards')
-      .then( (response) => {
-        console.log(response); //to see how the data looks like and decide what we want.
-        this.setState({
-          cards: response.data
-        });
-      })
-      .catch( (error) => {
-        this.setState({
-          error: error.message
-        })
+    .then( (response) => {
+      console.log(response); //to see how the data looks like and decide what we want.
+      this.setState({
+        cards: response.data
       });
+    })
+    .catch( (error) => {
+      this.setState({
+        error: error.message
+      })
+    });
   }
 
   renderCardList = () => {
     // console.log(`this.state.cards = ${this.state.cards}`)
-      const componentList = this.state.cards.map((card, index) => {
-        console.log(card.card.text)
-        return (
-          <Card
-           key={index}
-           index={index}
-           id={card.card.id}
-           text={card.card.text}
-           emoji={card.card.emoji}
-           deleteCardCallback={this.deleteCard}
-          />
-        );
-      });
-      return componentList;
-    }
+    const componentList = this.state.cards.map((element, index) => {
+      if(element.card !== undefined) {
+        // TODO: Fix this.... there is two undefined 'things' in the list... wtf? 
+        // console.log(element.card)
+        // this.deleteCard(element.card.id, index)
 
-    deleteCard = (id, index) => {
+      console.log(element.card.text)
+      return (
+        <Card
+        key={index}
+        index={index}
+        id={element.card.id}
+        text={element.card.text}
+        emoji={element.card.emoji}
+        deleteCardCallback={this.deleteCard}
+        />
+      );
+      }
+    });
+    return componentList;
+  }
+
+  deleteCard = (id, index) => {
     let url = 'https://inspiration-board.herokuapp.com/boards/leti/cards/'+id
     console.log(id);
     axios.delete(url)
-      .then((response) => {
-        console.log(response);
-        const updatedCards = this.state.cards
-        delete updatedCards[index]
+    .then((response) => {
+      console.log(response);
+      const updatedCards = this.state.cards
+      delete updatedCards[index]
+      this.setState({
+        cards: updatedCards,
+      })
+    })
+    .catch((error) => {
+      this.setState({
+        error: error.message
+      });
+      if (error.message) {
+        // this.renderError();
+        console.log(error.message);
+      }
+    });
+  }
+
+  addCard = (card) => {
+    const cards = this.state.cards;
+
+      cards.push(card);
+      this.setState({
+        cards,
+      });
+      axios.post('https://inspiration-board.herokuapp.com/boards/leti/cards/', card)
+      .then(() => {
+        // card successfully added
+        cards.push(card);
         this.setState({
-          cards: updatedCards,
-        })
+          cards,
+          message: `Successfully Added Card`
+        });
       })
       .catch((error) => {
+        // not successfull
         this.setState({
-          error: error.message
+          message: error.message,
         });
-        if (error.message) {
-          // this.renderError();
-          console.log(error.message);
-        }
-      });
+
+      })
   }
+
 
   render() {
     return (
-      <section className="board">
-        {this.renderCardList()}
+      <section >
+      <div className="form"><NewCardForm addCardCallBack={this.addCard}/></div>
+      <div className="board">{this.renderCardList()}</div >
       </section >
     )
   }

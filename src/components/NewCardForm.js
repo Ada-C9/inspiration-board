@@ -1,6 +1,73 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import emoji from 'emoji-dictionary';
-import './NewCardForm.css';
 
 const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog"]
+
+
+class NewCardForm extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      text: '',
+      emoji: '',
+    };
+  }
+
+  onFieldChange = (event) => {
+    const fieldName = event.target.name;
+    const fieldValue = event.target.value;
+    const updateState = {};
+    updateState[fieldName] = fieldValue;
+    this.setState(updateState);
+  }
+
+
+  onFormSubmit = (event) => {
+    event.preventDefault();
+
+    if(this.valid()) {
+      this.props.addCardCallBack(this.state);
+      this.clearForm();
+    }
+  }
+
+  valid =()=>{
+    return this.state.text.length > 0;
+  }
+
+  clearForm=()=>{
+      this.setState({
+        text: '',
+        emoji: '',
+      });
+    }
+
+  render() {
+    return (
+      <section className="new-card-form">
+      <header className="new-card-form__header">Add a new card! </header>
+      <form className="new-card-form__form"onSubmit={this.onFormSubmit}>
+      <div>
+      <label className="new-card-form__form-label" htmlFor="text">Text: </label>
+      <input className="new-card-form__form-textarea"
+      name="text"
+      value={this.state.text}
+      type="text"
+      onChange= {this.onFieldChange}
+      />
+      </div>
+      <input className="new-card-form__form-button" type="submit" value="Ada Card"
+      />
+      </form>
+      </section>
+    )
+  }
+}
+
+NewCardForm.propTypes = {
+  addCardCallBack: PropTypes.func,
+};
+
+export default NewCardForm;
