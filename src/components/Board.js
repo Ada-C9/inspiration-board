@@ -38,13 +38,33 @@ class Board extends Component {
     // });
   }
 
+deleteCard = (id) =>{
+  URL = `${this.props.url}${this.props.boardName}/cards/${id}`
+  let cards = this.state.cards;
+  console.log(URL)
+  axios.delete(URL)
+  .then((response)=> {
+    cards = cards.filter(card => card.card.id !== id);
+    this.setState({
+      cards,
+      message: `Successfully Deleted ${id}`
+    })
+  })
+  .catch ((error) => {
+    this.setState({
+      message: error.message,
+    });
+  });
+}
   render() {
     const cardRenders = this.state.cards.map((card, index) => {
       return (
         <Card
         key={index}
+        id= {card.card.id}
         text={card.card.text}
         emoji={card.card.emoji}
+        deleteCardCallback={this.deleteCard}
         />
       )
     })
