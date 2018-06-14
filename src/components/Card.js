@@ -14,9 +14,9 @@ class Card extends Component {
   }
 
   onButtonClick = (event) => {
-    console.log(event.target);
-    console.log(event.target.value);
-    console.log(event.target.id);
+    // console.log(event.target);
+    // console.log(event.target.value);
+    // console.log(event.target.id);
     this.props.deleteCardCallback(event.target.id, event.target.value)
   }
 

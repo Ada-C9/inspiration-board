@@ -25,32 +25,32 @@ class Board extends Component {
   componentDidMount() {
     axios.get(this.props.url)
     .then((response) => {
-      console.log("response.data");
-      console.log(response.data);
+      // console.log("response.data");
+      // console.log(response.data);
       const cards =  response.data
       this.setState({ cards: cards });
 
     })
     .catch((error) => {
-      console.log(error);
+      // console.log(error);
     });
   }
 
   deleteCard = (cardId, index) => {
     let deleteUrl = URL + `${cardId}`
-    console.log(deleteUrl);
+    // console.log(deleteUrl);
     axios.delete(deleteUrl)
     .then((response) => {
       console.log(response);
 
       let remainingCards = this.state.cards
       remainingCards.splice(index, 1)
-      console.log('remaining cards');
-      console.log(remainingCards);
+      // console.log('remaining cards');
+      // console.log(remainingCards);
       this.setState({ cards: remainingCards });
     })
     .catch((error) => {
-      console.log(error);
+      // console.log(error);
     });
   }
 
@@ -60,14 +60,14 @@ class Board extends Component {
     let addUrl = URL + `?text=${message.text}&emoji=${message.emoji}`
     axios.post(addUrl)
     .then((response) => {
-      console.log(response);
+      // console.log(response);
       let newCard = response.data
       let newSet = this.state.cards
       newSet.push(newCard)
       this.setState({ cards: newSet })
     })
     .catch((error) => {
-      console.log(error);
+      // console.log(error);
     });
   }
 

@@ -31,7 +31,7 @@ class NewCardForm extends Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state);
+    // console.log(this.state);
     this.props.addCardCallback(this.state);
     this.setState(
     {  text: '',
