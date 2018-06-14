@@ -28,6 +28,23 @@ class Board extends Component {
     });
   }
 
+  addCard = (message) => {
+    const cards = this.state.cards;
+    axios.post('https://inspiration-board.herokuapp.com/boards/mariko/cards/', message)
+      .then( (response) => {
+        console.log(response);
+        message.id = response.data.card.id;
+        cards.push({card: message})
+        this.setState({
+          cards,
+          message: 'Successfully added card to board'});
+
+       })
+      .catch( (error) => {
+        this.setState({ error: error.message });
+});
+  }
+
   renderCardList = () => {
     const componentsList = this.state.cards.map((card, index) => {
       return (
@@ -58,10 +75,16 @@ class Board extends Component {
 
   render() {
     return (
-      <div className='board'>
-        {this.renderCardList()}
-
-      </div>
+      <section>
+        <p className='validation-errors-display'> {this.state.message} </p>
+        <p className='validation-errors-display'> {this.state.error} </p>
+        <div>
+          <NewCardForm addCardCallback={this.addCard} />
+        </div>
+        <div className='board'>
+          {this.renderCardList()}
+        </div>
+      </section>
     )
   }
 
