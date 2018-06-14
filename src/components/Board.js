@@ -19,7 +19,7 @@ class Board extends Component {
   componentDidMount = () => {
     // console.log('Component did mount was called');
     // axios.get('').then().catch();
-    axios.get('https://inspiration-board.herokuapp.com/boards/leti/cards')
+    axios.get(this.props.url + this.props.boardName + '/cards')
     .then( (response) => {
       console.log(response); //to see how the data looks like and decide what we want.
       this.setState({
@@ -37,7 +37,7 @@ class Board extends Component {
     // console.log(`this.state.cards = ${this.state.cards}`)
     const componentList = this.state.cards.map((element, index) => {
       if(element.card !== undefined) {
-        // TODO: Fix this.... there is two undefined 'things' in the list... wtf? 
+        // TODO: Fix this.... there is two undefined 'things' in the list... wtf?
         // console.log(element.card)
         // this.deleteCard(element.card.id, index)
 
@@ -58,7 +58,7 @@ class Board extends Component {
   }
 
   deleteCard = (id, index) => {
-    let url = 'https://inspiration-board.herokuapp.com/boards/leti/cards/'+id
+    const url = this.props.url + this.props.boardName + '/cards/'+id
     console.log(id);
     axios.delete(url)
     .then((response) => {
@@ -87,7 +87,7 @@ class Board extends Component {
       this.setState({
         cards,
       });
-      axios.post('https://inspiration-board.herokuapp.com/boards/leti/cards/', card)
+      axios.post(this.props.url + this.props.boardName + '/cards/', card)
       .then(() => {
         // card successfully added
         cards.push(card);
@@ -118,7 +118,7 @@ class Board extends Component {
 }
 
 Board.propTypes = {
-
+  url: PropTypes.string,
 };
 
 export default Board;

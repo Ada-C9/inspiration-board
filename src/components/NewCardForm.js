@@ -25,7 +25,7 @@ class NewCardForm extends Component {
 
 
   onFormSubmit = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
 
     if(this.valid()) {
       this.props.addCardCallBack(this.state);
