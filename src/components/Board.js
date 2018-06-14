@@ -5,7 +5,7 @@ import axios from 'axios';
 import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
-import CARD_DATA from '../data/card-data.json';
+
 
 
 
@@ -31,7 +31,9 @@ class Board extends Component {
     axios.get('https://inspiration-board.herokuapp.com/boards/brenda/cards')
 
     .then( (response) => {
+
       this.props.updateStatusCallback(`Successfully loaded  cards from ${board_name}!`, 'success');
+
       const cardsData = response.data.map((card) =>{
         return {text: card.card.text,
           emoji: card.card.emoji,
@@ -40,18 +42,33 @@ class Board extends Component {
       });
       this.setState({cards: cardsData})
     })
+    .catch((error) => {
+      this.props.updateStatusCallback(`Error loading cards: ${error.message}`, 'error');
+    })
   }
 
 
   deleteCard = (id) => {
 
-    axios.delete(`https://inspiration-board.herokuapp.com/boards/brenda/cards/${id}`)
+    let board_name = this.props.boardName;
+
+    this.props.updateStatusCallback(`Deleting card ${id}`, 'success');
+
+    axios.delete(`https://inspiration-board.herokuapp.com/boards/${this.props.boardName}/cards/${id}`)
     .then((response) => {
-      console.log(response);
       this.componentDidMount();
+      this.props.updateStatusCallback(`Successfully deleted card ${id} from ${board_name}´s board!`, 'success');
+
+      const updatedCardsList = this.state.cards.filter((card)=> {
+        if (card.card.id !== id) {
+          return card
+        }
+      });
+      this.setState({cards: updatedCardsList});
+
     })
     .catch( (error) => {
-      this.setState({ error: error.message });
+      this.props.updateStatusCallback(`Couldn't delete the card: ${error.message}`, 'success');
     });
   }
 
@@ -64,7 +81,10 @@ class Board extends Component {
     .then((response) => {
       console.log(response);
 
-      this.props.updateStatusCallback(`Sucessfully added card ${card.name}!` , 'success');
+      this.props.updateStatusCallback(`Sucessfully added a new card!` , 'success');
+      console.log(card);
+
+      card.id = response.data.card.id;
       updatedCards.push(card);
 
       this.setState({cards: updatedCards});
@@ -76,22 +96,6 @@ class Board extends Component {
     });
   }
 
-  // cardList = () => {
-  //   // const cardList = CARD_DATA.cards.map((card, index) => {
-  //   const cardList = this.state.cards.map((card, index) => {
-  //     return (
-  //       <Card
-  //       key={index}
-  //       id={card.card.id}
-  //       text={card.card.text}
-  //       emoji={card.card.emoji}
-  //       deleteCard={this.deleteCard}
-  //       />
-  //     )
-  //   });
-  //   return cardList;
-  // }
-
 
   render() {
     const cards = this.state.cards.map((card, index) => {
@@ -99,13 +103,14 @@ class Board extends Component {
       text = {card.text}
       emoji = {card.emoji}
       id = {card.id}
-      deleteCard={this.deleteCard}
+      deleteCardCallback={this.deleteCard}
+
       />
     }
   )
   return (
     <div className="board">
-    <p>{this.state.error}</p>
+
 
     <NewCardForm addCardCallback={this.addCard}/>
     {cards}
