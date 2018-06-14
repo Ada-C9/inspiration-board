@@ -40,7 +40,16 @@ class NewCardForm extends Component {
     console.log(this.state);
   }
 
+  // {EMOJI_LIST.map(function(emoji, index){
+  //    return <option key={ index } >{emoji.getUnicode(emoji)}</option>
+  // })}
+
+  // <option>{emoji.getUnicode("heart_eyes_cat")}</option>
+
   render() {
+    const emojiList = EMOJI_LIST.map((emojiWord, index) => {
+     return <option key={index} value= {emojiWord}>{ emoji.getUnicode(emojiWord)}</option> })
+
     return (
       <form onSubmit={this.onFormSubmit}>
         <div>
@@ -52,10 +61,21 @@ class NewCardForm extends Component {
           onChange={this.onInputChange}/>
         </div>
 
-        
-
+        <div>
+          <label
+          htmlFor="emoji">Emoji</label>
+          <select
+          name="emoji"
+          value={this.state.emoji}
+          onChange={this.onInputChange}
+          className="new-card-form_form-select">
+            {emojiList}
+          </select>
+        </div>
+        <br></br>
         <div><input type="submit"/>
         </div>
+        <br></br>
       </form>
     );
   }
