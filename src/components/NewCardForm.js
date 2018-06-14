@@ -39,16 +39,19 @@ class NewCardForm extends Component {
 
   render() {
     return (
+      <article className="new-card-form">
+      <h2 className="new-card-form__header">Create New Card</h2>
       <form onSubmit={this.onFormSubmit} className="new-card-form__form">
       <div>
-      <label htmlFor="text">Words: </label>
+      <label className="new-card-form__form-label"htmlFor="text">Words: </label>
       <input type="text"
       name="text"
       value={this.state.text}
       onChange={this.onInputChange} />
       </div>
-      <div><input type="submit"/></div>
+      <div><input className="new-card-form__form-button" type="submit"/></div>
       </form>
+      </article>
     );
   }
 }
