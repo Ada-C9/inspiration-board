@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewCardForm shallow mount 1`] = `
+<section>
+  <div
+    className="validation-errors-display"
+  >
+    <ul
+      className="validation-errors-display__list"
+    />
+  </div>
+  <NewCardForm
+    onSubmitForm={[Function]}
+  />
+  <div
+    className="board"
+  />
+</section>
+`;

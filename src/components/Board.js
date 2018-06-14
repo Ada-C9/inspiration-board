@@ -48,10 +48,11 @@ class Board extends Component {
         });
 
       }).catch((error) => {
-        this.setState({status:
-          {
+        console.log(error);
+        this.setState({
+          status: {
             type: 'error',
-            messages: {"error": 'Unable to load cards'}
+            messages: {"error": 'Could not load cards'}
           }
         });
       });
