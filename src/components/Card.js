@@ -16,17 +16,17 @@ class Card extends Component {
     console.log('Got click');
     console.log(event);
     console.log(this.props.id);
+    console.log(this.props.index);
 
-    this.props.cardCallback(this.props.id)
+    this.props.cardCallback(this.props.index)
 
   }
   render() {
     return (
       <div className="card">
-        <ul>
-        <li>{this.props.id}</li>
-        <li>{this.props.text}</li>
-        <li>{emoji.getUnicode(`${this.props.emoji}`)}</li>
+        <ul className="card__content">
+        <li className="card__content-text card__content-text">{this.props.text}</li>
+        <li className="card__content-emoji">{emoji.getUnicode(`${this.props.emoji}`)}</li>
         <li><button onClick={this.clickHandler}>Remove</button></li>
         </ul>
       </div>
@@ -35,7 +35,7 @@ class Card extends Component {
 }
 
 Card.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.number,
   text: PropTypes.string.isRequired,
   emoji: PropTypes.string
 

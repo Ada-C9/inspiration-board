@@ -5,15 +5,16 @@ import './NewCardForm.css';
 
 const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog"]
 
-const CARDS_URL = 'https://inspiration-board.herokuapp.com/boards/Jamila_Cornick/cards'
-
 class NewCardForm extends Component {
   constructor() {
     super();
 
     this.state = {
-      text: '',
-      emoji: '',
+      card:{
+        text: '',
+        emoji: '',
+
+      }
     }
   }
 
@@ -38,26 +39,26 @@ class NewCardForm extends Component {
   }
   render(){
     return(
-      <form onSubmit={this.onFormSubmit}>
+      <form onSubmit={this.onFormSubmit} className="new-card-form new-card-form__form">
       <div>
-      <label htmlFor="text">text</label>
+      <label htmlFor="text" className="new-card-form__form-label">text</label>
       <input type="text"
       name="text"
-      value={this.state.text}
+      value={this.state.value}
       onChange={this.onInputChange}/>
       </div>
 
       <div>
-      <label htmlFor="emoji">emoji</label>
+      <label htmlFor="emoji" className="new-card-form__form-label"></label>
       <input type="text"
       name="emoji"
-      value={this.state.emoji}
+      value={this.state.value}
       onChange={this.onInputChange}/>
       </div>
 
 
 
-      <div> <input type="submit"/> </div>
+      <div> <input type="submit" className="new-card-form__form-button"/> </div>
 
 
       </form>
