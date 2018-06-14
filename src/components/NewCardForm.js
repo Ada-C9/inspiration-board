@@ -33,6 +33,11 @@ class NewCardForm extends Component {
     event.preventDefault();
     console.log(this.state);
     this.props.addCardCallback(this.state);
+    this.setState(
+    {  text: '',
+      emoji: ''}
+    )
+
   }
 
   render() {
