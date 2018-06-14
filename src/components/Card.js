@@ -21,7 +21,7 @@ class Card extends Component {
           {emoji.getUnicode(`${this.props.emoji}`)}
           </div>
           <div>
-          <button className="card__delete" onClick={() => { if (window.confirm('Are you sure you wish to delete this item?')) this.deleteCard() } } >
+          <button className="card__delete" onClick={() => { this.deleteCard() } } >
             Delete
           </button>
           </div>
