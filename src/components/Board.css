@@ -6,9 +6,11 @@
 .validation-errors-display {
   text-align: center;
   margin-bottom: 2em;
+  font-family: 'Permanent Marker', Helvetica, sans-serif;
 }
 
 .validation-errors-display__list {
   list-style-type: none;
   padding: 0;
+  animation: pulse 5s infinite;
 }

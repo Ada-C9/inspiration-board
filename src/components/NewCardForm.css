@@ -9,6 +9,7 @@
 .new-card-form__header {
   text-align: center;
   text-transform: uppercase;
+  font-size: 2em;
 }
 
 .new-card-form__form {
@@ -37,5 +38,32 @@
 .new-card-form__form-button {
   background-color: #F4FF81;
   border: 1.5px solid black;
+  border-radius: 5px;
   font-size: 1em;
+}
+
+input {
+  border: 1.5px solid black;
+  border-radius: 5px;
+  text-align: center;
+  animation: pulse 5s infinite;
+}
+
+input:hover {
+  background-color: #F4FF81;
+}
+
+select, input[type="color" i][list] {
+  border: 1.5px solid black;
+}
+
+select:hover {
+  background-color: #F4FF81;
+}
+
+@keyframes pulse {
+  0%   {color: #FF0000;}
+  25%  {color: #FF00FF;}
+  50%  {color: #32CD32;}
+  100% {color: #FF1493;}
 }

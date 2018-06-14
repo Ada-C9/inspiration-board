@@ -7,7 +7,7 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Permanent Marker', Helvetica, sans-serif;
 }
 
@@ -32,4 +32,12 @@ h1, h2 {
   font-size: 3rem;
 
   transform: rotate(-3deg) skew(-3deg);
+}
+
+.body {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV1ODadoLdK_oyD7WbF7zQWmf0jLl2Ef2JSR_fgAKJv-FV-eo0);
+}
+
+.boardList {
+  margin-left: 2em;
 }
