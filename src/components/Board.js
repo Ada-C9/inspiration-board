@@ -5,7 +5,7 @@ import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
 
-const URL = 'https://inspiration-board.herokuapp.com/boards/alexandriahh/cards/'
+const URL = 'https://inspiration-board.herokuapp.com/boards/alexandriagg/cards/'
 
 class Board extends Component {
   constructor() {
@@ -35,11 +35,8 @@ class Board extends Component {
       .then((response) => {
         let cards = this.state.cards
         let updatedCards = cards.filter(function(i) {
-          return i !== response.data;
+          return i.card.id !== response.data.card.id;
         });
-        console.log(cards);
-        console.log(response.data);
-        console.log(updatedCards);
         this.setState({
           cards: updatedCards
         })
@@ -96,7 +93,6 @@ class Board extends Component {
       </section>
     )
   }
-
 }
 
 export default Board;
