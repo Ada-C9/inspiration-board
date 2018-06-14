@@ -1,20 +1,33 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import emoji from 'emoji-dictionary';
-import tempData from '../data/card-data.json';
+
 
 import './Card.css';
 
 function convertToemoji(anEmoji){
-  return emoji.getUnicode(anEmoji)
+  if (anEmoji != null){
+   return emoji.getUnicode(anEmoji)
+  }
 }
 
+
+
 class Card extends Component {
+   findID = () => {
+      console.log(this.props.id)
+      console.log('hello')
+     this.props.deleteCard(this.props.id)
+  }
+
   render() {
     return (
       <div className="card">
-        <p>{this.props.text}</p>
-        <p>{convertToemoji(this.props.emoji)}</p>
+        <section className="card__content">
+        <button className="card__delete" onClick={this.findID}>Delete</button>
+        <p className="card__content-text">{this.props.text}</p>
+        <p className="card__content-emoji">{convertToemoji(this.props.emoji)}</p>
+        </section>
       </div>
     )
   }
@@ -22,7 +35,8 @@ class Card extends Component {
 
 Card.propTypes = {
   text:PropTypes.string.isRequired,
-  emoji:PropTypes.string.isRequired,
+  emoji:PropTypes.string,
+  id:PropTypes.number,
 };
 
 export default Card;
