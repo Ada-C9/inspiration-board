@@ -4,9 +4,11 @@ import emoji from 'emoji-dictionary';
 import './NewCardForm.css';
 
 
-const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog"]
+const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog",
+ "star_struck", "exploding_head", "thinking", "rofl", "clinking_glasses"]
 
-
+const emoji1 = require("emoji-dictionary");
+console.log(emoji1.getName("🥂"));
 
 class NewCardForm extends Component {
   static propTypes = {
@@ -55,32 +57,32 @@ class NewCardForm extends Component {
     })
     return (
       <section className="new-card-form">
-      <h1 className="new-card-form__header">Add a card </h1>
+      <h1 className="new-card-form__header">Create a card </h1>
       <form onSubmit={this.onFormSubmit}  className="new-card-form__form">
         <div>
-          <label htmlFor="text">Text </label>
+          <label htmlFor="text" className="new-card-form__form-label">Text  </label>
           <input
           type="text"
           name="text"
           value={this.state.text}
           onChange={this.onInputChange}
-          />
+          className="new-card-form__form-textarea"/>
         </div>
 
         <div >
-          <label htmlFor="emoji">Emoji
+          <label htmlFor="emoji" className="new-card-form__form-label">Emoji </label>
+
           <select
           type="text"
           name="emoji"
           value={this.state.emoji}
           onChange={this.onInputChange}
-          >
+          className="new-card-form__form-select">
           {list}
           </select>
-          </label>
         </div>
 
-        <div className=""><input type="submit"/> </div>
+        <div><input type="submit" className="new-card-form__form-button"/> </div>
       </form>
       </section>
     )
