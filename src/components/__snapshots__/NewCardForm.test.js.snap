@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[` 1`] = `
+exports[`NewCardForm that it matches an existing snapshot 1`] = `
 <NewCardForm
   addCardCallback={[Function]}
 >

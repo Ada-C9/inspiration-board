@@ -2,7 +2,7 @@
 
 exports[`Board that it matches an existing snapshot 1`] = `
 <Board
-  addPetCallback={[Function]}
+  updateStatusCallback={[Function]}
 >
   <div
     className="board"
