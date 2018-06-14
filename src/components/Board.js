@@ -7,7 +7,7 @@ import Card from './Card';
 import NewCardForm from './NewCardForm';
 // import CARD_DATA from '../data/card-data.json';
 
- const CARDS_URL = 'https://inspiration-board.herokuapp.com/boards/Jamila_Cornick/cards'
+const CARDS_URL = 'https://inspiration-board.herokuapp.com/boards/Jamila_Cornick/cards'
 class Board extends Component {
   constructor() {
     super();
@@ -34,16 +34,20 @@ class Board extends Component {
   }
 
 
-    cardClicked = (index) => {
+  cardClicked = (index, id) => {
 
-    axios.delete(`${CARDS_URL}/${index}`)
+    const updatedCard = this.state.cards;
+       updatedCard.splice(index, 1 );
+      // updatedCard.pop(deletedCard)
+       console.log(updatedCard.splice(index, 1 ));
+
+      this.setState({cards: updatedCard});
+
+    axios.delete(`${CARDS_URL}/${id}`)
     .then((response) => {
 
       console.log('Success!');
-      let updatedCard = this.state.cards;
-      updatedCard.pop(index);
 
-      this.setState({cards: updatedCard});
 
       this.props.updateStatusCallback(`Deleted card ${index} successfully`)
 
@@ -52,14 +56,14 @@ class Board extends Component {
 
       console.log(error);
 
-      this.props.updateStatusCallback(`There was an error deleting ${index}`)
+      this.props.updateStatusCallback(`There was an error deleting card ${index}`)
 
     });
 
-    }
+  }
 
 
-    newCard = (card) => {
+  newCard = (card) => {
 
     axios.post(CARDS_URL, card)
     .then((response) =>{
@@ -70,11 +74,11 @@ class Board extends Component {
 
       this.setState({cards: updatedCards});
 
-      this.props.updateStatusCallback(`Successfully added card ${card.id}!`)
+      this.props.updateStatusCallback(`Successfully added card ${card.index}!`)
 
     })
     .catch((error) =>{
-      this.props.updateStatusCallback(`Error adding card ${card.id}!`)
+      this.props.updateStatusCallback(`Error adding card ${card.index}!`)
     });
   }
 
@@ -94,8 +98,8 @@ class Board extends Component {
 
     return (
       <div className="board">
-        {cards}
-        <NewCardForm addCardCallback={this.newCard}/>
+      {cards}
+      <NewCardForm addCardCallback={this.newCard}/>
       </div>
     )
   }

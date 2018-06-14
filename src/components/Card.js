@@ -18,7 +18,7 @@ class Card extends Component {
     console.log(this.props.id);
     console.log(this.props.index);
 
-    this.props.cardCallback(this.props.index)
+    this.props.cardCallback(this.props.index, this.props.id)
 
   }
   render() {
