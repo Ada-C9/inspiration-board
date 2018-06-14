@@ -92,7 +92,7 @@ class Board extends Component {
 
   render() {
     return (
-      <div>  
+      <div>
         <NewCardForm addCardCallBack={this.addCard} />
         <section className="board">
           <p>{this.state.error}</p>

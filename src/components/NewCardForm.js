@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import emoji from 'emoji-dictionary';
 import './NewCardForm.css';
 
-const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog", "joy"]
+const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog", "joy", "sparkles", "clapping"]
 
 class NewCardForm extends Component {
   constructor() {
@@ -11,7 +11,7 @@ class NewCardForm extends Component {
 
     this.state = {
       text:'',
-      emoji: '',
+      emoji:'',
     };
   }
 
@@ -22,10 +22,10 @@ class NewCardForm extends Component {
     updateState[fieldName] = fieldValue;
     this.setState(updateState);
   }
-
-  valid = () => {
-    return this.state.text.length > 0;
-  }
+  //
+  // valid = () => {
+  //   return this.state.text.length > 0;
+  // }
 
   clearForm = () => {
     this.setState({
@@ -36,11 +36,8 @@ class NewCardForm extends Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
-     if (this.valid()) {
        this.props.addCardCallBack(this.state)
        this.clearForm()
-
-     }
   }
 
   render() {
@@ -59,12 +56,14 @@ class NewCardForm extends Component {
         </div>
         <div>
           <label hmtlfor="emoji" className="new-card-form__form-label" >Emoji: </label>
-          <input
+          <select
             name="emoji"
-            value={this.state.emoji}
+            value={this.state.value}
             onChange={this.onFieldChange}
             type="text"
-            className="new-card-form__form-textarea"/>
+            className="new-card-form__form-textarea">
+            {EMOJI_LIST.map(x => <option key={x} value={x}>{emoji.getUnicode(x)}</option>)};
+          </select>
         </div>
         <input type="submit" value="Add Card" className="new-card-form__form-button" />
       </form>
