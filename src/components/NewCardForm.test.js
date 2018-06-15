@@ -38,8 +38,8 @@ describe('NewCardForm', () => {
 
      textField.simulate('change', {
        target: {
-         text: 'This is a test message.',
-         emoji: '',
+         name: 'text',
+         value: 'This is a test message.',
        },
      });
 
