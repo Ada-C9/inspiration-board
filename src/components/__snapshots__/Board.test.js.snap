@@ -11,11 +11,6 @@ exports[`Board deep mount 1`] = `
       <section
         className="new-card-form"
       >
-        <h1
-          className="new-card-form__header"
-        >
-          Create a card 
-        </h1>
         <form
           className="new-card-form__form"
           onSubmit={[Function]}
@@ -126,8 +121,8 @@ exports[`Board deep mount 1`] = `
             <input
               className="new-card-form__form-button"
               type="submit"
+              value="create a card"
             />
-             
           </div>
         </form>
       </section>
