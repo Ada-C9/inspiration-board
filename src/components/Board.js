@@ -7,7 +7,7 @@ import emoji from 'emoji-dictionary';
 import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
-import CARD_DATA from '../data/card-data.json';
+// import CARD_DATA from '../data/card-data.json';
 
 class Board extends Component {
   constructor() {
@@ -38,10 +38,6 @@ class Board extends Component {
   renderCardList = () => {
     // console.log(`this.state.cards = ${this.state.cards}`)
     const componentList = this.state.cards.map((element, index) => {
-      if(element.card !== undefined) {
-        // TODO: Fix this.... there is two undefined 'things' in the list... wtf?
-        // console.log(element.card)
-        // this.deleteCard(element.card.id, index)
 
       console.log(element.card.text)
       return (
@@ -54,7 +50,6 @@ class Board extends Component {
         deleteCardCallback={this.deleteCard}
         />
       );
-      }
     });
     return componentList;
   }
@@ -87,7 +82,7 @@ class Board extends Component {
     const cards = this.state.cards;
     const newCard = { card: card };
 
-    // somehow not working without changing the emoji here.. need to fix form!
+    // somehow not working without changing the emoji here.. trying changing it on the NewCardForm but did not succed. Need to fix something on form..?
     // console.log(card);
     // console.log(card.emoji);
     card.emoji = emoji.getName(card.emoji);
@@ -134,6 +129,7 @@ class Board extends Component {
 
 Board.propTypes = {
   url: PropTypes.string,
+  boardName: PropTypes.string,
 };
 
 export default Board;
