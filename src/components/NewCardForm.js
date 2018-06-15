@@ -61,19 +61,18 @@ class NewCardForm extends Component {
 
   render() {
     return(
-      <form onSubmit={ this.submitForm }>
-        <div>
-          <label htmlFor="text">Message: </label>
-          <textarea name="text" value={this.state.text} onChange={ this.onFieldChange }/>
-        </div>
-        <div>
-          <label htmlFor="emoji">Emoji: </label>
-          <select name="emoji" value={this.state.emoji} onChange={ this.onFieldChange }>
+      <section className="new-card-form">
+        <h3 className="new-card-form__header">Create a New Inspiration</h3>
+        <form onSubmit={ this.submitForm } className="new-card-form__form">
+          <label htmlFor="text" className="new-card-form__form-label">Message: </label>
+          <textarea name="text" value={this.state.text} onChange={ this.onFieldChange } className="new-card-form__form-textarea"/>
+          <label htmlFor="emoji" className="new-card-form__form-label">Emoji: </label>
+          <select name="emoji" value={this.state.emoji} onChange={ this.onFieldChange } className="new-card-form__form-select">
             { this.displayEmojiList()}
           </select>
-        </div>
-        <input type="submit" value="create card"/>
-      </form>
+          <input type="submit" value="create card" className="new-card-form__form-button"/>
+        </form>
+      </section>
     )
   }
 }

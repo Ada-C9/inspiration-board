@@ -4,6 +4,12 @@ exports[`Card that it renders Card with shallow rendering 1`] = `
 <div
   className="card"
 >
+  <button
+    className="card__delete"
+    type="button"
+  >
+    x
+  </button>
   <div
     className="card__content"
   />

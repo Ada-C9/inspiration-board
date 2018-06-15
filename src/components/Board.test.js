@@ -8,8 +8,8 @@ describe('Board', () => {
     const wrapper = shallow(<Board />);
 
     expect(wrapper).toMatchSnapshot();
-    // wrapper.unmount();
 
+    // wrapper.unmount();
   });
 
 });

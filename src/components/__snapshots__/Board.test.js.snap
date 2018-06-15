@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Board that it renders Board with shallow rendering 1`] = `
-<div
-  className="board"
-/>
+<div>
+  <div>
+    <NewCardForm
+      submitNewCard={[Function]}
+    />
+  </div>
+  <div
+    className="board"
+  />
+</div>
 `;
