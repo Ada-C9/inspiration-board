@@ -5,7 +5,6 @@ import axios from 'axios';
 import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
-import Status from './Status';
 // import CARD_DATA from '../data/card-data.json';
 
 // NOTE: WILL RENDER OUT A LIST OF CARDS
@@ -14,6 +13,7 @@ const CARDS_URL = 'https://inspiration-board.herokuapp.com/boards/AnaLisa/cards'
 
 class Board extends Component {
   static propTypes = {
+    updateStatusCallback: PropTypes.func.isRequired
   };
 
   constructor() {
@@ -21,19 +21,17 @@ class Board extends Component {
 
     this.state = {
       cards: [],
-      status: {
-        message: '',
-        type: ''
-      }
     };
   }
 
   componentDidMount() {
-    console.log('In componentDidMount');
+    this.props.updateStatusCallback('Loading Cards...', 'success');
     axios.get(CARDS_URL)
     .then((response) => {
       console.log('Success');
       console.log(response);
+
+      this.props.updateStatusCallback('Successfully loaded cards, Take one!', 'success');
       // if we wanted only a first 10 cards, pre-processing on data, additional pre-processing or logic on data would be done here
       const cards = response.data.slice(0,10);
       // To get all of the cards, we reset the state with the response data (which is the cards)
@@ -43,12 +41,7 @@ class Board extends Component {
       console.log('Error :(');
       console.log(error);
       // Alert user to errors on screen by altering the status we are tracking with state
-      this.setState({
-        status: {
-          message: `Failed to load cards: ${error.message}`,
-          type: `error`
-        }
-      });
+      this.props.updateStatusCallback(error.message, 'error');
     });
   }
 
@@ -60,6 +53,15 @@ class Board extends Component {
 
     // then update state to updated cards collection
     this.setState({ cards: updatedCards });
+
+    axios.post(CARDS_URL, card)
+      .then((response) => {
+
+      })
+
+      .catch((error) => {
+
+      });
   }
 
   render() {
@@ -72,11 +74,6 @@ class Board extends Component {
     });
     return (
       <div className="board">
-      <section>
-      <Status message={this.state.status.message}
-      type={this.state.status.type}
-      />
-      </section>
       { cards }
       <section className="new-card-form">
       <NewCardForm addCardCallback={this.addCard}/>
