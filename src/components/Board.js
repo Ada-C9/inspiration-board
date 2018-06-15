@@ -52,19 +52,25 @@ class Board extends Component {
   }
 
   addCard = (newCard) => {
-    // this will have to be a post of new card info
-    axios.post(`https://inspiration-board.herokuapp.com/boards/<Abinnet-Ainalem>/cards/${newCard}`)
+    console.log(newCard);
+    const cardObject = {
+      card: newCard,
+    }
+
+    const updatedCardList = this.state.cards;
+    updatedCardList.push(cardObject);
+
+    axios.post(`https://inspiration-board.herokuapp.com/boards/<Abinnet-Ainalem>/cards`, newCard)
 
     .then (() => {
-      this.state.cards << newCard;
       this.setState({
         message: `Sucessfully added card`,
+        cards: updatedCardList,
       });
     })
     .catch(() => {
       this.setState({
         error: 'Unable to add card'
-
       })
     });
   }

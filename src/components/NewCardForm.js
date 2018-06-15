@@ -10,7 +10,6 @@ class NewCardForm extends Component {
     super(props);
 
     this.state = {
-      id: 0,
       text: '',
       emoji: '',
     };
@@ -20,7 +19,7 @@ class NewCardForm extends Component {
     const fieldName = event.target.name;
     const fieldValue = event.target.value;
     const updateState = {};
-    updateState[fieldName] = [fieldValue];
+    updateState[fieldName] = fieldValue;
     this.setState(updateState);
   }
 
@@ -30,15 +29,12 @@ class NewCardForm extends Component {
 
   clearForm = () => {
     this.setState({
-      id: 0,
       text: '',
       emoji: ''
     });
   }
   onFormSubmit = (event) => {
     event.preventDefault();
-
-      // this needs to be created in the card itself
     this.props.addCard(this.state)
     this.clearForm()
   }
@@ -58,10 +54,10 @@ class NewCardForm extends Component {
         <div>
           <label htmlFor="emoji">Emoji: </label>
           <input
-          name="age"
+          name="emoji"
           value={this.state.emoji}
           onChange={this.onFieldChange}
-          type="number" />
+          type="text" />
         </div>
 
         <input
@@ -75,7 +71,6 @@ class NewCardForm extends Component {
 }
 
 NewCardForm.propTypes = {
-  addCardCallback: PropTypes.func.isRequired,
 }
 
 export default NewCardForm;
