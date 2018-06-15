@@ -51,7 +51,7 @@ class Board extends Component {
     updatedCards.splice(index, 1);
     this.setState({cards: updatedCards});
 
-    let DELETE_URL = Cards_URL + this.props.boardName + '/cards' + id;
+    let DELETE_URL = Cards_URL + this.props.boardName + '/cards/' + id;
     axios.delete(DELETE_URL)
     .then((response) => {
       console.log(response);
@@ -63,7 +63,7 @@ class Board extends Component {
   }
 
   componentDidMount() {
-    this.getBoard(Cards_URL, this.props.board || 'Dikla')
+    this.getBoard(Cards_URL, this.props.boardName)
   }
   getBoard(url, boardName) {
     this.props.updateStatusCallback('Loading cards...', 'success');
