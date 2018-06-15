@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import emoji from 'emoji-dictionary';
+import './NewCardForm.css';
 
 const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog"]
 
@@ -56,10 +57,9 @@ class NewCardForm extends Component {
       <section className="new-card-form">
 
         <header className="new-card-form__header">Add a new card! </header>
-
         <form className="new-card-form__form"onSubmit={this.onFormSubmit}>
 
-          <div>
+
             <label className="new-card-form__form-label" htmlFor="text">Text: </label>
             <input
             className="new-card-form__form-textarea"
@@ -68,9 +68,9 @@ class NewCardForm extends Component {
             type="text"
             onChange= {this.onFieldChange}
             />
-          </div>
 
-          <div>
+
+
             <label className="new-card-form__form-label" htmlFor="emoji">Emoji: </label>
             <select
             name="emoji"
@@ -80,7 +80,7 @@ class NewCardForm extends Component {
             onChange={this.onFieldChange}>
             {this.renderEmojiList()}
           </select>
-          </div>
+          
 
 
           <input

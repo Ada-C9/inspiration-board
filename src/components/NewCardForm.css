@@ -9,6 +9,10 @@
 .new-card-form__header {
   text-align: center;
   text-transform: uppercase;
+  font-size: 1.25em;
+  padding: 2rem;
+  margin-left: 4.5rem;
+  font-family: 'Permanent Marker', Helvetica, sans-serif;
 }
 
 .new-card-form__form {
