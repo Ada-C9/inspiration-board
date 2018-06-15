@@ -30,31 +30,38 @@ class Board extends Component {
         this.setState({ cards })
       })
       .catch((error) => {
-        this.setState({ error: error.message})
+        this.setState({ message: error.message})
       });
   }
 
-  renderCardComponents = () => {
-    const cards = this.state.cards.map((card, index) => {
-      return(
-        <Card
-          key={index}
-          text={card.text}
-          emoji={card.emoji}
-        />
-      )
-    })
-    return cards;
-  }
+  createNewCard = (newCardData) => {
+    const cards = this.state.cards
+    axios.post(`${this.props.url}${this.props.boardName}/cards`, newCardData)
+      .then((response) => {
+        console.log(response.data.card);
+        cards.push(response.data.card);
+        this.setState({
+          cards,
+          message: `Sucessfully created Card ${response.data.card.id}`
+        })
+      })
+      .catch((error) => {
+        this.setState({ message: error.message})
+      });
+  };
 
   render() {
+    const cardComponents = this.state.cards.map((card, index) => {
+      return<Card key={index} text={card.text} emoji={card.emoji} />;
+    });
+
     return (
       <div>
         <div>
-          <NewCardForm />
+          <NewCardForm submitNewCard={ this.createNewCard }/>
         </div>
         <div className="board">
-          { this.renderCardComponents() }
+          { cardComponents }
         </div>
       </div>
     )

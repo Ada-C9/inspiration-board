@@ -12,8 +12,12 @@ class NewCardForm extends Component {
     this.state = {
       text: '',
       emoji: ''
-    }
+    };
   }
+
+  static propTypes = {
+    submitNewCard: PropTypes.func.isRequired
+  };
 
   onFieldChange = (event) => {
     const fieldName = event.target.name;
@@ -21,7 +25,7 @@ class NewCardForm extends Component {
     const updateState = {};
     updateState[fieldName] = fieldValue;
     this.setState(updateState);
-  }
+  };
 
   displayEmojiList = () => {
     const options = EMOJI_LIST.map((keyword, index) => {
@@ -29,6 +33,25 @@ class NewCardForm extends Component {
       return <option key={ index } value={ keyword }>{ unicode }</option>
     });
     return options;
+  };
+
+  submitForm = (event) => {
+    event.preventDefault();
+
+    if (this.state.text || this.state.emoji ) {
+      this.props.submitNewCard({
+        text: this.state.text,
+        emoji: this.state.emoji
+      })
+      this.clearForm();
+    }
+  };
+
+  clearForm = () => {
+    this.setState({
+      text: '',
+      emoji: ''
+    })
   }
 
   seeState = () => {
@@ -38,7 +61,7 @@ class NewCardForm extends Component {
 
   render() {
     return(
-      <form>
+      <form onSubmit={ this.submitForm }>
         <div>
           <label htmlFor="text">Message: </label>
           <textarea name="text" value={this.state.text} onChange={ this.onFieldChange }/>
