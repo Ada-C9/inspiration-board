@@ -24,7 +24,10 @@
     "enzyme-to-json": "^3.3.4",
     "gh-pages": "^1.2.0"
   },
-  "homepage": "http://adagold.github.io/inspiration-board", "jest": {
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+  "homepage": "http://adagold.github.io/inspiration-board",
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }
