@@ -23,6 +23,7 @@ class Card extends Component {
   render() {
     return (
       <div className="card">
+        <button type="button" className="card__delete">x</button>
         <div className="card__content">
           { this.renderText() }
           { this.renderEmoji() }

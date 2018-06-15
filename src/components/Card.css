@@ -4,14 +4,14 @@
   padding: 1em 0;
   margin: 0.5rem;
 
-  min-height: 250px;
+  min-height: 225px;
   min-width: 225px;
   flex-basis: 18%;
 
   border-radius: 5px;
 
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template: 1fr 5fr 1fr / 1fr 5fr;
   align-items: center;
 }
 
@@ -24,12 +24,12 @@
 
   text-align: center;
   font-weight: 100;
-  overflow: hidden;
+  max-height: 150px;
 }
 
 .card__content-text {
   text-overflow: ellipsis;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .card__content-emoji {
@@ -42,6 +42,9 @@
 }
 
 .card__delete {
+  grid-column-start: 3;
+  justify-content: left;
+  margin: 0 5px 0;
   align-self: start;
   font-family: 'Permanent Marker', Helvetica, sans-serif;
 }
