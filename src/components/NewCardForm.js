@@ -56,7 +56,6 @@ class NewCardForm extends Component {
     })
     return (
       <section className="new-card-form">
-      <h1 className="new-card-form__header">Create a card </h1>
       <form onSubmit={this.onFormSubmit}  className="new-card-form__form">
         <div>
           <label htmlFor="text" className="new-card-form__form-label">Text  </label>
@@ -82,7 +81,7 @@ class NewCardForm extends Component {
           </select>
         </div>
 
-        <div><input type="submit" className="new-card-form__form-button"/> </div>
+        <div><input type="submit" value="create a card" className="new-card-form__form-button"/></div>
       </form>
       </section>
     )
