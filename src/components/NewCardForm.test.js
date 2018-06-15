@@ -10,4 +10,34 @@ describe('NewCardForm', () => {
 
     wrapper.unmount();
   });
+
+  test('when the user types on a field the value changes', () => {
+    const wrapper = shallow(<NewCardForm
+      addCardCallback={() => {}}
+      />);
+
+      const fieldValues = [
+        {
+          field: 'text',
+          value: 'heart',
+        },
+        {
+          field: 'emoji',
+          value: 'heart_eyes',
+        }
+      ];
+
+      fieldValues.forEach(({field, value}) => {
+      let element = wrapper.find(`[name="${field}"]`);
+
+      element.simulate('change', {target: {
+        name: field,
+        value,
+      }})
+      wrapper.update();
+
+      element = wrapper.find(`[name="${field}"]`);
+      expect(element.getElement().props.value).toEqual(value);
+    });
+  });
 });

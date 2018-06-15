@@ -18,26 +18,34 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <div>
+        <header
+          className="new-card-form__header"
+>
+          Create New Card
+</header>,
+        <div
+          className="new-card-form__form"
+>
           <label
+                    className="new-card-form__form-label"
                     htmlFor="text"
           >
                     Text: 
           </label>
-          <input
+          <textarea
+                    className="new-card-form__form-textarea"
                     name="text"
                     onChange={[Function]}
-                    type="text"
                     value=""
           />
-</div>,
-        <div>
           <label
+                    className="new-card-form__form-label"
                     htmlFor="emoji"
           >
                     Emoji: 
           </label>
           <select
+                    className="new-card-form__form-select"
                     name="emoji"
                     onChange={[Function]}
                     type="text"
@@ -77,12 +85,14 @@ ShallowWrapper {
                               🐶
                     </option>
           </select>
+          <input
+                    className="new-card-form__form-button"
+                    type="submit"
+                    value="Add Card"
+          />
 </div>,
-        <input
-          type="submit"
-          value="Add Card"
-/>,
       ],
+      "className": "new-card-form",
       "onSubmit": [Function],
     },
     "ref": null,
@@ -92,50 +102,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <label
-              htmlFor="text"
->
-              Text: 
-</label>,
-            <input
-              name="text"
-              onChange={[Function]}
-              type="text"
-              value=""
-/>,
-          ],
+          "children": "Create New Card",
+          "className": "new-card-form__header",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Text: ",
-              "htmlFor": "text",
-            },
-            "ref": null,
-            "rendered": "Text: ",
-            "type": "label",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "name": "text",
-              "onChange": [Function],
-              "type": "text",
-              "value": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-        ],
-        "type": "div",
+        "rendered": "Create New Card",
+        "type": "header",
       },
       Object {
         "instance": null,
@@ -144,11 +116,25 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <label
+              className="new-card-form__form-label"
+              htmlFor="text"
+>
+              Text: 
+</label>,
+            <textarea
+              className="new-card-form__form-textarea"
+              name="text"
+              onChange={[Function]}
+              value=""
+/>,
+            <label
+              className="new-card-form__form-label"
               htmlFor="emoji"
 >
               Emoji: 
 </label>,
             <select
+              className="new-card-form__form-select"
               name="emoji"
               onChange={[Function]}
               type="text"
@@ -188,7 +174,13 @@ ShallowWrapper {
                             🐶
               </option>
 </select>,
+            <input
+              className="new-card-form__form-button"
+              type="submit"
+              value="Add Card"
+/>,
           ],
+          "className": "new-card-form__form",
         },
         "ref": null,
         "rendered": Array [
@@ -197,7 +189,35 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "children": "Text: ",
+              "className": "new-card-form__form-label",
+              "htmlFor": "text",
+            },
+            "ref": null,
+            "rendered": "Text: ",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "new-card-form__form-textarea",
+              "name": "text",
+              "onChange": [Function],
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "textarea",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
               "children": "Emoji: ",
+              "className": "new-card-form__form-label",
               "htmlFor": "emoji",
             },
             "ref": null,
@@ -244,6 +264,7 @@ ShallowWrapper {
                   🐶
 </option>,
               ],
+              "className": "new-card-form__form-select",
               "name": "emoji",
               "onChange": [Function],
               "type": "text",
@@ -338,20 +359,21 @@ ShallowWrapper {
             ],
             "type": "select",
           },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "new-card-form__form-button",
+              "type": "submit",
+              "value": "Add Card",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
         ],
         "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "type": "submit",
-          "value": "Add Card",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
       },
     ],
     "type": "form",
@@ -363,26 +385,34 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <div>
+          <header
+            className="new-card-form__header"
+>
+            Create New Card
+</header>,
+          <div
+            className="new-card-form__form"
+>
             <label
+                        className="new-card-form__form-label"
                         htmlFor="text"
             >
                         Text: 
             </label>
-            <input
+            <textarea
+                        className="new-card-form__form-textarea"
                         name="text"
                         onChange={[Function]}
-                        type="text"
                         value=""
             />
-</div>,
-          <div>
             <label
+                        className="new-card-form__form-label"
                         htmlFor="emoji"
             >
                         Emoji: 
             </label>
             <select
+                        className="new-card-form__form-select"
                         name="emoji"
                         onChange={[Function]}
                         type="text"
@@ -422,12 +452,14 @@ ShallowWrapper {
                                     🐶
                         </option>
             </select>
+            <input
+                        className="new-card-form__form-button"
+                        type="submit"
+                        value="Add Card"
+            />
 </div>,
-          <input
-            type="submit"
-            value="Add Card"
-/>,
         ],
+        "className": "new-card-form",
         "onSubmit": [Function],
       },
       "ref": null,
@@ -437,50 +469,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <label
-                htmlFor="text"
->
-                Text: 
-</label>,
-              <input
-                name="text"
-                onChange={[Function]}
-                type="text"
-                value=""
-/>,
-            ],
+            "children": "Create New Card",
+            "className": "new-card-form__header",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Text: ",
-                "htmlFor": "text",
-              },
-              "ref": null,
-              "rendered": "Text: ",
-              "type": "label",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "name": "text",
-                "onChange": [Function],
-                "type": "text",
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-          ],
-          "type": "div",
+          "rendered": "Create New Card",
+          "type": "header",
         },
         Object {
           "instance": null,
@@ -489,11 +483,25 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <label
+                className="new-card-form__form-label"
+                htmlFor="text"
+>
+                Text: 
+</label>,
+              <textarea
+                className="new-card-form__form-textarea"
+                name="text"
+                onChange={[Function]}
+                value=""
+/>,
+              <label
+                className="new-card-form__form-label"
                 htmlFor="emoji"
 >
                 Emoji: 
 </label>,
               <select
+                className="new-card-form__form-select"
                 name="emoji"
                 onChange={[Function]}
                 type="text"
@@ -533,7 +541,13 @@ ShallowWrapper {
                                 🐶
                 </option>
 </select>,
+              <input
+                className="new-card-form__form-button"
+                type="submit"
+                value="Add Card"
+/>,
             ],
+            "className": "new-card-form__form",
           },
           "ref": null,
           "rendered": Array [
@@ -542,7 +556,35 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "children": "Text: ",
+                "className": "new-card-form__form-label",
+                "htmlFor": "text",
+              },
+              "ref": null,
+              "rendered": "Text: ",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "new-card-form__form-textarea",
+                "name": "text",
+                "onChange": [Function],
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "textarea",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
                 "children": "Emoji: ",
+                "className": "new-card-form__form-label",
                 "htmlFor": "emoji",
               },
               "ref": null,
@@ -589,6 +631,7 @@ ShallowWrapper {
                     🐶
 </option>,
                 ],
+                "className": "new-card-form__form-select",
                 "name": "emoji",
                 "onChange": [Function],
                 "type": "text",
@@ -683,20 +726,21 @@ ShallowWrapper {
               ],
               "type": "select",
             },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "new-card-form__form-button",
+                "type": "submit",
+                "value": "Add Card",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
           ],
           "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "type": "submit",
-            "value": "Add Card",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
         },
       ],
       "type": "form",
