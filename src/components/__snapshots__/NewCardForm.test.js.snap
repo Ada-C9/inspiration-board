@@ -20,12 +20,82 @@ exports[`NewCardForm matches previous snapshot 1`] = `
   >
     Emoji:
   </label>
-  <input
+  <select
     name="emoji"
     onChange={[Function]}
-    type="text"
     value=""
-  />
+  >
+    <option
+      key="0"
+      value=""
+    />
+    <option
+      key="1"
+      value="heart_eyes"
+    >
+      😍
+    </option>
+    <option
+      key="2"
+      value="beer"
+    >
+      🍺
+    </option>
+    <option
+      key="3"
+      value="clap"
+    >
+      👏
+    </option>
+    <option
+      key="4"
+      value="sparkling_heart"
+    >
+      💖
+    </option>
+    <option
+      key="5"
+      value="heart_eyes_cat"
+    >
+      😻
+    </option>
+    <option
+      key="6"
+      value="dog"
+    >
+      🐶
+    </option>
+    <option
+      key="7"
+      value="woman_technologist"
+    >
+      👩‍💻
+    </option>
+    <option
+      key="8"
+      value="roll_eyes"
+    >
+      🙄
+    </option>
+    <option
+      key="9"
+      value="100"
+    >
+      💯
+    </option>
+    <option
+      key="10"
+      value="kissing_heart"
+    >
+      😘
+    </option>
+    <option
+      key="11"
+      value="nerd_face"
+    >
+      🤓
+    </option>
+  </select>
   <input
     type="submit"
   />

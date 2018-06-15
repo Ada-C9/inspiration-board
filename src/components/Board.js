@@ -67,7 +67,7 @@ class Board extends Component {
       this.setState({ cards: newSet })
     })
     .catch((error) => {
-      // console.log(error);
+      console.log(error);
     });
   }
 
