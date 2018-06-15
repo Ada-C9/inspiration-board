@@ -39,9 +39,14 @@ h1, h2, h3 {
 }
 
 .boardList {
-  margin-left: 2em;
+  margin-left: 4em;
+  margin-bottom: 4em;
 }
 
 h3 {
   margin: 0;
+}
+select, input[type="color" i][list] {
+    border: 1.5px solid black;
+    font-family: 'Permanent Marker', Helvetica, sans-serif;
 }
