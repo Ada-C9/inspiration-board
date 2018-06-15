@@ -50,9 +50,29 @@ class Board extends Component {
       });
   };
 
+  deleteCard = (id, index) => {
+    const cards = this.state.cards
+    axios.delete(`${this.props.url}${this.props.boardName}/cards/${id}`)
+      .then((response) => {
+        cards.splice(index, 1)
+        this.setState({
+          cards,
+          message: `Sucessfully created Card ${response.data.card.id}`
+        })
+      })
+      .catch((error) => {
+        this.setState({ message: error.message})
+      });
+  };
+
   render() {
     const cardComponents = this.state.cards.map((card, index) => {
-      return<Card key={index} text={card.text} emoji={card.emoji} />;
+      return<Card
+        key={index}
+        text={card.text}
+        emoji={card.emoji}
+        deleteCard={ this.deleteCard }
+      />;
     });
 
     return (
