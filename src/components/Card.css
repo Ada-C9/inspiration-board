@@ -1,5 +1,5 @@
 .card {
-  background-color: #a3e7ba;
+  background-color: rgb(27, 219, 150);
 
   padding: 1em 0;
   margin: 0.5rem;
@@ -13,6 +13,11 @@
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   align-items: center;
+}
+
+@keyframes example {
+    from {background-color: rgb(27, 219, 150);}
+    to {background-color: rgb(216, 122, 244);}
 }
 
 .card__content {

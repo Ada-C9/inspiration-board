@@ -44,7 +44,7 @@ class NewCardForm extends Component {
       return (
         <option
         key={index}
-        value={char}>{char}</option>
+        value={char}>{emoji.getUnicode(`${char}`)}</option>
       );
     })
 

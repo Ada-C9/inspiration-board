@@ -26,14 +26,20 @@ updateStatus = (message, type) => {
   render() {
     return (
       <section>
-        <Status message={this.state.status.message} type={this.state.status.type}/>
+        <ul className="validation-errors-display">
+          <li className="validation-errors-display__list">
+          <Status message={this.state.status.message} type={this.state.status.type}/>
+          </li>
+        </ul>
         <header className="header">
           <h1 className="header__h1"><span className="header__text">Inspiration Board</span></h1>
         </header>
-        <Board
-          url="https://inspiration-board.herokuapp.com/boards/"
-          boardName={`Ari`}
-          updateStatusCallback={this.updateStatus} />
+        <div className="board">
+          <Board
+            url="https://inspiration-board.herokuapp.com/boards/"
+            boardName={`Ari`}
+            updateStatusCallback={this.updateStatus} />
+        </div>
       </section>
     );
   }

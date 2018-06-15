@@ -3,16 +3,6 @@
   flex-wrap: wrap;
 }
 
-.validation-errors-display {
-  text-align: center;
-  margin-bottom: 2em;
-}
-
-.validation-errors-display__list {
-  list-style-type: none;
-  padding: 0;
-}
-
 .board-header {
   text-align: center;
   text-transform: uppercase;

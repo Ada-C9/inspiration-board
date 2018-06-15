@@ -14,10 +14,4 @@ describe('Board', () =>{
     boardComponent.unmount();
   });
 
-  test('removes a card with clicked', () => {
-
-  });
-  test('adds a card when submitted', () => {
-
-  });
 })
