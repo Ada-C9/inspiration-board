@@ -4,11 +4,11 @@ import { mount, shallow } from 'enzyme';
 
 describe('NewCardForm', () => {
   test('that it matches an existing snapshot', () => {
-    const cardForm = mount( <NewCardForm addCardCallback={() => {} } />);
+    const cardForm = shallow( <NewCardForm addCardCallback={() => {} } />);
 
     expect(cardForm).toMatchSnapshot();
 
-    cardForm.unmount();
+    // cardForm.unmount();
   });
 
   test('Invokes callback on form submission', () => {
