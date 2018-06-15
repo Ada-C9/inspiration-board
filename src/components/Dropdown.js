@@ -22,7 +22,7 @@ class Dropdown extends Component {
         });
       })
       .catch( (error) => {
-        console.log(error);
+        // console.log(error);
       });
   }
 
@@ -39,9 +39,9 @@ class Dropdown extends Component {
     return(
       <select value={this.state.value} onChange = { this.changeValue }>
         {
-          this.state.names.map( (name) => {
+          this.state.names.map( (name, index) => {
             return(
-              <option key = { name } value = { name }>
+              <option key = { index } value = { name }>
                 { name }
               </option>
             );

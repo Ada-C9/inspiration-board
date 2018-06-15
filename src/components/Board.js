@@ -26,6 +26,9 @@ class Board extends Component {
       })
       .catch( (error) => {
         // console.log(error);
+        this.setState({
+          message: error.response
+        });
       });
   }
 
