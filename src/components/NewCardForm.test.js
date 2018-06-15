@@ -44,7 +44,7 @@ describe('NewCardForm', () => {
     expect(textField.getElement().props.value).toEqual('New Stuff');
   });
 
-  // NOTE:TODO: Write and Implement tests for Submit. Check that callback gets run
+  // NOTE: Tests for Submit. Check that callback gets run
   test('that the text box is reset to blank when the form is submitted', () => {
     // Arrange
     const wrapper = mount( <NewCardForm addCardCallback={() => {} } />);
@@ -94,4 +94,6 @@ describe('NewCardForm', () => {
       text: ''
     });
   });
+
+  // NOTE: TODO:  Tests for Api interaction and info
 });
