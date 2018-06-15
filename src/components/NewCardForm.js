@@ -62,7 +62,7 @@ class NewCardForm extends Component {
           <label className='new-card-form__form-label' htmlFor='text'></label>
           <input className='new-card-form__form-textarea' placeholder='Enter message here...' type='text' name='text' value={this.state.text} onChange={this.onInputChange} />
 
-          <select className='new-card-form__form-select' name='emoji' onChange={this.onInputChange} >
+          <select className='new-card-form__form-select' name='emoji' value={this.state.emoji} onChange={this.onInputChange} >
             {emojiDropDown}
           </select>
 

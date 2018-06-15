@@ -61,7 +61,6 @@ class Board extends Component {
   deleteCard = (cardID) => {
 
     let deleteURL = `${url}${this.props.boardName}/cards/${cardID}`;
-
     axios.delete(deleteURL);
 
 
@@ -77,6 +76,9 @@ class Board extends Component {
   }
 
   addCard = (card) => {
+    let boardURL = `${url}${this.props.boardName}/cards`
+    axios.post(boardURL, card);
+
     let updatedCards = this.state.cards;
     updatedCards.push(card);
     this.setState({cards: updatedCards});
