@@ -68,13 +68,15 @@ class Board extends Component {
   render() {
     const cards = this.state.cards.map((card, index) => {
       return (
-        <Card
-        key={index}
-        id={card.card.id}
-        text={card.card.text}
-        emoji={card.card.emoji}
-        deleteCardCallback={this.deleteCard}
-        />
+        <div>
+          <Card
+          key={index}
+          id={card.card.id}
+          text={card.card.text}
+          emoji={card.card.emoji}
+          deleteCardCallback={this.deleteCard}
+          />
+        </div>
       );
     });
 

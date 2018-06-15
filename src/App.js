@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Board from './components/Board';
 import Status from './components/Status';
+import Dropdown from './components/Dropdown';
 
 class App extends Component {
   constructor() {
@@ -11,7 +12,8 @@ class App extends Component {
       status: {
         message: 'loaded the page',
         type: 'success'
-      }
+      },
+      currentBoard: 'sam'
     }
   }
 
@@ -20,7 +22,7 @@ class App extends Component {
       status: {
         message: message,
         type: type
-      }
+      },
     })
   }
 
@@ -31,13 +33,14 @@ class App extends Component {
         <header className="header">
           <h1 className="header__h1"><span className="header__text">Inspiration Board</span></h1>
         </header>
+        <Dropdown />
         <Status
           message={this.state.status.message}
           type={this.state.status.type}
         />
         <Board
         url="https://inspiration-board.herokuapp.com/boards/"
-        boardName={`sam`}
+        boardName={this.state.currentBoard}
         updateStatusCallback={this.updateStatus}
         />
       </section>
