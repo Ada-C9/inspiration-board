@@ -18,9 +18,11 @@ class Card extends Component {
       <section className="card">
       <div className="card__content">
 
-      <button className="card__delete" onClick={this.removeCard}>
+      <div className="card__delete">
+      <button  onClick={this.removeCard}>
       x
       </button>
+      </div>
 
       <br/>
 

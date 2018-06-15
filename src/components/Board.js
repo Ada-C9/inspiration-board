@@ -99,11 +99,11 @@ class Board extends Component {
 
   render() {
     return (
-      <section>
+      <section >
       <header>
       {this.state.message ? this.state.message: ""  }
       </header>
-      <div>
+      <div className="board">
       {this.renderBoardCards()}
       </div>
       <NewCardForm addCardCallback={this.addCard} />
