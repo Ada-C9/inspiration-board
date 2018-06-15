@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import './Board.css';
 import Card from './Card';
+import './Card.css';
 import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 import Foundation,{Callout,Colors} from 'react-foundation';
@@ -32,10 +33,12 @@ class Board extends Component {
   }
 
   removeCard = (cardId) => {
-    axios.delete(`https://inspiration-board.herokuapp.com/boards/<Abinnet-Ainalem>/cards${cardId}`)
+    axios.delete(`https://inspiration-board.herokuapp.com
+      /boards/<Abinnet-Ainalem>/cards${cardId}`)
     .then ((response) => {
+      this.state.cards.pop(cardId -1);
       this.setState({
-        message: response.status
+        message: response.status,
       })
     })
     .catch((error) => {
@@ -52,11 +55,17 @@ class Board extends Component {
       console.log(`this is card with index ${index}`);
       console.log(card);
       return (
-        <Card
-          key={index}
-          quote={card.card.text}
-          emoji={card.card.emoji}
-        />
+        <div key={index + 1}>
+          <Card
+            quote={card.card.text}
+            emoji={card.card.emoji}
+            //this is a function that requires a parameter
+            //how do I pass this function and its parameter in props?
+            //is this through a callback?
+            removeCard={this.removeCard}
+            index={this.index}
+          />
+        </div>
       );
     });
     console.log(list);
@@ -83,6 +92,7 @@ class Board extends Component {
 }
 
 Board.propTypes = {
+  cards: PropTypes.array
 };
 
 export default Board;
