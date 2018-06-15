@@ -32,14 +32,16 @@ class Board extends Component {
     });
   }
 
-  removeCard = (cardId) => {
-    axios.delete(`https://inspiration-board.herokuapp.com
-      /boards/<Abinnet-Ainalem>/cards${cardId}`)
+  removeCard = (cardIndex) => {
+    const deletedCardId = this.state.cards[cardIndex].card.id;
+
+    axios.delete(`https://inspiration-board.herokuapp.com/boards/<Abinnet-Ainalem>/cards/${deletedCardId}`)
+
     .then ((response) => {
-      this.state.cards.pop(cardId -1);
+      this.state.cards.splice(cardIndex,1);
       this.setState({
-        message: response.status,
-      })
+        message: `Deleted card`,
+      });
     })
     .catch((error) => {
       this.setState({
@@ -49,26 +51,18 @@ class Board extends Component {
   }
 
   showCards = () => {
-    console.log('this state cards');
-    console.log(this.state.cards);
     const list = this.state.cards.map((card, index) => {
-      console.log(`this is card with index ${index}`);
-      console.log(card);
       return (
         <div key={index + 1}>
           <Card
             quote={card.card.text}
             emoji={card.card.emoji}
-            //this is a function that requires a parameter
-            //how do I pass this function and its parameter in props?
-            //is this through a callback?
             removeCard={this.removeCard}
-            index={this.index}
+            index={index}
           />
         </div>
       );
     });
-    console.log(list);
     return list
   }
 
