@@ -27,7 +27,6 @@ class Dropdown extends Component {
   }
 
   changeValue = (event) => {
-    // console.log(event.target.value);
     this.setState({
       value: event.target.value
     });
