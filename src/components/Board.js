@@ -25,9 +25,9 @@ class Board extends Component {
         cards: response.data
       })
     })
-    .catch((error) => {
+    .catch(() => {
       this.setState({
-        error: error.message
+        error: 'Unable to view cards'
       })
     });
   }
@@ -37,18 +37,38 @@ class Board extends Component {
 
     axios.delete(`https://inspiration-board.herokuapp.com/boards/<Abinnet-Ainalem>/cards/${deletedCardId}`)
 
-    .then ((response) => {
+    .then (() => {
       this.state.cards.splice(cardIndex,1);
       this.setState({
         message: `Deleted card`,
       });
     })
-    .catch((error) => {
+    .catch(() => {
       this.setState({
-        error: error.message
+        error: 'Unable to delete card'
+
       })
     });
   }
+
+  addCard = (newCard) => {
+    // this will have to be a post of new card info
+    axios.post(`https://inspiration-board.herokuapp.com/boards/<Abinnet-Ainalem>/cards/${newCard}`)
+
+    .then (() => {
+      this.state.cards << newCard;
+      this.setState({
+        message: `Sucessfully added card`,
+      });
+    })
+    .catch(() => {
+      this.setState({
+        error: 'Unable to add card'
+
+      })
+    });
+  }
+
 
   showCards = () => {
     const list = this.state.cards.map((card, index) => {
@@ -69,16 +89,20 @@ class Board extends Component {
 
   render() {
     return (
-      <div className="board">
+      <div>
         <div className="callout-colors-example">
           <Callout color={Colors.WARNING}>
-          <h5>{this.state.error}</h5>
+            <h5>{this.state.error}</h5>
           </Callout>
           <Callout color={Colors.WARNING}>
-          <h5>{this.state.message}</h5>
+            <h5>{this.state.message}</h5>
           </Callout>
+          <NewCardForm
+            addCard={this.addCard}/>
         </div>
-        {this.showCards()}
+        <div className="board">
+          {this.showCards()}
+        </div>
       </div>
     )
   }
