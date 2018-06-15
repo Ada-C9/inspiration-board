@@ -17,17 +17,23 @@ class Dropdown extends Component {
         this.setState({
           boards: response.data.map((board, index) => {
             return (
-              board.board.name
+              <option>{board.board.name}</option>
             );
           })
         });
       })
 
+      .catch((error) => {
+        this.props.updateStatusCallback(error.message, 'error');
+      });
+
   }
 
   render() {
     return (
-      <h3>Dropdown Goes Here</h3>
+      <select className='dropdown'>
+        { this.state.boards}
+      </select>
     );
   }
 
