@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Board that it matches an existing snapshot 1`] = `
-<div
-  className="board"
->
+<div>
   <div
     className="callout-colors-example"
   >
@@ -17,6 +15,12 @@ exports[`Board that it matches an existing snapshot 1`] = `
     >
       <h5 />
     </Callout>
+    <NewCardForm
+      addCard={[Function]}
+    />
   </div>
+  <div
+    className="board"
+  />
 </div>
 `;
