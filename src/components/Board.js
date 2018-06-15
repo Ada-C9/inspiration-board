@@ -46,6 +46,13 @@ class Board extends Component {
     return cards;
   }
 
+  renderMessage = () => {
+    if (this.state.message) {
+      return (
+        <p>{this.state.message}</p>
+      );
+    }
+  }
   renderError = () => {
     if (this.state.error) {
       return (
@@ -94,8 +101,8 @@ class Board extends Component {
     return (
       <div>
       <NewCardForm addCardCallback={this.addCard}/>
-        {this.renderError()}
-        {this.renderCards()}
+        <section className="validation-errors-display">{this.renderMessage()}</section>
+        <section className="cards">{this.renderCards()}</section>
       </div>
     )
   }

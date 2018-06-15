@@ -41,32 +41,37 @@ class NewCardForm extends Component {
     });
 
     return (
-      <form onSubmit={this.onFormSubmit}>
-      <div>
-        <label htmlFor="text">Text: </label>
-        <input
-          name="text"
-          value={this.state.text}
-          onChange={this.onFieldChange}
-          type="text"
-          />
-      </div>
-        <div>
-          <label htmlFor="emoji">Emoji: </label>
-          <select
-            name="emoji"
-            value={this.state.emoji}
-            onChange={this.onFieldChange}
-            type="text"
-            >
-            {options}
-          </select>
-        </div>
-        <input type="submit" value="Add Card" />
-      </form>
-    );
+        <form onSubmit={this.onFormSubmit} className="new-card-form">
+          <header className="new-card-form__header">
+            Create New Card
+          </header>
+
+          <div className="new-card-form__form">
+            <label htmlFor="text" className="new-card-form__form-label">Text: </label>
+            <textarea
+              name="text"
+              value={this.state.text}
+              onChange={this.onFieldChange}
+              className="new-card-form__form-textarea"
+              />
+
+            <label htmlFor="emoji" className="new-card-form__form-label">Emoji: </label>
+            <select
+              name="emoji"
+              value={this.state.emoji}
+              onChange={this.onFieldChange}
+              type="text"
+              className="new-card-form__form-select"
+              >
+              
+              {options}
+            </select>
+            <input type="submit" value="Add Card" className="new-card-form__form-button"/>
+          </div>
+        </form>
+      );
+    }
   }
-}
 
 NewCardForm.propTypes = {
   addCardCallback: PropTypes.func.isRequired,
