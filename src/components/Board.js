@@ -5,7 +5,7 @@ import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
 
-const URL = 'https://inspiration-board.herokuapp.com/boards/alexandriagg/cards/'
+const URL = 'https://inspiration-board.herokuapp.com/boards/alexandriaz/cards/'
 
 class Board extends Component {
   constructor() {

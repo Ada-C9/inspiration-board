@@ -45,3 +45,7 @@
   align-self: start;
   font-family: 'Permanent Marker', Helvetica, sans-serif;
 }
+
+.card__delete:hover {
+  cursor: pointer;
+}

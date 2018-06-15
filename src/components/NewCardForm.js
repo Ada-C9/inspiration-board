@@ -61,28 +61,29 @@ class NewCardForm extends Component {
   render() {
     return (
       <form className="new-card-form" onSubmit={this.onFormSubmit}>
-        <section className="form">
+        <section className="new-card-form__form">
           <div>
-            <label className="form-label" htmlFor="text">
+            <label className="new-card-form__form-label" htmlFor="text">
               Message:
-              <input className="form-textarea"
+              <input className="new-card-form__form-textarea"
                 name="text"
                 value={this.state.message}
                 onChange={this.onFieldChange}
                 type="text"
-                id="text"
               />
             </label>
           </div>
           <div>
-            <label className="form-label" htmlFor="emoji">
+            <label className="new-card-form__form-label" htmlFor="emoji">
               Emoji:
-              <select className="form-select" name="emoji" value={this.state.emoji} onChange={this.selectDropdown}>
+              <select className="new-card-form__form-select" value={this.state.emoji} onChange={this.selectDropdown} name="emoji">
                 {this.emojiDropdown()}
               </select>
             </label>
           </div>
-          <input type="submit" value="Add Card" />
+          <div>
+            <input type="submit" value="Add Card" className="new-card-form__form-button" />
+          </div>
         </section>
       </form>
     )
