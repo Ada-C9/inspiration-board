@@ -11,7 +11,7 @@ class NewCardForm extends Component {
 
     this.state = {
       text: '',
-      emoji: ''
+      emoji: '',
     }
   }
 
@@ -46,9 +46,10 @@ class NewCardForm extends Component {
   }
 
   clearForm = () => {
+    console.log('inside clear form');
     this.setState({
       text: '',
-      emoji: ''
+      emoji: '',
     });
   }
 
@@ -60,32 +61,26 @@ class NewCardForm extends Component {
 
   render() {
     return (
-      <form className="new-card-form" onSubmit={this.onFormSubmit}>
-        <section className="new-card-form__form">
-          <div>
-            <label className="new-card-form__form-label" htmlFor="text">
-              Message:
-              <input className="new-card-form__form-textarea"
-                name="text"
-                value={this.state.message}
-                onChange={this.onFieldChange}
-                type="text"
-              />
-            </label>
-          </div>
-          <div>
-            <label className="new-card-form__form-label" htmlFor="emoji">
-              Emoji:
-              <select className="new-card-form__form-select" value={this.state.emoji} onChange={this.selectDropdown} name="emoji">
-                {this.emojiDropdown()}
-              </select>
-            </label>
-          </div>
-          <div>
-            <input type="submit" value="Add Card" className="new-card-form__form-button" />
-          </div>
-        </section>
-      </form>
+      <section className="new-card-form">
+        <form className="new-card-form__form" onSubmit={this.onFormSubmit}>
+        
+          <label className="new-card-form__form-label" htmlFor="text">Message:</label>
+          <input className="new-card-form__form-textarea"
+            name="text"
+            value={this.state.text}
+            onChange={this.onFieldChange}
+            type="text"
+          />
+
+          <label className="new-card-form__form-label" htmlFor="emoji">Emoji:</label>
+          <select className="new-card-form__form-select" value={this.state.emoji} onChange={this.selectDropdown} name="emoji">
+            {this.emojiDropdown()}
+          </select>
+
+          <input type="submit" value="Add Card" className="new-card-form__form-button" />
+
+        </form>
+      </section>
     )
   }
 }
