@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Board idk 1`] = `
+exports[`Card idk 1`] = `
 <div
   className="board"
 >
@@ -10,7 +10,7 @@ exports[`Board idk 1`] = `
 </div>
 `;
 
-exports[`Board that it matches an existing snapshot 1`] = `
+exports[`Card that it matches an existing snapshot 1`] = `
 <Board
   updateStatusCallback={[Function]}
 >
