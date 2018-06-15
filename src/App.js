@@ -15,7 +15,7 @@ class App extends Component {
     // Set state to the static data from props
     this.state = {
       boardList: [],
-      boardName: '',
+      boardName: null,
       status: {
         message: 'loaded the page',
         type: 'success'
@@ -81,7 +81,7 @@ class App extends Component {
         </select>
         </div>
         <Board
-         boardName={this.state.boardName}
+         boardName={this.state.boardName || 'Dikla'}
          updateStatusCallback={this.updateStatus}/>
         </section>
     );
