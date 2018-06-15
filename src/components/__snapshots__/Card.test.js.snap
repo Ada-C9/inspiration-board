@@ -6,6 +6,7 @@ exports[`Card that it renders Card with shallow rendering 1`] = `
 >
   <button
     className="card__delete"
+    onClick={[Function]}
     type="button"
   >
     x

@@ -20,10 +20,15 @@ class Card extends Component {
       )
     }
   }
+
+  selectDelete = () => {
+    console.log(this.props.id, this.props.index)
+    this.props.deleteCard(this.props.id, this.props.index)
+  }
   render() {
     return (
       <div className="card">
-        <button type="button" className="card__delete">x</button>
+        <button type="button" className="card__delete" onClick={ this.selectDelete }>x</button>
         <div className="card__content">
           { this.renderText() }
           { this.renderEmoji() }
@@ -35,7 +40,10 @@ class Card extends Component {
 
 Card.propTypes = {
   text: PropTypes.string,
-  emoji: PropTypes.string
+  emoji: PropTypes.string,
+  index: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
+  deleteCard: PropTypes.func.isRequired
 };
 
 export default Card;

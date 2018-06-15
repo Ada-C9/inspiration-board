@@ -57,7 +57,7 @@ class Board extends Component {
         cards.splice(index, 1)
         this.setState({
           cards,
-          message: `Sucessfully created Card ${response.data.card.id}`
+          message: `Sucessfully deleted Card ${response.data.card.id}`
         })
       })
       .catch((error) => {
@@ -69,6 +69,8 @@ class Board extends Component {
     const cardComponents = this.state.cards.map((card, index) => {
       return<Card
         key={index}
+        index={index}
+        id={card.id}
         text={card.text}
         emoji={card.emoji}
         deleteCard={ this.deleteCard }
