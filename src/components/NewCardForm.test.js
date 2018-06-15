@@ -38,6 +38,7 @@ describe('NewCardForm', () => {
 
       element = wrapper.find(`[name="${field}"]`);
       expect(element.getElement().props.value).toEqual(value);
+      
     });
   });
 });

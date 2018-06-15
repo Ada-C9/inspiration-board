@@ -10,4 +10,23 @@ describe('Card', () => {
 
     wrapper.unmount();
   });
-});
+
+  test('Card can be deleted', () => {
+      const mockDeleteCardCallback = jest.fn();
+      const wrapper = shallow(<Card
+        deleteCardCallback={mockDeleteCardCallback}
+        id={1}
+        />
+      );
+
+      wrapper.find('.card__delete').simulate('click', {
+        target: {
+          id: 1,
+        }
+      });
+      wrapper.update();
+
+      expect(mockDeleteCardCallback).toHaveBeenCalled();
+      expect(mockDeleteCardCallback.mock.calls[0][0]).toEqual(1);
+    });
+  });

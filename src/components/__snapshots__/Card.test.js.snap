@@ -18,19 +18,84 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        undefined,
-        undefined,
-        " ",
-        undefined,
+        <section
+          className="card__delete"
+          onClick={[Function]}
+>
+          Delete Card
+</section>,
+        <section
+          className="card__content"
+>
+          <span
+                    className="card__content-text"
+          />
+          <span
+                    className="card__content-emoji"
+          />
+</section>,
       ],
       "className": "card",
     },
     "ref": null,
     "rendered": Array [
-      undefined,
-      undefined,
-      " ",
-      undefined,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Delete Card",
+          "className": "card__delete",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Delete Card",
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span
+              className="card__content-text"
+/>,
+            <span
+              className="card__content-emoji"
+/>,
+          ],
+          "className": "card__content",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "card__content-text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "card__content-emoji",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "span",
+          },
+        ],
+        "type": "section",
+      },
     ],
     "type": "div",
   },
@@ -41,19 +106,84 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          undefined,
-          undefined,
-          " ",
-          undefined,
+          <section
+            className="card__delete"
+            onClick={[Function]}
+>
+            Delete Card
+</section>,
+          <section
+            className="card__content"
+>
+            <span
+                        className="card__content-text"
+            />
+            <span
+                        className="card__content-emoji"
+            />
+</section>,
         ],
         "className": "card",
       },
       "ref": null,
       "rendered": Array [
-        undefined,
-        undefined,
-        " ",
-        undefined,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Delete Card",
+            "className": "card__delete",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Delete Card",
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span
+                className="card__content-text"
+/>,
+              <span
+                className="card__content-emoji"
+/>,
+            ],
+            "className": "card__content",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "card__content-text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "card__content-emoji",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "span",
+            },
+          ],
+          "type": "section",
+        },
       ],
       "type": "div",
     },
