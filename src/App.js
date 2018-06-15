@@ -15,6 +15,7 @@ class App extends Component {
     // Set state to the static data from props
     this.state = {
       boardList: [],
+      boardName: '',
       status: {
         message: 'loaded the page',
         type: 'success'
@@ -51,6 +52,12 @@ class App extends Component {
     });
   }
 
+  onSelectChange = (event) => {
+    let updatedInput = {};
+    updatedInput[event.target.name] = event.target.value
+     this.setState( updatedInput );
+  }
+
   render() {
     const boardList = this.state.boardList.map((name, index) => {
       return <option key={index} value={name} >{name}</option>
@@ -66,11 +73,16 @@ class App extends Component {
         />
         <div className="boardList">
         <h3>Pick a Board</h3>
-        <select>
+        <select onChange={this.onSelectChange}
+        name="boardName"
+        value={this.state.boardName}
+        >
           {boardList}
         </select>
         </div>
-        <Board updateStatusCallback={this.updateStatus}/>
+        <Board
+         boardName={this.state.boardName}
+         updateStatusCallback={this.updateStatus}/>
         </section>
     );
   }

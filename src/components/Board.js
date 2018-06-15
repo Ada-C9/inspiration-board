@@ -9,11 +9,13 @@ import NewCardForm from './NewCardForm';
 // import CARD_DATA from '../data/card-data.json';
 // import Status from './Status';
 
-const Cards_URL = 'https://inspiration-board.herokuapp.com/boards/Dikla/cards'
+const Cards_URL = 'https://inspiration-board.herokuapp.com/boards/'
 class Board extends Component {
   static propTypes = {
     cards: PropTypes.array.isRequired,
-    updateStatusCallback: PropTypes.func
+    updateStatusCallback: PropTypes.func,
+    board: PropTypes.string,
+    boardName: PropTypes.string,
   };
 
   constructor() {
@@ -28,7 +30,8 @@ class Board extends Component {
 
   addCard = (cardInfo) => {
     console.log(cardInfo);
-    axios.post(Cards_URL, cardInfo)
+    const url = Cards_URL + this.props.boardName + '/cards';
+    axios.post(url, cardInfo)
     .then((response) => {
       console.log(response.data);
       this.props.updateStatusCallback(`Successfully added card ${ response.data.card.id}!`, 'success');
@@ -48,7 +51,7 @@ class Board extends Component {
     updatedCards.splice(index, 1);
     this.setState({cards: updatedCards});
 
-    let DELETE_URL = 'https://inspiration-board.herokuapp.com/boards/' + `Dikla/cards/${id}`;
+    let DELETE_URL = Cards_URL + this.props.boardName + '/cards' + id;
     axios.delete(DELETE_URL)
     .then((response) => {
       console.log(response);
@@ -59,10 +62,13 @@ class Board extends Component {
     });
   }
 
-
   componentDidMount() {
-    this.props.updateStatusCallback('Loading cards...', 'success')
-    axios.get(Cards_URL)
+    this.getBoard(Cards_URL, this.props.board || 'Dikla')
+  }
+  getBoard(url, boardName) {
+    this.props.updateStatusCallback('Loading cards...', 'success');
+    const cardUrl = Cards_URL + boardName + '/cards';
+    axios.get(cardUrl)
     .then((response) => {
       console.log("success");
       console.log(response);
@@ -78,6 +84,12 @@ class Board extends Component {
       this.props.updateStatusCallback(error.message, 'error')
 
     });
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.boardName && this.props.boardName !== prevProps.boardName) {
+      this.getBoard(Cards_URL, this.props.boardName)
+    }
   }
 
 
