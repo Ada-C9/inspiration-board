@@ -60,10 +60,3 @@ select, input[type="color" i][list] {
 select:hover {
   background-color: #F4FF81;
 }
-
-@keyframes pulse {
-  0%   {color: #FF0000;}
-  25%  {color: #FF00FF;}
-  50%  {color: #32CD32;}
-  100% {color: #FF1493;}
-}
