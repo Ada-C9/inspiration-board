@@ -50,21 +50,25 @@ class Board extends Component {
   }
 
 
+  deleteCard = (id) => {
+      axios.delete(`${this.props.url}${this.props.boardName}/cards/${id}`)
+        .then((response) =>{
+          this.props.updateStatusCallback('Successfully deleted card')
+          let updatedCards = this.state.cards;
+          let index = updatedCards.findIndex((card) => {
+            return card.card.id === id;
+          });
 
-  removeCard = (id) => {
-    axios.delete(`${this.props.url}${this.props.boardName}/cards/${id}`)
-      .then((response) =>{
-        this.props.updateStatusCallback('Successfully deleted card')
-        let updatedCards = this.state.cards;
-        let index = updatedCards.findIndex(response.data)
+          console.log(`got index ${index}`);
+          console.log(updatedCards[index]);
 
-        updatedCards.pop(index);
-        this.setState({ cards: updatedCards });
-      })
-      .catch((error) => {
-        console.log(error.message);
-        this.props.updateStatusCallback(error.messages, 'error')
-      })
+          updatedCards.splice(index, 1);
+          this.setState({ cards: updatedCards });
+        })
+        .catch((error) => {
+          console.log(error.message);
+          this.props.updateStatusCallback(error.messages, 'error')
+        })
   }
 
   render() {
@@ -73,7 +77,7 @@ class Board extends Component {
       return <Card key={index}
       text={note.card.text}
       emoji={note.card.emoji}
-      deleteCallback={this.removeCard}
+      deleteCallback={this.deleteCard}
       id={note.card.id} />
     })
 

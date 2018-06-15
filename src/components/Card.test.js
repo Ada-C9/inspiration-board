@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('Card', () =>{
   test('matches snapshot', () =>{
