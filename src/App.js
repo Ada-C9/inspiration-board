@@ -15,7 +15,7 @@ class App extends Component {
     // Set state to the static data from props
     this.state = {
       boardList: [],
-      boardName: null,
+      boardName: undefined,
       status: {
         message: 'loaded the page',
         type: 'success'
