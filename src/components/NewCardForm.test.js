@@ -5,8 +5,12 @@ import NewCardForm from './NewCardForm';
 
 describe('NewCardForm', () => {
 
-  it('', () => {
+  test('that it renders NewCardForm with shallow rendering', () => {
+    const wrapper = shallow(<NewCardForm submitNewCard={ ()=>{ } } />);
 
+    expect(wrapper).toMatchSnapshot();
+
+    wrapper.unmount();
   });
 
 });
