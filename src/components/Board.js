@@ -69,6 +69,7 @@ class Board extends Component {
       delete updatedCards[index]
       this.setState({
         cards: updatedCards,
+        message: `Successfully Deleted Card!`
       })
     })
     .catch((error) => {
@@ -122,9 +123,9 @@ class Board extends Component {
   render() {
     return (
       <section >
-      {this.renderMessage()}
-      <div className="form"><NewCardForm addCardCallBack={this.addCard}/></div>
-      <div className="board">{this.renderCardList()}</div >
+        <div className="form"><NewCardForm addCardCallBack={this.addCard}/></div>
+        <div className="message">{this.renderMessage()}</div>
+        <div className="board">{this.renderCardList()}</div >
       </section >
     )
   }
