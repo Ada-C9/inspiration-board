@@ -12,15 +12,8 @@ class Card extends Component {
     }
   }
 
-  // deleteCard = (event) => {
-  //   event.preventDefault();
-  //   console.log(this.props.id);
-  //   this.props.deleteCard(this.props.id)
-  //
-  //
-  // }
-
-  deleteThisCard = () => {
+  deleteThisCard = (event) => {
+      event.preventDefault();
       this.props.deleteCardCallback(this.props.id);
     };
 
@@ -43,7 +36,7 @@ class Card extends Component {
 Card.propTypes = {
   text: PropTypes.string,
   emoji: PropTypes.string,
-  id: PropTypes.number,
+  id: PropTypes.number.isRequired,
   deleteCardCallback: PropTypes.func.isRequired
 
 };

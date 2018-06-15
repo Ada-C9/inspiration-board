@@ -1,10 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Board that it matches an existing snapshot 1`] = `
+exports[`Board shallow mount 1`] = `
 <div
   className="board"
 >
-  <p />
   <NewCardForm
     addCardCallback={[Function]}
   />

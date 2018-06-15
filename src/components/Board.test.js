@@ -4,8 +4,13 @@ import { shallow } from 'enzyme';
 
 
 describe('Board', () => {
-  test('that it matches an existing snapshot', () => {
-    const wrapper = shallow(<Board boardId={1}  />);
-    expect(wrapper).toMatchSnapshot();
-  })
+  test('shallow mount', () => {
+    const board = shallow(
+      <Board url="inspiration/board.com" boardName="BRENDA" updateStatusCallback={()=>{}} />
+    );
+
+    expect(board).toMatchSnapshot();
+
+
+  });
 })

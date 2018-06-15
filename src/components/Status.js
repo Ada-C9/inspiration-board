@@ -7,13 +7,9 @@ class Status extends React.Component {
     type: PropTypes.string
   }
   render() {
-    let prefix = '';
-    if (this.props.type === 'error') {
-      prefix = "There was a problem: ";
-    }
+
     return (
       <section className={`status ${this.props.type}`}>
-        {prefix}
         {this.props.message}
       </section>
     );

@@ -11,7 +11,10 @@ import NewCardForm from './NewCardForm';
 
 const CARDS_URL = 'https://inspiration-board.herokuapp.com/boards/brenda/cards'
 
+
 class Board extends Component {
+
+
   constructor() {
     super();
 
@@ -43,7 +46,7 @@ class Board extends Component {
       this.setState({cards: cardsData})
     })
     .catch((error) => {
-      this.props.updateStatusCallback(`Error loading cards: ${error.message}`, 'error');
+      this.props.updateStatusCallback(error.message, 'error');
     })
   }
 
@@ -56,19 +59,24 @@ class Board extends Component {
 
     axios.delete(`https://inspiration-board.herokuapp.com/boards/${this.props.boardName}/cards/${id}`)
     .then((response) => {
-      this.componentDidMount();
+
       this.props.updateStatusCallback(`Successfully deleted card ${id} from ${board_name}´s board!`, 'success');
 
-      const updatedCardsList = this.state.cards.filter((card)=> {
-        if (card.card.id !== id) {
-          return card
+      const updatedCardsList = []
+      this.state.cards.map((card) => {
+
+        if (card.id !== id) {
+          updatedCardsList.push(card);
         }
+
       });
       this.setState({cards: updatedCardsList});
 
     })
     .catch( (error) => {
-      this.props.updateStatusCallback(`Couldn't delete the card: ${error.message}`, 'success');
+      console.log(error);
+
+      this.props.updateStatusCallback(error.message, 'success');
     });
   }
 
@@ -79,10 +87,9 @@ class Board extends Component {
 
     axios.post(CARDS_URL, card)
     .then((response) => {
-      console.log(response);
 
       this.props.updateStatusCallback(`Sucessfully added a new card!` , 'success');
-      console.log(card);
+    
 
       card.id = response.data.card.id;
       updatedCards.push(card);

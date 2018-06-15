@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 
 describe('Card', () => {
   test('matches a snapshot', () => {
-    const wrapper = shallow(<Card deleteCard={() => {}} id={2} />);
+    const wrapper = shallow(<Card id={2} deleteCardCallback={() => {}} />);
     expect(wrapper).toMatchSnapshot();
   })
 })
