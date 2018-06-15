@@ -1,0 +1,6221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewCardForm it matches an existing snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <NewCardForm />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2
+          className="new-card-form__header"
+>
+          Add a card
+</h2>,
+        <div
+          className="new-card-form__form"
+>
+          <label
+                    className="new-card-form__form-label"
+                    htmlFor="text"
+          >
+                    Text: 
+          </label>
+          <input
+                    className="new-card-form__form-textarea"
+                    name="text"
+                    onChange={[Function]}
+                    type="text"
+                    value=""
+          />
+</div>,
+        <div
+          className="new-card-form__form"
+>
+          <label
+                    className="new-card-form__form-label"
+                    htmlFor="emoji"
+          >
+                    Emoji: 
+          </label>
+          <select
+                    className="new-card-form__form-select"
+                    name="emoji"
+                    onChange={[Function]}
+                    value=""
+          >
+                    <option
+                              value=""
+                    />
+                    <option
+                              value="heart_eyes"
+                    >
+                              😍
+                    </option>
+                    <option
+                              value="beer"
+                    >
+                              🍺
+                    </option>
+                    <option
+                              value="clap"
+                    >
+                              👏
+                    </option>
+                    <option
+                              value="sparkling_heart"
+                    >
+                              💖
+                    </option>
+                    <option
+                              value="heart_eyes_cat"
+                    >
+                              😻
+                    </option>
+                    <option
+                              value="dog"
+                    >
+                              🐶
+                    </option>
+                    <option
+                              value="100"
+                    >
+                              💯
+                    </option>
+                    <option
+                              value="1234"
+                    >
+                              🔢
+                    </option>
+                    <option
+                              value="grinning"
+                    >
+                              😀
+                    </option>
+                    <option
+                              value="grimacing"
+                    >
+                              😬
+                    </option>
+                    <option
+                              value="grin"
+                    >
+                              😁
+                    </option>
+                    <option
+                              value="joy"
+                    >
+                              😂
+                    </option>
+                    <option
+                              value="rofl"
+                    >
+                              🤣
+                    </option>
+                    <option
+                              value="smiley"
+                    >
+                              😃
+                    </option>
+                    <option
+                              value="smile"
+                    >
+                              😄
+                    </option>
+                    <option
+                              value="sweat_smile"
+                    >
+                              😅
+                    </option>
+                    <option
+                              value="laughing"
+                    >
+                              😆
+                    </option>
+                    <option
+                              value="innocent"
+                    >
+                              😇
+                    </option>
+                    <option
+                              value="wink"
+                    >
+                              😉
+                    </option>
+                    <option
+                              value="blush"
+                    >
+                              😊
+                    </option>
+                    <option
+                              value="slightly_smiling_face"
+                    >
+                              🙂
+                    </option>
+                    <option
+                              value="upside_down_face"
+                    >
+                              🙃
+                    </option>
+                    <option
+                              value="relaxed"
+                    >
+                              ☺️
+                    </option>
+                    <option
+                              value="yum"
+                    >
+                              😋
+                    </option>
+                    <option
+                              value="relieved"
+                    >
+                              😌
+                    </option>
+                    <option
+                              value="heart_eyes"
+                    >
+                              😍
+                    </option>
+                    <option
+                              value="kissing_heart"
+                    >
+                              😘
+                    </option>
+                    <option
+                              value="kissing"
+                    >
+                              😗
+                    </option>
+                    <option
+                              value="kissing_smiling_eyes"
+                    >
+                              😙
+                    </option>
+                    <option
+                              value="kissing_closed_eyes"
+                    >
+                              😚
+                    </option>
+                    <option
+                              value="stuck_out_tongue_winking_eye"
+                    >
+                              😜
+                    </option>
+                    <option
+                              value="zany"
+                    >
+                              🤪
+                    </option>
+                    <option
+                              value="raised_eyebrow"
+                    >
+                              🤨
+                    </option>
+                    <option
+                              value="monocle"
+                    >
+                              🧐
+                    </option>
+                    <option
+                              value="stuck_out_tongue_closed_eyes"
+                    >
+                              😝
+                    </option>
+                    <option
+                              value="stuck_out_tongue"
+                    >
+                              😛
+                    </option>
+                    <option
+                              value="money_mouth_face"
+                    >
+                              🤑
+                    </option>
+                    <option
+                              value="nerd_face"
+                    >
+                              🤓
+                    </option>
+                    <option
+                              value="sunglasses"
+                    >
+                              😎
+                    </option>
+                    <option
+                              value="star_struck"
+                    >
+                              🤩
+                    </option>
+                    <option
+                              value="clown_face"
+                    >
+                              🤡
+                    </option>
+                    <option
+                              value="cowboy_hat_face"
+                    >
+                              🤠
+                    </option>
+                    <option
+                              value="hugs"
+                    >
+                              🤗
+                    </option>
+                    <option
+                              value="smirk"
+                    >
+                              😏
+                    </option>
+                    <option
+                              value="no_mouth"
+                    >
+                              😶
+                    </option>
+                    <option
+                              value="neutral_face"
+                    >
+                              😐
+                    </option>
+                    <option
+                              value="expressionless"
+                    >
+                              😑
+                    </option>
+                    <option
+                              value="unamused"
+                    >
+                              😒
+                    </option>
+                    <option
+                              value="roll_eyes"
+                    >
+                              🙄
+                    </option>
+                    <option
+                              value="thinking"
+                    >
+                              🤔
+                    </option>
+                    <option
+                              value="lying_face"
+                    >
+                              🤥
+                    </option>
+                    <option
+                              value="hand_over_mouth"
+                    >
+                              🤭
+                    </option>
+                    <option
+                              value="shushing"
+                    >
+                              🤫
+                    </option>
+                    <option
+                              value="symbols_over_mouth"
+                    >
+                              🤬
+                    </option>
+                    <option
+                              value="exploding_head"
+                    >
+                              🤯
+                    </option>
+                    <option
+                              value="flushed"
+                    >
+                              😳
+                    </option>
+                    <option
+                              value="disappointed"
+                    >
+                              😞
+                    </option>
+                    <option
+                              value="worried"
+                    >
+                              😟
+                    </option>
+                    <option
+                              value="angry"
+                    >
+                              😠
+                    </option>
+                    <option
+                              value="rage"
+                    >
+                              😡
+                    </option>
+                    <option
+                              value="pensive"
+                    >
+                              😔
+                    </option>
+                    <option
+                              value="confused"
+                    >
+                              😕
+                    </option>
+                    <option
+                              value="slightly_frowning_face"
+                    >
+                              🙁
+                    </option>
+                    <option
+                              value="frowning_face"
+                    >
+                              ☹
+                    </option>
+                    <option
+                              value="persevere"
+                    >
+                              😣
+                    </option>
+                    <option
+                              value="confounded"
+                    >
+                              😖
+                    </option>
+                    <option
+                              value="tired_face"
+                    >
+                              😫
+                    </option>
+                    <option
+                              value="weary"
+                    >
+                              😩
+                    </option>
+                    <option
+                              value="triumph"
+                    >
+                              😤
+                    </option>
+                    <option
+                              value="open_mouth"
+                    >
+                              😮
+                    </option>
+                    <option
+                              value="scream"
+                    >
+                              😱
+                    </option>
+                    <option
+                              value="fearful"
+                    >
+                              😨
+                    </option>
+                    <option
+                              value="cold_sweat"
+                    >
+                              😰
+                    </option>
+                    <option
+                              value="hushed"
+                    >
+                              😯
+                    </option>
+                    <option
+                              value="frowning"
+                    >
+                              😦
+                    </option>
+                    <option
+                              value="anguished"
+                    >
+                              😧
+                    </option>
+                    <option
+                              value="cry"
+                    >
+                              😢
+                    </option>
+                    <option
+                              value="disappointed_relieved"
+                    >
+                              😥
+                    </option>
+                    <option
+                              value="drooling_face"
+                    >
+                              🤤
+                    </option>
+                    <option
+                              value="sleepy"
+                    >
+                              😪
+                    </option>
+                    <option
+                              value="sweat"
+                    >
+                              😓
+                    </option>
+                    <option
+                              value="sob"
+                    >
+                              😭
+                    </option>
+                    <option
+                              value="dizzy_face"
+                    >
+                              😵
+                    </option>
+                    <option
+                              value="astonished"
+                    >
+                              😲
+                    </option>
+                    <option
+                              value="zipper_mouth_face"
+                    >
+                              🤐
+                    </option>
+                    <option
+                              value="nauseated_face"
+                    >
+                              🤢
+                    </option>
+                    <option
+                              value="sneezing_face"
+                    >
+                              🤧
+                    </option>
+                    <option
+                              value="vomiting"
+                    >
+                              🤮
+                    </option>
+                    <option
+                              value="mask"
+                    >
+                              😷
+                    </option>
+                    <option
+                              value="face_with_thermometer"
+                    >
+                              🤒
+                    </option>
+                    <option
+                              value="face_with_head_bandage"
+                    >
+                              🤕
+                    </option>
+                    <option
+                              value="sleeping"
+                    >
+                              😴
+                    </option>
+                    <option
+                              value="zzz"
+                    >
+                              💤
+                    </option>
+                    <option
+                              value="poop"
+                    >
+                              💩
+                    </option>
+                    <option
+                              value="smiling_imp"
+                    >
+                              😈
+                    </option>
+                    <option
+                              value="imp"
+                    >
+                              👿
+                    </option>
+                    <option
+                              value="japanese_ogre"
+                    >
+                              👹
+                    </option>
+                    <option
+                              value="japanese_goblin"
+                    >
+                              👺
+                    </option>
+                    <option
+                              value="skull"
+                    >
+                              💀
+                    </option>
+                    <option
+                              value="ghost"
+                    >
+                              👻
+                    </option>
+                    <option
+                              value="alien"
+                    >
+                              👽
+                    </option>
+                    <option
+                              value="robot"
+                    >
+                              🤖
+                    </option>
+                    <option
+                              value="smiley_cat"
+                    >
+                              😺
+                    </option>
+                    <option
+                              value="smile_cat"
+                    >
+                              😸
+                    </option>
+                    <option
+                              value="joy_cat"
+                    >
+                              😹
+                    </option>
+                    <option
+                              value="heart_eyes_cat"
+                    >
+                              😻
+                    </option>
+          </select>
+</div>,
+        <div
+          className="new-card-form__form"
+>
+          <input
+                    className="new-card-form__form-button"
+                    type="submit"
+                    value="Add Card"
+          />
+</div>,
+      ],
+      "className": "new-card-form",
+      "onSubmit": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Add a card",
+          "className": "new-card-form__header",
+        },
+        "ref": null,
+        "rendered": "Add a card",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <label
+              className="new-card-form__form-label"
+              htmlFor="text"
+>
+              Text: 
+</label>,
+            <input
+              className="new-card-form__form-textarea"
+              name="text"
+              onChange={[Function]}
+              type="text"
+              value=""
+/>,
+          ],
+          "className": "new-card-form__form",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Text: ",
+              "className": "new-card-form__form-label",
+              "htmlFor": "text",
+            },
+            "ref": null,
+            "rendered": "Text: ",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "new-card-form__form-textarea",
+              "name": "text",
+              "onChange": [Function],
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <label
+              className="new-card-form__form-label"
+              htmlFor="emoji"
+>
+              Emoji: 
+</label>,
+            <select
+              className="new-card-form__form-select"
+              name="emoji"
+              onChange={[Function]}
+              value=""
+>
+              <option
+                            value=""
+              />
+              <option
+                            value="heart_eyes"
+              >
+                            😍
+              </option>
+              <option
+                            value="beer"
+              >
+                            🍺
+              </option>
+              <option
+                            value="clap"
+              >
+                            👏
+              </option>
+              <option
+                            value="sparkling_heart"
+              >
+                            💖
+              </option>
+              <option
+                            value="heart_eyes_cat"
+              >
+                            😻
+              </option>
+              <option
+                            value="dog"
+              >
+                            🐶
+              </option>
+              <option
+                            value="100"
+              >
+                            💯
+              </option>
+              <option
+                            value="1234"
+              >
+                            🔢
+              </option>
+              <option
+                            value="grinning"
+              >
+                            😀
+              </option>
+              <option
+                            value="grimacing"
+              >
+                            😬
+              </option>
+              <option
+                            value="grin"
+              >
+                            😁
+              </option>
+              <option
+                            value="joy"
+              >
+                            😂
+              </option>
+              <option
+                            value="rofl"
+              >
+                            🤣
+              </option>
+              <option
+                            value="smiley"
+              >
+                            😃
+              </option>
+              <option
+                            value="smile"
+              >
+                            😄
+              </option>
+              <option
+                            value="sweat_smile"
+              >
+                            😅
+              </option>
+              <option
+                            value="laughing"
+              >
+                            😆
+              </option>
+              <option
+                            value="innocent"
+              >
+                            😇
+              </option>
+              <option
+                            value="wink"
+              >
+                            😉
+              </option>
+              <option
+                            value="blush"
+              >
+                            😊
+              </option>
+              <option
+                            value="slightly_smiling_face"
+              >
+                            🙂
+              </option>
+              <option
+                            value="upside_down_face"
+              >
+                            🙃
+              </option>
+              <option
+                            value="relaxed"
+              >
+                            ☺️
+              </option>
+              <option
+                            value="yum"
+              >
+                            😋
+              </option>
+              <option
+                            value="relieved"
+              >
+                            😌
+              </option>
+              <option
+                            value="heart_eyes"
+              >
+                            😍
+              </option>
+              <option
+                            value="kissing_heart"
+              >
+                            😘
+              </option>
+              <option
+                            value="kissing"
+              >
+                            😗
+              </option>
+              <option
+                            value="kissing_smiling_eyes"
+              >
+                            😙
+              </option>
+              <option
+                            value="kissing_closed_eyes"
+              >
+                            😚
+              </option>
+              <option
+                            value="stuck_out_tongue_winking_eye"
+              >
+                            😜
+              </option>
+              <option
+                            value="zany"
+              >
+                            🤪
+              </option>
+              <option
+                            value="raised_eyebrow"
+              >
+                            🤨
+              </option>
+              <option
+                            value="monocle"
+              >
+                            🧐
+              </option>
+              <option
+                            value="stuck_out_tongue_closed_eyes"
+              >
+                            😝
+              </option>
+              <option
+                            value="stuck_out_tongue"
+              >
+                            😛
+              </option>
+              <option
+                            value="money_mouth_face"
+              >
+                            🤑
+              </option>
+              <option
+                            value="nerd_face"
+              >
+                            🤓
+              </option>
+              <option
+                            value="sunglasses"
+              >
+                            😎
+              </option>
+              <option
+                            value="star_struck"
+              >
+                            🤩
+              </option>
+              <option
+                            value="clown_face"
+              >
+                            🤡
+              </option>
+              <option
+                            value="cowboy_hat_face"
+              >
+                            🤠
+              </option>
+              <option
+                            value="hugs"
+              >
+                            🤗
+              </option>
+              <option
+                            value="smirk"
+              >
+                            😏
+              </option>
+              <option
+                            value="no_mouth"
+              >
+                            😶
+              </option>
+              <option
+                            value="neutral_face"
+              >
+                            😐
+              </option>
+              <option
+                            value="expressionless"
+              >
+                            😑
+              </option>
+              <option
+                            value="unamused"
+              >
+                            😒
+              </option>
+              <option
+                            value="roll_eyes"
+              >
+                            🙄
+              </option>
+              <option
+                            value="thinking"
+              >
+                            🤔
+              </option>
+              <option
+                            value="lying_face"
+              >
+                            🤥
+              </option>
+              <option
+                            value="hand_over_mouth"
+              >
+                            🤭
+              </option>
+              <option
+                            value="shushing"
+              >
+                            🤫
+              </option>
+              <option
+                            value="symbols_over_mouth"
+              >
+                            🤬
+              </option>
+              <option
+                            value="exploding_head"
+              >
+                            🤯
+              </option>
+              <option
+                            value="flushed"
+              >
+                            😳
+              </option>
+              <option
+                            value="disappointed"
+              >
+                            😞
+              </option>
+              <option
+                            value="worried"
+              >
+                            😟
+              </option>
+              <option
+                            value="angry"
+              >
+                            😠
+              </option>
+              <option
+                            value="rage"
+              >
+                            😡
+              </option>
+              <option
+                            value="pensive"
+              >
+                            😔
+              </option>
+              <option
+                            value="confused"
+              >
+                            😕
+              </option>
+              <option
+                            value="slightly_frowning_face"
+              >
+                            🙁
+              </option>
+              <option
+                            value="frowning_face"
+              >
+                            ☹
+              </option>
+              <option
+                            value="persevere"
+              >
+                            😣
+              </option>
+              <option
+                            value="confounded"
+              >
+                            😖
+              </option>
+              <option
+                            value="tired_face"
+              >
+                            😫
+              </option>
+              <option
+                            value="weary"
+              >
+                            😩
+              </option>
+              <option
+                            value="triumph"
+              >
+                            😤
+              </option>
+              <option
+                            value="open_mouth"
+              >
+                            😮
+              </option>
+              <option
+                            value="scream"
+              >
+                            😱
+              </option>
+              <option
+                            value="fearful"
+              >
+                            😨
+              </option>
+              <option
+                            value="cold_sweat"
+              >
+                            😰
+              </option>
+              <option
+                            value="hushed"
+              >
+                            😯
+              </option>
+              <option
+                            value="frowning"
+              >
+                            😦
+              </option>
+              <option
+                            value="anguished"
+              >
+                            😧
+              </option>
+              <option
+                            value="cry"
+              >
+                            😢
+              </option>
+              <option
+                            value="disappointed_relieved"
+              >
+                            😥
+              </option>
+              <option
+                            value="drooling_face"
+              >
+                            🤤
+              </option>
+              <option
+                            value="sleepy"
+              >
+                            😪
+              </option>
+              <option
+                            value="sweat"
+              >
+                            😓
+              </option>
+              <option
+                            value="sob"
+              >
+                            😭
+              </option>
+              <option
+                            value="dizzy_face"
+              >
+                            😵
+              </option>
+              <option
+                            value="astonished"
+              >
+                            😲
+              </option>
+              <option
+                            value="zipper_mouth_face"
+              >
+                            🤐
+              </option>
+              <option
+                            value="nauseated_face"
+              >
+                            🤢
+              </option>
+              <option
+                            value="sneezing_face"
+              >
+                            🤧
+              </option>
+              <option
+                            value="vomiting"
+              >
+                            🤮
+              </option>
+              <option
+                            value="mask"
+              >
+                            😷
+              </option>
+              <option
+                            value="face_with_thermometer"
+              >
+                            🤒
+              </option>
+              <option
+                            value="face_with_head_bandage"
+              >
+                            🤕
+              </option>
+              <option
+                            value="sleeping"
+              >
+                            😴
+              </option>
+              <option
+                            value="zzz"
+              >
+                            💤
+              </option>
+              <option
+                            value="poop"
+              >
+                            💩
+              </option>
+              <option
+                            value="smiling_imp"
+              >
+                            😈
+              </option>
+              <option
+                            value="imp"
+              >
+                            👿
+              </option>
+              <option
+                            value="japanese_ogre"
+              >
+                            👹
+              </option>
+              <option
+                            value="japanese_goblin"
+              >
+                            👺
+              </option>
+              <option
+                            value="skull"
+              >
+                            💀
+              </option>
+              <option
+                            value="ghost"
+              >
+                            👻
+              </option>
+              <option
+                            value="alien"
+              >
+                            👽
+              </option>
+              <option
+                            value="robot"
+              >
+                            🤖
+              </option>
+              <option
+                            value="smiley_cat"
+              >
+                            😺
+              </option>
+              <option
+                            value="smile_cat"
+              >
+                            😸
+              </option>
+              <option
+                            value="joy_cat"
+              >
+                            😹
+              </option>
+              <option
+                            value="heart_eyes_cat"
+              >
+                            😻
+              </option>
+</select>,
+          ],
+          "className": "new-card-form__form",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Emoji: ",
+              "className": "new-card-form__form-label",
+              "htmlFor": "emoji",
+            },
+            "ref": null,
+            "rendered": "Emoji: ",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <option
+                  value=""
+/>,
+                <option
+                  value="heart_eyes"
+>
+                  😍
+</option>,
+                <option
+                  value="beer"
+>
+                  🍺
+</option>,
+                <option
+                  value="clap"
+>
+                  👏
+</option>,
+                <option
+                  value="sparkling_heart"
+>
+                  💖
+</option>,
+                <option
+                  value="heart_eyes_cat"
+>
+                  😻
+</option>,
+                <option
+                  value="dog"
+>
+                  🐶
+</option>,
+                <option
+                  value="100"
+>
+                  💯
+</option>,
+                <option
+                  value="1234"
+>
+                  🔢
+</option>,
+                <option
+                  value="grinning"
+>
+                  😀
+</option>,
+                <option
+                  value="grimacing"
+>
+                  😬
+</option>,
+                <option
+                  value="grin"
+>
+                  😁
+</option>,
+                <option
+                  value="joy"
+>
+                  😂
+</option>,
+                <option
+                  value="rofl"
+>
+                  🤣
+</option>,
+                <option
+                  value="smiley"
+>
+                  😃
+</option>,
+                <option
+                  value="smile"
+>
+                  😄
+</option>,
+                <option
+                  value="sweat_smile"
+>
+                  😅
+</option>,
+                <option
+                  value="laughing"
+>
+                  😆
+</option>,
+                <option
+                  value="innocent"
+>
+                  😇
+</option>,
+                <option
+                  value="wink"
+>
+                  😉
+</option>,
+                <option
+                  value="blush"
+>
+                  😊
+</option>,
+                <option
+                  value="slightly_smiling_face"
+>
+                  🙂
+</option>,
+                <option
+                  value="upside_down_face"
+>
+                  🙃
+</option>,
+                <option
+                  value="relaxed"
+>
+                  ☺️
+</option>,
+                <option
+                  value="yum"
+>
+                  😋
+</option>,
+                <option
+                  value="relieved"
+>
+                  😌
+</option>,
+                <option
+                  value="heart_eyes"
+>
+                  😍
+</option>,
+                <option
+                  value="kissing_heart"
+>
+                  😘
+</option>,
+                <option
+                  value="kissing"
+>
+                  😗
+</option>,
+                <option
+                  value="kissing_smiling_eyes"
+>
+                  😙
+</option>,
+                <option
+                  value="kissing_closed_eyes"
+>
+                  😚
+</option>,
+                <option
+                  value="stuck_out_tongue_winking_eye"
+>
+                  😜
+</option>,
+                <option
+                  value="zany"
+>
+                  🤪
+</option>,
+                <option
+                  value="raised_eyebrow"
+>
+                  🤨
+</option>,
+                <option
+                  value="monocle"
+>
+                  🧐
+</option>,
+                <option
+                  value="stuck_out_tongue_closed_eyes"
+>
+                  😝
+</option>,
+                <option
+                  value="stuck_out_tongue"
+>
+                  😛
+</option>,
+                <option
+                  value="money_mouth_face"
+>
+                  🤑
+</option>,
+                <option
+                  value="nerd_face"
+>
+                  🤓
+</option>,
+                <option
+                  value="sunglasses"
+>
+                  😎
+</option>,
+                <option
+                  value="star_struck"
+>
+                  🤩
+</option>,
+                <option
+                  value="clown_face"
+>
+                  🤡
+</option>,
+                <option
+                  value="cowboy_hat_face"
+>
+                  🤠
+</option>,
+                <option
+                  value="hugs"
+>
+                  🤗
+</option>,
+                <option
+                  value="smirk"
+>
+                  😏
+</option>,
+                <option
+                  value="no_mouth"
+>
+                  😶
+</option>,
+                <option
+                  value="neutral_face"
+>
+                  😐
+</option>,
+                <option
+                  value="expressionless"
+>
+                  😑
+</option>,
+                <option
+                  value="unamused"
+>
+                  😒
+</option>,
+                <option
+                  value="roll_eyes"
+>
+                  🙄
+</option>,
+                <option
+                  value="thinking"
+>
+                  🤔
+</option>,
+                <option
+                  value="lying_face"
+>
+                  🤥
+</option>,
+                <option
+                  value="hand_over_mouth"
+>
+                  🤭
+</option>,
+                <option
+                  value="shushing"
+>
+                  🤫
+</option>,
+                <option
+                  value="symbols_over_mouth"
+>
+                  🤬
+</option>,
+                <option
+                  value="exploding_head"
+>
+                  🤯
+</option>,
+                <option
+                  value="flushed"
+>
+                  😳
+</option>,
+                <option
+                  value="disappointed"
+>
+                  😞
+</option>,
+                <option
+                  value="worried"
+>
+                  😟
+</option>,
+                <option
+                  value="angry"
+>
+                  😠
+</option>,
+                <option
+                  value="rage"
+>
+                  😡
+</option>,
+                <option
+                  value="pensive"
+>
+                  😔
+</option>,
+                <option
+                  value="confused"
+>
+                  😕
+</option>,
+                <option
+                  value="slightly_frowning_face"
+>
+                  🙁
+</option>,
+                <option
+                  value="frowning_face"
+>
+                  ☹
+</option>,
+                <option
+                  value="persevere"
+>
+                  😣
+</option>,
+                <option
+                  value="confounded"
+>
+                  😖
+</option>,
+                <option
+                  value="tired_face"
+>
+                  😫
+</option>,
+                <option
+                  value="weary"
+>
+                  😩
+</option>,
+                <option
+                  value="triumph"
+>
+                  😤
+</option>,
+                <option
+                  value="open_mouth"
+>
+                  😮
+</option>,
+                <option
+                  value="scream"
+>
+                  😱
+</option>,
+                <option
+                  value="fearful"
+>
+                  😨
+</option>,
+                <option
+                  value="cold_sweat"
+>
+                  😰
+</option>,
+                <option
+                  value="hushed"
+>
+                  😯
+</option>,
+                <option
+                  value="frowning"
+>
+                  😦
+</option>,
+                <option
+                  value="anguished"
+>
+                  😧
+</option>,
+                <option
+                  value="cry"
+>
+                  😢
+</option>,
+                <option
+                  value="disappointed_relieved"
+>
+                  😥
+</option>,
+                <option
+                  value="drooling_face"
+>
+                  🤤
+</option>,
+                <option
+                  value="sleepy"
+>
+                  😪
+</option>,
+                <option
+                  value="sweat"
+>
+                  😓
+</option>,
+                <option
+                  value="sob"
+>
+                  😭
+</option>,
+                <option
+                  value="dizzy_face"
+>
+                  😵
+</option>,
+                <option
+                  value="astonished"
+>
+                  😲
+</option>,
+                <option
+                  value="zipper_mouth_face"
+>
+                  🤐
+</option>,
+                <option
+                  value="nauseated_face"
+>
+                  🤢
+</option>,
+                <option
+                  value="sneezing_face"
+>
+                  🤧
+</option>,
+                <option
+                  value="vomiting"
+>
+                  🤮
+</option>,
+                <option
+                  value="mask"
+>
+                  😷
+</option>,
+                <option
+                  value="face_with_thermometer"
+>
+                  🤒
+</option>,
+                <option
+                  value="face_with_head_bandage"
+>
+                  🤕
+</option>,
+                <option
+                  value="sleeping"
+>
+                  😴
+</option>,
+                <option
+                  value="zzz"
+>
+                  💤
+</option>,
+                <option
+                  value="poop"
+>
+                  💩
+</option>,
+                <option
+                  value="smiling_imp"
+>
+                  😈
+</option>,
+                <option
+                  value="imp"
+>
+                  👿
+</option>,
+                <option
+                  value="japanese_ogre"
+>
+                  👹
+</option>,
+                <option
+                  value="japanese_goblin"
+>
+                  👺
+</option>,
+                <option
+                  value="skull"
+>
+                  💀
+</option>,
+                <option
+                  value="ghost"
+>
+                  👻
+</option>,
+                <option
+                  value="alien"
+>
+                  👽
+</option>,
+                <option
+                  value="robot"
+>
+                  🤖
+</option>,
+                <option
+                  value="smiley_cat"
+>
+                  😺
+</option>,
+                <option
+                  value="smile_cat"
+>
+                  😸
+</option>,
+                <option
+                  value="joy_cat"
+>
+                  😹
+</option>,
+                <option
+                  value="heart_eyes_cat"
+>
+                  😻
+</option>,
+              ],
+              "className": "new-card-form__form-select",
+              "name": "emoji",
+              "onChange": [Function],
+              "value": "",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "0",
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "1",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😍",
+                  "value": "heart_eyes",
+                },
+                "ref": null,
+                "rendered": "😍",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "2",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🍺",
+                  "value": "beer",
+                },
+                "ref": null,
+                "rendered": "🍺",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "3",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "👏",
+                  "value": "clap",
+                },
+                "ref": null,
+                "rendered": "👏",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "4",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "💖",
+                  "value": "sparkling_heart",
+                },
+                "ref": null,
+                "rendered": "💖",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "5",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😻",
+                  "value": "heart_eyes_cat",
+                },
+                "ref": null,
+                "rendered": "😻",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "6",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🐶",
+                  "value": "dog",
+                },
+                "ref": null,
+                "rendered": "🐶",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "7",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "💯",
+                  "value": "100",
+                },
+                "ref": null,
+                "rendered": "💯",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "8",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🔢",
+                  "value": "1234",
+                },
+                "ref": null,
+                "rendered": "🔢",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "9",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😀",
+                  "value": "grinning",
+                },
+                "ref": null,
+                "rendered": "😀",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "10",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😬",
+                  "value": "grimacing",
+                },
+                "ref": null,
+                "rendered": "😬",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "11",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😁",
+                  "value": "grin",
+                },
+                "ref": null,
+                "rendered": "😁",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "12",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😂",
+                  "value": "joy",
+                },
+                "ref": null,
+                "rendered": "😂",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "13",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤣",
+                  "value": "rofl",
+                },
+                "ref": null,
+                "rendered": "🤣",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "14",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😃",
+                  "value": "smiley",
+                },
+                "ref": null,
+                "rendered": "😃",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "15",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😄",
+                  "value": "smile",
+                },
+                "ref": null,
+                "rendered": "😄",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "16",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😅",
+                  "value": "sweat_smile",
+                },
+                "ref": null,
+                "rendered": "😅",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "17",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😆",
+                  "value": "laughing",
+                },
+                "ref": null,
+                "rendered": "😆",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "18",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😇",
+                  "value": "innocent",
+                },
+                "ref": null,
+                "rendered": "😇",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "19",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😉",
+                  "value": "wink",
+                },
+                "ref": null,
+                "rendered": "😉",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "20",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😊",
+                  "value": "blush",
+                },
+                "ref": null,
+                "rendered": "😊",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "21",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🙂",
+                  "value": "slightly_smiling_face",
+                },
+                "ref": null,
+                "rendered": "🙂",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "22",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🙃",
+                  "value": "upside_down_face",
+                },
+                "ref": null,
+                "rendered": "🙃",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "23",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "☺️",
+                  "value": "relaxed",
+                },
+                "ref": null,
+                "rendered": "☺️",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "24",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😋",
+                  "value": "yum",
+                },
+                "ref": null,
+                "rendered": "😋",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "25",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😌",
+                  "value": "relieved",
+                },
+                "ref": null,
+                "rendered": "😌",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "26",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😍",
+                  "value": "heart_eyes",
+                },
+                "ref": null,
+                "rendered": "😍",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "27",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😘",
+                  "value": "kissing_heart",
+                },
+                "ref": null,
+                "rendered": "😘",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "28",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😗",
+                  "value": "kissing",
+                },
+                "ref": null,
+                "rendered": "😗",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "29",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😙",
+                  "value": "kissing_smiling_eyes",
+                },
+                "ref": null,
+                "rendered": "😙",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "30",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😚",
+                  "value": "kissing_closed_eyes",
+                },
+                "ref": null,
+                "rendered": "😚",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "31",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😜",
+                  "value": "stuck_out_tongue_winking_eye",
+                },
+                "ref": null,
+                "rendered": "😜",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "32",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤪",
+                  "value": "zany",
+                },
+                "ref": null,
+                "rendered": "🤪",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "33",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤨",
+                  "value": "raised_eyebrow",
+                },
+                "ref": null,
+                "rendered": "🤨",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "34",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🧐",
+                  "value": "monocle",
+                },
+                "ref": null,
+                "rendered": "🧐",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "35",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😝",
+                  "value": "stuck_out_tongue_closed_eyes",
+                },
+                "ref": null,
+                "rendered": "😝",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "36",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😛",
+                  "value": "stuck_out_tongue",
+                },
+                "ref": null,
+                "rendered": "😛",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "37",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤑",
+                  "value": "money_mouth_face",
+                },
+                "ref": null,
+                "rendered": "🤑",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "38",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤓",
+                  "value": "nerd_face",
+                },
+                "ref": null,
+                "rendered": "🤓",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "39",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😎",
+                  "value": "sunglasses",
+                },
+                "ref": null,
+                "rendered": "😎",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "40",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤩",
+                  "value": "star_struck",
+                },
+                "ref": null,
+                "rendered": "🤩",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "41",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤡",
+                  "value": "clown_face",
+                },
+                "ref": null,
+                "rendered": "🤡",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "42",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤠",
+                  "value": "cowboy_hat_face",
+                },
+                "ref": null,
+                "rendered": "🤠",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "43",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤗",
+                  "value": "hugs",
+                },
+                "ref": null,
+                "rendered": "🤗",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "44",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😏",
+                  "value": "smirk",
+                },
+                "ref": null,
+                "rendered": "😏",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "45",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😶",
+                  "value": "no_mouth",
+                },
+                "ref": null,
+                "rendered": "😶",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "46",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😐",
+                  "value": "neutral_face",
+                },
+                "ref": null,
+                "rendered": "😐",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "47",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😑",
+                  "value": "expressionless",
+                },
+                "ref": null,
+                "rendered": "😑",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "48",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😒",
+                  "value": "unamused",
+                },
+                "ref": null,
+                "rendered": "😒",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "49",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🙄",
+                  "value": "roll_eyes",
+                },
+                "ref": null,
+                "rendered": "🙄",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "50",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤔",
+                  "value": "thinking",
+                },
+                "ref": null,
+                "rendered": "🤔",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "51",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤥",
+                  "value": "lying_face",
+                },
+                "ref": null,
+                "rendered": "🤥",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "52",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤭",
+                  "value": "hand_over_mouth",
+                },
+                "ref": null,
+                "rendered": "🤭",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "53",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤫",
+                  "value": "shushing",
+                },
+                "ref": null,
+                "rendered": "🤫",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "54",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤬",
+                  "value": "symbols_over_mouth",
+                },
+                "ref": null,
+                "rendered": "🤬",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "55",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤯",
+                  "value": "exploding_head",
+                },
+                "ref": null,
+                "rendered": "🤯",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "56",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😳",
+                  "value": "flushed",
+                },
+                "ref": null,
+                "rendered": "😳",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "57",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😞",
+                  "value": "disappointed",
+                },
+                "ref": null,
+                "rendered": "😞",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "58",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😟",
+                  "value": "worried",
+                },
+                "ref": null,
+                "rendered": "😟",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "59",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😠",
+                  "value": "angry",
+                },
+                "ref": null,
+                "rendered": "😠",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "60",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😡",
+                  "value": "rage",
+                },
+                "ref": null,
+                "rendered": "😡",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "61",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😔",
+                  "value": "pensive",
+                },
+                "ref": null,
+                "rendered": "😔",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "62",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😕",
+                  "value": "confused",
+                },
+                "ref": null,
+                "rendered": "😕",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "63",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🙁",
+                  "value": "slightly_frowning_face",
+                },
+                "ref": null,
+                "rendered": "🙁",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "64",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "☹",
+                  "value": "frowning_face",
+                },
+                "ref": null,
+                "rendered": "☹",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "65",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😣",
+                  "value": "persevere",
+                },
+                "ref": null,
+                "rendered": "😣",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "66",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😖",
+                  "value": "confounded",
+                },
+                "ref": null,
+                "rendered": "😖",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "67",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😫",
+                  "value": "tired_face",
+                },
+                "ref": null,
+                "rendered": "😫",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "68",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😩",
+                  "value": "weary",
+                },
+                "ref": null,
+                "rendered": "😩",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "69",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😤",
+                  "value": "triumph",
+                },
+                "ref": null,
+                "rendered": "😤",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "70",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😮",
+                  "value": "open_mouth",
+                },
+                "ref": null,
+                "rendered": "😮",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "71",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😱",
+                  "value": "scream",
+                },
+                "ref": null,
+                "rendered": "😱",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "72",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😨",
+                  "value": "fearful",
+                },
+                "ref": null,
+                "rendered": "😨",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "73",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😰",
+                  "value": "cold_sweat",
+                },
+                "ref": null,
+                "rendered": "😰",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "74",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😯",
+                  "value": "hushed",
+                },
+                "ref": null,
+                "rendered": "😯",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "75",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😦",
+                  "value": "frowning",
+                },
+                "ref": null,
+                "rendered": "😦",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "76",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😧",
+                  "value": "anguished",
+                },
+                "ref": null,
+                "rendered": "😧",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "77",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😢",
+                  "value": "cry",
+                },
+                "ref": null,
+                "rendered": "😢",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "78",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😥",
+                  "value": "disappointed_relieved",
+                },
+                "ref": null,
+                "rendered": "😥",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "79",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤤",
+                  "value": "drooling_face",
+                },
+                "ref": null,
+                "rendered": "🤤",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "80",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😪",
+                  "value": "sleepy",
+                },
+                "ref": null,
+                "rendered": "😪",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "81",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😓",
+                  "value": "sweat",
+                },
+                "ref": null,
+                "rendered": "😓",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "82",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😭",
+                  "value": "sob",
+                },
+                "ref": null,
+                "rendered": "😭",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "83",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😵",
+                  "value": "dizzy_face",
+                },
+                "ref": null,
+                "rendered": "😵",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "84",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😲",
+                  "value": "astonished",
+                },
+                "ref": null,
+                "rendered": "😲",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "85",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤐",
+                  "value": "zipper_mouth_face",
+                },
+                "ref": null,
+                "rendered": "🤐",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "86",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤢",
+                  "value": "nauseated_face",
+                },
+                "ref": null,
+                "rendered": "🤢",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "87",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤧",
+                  "value": "sneezing_face",
+                },
+                "ref": null,
+                "rendered": "🤧",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "88",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤮",
+                  "value": "vomiting",
+                },
+                "ref": null,
+                "rendered": "🤮",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "89",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😷",
+                  "value": "mask",
+                },
+                "ref": null,
+                "rendered": "😷",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "90",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤒",
+                  "value": "face_with_thermometer",
+                },
+                "ref": null,
+                "rendered": "🤒",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "91",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤕",
+                  "value": "face_with_head_bandage",
+                },
+                "ref": null,
+                "rendered": "🤕",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "92",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😴",
+                  "value": "sleeping",
+                },
+                "ref": null,
+                "rendered": "😴",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "93",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "💤",
+                  "value": "zzz",
+                },
+                "ref": null,
+                "rendered": "💤",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "94",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "💩",
+                  "value": "poop",
+                },
+                "ref": null,
+                "rendered": "💩",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "95",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😈",
+                  "value": "smiling_imp",
+                },
+                "ref": null,
+                "rendered": "😈",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "96",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "👿",
+                  "value": "imp",
+                },
+                "ref": null,
+                "rendered": "👿",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "97",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "👹",
+                  "value": "japanese_ogre",
+                },
+                "ref": null,
+                "rendered": "👹",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "98",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "👺",
+                  "value": "japanese_goblin",
+                },
+                "ref": null,
+                "rendered": "👺",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "99",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "💀",
+                  "value": "skull",
+                },
+                "ref": null,
+                "rendered": "💀",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "100",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "👻",
+                  "value": "ghost",
+                },
+                "ref": null,
+                "rendered": "👻",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "101",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "👽",
+                  "value": "alien",
+                },
+                "ref": null,
+                "rendered": "👽",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "102",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🤖",
+                  "value": "robot",
+                },
+                "ref": null,
+                "rendered": "🤖",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "103",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😺",
+                  "value": "smiley_cat",
+                },
+                "ref": null,
+                "rendered": "😺",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "104",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😸",
+                  "value": "smile_cat",
+                },
+                "ref": null,
+                "rendered": "😸",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "105",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😹",
+                  "value": "joy_cat",
+                },
+                "ref": null,
+                "rendered": "😹",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "106",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😻",
+                  "value": "heart_eyes_cat",
+                },
+                "ref": null,
+                "rendered": "😻",
+                "type": "option",
+              },
+            ],
+            "type": "select",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <input
+            className="new-card-form__form-button"
+            type="submit"
+            value="Add Card"
+/>,
+          "className": "new-card-form__form",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "new-card-form__form-button",
+            "type": "submit",
+            "value": "Add Card",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2
+            className="new-card-form__header"
+>
+            Add a card
+</h2>,
+          <div
+            className="new-card-form__form"
+>
+            <label
+                        className="new-card-form__form-label"
+                        htmlFor="text"
+            >
+                        Text: 
+            </label>
+            <input
+                        className="new-card-form__form-textarea"
+                        name="text"
+                        onChange={[Function]}
+                        type="text"
+                        value=""
+            />
+</div>,
+          <div
+            className="new-card-form__form"
+>
+            <label
+                        className="new-card-form__form-label"
+                        htmlFor="emoji"
+            >
+                        Emoji: 
+            </label>
+            <select
+                        className="new-card-form__form-select"
+                        name="emoji"
+                        onChange={[Function]}
+                        value=""
+            >
+                        <option
+                                    value=""
+                        />
+                        <option
+                                    value="heart_eyes"
+                        >
+                                    😍
+                        </option>
+                        <option
+                                    value="beer"
+                        >
+                                    🍺
+                        </option>
+                        <option
+                                    value="clap"
+                        >
+                                    👏
+                        </option>
+                        <option
+                                    value="sparkling_heart"
+                        >
+                                    💖
+                        </option>
+                        <option
+                                    value="heart_eyes_cat"
+                        >
+                                    😻
+                        </option>
+                        <option
+                                    value="dog"
+                        >
+                                    🐶
+                        </option>
+                        <option
+                                    value="100"
+                        >
+                                    💯
+                        </option>
+                        <option
+                                    value="1234"
+                        >
+                                    🔢
+                        </option>
+                        <option
+                                    value="grinning"
+                        >
+                                    😀
+                        </option>
+                        <option
+                                    value="grimacing"
+                        >
+                                    😬
+                        </option>
+                        <option
+                                    value="grin"
+                        >
+                                    😁
+                        </option>
+                        <option
+                                    value="joy"
+                        >
+                                    😂
+                        </option>
+                        <option
+                                    value="rofl"
+                        >
+                                    🤣
+                        </option>
+                        <option
+                                    value="smiley"
+                        >
+                                    😃
+                        </option>
+                        <option
+                                    value="smile"
+                        >
+                                    😄
+                        </option>
+                        <option
+                                    value="sweat_smile"
+                        >
+                                    😅
+                        </option>
+                        <option
+                                    value="laughing"
+                        >
+                                    😆
+                        </option>
+                        <option
+                                    value="innocent"
+                        >
+                                    😇
+                        </option>
+                        <option
+                                    value="wink"
+                        >
+                                    😉
+                        </option>
+                        <option
+                                    value="blush"
+                        >
+                                    😊
+                        </option>
+                        <option
+                                    value="slightly_smiling_face"
+                        >
+                                    🙂
+                        </option>
+                        <option
+                                    value="upside_down_face"
+                        >
+                                    🙃
+                        </option>
+                        <option
+                                    value="relaxed"
+                        >
+                                    ☺️
+                        </option>
+                        <option
+                                    value="yum"
+                        >
+                                    😋
+                        </option>
+                        <option
+                                    value="relieved"
+                        >
+                                    😌
+                        </option>
+                        <option
+                                    value="heart_eyes"
+                        >
+                                    😍
+                        </option>
+                        <option
+                                    value="kissing_heart"
+                        >
+                                    😘
+                        </option>
+                        <option
+                                    value="kissing"
+                        >
+                                    😗
+                        </option>
+                        <option
+                                    value="kissing_smiling_eyes"
+                        >
+                                    😙
+                        </option>
+                        <option
+                                    value="kissing_closed_eyes"
+                        >
+                                    😚
+                        </option>
+                        <option
+                                    value="stuck_out_tongue_winking_eye"
+                        >
+                                    😜
+                        </option>
+                        <option
+                                    value="zany"
+                        >
+                                    🤪
+                        </option>
+                        <option
+                                    value="raised_eyebrow"
+                        >
+                                    🤨
+                        </option>
+                        <option
+                                    value="monocle"
+                        >
+                                    🧐
+                        </option>
+                        <option
+                                    value="stuck_out_tongue_closed_eyes"
+                        >
+                                    😝
+                        </option>
+                        <option
+                                    value="stuck_out_tongue"
+                        >
+                                    😛
+                        </option>
+                        <option
+                                    value="money_mouth_face"
+                        >
+                                    🤑
+                        </option>
+                        <option
+                                    value="nerd_face"
+                        >
+                                    🤓
+                        </option>
+                        <option
+                                    value="sunglasses"
+                        >
+                                    😎
+                        </option>
+                        <option
+                                    value="star_struck"
+                        >
+                                    🤩
+                        </option>
+                        <option
+                                    value="clown_face"
+                        >
+                                    🤡
+                        </option>
+                        <option
+                                    value="cowboy_hat_face"
+                        >
+                                    🤠
+                        </option>
+                        <option
+                                    value="hugs"
+                        >
+                                    🤗
+                        </option>
+                        <option
+                                    value="smirk"
+                        >
+                                    😏
+                        </option>
+                        <option
+                                    value="no_mouth"
+                        >
+                                    😶
+                        </option>
+                        <option
+                                    value="neutral_face"
+                        >
+                                    😐
+                        </option>
+                        <option
+                                    value="expressionless"
+                        >
+                                    😑
+                        </option>
+                        <option
+                                    value="unamused"
+                        >
+                                    😒
+                        </option>
+                        <option
+                                    value="roll_eyes"
+                        >
+                                    🙄
+                        </option>
+                        <option
+                                    value="thinking"
+                        >
+                                    🤔
+                        </option>
+                        <option
+                                    value="lying_face"
+                        >
+                                    🤥
+                        </option>
+                        <option
+                                    value="hand_over_mouth"
+                        >
+                                    🤭
+                        </option>
+                        <option
+                                    value="shushing"
+                        >
+                                    🤫
+                        </option>
+                        <option
+                                    value="symbols_over_mouth"
+                        >
+                                    🤬
+                        </option>
+                        <option
+                                    value="exploding_head"
+                        >
+                                    🤯
+                        </option>
+                        <option
+                                    value="flushed"
+                        >
+                                    😳
+                        </option>
+                        <option
+                                    value="disappointed"
+                        >
+                                    😞
+                        </option>
+                        <option
+                                    value="worried"
+                        >
+                                    😟
+                        </option>
+                        <option
+                                    value="angry"
+                        >
+                                    😠
+                        </option>
+                        <option
+                                    value="rage"
+                        >
+                                    😡
+                        </option>
+                        <option
+                                    value="pensive"
+                        >
+                                    😔
+                        </option>
+                        <option
+                                    value="confused"
+                        >
+                                    😕
+                        </option>
+                        <option
+                                    value="slightly_frowning_face"
+                        >
+                                    🙁
+                        </option>
+                        <option
+                                    value="frowning_face"
+                        >
+                                    ☹
+                        </option>
+                        <option
+                                    value="persevere"
+                        >
+                                    😣
+                        </option>
+                        <option
+                                    value="confounded"
+                        >
+                                    😖
+                        </option>
+                        <option
+                                    value="tired_face"
+                        >
+                                    😫
+                        </option>
+                        <option
+                                    value="weary"
+                        >
+                                    😩
+                        </option>
+                        <option
+                                    value="triumph"
+                        >
+                                    😤
+                        </option>
+                        <option
+                                    value="open_mouth"
+                        >
+                                    😮
+                        </option>
+                        <option
+                                    value="scream"
+                        >
+                                    😱
+                        </option>
+                        <option
+                                    value="fearful"
+                        >
+                                    😨
+                        </option>
+                        <option
+                                    value="cold_sweat"
+                        >
+                                    😰
+                        </option>
+                        <option
+                                    value="hushed"
+                        >
+                                    😯
+                        </option>
+                        <option
+                                    value="frowning"
+                        >
+                                    😦
+                        </option>
+                        <option
+                                    value="anguished"
+                        >
+                                    😧
+                        </option>
+                        <option
+                                    value="cry"
+                        >
+                                    😢
+                        </option>
+                        <option
+                                    value="disappointed_relieved"
+                        >
+                                    😥
+                        </option>
+                        <option
+                                    value="drooling_face"
+                        >
+                                    🤤
+                        </option>
+                        <option
+                                    value="sleepy"
+                        >
+                                    😪
+                        </option>
+                        <option
+                                    value="sweat"
+                        >
+                                    😓
+                        </option>
+                        <option
+                                    value="sob"
+                        >
+                                    😭
+                        </option>
+                        <option
+                                    value="dizzy_face"
+                        >
+                                    😵
+                        </option>
+                        <option
+                                    value="astonished"
+                        >
+                                    😲
+                        </option>
+                        <option
+                                    value="zipper_mouth_face"
+                        >
+                                    🤐
+                        </option>
+                        <option
+                                    value="nauseated_face"
+                        >
+                                    🤢
+                        </option>
+                        <option
+                                    value="sneezing_face"
+                        >
+                                    🤧
+                        </option>
+                        <option
+                                    value="vomiting"
+                        >
+                                    🤮
+                        </option>
+                        <option
+                                    value="mask"
+                        >
+                                    😷
+                        </option>
+                        <option
+                                    value="face_with_thermometer"
+                        >
+                                    🤒
+                        </option>
+                        <option
+                                    value="face_with_head_bandage"
+                        >
+                                    🤕
+                        </option>
+                        <option
+                                    value="sleeping"
+                        >
+                                    😴
+                        </option>
+                        <option
+                                    value="zzz"
+                        >
+                                    💤
+                        </option>
+                        <option
+                                    value="poop"
+                        >
+                                    💩
+                        </option>
+                        <option
+                                    value="smiling_imp"
+                        >
+                                    😈
+                        </option>
+                        <option
+                                    value="imp"
+                        >
+                                    👿
+                        </option>
+                        <option
+                                    value="japanese_ogre"
+                        >
+                                    👹
+                        </option>
+                        <option
+                                    value="japanese_goblin"
+                        >
+                                    👺
+                        </option>
+                        <option
+                                    value="skull"
+                        >
+                                    💀
+                        </option>
+                        <option
+                                    value="ghost"
+                        >
+                                    👻
+                        </option>
+                        <option
+                                    value="alien"
+                        >
+                                    👽
+                        </option>
+                        <option
+                                    value="robot"
+                        >
+                                    🤖
+                        </option>
+                        <option
+                                    value="smiley_cat"
+                        >
+                                    😺
+                        </option>
+                        <option
+                                    value="smile_cat"
+                        >
+                                    😸
+                        </option>
+                        <option
+                                    value="joy_cat"
+                        >
+                                    😹
+                        </option>
+                        <option
+                                    value="heart_eyes_cat"
+                        >
+                                    😻
+                        </option>
+            </select>
+</div>,
+          <div
+            className="new-card-form__form"
+>
+            <input
+                        className="new-card-form__form-button"
+                        type="submit"
+                        value="Add Card"
+            />
+</div>,
+        ],
+        "className": "new-card-form",
+        "onSubmit": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Add a card",
+            "className": "new-card-form__header",
+          },
+          "ref": null,
+          "rendered": "Add a card",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <label
+                className="new-card-form__form-label"
+                htmlFor="text"
+>
+                Text: 
+</label>,
+              <input
+                className="new-card-form__form-textarea"
+                name="text"
+                onChange={[Function]}
+                type="text"
+                value=""
+/>,
+            ],
+            "className": "new-card-form__form",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Text: ",
+                "className": "new-card-form__form-label",
+                "htmlFor": "text",
+              },
+              "ref": null,
+              "rendered": "Text: ",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "new-card-form__form-textarea",
+                "name": "text",
+                "onChange": [Function],
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <label
+                className="new-card-form__form-label"
+                htmlFor="emoji"
+>
+                Emoji: 
+</label>,
+              <select
+                className="new-card-form__form-select"
+                name="emoji"
+                onChange={[Function]}
+                value=""
+>
+                <option
+                                value=""
+                />
+                <option
+                                value="heart_eyes"
+                >
+                                😍
+                </option>
+                <option
+                                value="beer"
+                >
+                                🍺
+                </option>
+                <option
+                                value="clap"
+                >
+                                👏
+                </option>
+                <option
+                                value="sparkling_heart"
+                >
+                                💖
+                </option>
+                <option
+                                value="heart_eyes_cat"
+                >
+                                😻
+                </option>
+                <option
+                                value="dog"
+                >
+                                🐶
+                </option>
+                <option
+                                value="100"
+                >
+                                💯
+                </option>
+                <option
+                                value="1234"
+                >
+                                🔢
+                </option>
+                <option
+                                value="grinning"
+                >
+                                😀
+                </option>
+                <option
+                                value="grimacing"
+                >
+                                😬
+                </option>
+                <option
+                                value="grin"
+                >
+                                😁
+                </option>
+                <option
+                                value="joy"
+                >
+                                😂
+                </option>
+                <option
+                                value="rofl"
+                >
+                                🤣
+                </option>
+                <option
+                                value="smiley"
+                >
+                                😃
+                </option>
+                <option
+                                value="smile"
+                >
+                                😄
+                </option>
+                <option
+                                value="sweat_smile"
+                >
+                                😅
+                </option>
+                <option
+                                value="laughing"
+                >
+                                😆
+                </option>
+                <option
+                                value="innocent"
+                >
+                                😇
+                </option>
+                <option
+                                value="wink"
+                >
+                                😉
+                </option>
+                <option
+                                value="blush"
+                >
+                                😊
+                </option>
+                <option
+                                value="slightly_smiling_face"
+                >
+                                🙂
+                </option>
+                <option
+                                value="upside_down_face"
+                >
+                                🙃
+                </option>
+                <option
+                                value="relaxed"
+                >
+                                ☺️
+                </option>
+                <option
+                                value="yum"
+                >
+                                😋
+                </option>
+                <option
+                                value="relieved"
+                >
+                                😌
+                </option>
+                <option
+                                value="heart_eyes"
+                >
+                                😍
+                </option>
+                <option
+                                value="kissing_heart"
+                >
+                                😘
+                </option>
+                <option
+                                value="kissing"
+                >
+                                😗
+                </option>
+                <option
+                                value="kissing_smiling_eyes"
+                >
+                                😙
+                </option>
+                <option
+                                value="kissing_closed_eyes"
+                >
+                                😚
+                </option>
+                <option
+                                value="stuck_out_tongue_winking_eye"
+                >
+                                😜
+                </option>
+                <option
+                                value="zany"
+                >
+                                🤪
+                </option>
+                <option
+                                value="raised_eyebrow"
+                >
+                                🤨
+                </option>
+                <option
+                                value="monocle"
+                >
+                                🧐
+                </option>
+                <option
+                                value="stuck_out_tongue_closed_eyes"
+                >
+                                😝
+                </option>
+                <option
+                                value="stuck_out_tongue"
+                >
+                                😛
+                </option>
+                <option
+                                value="money_mouth_face"
+                >
+                                🤑
+                </option>
+                <option
+                                value="nerd_face"
+                >
+                                🤓
+                </option>
+                <option
+                                value="sunglasses"
+                >
+                                😎
+                </option>
+                <option
+                                value="star_struck"
+                >
+                                🤩
+                </option>
+                <option
+                                value="clown_face"
+                >
+                                🤡
+                </option>
+                <option
+                                value="cowboy_hat_face"
+                >
+                                🤠
+                </option>
+                <option
+                                value="hugs"
+                >
+                                🤗
+                </option>
+                <option
+                                value="smirk"
+                >
+                                😏
+                </option>
+                <option
+                                value="no_mouth"
+                >
+                                😶
+                </option>
+                <option
+                                value="neutral_face"
+                >
+                                😐
+                </option>
+                <option
+                                value="expressionless"
+                >
+                                😑
+                </option>
+                <option
+                                value="unamused"
+                >
+                                😒
+                </option>
+                <option
+                                value="roll_eyes"
+                >
+                                🙄
+                </option>
+                <option
+                                value="thinking"
+                >
+                                🤔
+                </option>
+                <option
+                                value="lying_face"
+                >
+                                🤥
+                </option>
+                <option
+                                value="hand_over_mouth"
+                >
+                                🤭
+                </option>
+                <option
+                                value="shushing"
+                >
+                                🤫
+                </option>
+                <option
+                                value="symbols_over_mouth"
+                >
+                                🤬
+                </option>
+                <option
+                                value="exploding_head"
+                >
+                                🤯
+                </option>
+                <option
+                                value="flushed"
+                >
+                                😳
+                </option>
+                <option
+                                value="disappointed"
+                >
+                                😞
+                </option>
+                <option
+                                value="worried"
+                >
+                                😟
+                </option>
+                <option
+                                value="angry"
+                >
+                                😠
+                </option>
+                <option
+                                value="rage"
+                >
+                                😡
+                </option>
+                <option
+                                value="pensive"
+                >
+                                😔
+                </option>
+                <option
+                                value="confused"
+                >
+                                😕
+                </option>
+                <option
+                                value="slightly_frowning_face"
+                >
+                                🙁
+                </option>
+                <option
+                                value="frowning_face"
+                >
+                                ☹
+                </option>
+                <option
+                                value="persevere"
+                >
+                                😣
+                </option>
+                <option
+                                value="confounded"
+                >
+                                😖
+                </option>
+                <option
+                                value="tired_face"
+                >
+                                😫
+                </option>
+                <option
+                                value="weary"
+                >
+                                😩
+                </option>
+                <option
+                                value="triumph"
+                >
+                                😤
+                </option>
+                <option
+                                value="open_mouth"
+                >
+                                😮
+                </option>
+                <option
+                                value="scream"
+                >
+                                😱
+                </option>
+                <option
+                                value="fearful"
+                >
+                                😨
+                </option>
+                <option
+                                value="cold_sweat"
+                >
+                                😰
+                </option>
+                <option
+                                value="hushed"
+                >
+                                😯
+                </option>
+                <option
+                                value="frowning"
+                >
+                                😦
+                </option>
+                <option
+                                value="anguished"
+                >
+                                😧
+                </option>
+                <option
+                                value="cry"
+                >
+                                😢
+                </option>
+                <option
+                                value="disappointed_relieved"
+                >
+                                😥
+                </option>
+                <option
+                                value="drooling_face"
+                >
+                                🤤
+                </option>
+                <option
+                                value="sleepy"
+                >
+                                😪
+                </option>
+                <option
+                                value="sweat"
+                >
+                                😓
+                </option>
+                <option
+                                value="sob"
+                >
+                                😭
+                </option>
+                <option
+                                value="dizzy_face"
+                >
+                                😵
+                </option>
+                <option
+                                value="astonished"
+                >
+                                😲
+                </option>
+                <option
+                                value="zipper_mouth_face"
+                >
+                                🤐
+                </option>
+                <option
+                                value="nauseated_face"
+                >
+                                🤢
+                </option>
+                <option
+                                value="sneezing_face"
+                >
+                                🤧
+                </option>
+                <option
+                                value="vomiting"
+                >
+                                🤮
+                </option>
+                <option
+                                value="mask"
+                >
+                                😷
+                </option>
+                <option
+                                value="face_with_thermometer"
+                >
+                                🤒
+                </option>
+                <option
+                                value="face_with_head_bandage"
+                >
+                                🤕
+                </option>
+                <option
+                                value="sleeping"
+                >
+                                😴
+                </option>
+                <option
+                                value="zzz"
+                >
+                                💤
+                </option>
+                <option
+                                value="poop"
+                >
+                                💩
+                </option>
+                <option
+                                value="smiling_imp"
+                >
+                                😈
+                </option>
+                <option
+                                value="imp"
+                >
+                                👿
+                </option>
+                <option
+                                value="japanese_ogre"
+                >
+                                👹
+                </option>
+                <option
+                                value="japanese_goblin"
+                >
+                                👺
+                </option>
+                <option
+                                value="skull"
+                >
+                                💀
+                </option>
+                <option
+                                value="ghost"
+                >
+                                👻
+                </option>
+                <option
+                                value="alien"
+                >
+                                👽
+                </option>
+                <option
+                                value="robot"
+                >
+                                🤖
+                </option>
+                <option
+                                value="smiley_cat"
+                >
+                                😺
+                </option>
+                <option
+                                value="smile_cat"
+                >
+                                😸
+                </option>
+                <option
+                                value="joy_cat"
+                >
+                                😹
+                </option>
+                <option
+                                value="heart_eyes_cat"
+                >
+                                😻
+                </option>
+</select>,
+            ],
+            "className": "new-card-form__form",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Emoji: ",
+                "className": "new-card-form__form-label",
+                "htmlFor": "emoji",
+              },
+              "ref": null,
+              "rendered": "Emoji: ",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <option
+                    value=""
+/>,
+                  <option
+                    value="heart_eyes"
+>
+                    😍
+</option>,
+                  <option
+                    value="beer"
+>
+                    🍺
+</option>,
+                  <option
+                    value="clap"
+>
+                    👏
+</option>,
+                  <option
+                    value="sparkling_heart"
+>
+                    💖
+</option>,
+                  <option
+                    value="heart_eyes_cat"
+>
+                    😻
+</option>,
+                  <option
+                    value="dog"
+>
+                    🐶
+</option>,
+                  <option
+                    value="100"
+>
+                    💯
+</option>,
+                  <option
+                    value="1234"
+>
+                    🔢
+</option>,
+                  <option
+                    value="grinning"
+>
+                    😀
+</option>,
+                  <option
+                    value="grimacing"
+>
+                    😬
+</option>,
+                  <option
+                    value="grin"
+>
+                    😁
+</option>,
+                  <option
+                    value="joy"
+>
+                    😂
+</option>,
+                  <option
+                    value="rofl"
+>
+                    🤣
+</option>,
+                  <option
+                    value="smiley"
+>
+                    😃
+</option>,
+                  <option
+                    value="smile"
+>
+                    😄
+</option>,
+                  <option
+                    value="sweat_smile"
+>
+                    😅
+</option>,
+                  <option
+                    value="laughing"
+>
+                    😆
+</option>,
+                  <option
+                    value="innocent"
+>
+                    😇
+</option>,
+                  <option
+                    value="wink"
+>
+                    😉
+</option>,
+                  <option
+                    value="blush"
+>
+                    😊
+</option>,
+                  <option
+                    value="slightly_smiling_face"
+>
+                    🙂
+</option>,
+                  <option
+                    value="upside_down_face"
+>
+                    🙃
+</option>,
+                  <option
+                    value="relaxed"
+>
+                    ☺️
+</option>,
+                  <option
+                    value="yum"
+>
+                    😋
+</option>,
+                  <option
+                    value="relieved"
+>
+                    😌
+</option>,
+                  <option
+                    value="heart_eyes"
+>
+                    😍
+</option>,
+                  <option
+                    value="kissing_heart"
+>
+                    😘
+</option>,
+                  <option
+                    value="kissing"
+>
+                    😗
+</option>,
+                  <option
+                    value="kissing_smiling_eyes"
+>
+                    😙
+</option>,
+                  <option
+                    value="kissing_closed_eyes"
+>
+                    😚
+</option>,
+                  <option
+                    value="stuck_out_tongue_winking_eye"
+>
+                    😜
+</option>,
+                  <option
+                    value="zany"
+>
+                    🤪
+</option>,
+                  <option
+                    value="raised_eyebrow"
+>
+                    🤨
+</option>,
+                  <option
+                    value="monocle"
+>
+                    🧐
+</option>,
+                  <option
+                    value="stuck_out_tongue_closed_eyes"
+>
+                    😝
+</option>,
+                  <option
+                    value="stuck_out_tongue"
+>
+                    😛
+</option>,
+                  <option
+                    value="money_mouth_face"
+>
+                    🤑
+</option>,
+                  <option
+                    value="nerd_face"
+>
+                    🤓
+</option>,
+                  <option
+                    value="sunglasses"
+>
+                    😎
+</option>,
+                  <option
+                    value="star_struck"
+>
+                    🤩
+</option>,
+                  <option
+                    value="clown_face"
+>
+                    🤡
+</option>,
+                  <option
+                    value="cowboy_hat_face"
+>
+                    🤠
+</option>,
+                  <option
+                    value="hugs"
+>
+                    🤗
+</option>,
+                  <option
+                    value="smirk"
+>
+                    😏
+</option>,
+                  <option
+                    value="no_mouth"
+>
+                    😶
+</option>,
+                  <option
+                    value="neutral_face"
+>
+                    😐
+</option>,
+                  <option
+                    value="expressionless"
+>
+                    😑
+</option>,
+                  <option
+                    value="unamused"
+>
+                    😒
+</option>,
+                  <option
+                    value="roll_eyes"
+>
+                    🙄
+</option>,
+                  <option
+                    value="thinking"
+>
+                    🤔
+</option>,
+                  <option
+                    value="lying_face"
+>
+                    🤥
+</option>,
+                  <option
+                    value="hand_over_mouth"
+>
+                    🤭
+</option>,
+                  <option
+                    value="shushing"
+>
+                    🤫
+</option>,
+                  <option
+                    value="symbols_over_mouth"
+>
+                    🤬
+</option>,
+                  <option
+                    value="exploding_head"
+>
+                    🤯
+</option>,
+                  <option
+                    value="flushed"
+>
+                    😳
+</option>,
+                  <option
+                    value="disappointed"
+>
+                    😞
+</option>,
+                  <option
+                    value="worried"
+>
+                    😟
+</option>,
+                  <option
+                    value="angry"
+>
+                    😠
+</option>,
+                  <option
+                    value="rage"
+>
+                    😡
+</option>,
+                  <option
+                    value="pensive"
+>
+                    😔
+</option>,
+                  <option
+                    value="confused"
+>
+                    😕
+</option>,
+                  <option
+                    value="slightly_frowning_face"
+>
+                    🙁
+</option>,
+                  <option
+                    value="frowning_face"
+>
+                    ☹
+</option>,
+                  <option
+                    value="persevere"
+>
+                    😣
+</option>,
+                  <option
+                    value="confounded"
+>
+                    😖
+</option>,
+                  <option
+                    value="tired_face"
+>
+                    😫
+</option>,
+                  <option
+                    value="weary"
+>
+                    😩
+</option>,
+                  <option
+                    value="triumph"
+>
+                    😤
+</option>,
+                  <option
+                    value="open_mouth"
+>
+                    😮
+</option>,
+                  <option
+                    value="scream"
+>
+                    😱
+</option>,
+                  <option
+                    value="fearful"
+>
+                    😨
+</option>,
+                  <option
+                    value="cold_sweat"
+>
+                    😰
+</option>,
+                  <option
+                    value="hushed"
+>
+                    😯
+</option>,
+                  <option
+                    value="frowning"
+>
+                    😦
+</option>,
+                  <option
+                    value="anguished"
+>
+                    😧
+</option>,
+                  <option
+                    value="cry"
+>
+                    😢
+</option>,
+                  <option
+                    value="disappointed_relieved"
+>
+                    😥
+</option>,
+                  <option
+                    value="drooling_face"
+>
+                    🤤
+</option>,
+                  <option
+                    value="sleepy"
+>
+                    😪
+</option>,
+                  <option
+                    value="sweat"
+>
+                    😓
+</option>,
+                  <option
+                    value="sob"
+>
+                    😭
+</option>,
+                  <option
+                    value="dizzy_face"
+>
+                    😵
+</option>,
+                  <option
+                    value="astonished"
+>
+                    😲
+</option>,
+                  <option
+                    value="zipper_mouth_face"
+>
+                    🤐
+</option>,
+                  <option
+                    value="nauseated_face"
+>
+                    🤢
+</option>,
+                  <option
+                    value="sneezing_face"
+>
+                    🤧
+</option>,
+                  <option
+                    value="vomiting"
+>
+                    🤮
+</option>,
+                  <option
+                    value="mask"
+>
+                    😷
+</option>,
+                  <option
+                    value="face_with_thermometer"
+>
+                    🤒
+</option>,
+                  <option
+                    value="face_with_head_bandage"
+>
+                    🤕
+</option>,
+                  <option
+                    value="sleeping"
+>
+                    😴
+</option>,
+                  <option
+                    value="zzz"
+>
+                    💤
+</option>,
+                  <option
+                    value="poop"
+>
+                    💩
+</option>,
+                  <option
+                    value="smiling_imp"
+>
+                    😈
+</option>,
+                  <option
+                    value="imp"
+>
+                    👿
+</option>,
+                  <option
+                    value="japanese_ogre"
+>
+                    👹
+</option>,
+                  <option
+                    value="japanese_goblin"
+>
+                    👺
+</option>,
+                  <option
+                    value="skull"
+>
+                    💀
+</option>,
+                  <option
+                    value="ghost"
+>
+                    👻
+</option>,
+                  <option
+                    value="alien"
+>
+                    👽
+</option>,
+                  <option
+                    value="robot"
+>
+                    🤖
+</option>,
+                  <option
+                    value="smiley_cat"
+>
+                    😺
+</option>,
+                  <option
+                    value="smile_cat"
+>
+                    😸
+</option>,
+                  <option
+                    value="joy_cat"
+>
+                    😹
+</option>,
+                  <option
+                    value="heart_eyes_cat"
+>
+                    😻
+</option>,
+                ],
+                "className": "new-card-form__form-select",
+                "name": "emoji",
+                "onChange": [Function],
+                "value": "",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "0",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "1",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😍",
+                    "value": "heart_eyes",
+                  },
+                  "ref": null,
+                  "rendered": "😍",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "2",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🍺",
+                    "value": "beer",
+                  },
+                  "ref": null,
+                  "rendered": "🍺",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "3",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "👏",
+                    "value": "clap",
+                  },
+                  "ref": null,
+                  "rendered": "👏",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "4",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "💖",
+                    "value": "sparkling_heart",
+                  },
+                  "ref": null,
+                  "rendered": "💖",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "5",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😻",
+                    "value": "heart_eyes_cat",
+                  },
+                  "ref": null,
+                  "rendered": "😻",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "6",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🐶",
+                    "value": "dog",
+                  },
+                  "ref": null,
+                  "rendered": "🐶",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "7",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "💯",
+                    "value": "100",
+                  },
+                  "ref": null,
+                  "rendered": "💯",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "8",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🔢",
+                    "value": "1234",
+                  },
+                  "ref": null,
+                  "rendered": "🔢",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "9",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😀",
+                    "value": "grinning",
+                  },
+                  "ref": null,
+                  "rendered": "😀",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "10",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😬",
+                    "value": "grimacing",
+                  },
+                  "ref": null,
+                  "rendered": "😬",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "11",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😁",
+                    "value": "grin",
+                  },
+                  "ref": null,
+                  "rendered": "😁",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "12",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😂",
+                    "value": "joy",
+                  },
+                  "ref": null,
+                  "rendered": "😂",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "13",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤣",
+                    "value": "rofl",
+                  },
+                  "ref": null,
+                  "rendered": "🤣",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "14",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😃",
+                    "value": "smiley",
+                  },
+                  "ref": null,
+                  "rendered": "😃",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "15",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😄",
+                    "value": "smile",
+                  },
+                  "ref": null,
+                  "rendered": "😄",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "16",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😅",
+                    "value": "sweat_smile",
+                  },
+                  "ref": null,
+                  "rendered": "😅",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "17",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😆",
+                    "value": "laughing",
+                  },
+                  "ref": null,
+                  "rendered": "😆",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "18",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😇",
+                    "value": "innocent",
+                  },
+                  "ref": null,
+                  "rendered": "😇",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "19",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😉",
+                    "value": "wink",
+                  },
+                  "ref": null,
+                  "rendered": "😉",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "20",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😊",
+                    "value": "blush",
+                  },
+                  "ref": null,
+                  "rendered": "😊",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "21",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🙂",
+                    "value": "slightly_smiling_face",
+                  },
+                  "ref": null,
+                  "rendered": "🙂",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "22",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🙃",
+                    "value": "upside_down_face",
+                  },
+                  "ref": null,
+                  "rendered": "🙃",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "23",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "☺️",
+                    "value": "relaxed",
+                  },
+                  "ref": null,
+                  "rendered": "☺️",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "24",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😋",
+                    "value": "yum",
+                  },
+                  "ref": null,
+                  "rendered": "😋",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "25",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😌",
+                    "value": "relieved",
+                  },
+                  "ref": null,
+                  "rendered": "😌",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "26",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😍",
+                    "value": "heart_eyes",
+                  },
+                  "ref": null,
+                  "rendered": "😍",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "27",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😘",
+                    "value": "kissing_heart",
+                  },
+                  "ref": null,
+                  "rendered": "😘",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "28",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😗",
+                    "value": "kissing",
+                  },
+                  "ref": null,
+                  "rendered": "😗",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "29",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😙",
+                    "value": "kissing_smiling_eyes",
+                  },
+                  "ref": null,
+                  "rendered": "😙",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "30",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😚",
+                    "value": "kissing_closed_eyes",
+                  },
+                  "ref": null,
+                  "rendered": "😚",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "31",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😜",
+                    "value": "stuck_out_tongue_winking_eye",
+                  },
+                  "ref": null,
+                  "rendered": "😜",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "32",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤪",
+                    "value": "zany",
+                  },
+                  "ref": null,
+                  "rendered": "🤪",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "33",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤨",
+                    "value": "raised_eyebrow",
+                  },
+                  "ref": null,
+                  "rendered": "🤨",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "34",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🧐",
+                    "value": "monocle",
+                  },
+                  "ref": null,
+                  "rendered": "🧐",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "35",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😝",
+                    "value": "stuck_out_tongue_closed_eyes",
+                  },
+                  "ref": null,
+                  "rendered": "😝",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "36",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😛",
+                    "value": "stuck_out_tongue",
+                  },
+                  "ref": null,
+                  "rendered": "😛",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "37",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤑",
+                    "value": "money_mouth_face",
+                  },
+                  "ref": null,
+                  "rendered": "🤑",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "38",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤓",
+                    "value": "nerd_face",
+                  },
+                  "ref": null,
+                  "rendered": "🤓",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "39",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😎",
+                    "value": "sunglasses",
+                  },
+                  "ref": null,
+                  "rendered": "😎",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "40",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤩",
+                    "value": "star_struck",
+                  },
+                  "ref": null,
+                  "rendered": "🤩",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "41",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤡",
+                    "value": "clown_face",
+                  },
+                  "ref": null,
+                  "rendered": "🤡",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "42",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤠",
+                    "value": "cowboy_hat_face",
+                  },
+                  "ref": null,
+                  "rendered": "🤠",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "43",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤗",
+                    "value": "hugs",
+                  },
+                  "ref": null,
+                  "rendered": "🤗",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "44",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😏",
+                    "value": "smirk",
+                  },
+                  "ref": null,
+                  "rendered": "😏",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "45",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😶",
+                    "value": "no_mouth",
+                  },
+                  "ref": null,
+                  "rendered": "😶",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "46",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😐",
+                    "value": "neutral_face",
+                  },
+                  "ref": null,
+                  "rendered": "😐",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "47",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😑",
+                    "value": "expressionless",
+                  },
+                  "ref": null,
+                  "rendered": "😑",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "48",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😒",
+                    "value": "unamused",
+                  },
+                  "ref": null,
+                  "rendered": "😒",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "49",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🙄",
+                    "value": "roll_eyes",
+                  },
+                  "ref": null,
+                  "rendered": "🙄",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "50",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤔",
+                    "value": "thinking",
+                  },
+                  "ref": null,
+                  "rendered": "🤔",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "51",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤥",
+                    "value": "lying_face",
+                  },
+                  "ref": null,
+                  "rendered": "🤥",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "52",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤭",
+                    "value": "hand_over_mouth",
+                  },
+                  "ref": null,
+                  "rendered": "🤭",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "53",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤫",
+                    "value": "shushing",
+                  },
+                  "ref": null,
+                  "rendered": "🤫",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "54",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤬",
+                    "value": "symbols_over_mouth",
+                  },
+                  "ref": null,
+                  "rendered": "🤬",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "55",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤯",
+                    "value": "exploding_head",
+                  },
+                  "ref": null,
+                  "rendered": "🤯",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "56",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😳",
+                    "value": "flushed",
+                  },
+                  "ref": null,
+                  "rendered": "😳",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "57",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😞",
+                    "value": "disappointed",
+                  },
+                  "ref": null,
+                  "rendered": "😞",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "58",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😟",
+                    "value": "worried",
+                  },
+                  "ref": null,
+                  "rendered": "😟",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "59",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😠",
+                    "value": "angry",
+                  },
+                  "ref": null,
+                  "rendered": "😠",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "60",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😡",
+                    "value": "rage",
+                  },
+                  "ref": null,
+                  "rendered": "😡",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "61",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😔",
+                    "value": "pensive",
+                  },
+                  "ref": null,
+                  "rendered": "😔",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "62",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😕",
+                    "value": "confused",
+                  },
+                  "ref": null,
+                  "rendered": "😕",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "63",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🙁",
+                    "value": "slightly_frowning_face",
+                  },
+                  "ref": null,
+                  "rendered": "🙁",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "64",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "☹",
+                    "value": "frowning_face",
+                  },
+                  "ref": null,
+                  "rendered": "☹",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "65",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😣",
+                    "value": "persevere",
+                  },
+                  "ref": null,
+                  "rendered": "😣",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "66",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😖",
+                    "value": "confounded",
+                  },
+                  "ref": null,
+                  "rendered": "😖",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "67",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😫",
+                    "value": "tired_face",
+                  },
+                  "ref": null,
+                  "rendered": "😫",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "68",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😩",
+                    "value": "weary",
+                  },
+                  "ref": null,
+                  "rendered": "😩",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "69",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😤",
+                    "value": "triumph",
+                  },
+                  "ref": null,
+                  "rendered": "😤",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "70",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😮",
+                    "value": "open_mouth",
+                  },
+                  "ref": null,
+                  "rendered": "😮",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "71",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😱",
+                    "value": "scream",
+                  },
+                  "ref": null,
+                  "rendered": "😱",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "72",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😨",
+                    "value": "fearful",
+                  },
+                  "ref": null,
+                  "rendered": "😨",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "73",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😰",
+                    "value": "cold_sweat",
+                  },
+                  "ref": null,
+                  "rendered": "😰",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "74",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😯",
+                    "value": "hushed",
+                  },
+                  "ref": null,
+                  "rendered": "😯",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "75",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😦",
+                    "value": "frowning",
+                  },
+                  "ref": null,
+                  "rendered": "😦",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "76",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😧",
+                    "value": "anguished",
+                  },
+                  "ref": null,
+                  "rendered": "😧",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "77",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😢",
+                    "value": "cry",
+                  },
+                  "ref": null,
+                  "rendered": "😢",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "78",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😥",
+                    "value": "disappointed_relieved",
+                  },
+                  "ref": null,
+                  "rendered": "😥",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "79",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤤",
+                    "value": "drooling_face",
+                  },
+                  "ref": null,
+                  "rendered": "🤤",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "80",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😪",
+                    "value": "sleepy",
+                  },
+                  "ref": null,
+                  "rendered": "😪",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "81",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😓",
+                    "value": "sweat",
+                  },
+                  "ref": null,
+                  "rendered": "😓",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "82",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😭",
+                    "value": "sob",
+                  },
+                  "ref": null,
+                  "rendered": "😭",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "83",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😵",
+                    "value": "dizzy_face",
+                  },
+                  "ref": null,
+                  "rendered": "😵",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "84",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😲",
+                    "value": "astonished",
+                  },
+                  "ref": null,
+                  "rendered": "😲",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "85",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤐",
+                    "value": "zipper_mouth_face",
+                  },
+                  "ref": null,
+                  "rendered": "🤐",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "86",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤢",
+                    "value": "nauseated_face",
+                  },
+                  "ref": null,
+                  "rendered": "🤢",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "87",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤧",
+                    "value": "sneezing_face",
+                  },
+                  "ref": null,
+                  "rendered": "🤧",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "88",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤮",
+                    "value": "vomiting",
+                  },
+                  "ref": null,
+                  "rendered": "🤮",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "89",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😷",
+                    "value": "mask",
+                  },
+                  "ref": null,
+                  "rendered": "😷",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "90",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤒",
+                    "value": "face_with_thermometer",
+                  },
+                  "ref": null,
+                  "rendered": "🤒",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "91",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤕",
+                    "value": "face_with_head_bandage",
+                  },
+                  "ref": null,
+                  "rendered": "🤕",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "92",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😴",
+                    "value": "sleeping",
+                  },
+                  "ref": null,
+                  "rendered": "😴",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "93",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "💤",
+                    "value": "zzz",
+                  },
+                  "ref": null,
+                  "rendered": "💤",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "94",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "💩",
+                    "value": "poop",
+                  },
+                  "ref": null,
+                  "rendered": "💩",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "95",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😈",
+                    "value": "smiling_imp",
+                  },
+                  "ref": null,
+                  "rendered": "😈",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "96",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "👿",
+                    "value": "imp",
+                  },
+                  "ref": null,
+                  "rendered": "👿",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "97",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "👹",
+                    "value": "japanese_ogre",
+                  },
+                  "ref": null,
+                  "rendered": "👹",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "98",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "👺",
+                    "value": "japanese_goblin",
+                  },
+                  "ref": null,
+                  "rendered": "👺",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "99",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "💀",
+                    "value": "skull",
+                  },
+                  "ref": null,
+                  "rendered": "💀",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "100",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "👻",
+                    "value": "ghost",
+                  },
+                  "ref": null,
+                  "rendered": "👻",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "101",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "👽",
+                    "value": "alien",
+                  },
+                  "ref": null,
+                  "rendered": "👽",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "102",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🤖",
+                    "value": "robot",
+                  },
+                  "ref": null,
+                  "rendered": "🤖",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "103",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😺",
+                    "value": "smiley_cat",
+                  },
+                  "ref": null,
+                  "rendered": "😺",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "104",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😸",
+                    "value": "smile_cat",
+                  },
+                  "ref": null,
+                  "rendered": "😸",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "105",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😹",
+                    "value": "joy_cat",
+                  },
+                  "ref": null,
+                  "rendered": "😹",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "106",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😻",
+                    "value": "heart_eyes_cat",
+                  },
+                  "ref": null,
+                  "rendered": "😻",
+                  "type": "option",
+                },
+              ],
+              "type": "select",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <input
+              className="new-card-form__form-button"
+              type="submit"
+              value="Add Card"
+/>,
+            "className": "new-card-form__form",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "new-card-form__form-button",
+              "type": "submit",
+              "value": "Add Card",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "form",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

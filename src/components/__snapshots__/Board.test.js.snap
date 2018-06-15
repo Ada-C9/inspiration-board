@@ -17,11 +17,28 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [],
+      "children": Array [
+        Array [],
+        <NewCardForm
+          addCardCallback={[Function]}
+/>,
+      ],
       "className": "board",
     },
     "ref": null,
-    "rendered": Array [],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "addCardCallback": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -30,11 +47,28 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [],
+        "children": Array [
+          Array [],
+          <NewCardForm
+            addCardCallback={[Function]}
+/>,
+        ],
         "className": "board",
       },
       "ref": null,
-      "rendered": Array [],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "addCardCallback": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
       "type": "div",
     },
   ],
