@@ -53,15 +53,12 @@ class Board extends Component {
   deleteCard = (id) => {
       axios.delete(`${this.props.url}${this.props.boardName}/cards/${id}`)
         .then((response) =>{
+          console.log(response.data)
           this.props.updateStatusCallback('Successfully deleted card')
           let updatedCards = this.state.cards;
           let index = updatedCards.findIndex((card) => {
             return card.card.id === id;
           });
-
-          console.log(`got index ${index}`);
-          console.log(updatedCards[index]);
-
           updatedCards.splice(index, 1);
           this.setState({ cards: updatedCards });
         })
@@ -83,7 +80,6 @@ class Board extends Component {
 
     return (
       <section>
-
         <div className="board-header">
           Board: {this.props.boardName}
         </div>
