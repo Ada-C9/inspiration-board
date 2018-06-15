@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import emoji from 'emoji-dictionary';
+// import emoji from 'emoji-dictionary';
 
 import './Card.css';
 // NOTE: RENDERS OUT A SINGLE CARD
