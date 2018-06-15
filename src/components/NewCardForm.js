@@ -23,10 +23,6 @@ class NewCardForm extends Component {
     this.setState(updateState);
   }
 
-  // valid = () => {
-  //   return this.state.name.length > 0 && this.state.age > 0
-  // }
-
   clearForm = () => {
     this.setState({
       text: '',

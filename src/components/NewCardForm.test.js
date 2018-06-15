@@ -12,52 +12,48 @@ describe('NewCardForm', () => {
     // Arrange
     /// can use shallow b/c there is no subfields in NewCardForm
     const wrapper = shallow( <NewCardForm
-      addCardCallback={() => {} } />);
+      addCard={() => {} } />);
 
     //find the inputfield
-    let nameField = wrapper.find('input[name="name"]');
+    let nameField = wrapper.find('input[name="text"]');
 
     // Act
     //simulates the event we are listening for
     nameField.simulate('change', {
       target: {
         text: 'testing out a positive note',
-        emoji: '',
+        emoji: 'heart_eyes',
       },
     });
     //forces the on change event
     wrapper.update();
 
     //b/c re-rendered in the DOM have to look for nameField again
-    nameField = wrapper.find('input[name="name"]');
+    nameField = wrapper.find('input[name="text"]');
     //Assert
     //.props here is only getting the properties on the the inputfield
-    expect(nameField.getElement().props.value.toEqual('Bob'))
+    expect(nameField.getElement().props.value.toEqual('testing out a positive note'))
   });
 
-  test('when the user types on a field the value changes', () => {
+  test('when a user enters text in the emoji field the field is updated', () => {
+
     const wrapper = shallow( <NewCardForm
-      addCardCallback={() => {} } />);
+      addCard={() => {} } />);
 
-    //find the inputfield
-    let nameField = wrapper.find('input[name="name"]');
+    let nameField = wrapper.find('input[name="emoji"]');
 
-    // Act
-    //simulates the event we are listening for
     nameField.simulate('change', {
       target: {
-        name: 'name',
-        value: 'Bob',
+        text: 'testing out a positive note',
+        emoji: 'heart_eyes',
       },
     });
-    //forces the on change event
+
     wrapper.update();
 
-    //b/c re-rendered in the DOM have to look for nameField again
-    nameField = wrapper.find('input[name="name"]');
-    //Assert
-    //.props here is only getting the properties on the the inputfield
-    expect(nameField.getElement().props.value.toEqual('Bob'))
+    nameField = wrapper.find('input[name="emoji"]');
 
-  })
+    expect(nameField.getElement().props.value.toEqual('heart_eyes'))
+  });
+
 });

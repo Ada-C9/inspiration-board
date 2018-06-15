@@ -52,7 +52,7 @@ class Board extends Component {
   }
 
   addCard = (newCard) => {
-    console.log(newCard);
+    // is this ok to do?
     const cardObject = {
       card: newCard,
     }
@@ -75,6 +75,10 @@ class Board extends Component {
     });
   }
 
+  timedRefresh = () => {
+    
+  }
+// call get request every 2 minutes to update the api data as well
 
   showCards = () => {
     const list = this.state.cards.map((card, index) => {
