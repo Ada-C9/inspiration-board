@@ -1,16 +1,16 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import NewCardForm from './NewCardForm';
 
 describe('NewCardForm', () => {
   test('that it matches an existing snapshot', () => {
-    const wrapper = mount(<NewCardForm addNewCardCallback={() => {} }/>);
+    const wrapper = shallow(<NewCardForm addNewCardCallback={() => {} }/>);
     expect(wrapper).toMatchSnapshot();
     wrapper.unmount();
   })
 
   test('when a user enters a name in a field, the field is updated', () => {
-    const wrapper = mount(<NewCardForm addNewCardCallback={() => {} }/>);
+    const wrapper = shallow(<NewCardForm addNewCardCallback={() => {} }/>);
 
     const fieldValues = [
       {
@@ -37,7 +37,7 @@ describe('NewCardForm', () => {
 
   test('NewCardForm can submit; fields clear', () => {
     const mockAddNewCardCallback = jest.fn();
-    const wrapper = mount(<NewCardForm addNewCardCallback={mockAddNewCardCallback}/>);
+    const wrapper = shallow(<NewCardForm addNewCardCallback={mockAddNewCardCallback}/>);
 
     wrapper.find(`[name="text"]`).simulate('change', {
       target: {

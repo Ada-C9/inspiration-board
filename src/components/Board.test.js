@@ -1,11 +1,10 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import Board from './Board';
 
 describe('Board', () => {
   test('that it matches an existing snapshot', () => {
-    const wrapper = mount(<Board />);
+    const wrapper = shallow(<Board />);
     expect(wrapper).toMatchSnapshot();
-    wrapper.unmount();
   });
 });
