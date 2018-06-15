@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
+import emoji from 'emoji-dictionary';
+
 import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
@@ -82,19 +84,22 @@ class Board extends Component {
 
   addCard = (card) => {
     const cards = this.state.cards;
+    const newCard = { card: card };
 
-      cards.push(card);
+    // somehow not working without changing the emoji here.. need to fix form!
+    // console.log(card);
+    // console.log(card.emoji);
+    card.emoji = emoji.getName(card.emoji);
+
+
+    axios.post(this.props.url + this.props.boardName + '/cards/', card)
+    .then(() => {
+      // card successfully added
+      cards.push(newCard);
       this.setState({
         cards,
+        message: `Successfully Added Card!`
       });
-      axios.post(this.props.url + this.props.boardName + '/cards/', card)
-      .then(() => {
-        // card successfully added
-        cards.push(card);
-        this.setState({
-          cards,
-          message: `Successfully Added Card`
-        });
       })
       .catch((error) => {
         // not successfull
@@ -105,10 +110,19 @@ class Board extends Component {
       })
   }
 
+  renderMessage = () => {
+   if (this.state.message) {
+     return (
+       <p>{this.state.message}</p>
+     );
+   }
+ };
+
 
   render() {
     return (
       <section >
+      {this.renderMessage()}
       <div className="form"><NewCardForm addCardCallBack={this.addCard}/></div>
       <div className="board">{this.renderCardList()}</div >
       </section >
