@@ -1,10 +1,10 @@
 import React from 'react';
 import NewCardForm from './NewCardForm';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('NewCardForm', () => {
   test('that it matches an existing snapshot', () => {
-    const wrapper = mount(<NewCardForm/>);
+    const wrapper = shallow(<NewCardForm/>);
     expect(wrapper).toMatchSnapshot();
     wrapper.unmount();
   });

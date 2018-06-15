@@ -80,20 +80,18 @@ ReactWrapper {
                   <article
                                     class="card"
                   >
-                                    <button
-                                                      class="delete"
-                                    >
-                                                      <span>
-                                                                        x
-                                                      </span>
-                                    </button>
                                     <div
-                                                      class="content"
+                                                      class="card__content"
                                     >
                                                       <p
-                                                                        class="content-text"
+                                                                        class="card__content-text"
                                                       />
                                     </div>
+                                    <span
+                                                      class="card__delete"
+                                    >
+                                                      x
+                                    </span>
                   </article>
 </div>,
                 "context": Object {},
@@ -181,20 +179,18 @@ ReactWrapper {
                 <article
                                 class="card"
                 >
-                                <button
-                                                class="delete"
-                                >
-                                                <span>
-                                                                x
-                                                </span>
-                                </button>
                                 <div
-                                                class="content"
+                                                class="card__content"
                                 >
                                                 <p
-                                                                class="content-text"
+                                                                class="card__content-text"
                                                 />
                                 </div>
+                                <span
+                                                class="card__delete"
+                                >
+                                                x
+                                </span>
                 </article>
 </div>,
               "context": Object {},
@@ -272,7 +268,7 @@ ReactWrapper {
           "_debugOwner": [Circular],
           "_debugSource": Object {
             "fileName": "/Users/alex/Ada/react/inspiration-board/src/components/Card.js",
-            "lineNumber": 27,
+            "lineNumber": 20,
           },
           "alternate": null,
           "child": FiberNode {
@@ -281,7 +277,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/Users/alex/Ada/react/inspiration-board/src/components/Card.js",
-              "lineNumber": 28,
+              "lineNumber": 21,
             },
             "alternate": null,
             "child": FiberNode {
@@ -290,7 +286,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/Users/alex/Ada/react/inspiration-board/src/components/Card.js",
-                "lineNumber": 29,
+                "lineNumber": 22,
               },
               "alternate": null,
               "child": null,
@@ -301,24 +297,26 @@ ReactWrapper {
               "key": null,
               "lastEffect": null,
               "memoizedProps": Object {
-                "children": "x",
+                "children": undefined,
+                "className": "card__content-text",
               },
               "memoizedState": null,
               "mode": 0,
               "nextEffect": null,
               "pendingProps": Object {
-                "children": "x",
+                "children": undefined,
+                "className": "card__content-text",
               },
               "ref": null,
               "return": [Circular],
               "selfBaseTime": 0,
               "sibling": null,
-              "stateNode": <span>
-                x
-</span>,
+              "stateNode": <p
+                class="card__content-text"
+/>,
               "tag": 5,
               "treeBaseTime": 0,
-              "type": "span",
+              "type": "p",
               "updateQueue": null,
             },
             "effectTag": 0,
@@ -328,23 +326,25 @@ ReactWrapper {
             "key": null,
             "lastEffect": null,
             "memoizedProps": Object {
-              "children": <span>
-                x
-</span>,
-              "className": "delete",
-              "id": undefined,
-              "onClick": [Function],
+              "children": Array [
+                <p
+                  className="card__content-text"
+/>,
+                undefined,
+              ],
+              "className": "card__content",
             },
             "memoizedState": null,
             "mode": 0,
             "nextEffect": null,
             "pendingProps": Object {
-              "children": <span>
-                x
-</span>,
-              "className": "delete",
-              "id": undefined,
-              "onClick": [Function],
+              "children": Array [
+                <p
+                  className="card__content-text"
+/>,
+                undefined,
+              ],
+              "className": "card__content",
             },
             "ref": null,
             "return": [Circular],
@@ -355,48 +355,10 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/Users/alex/Ada/react/inspiration-board/src/components/Card.js",
-                "lineNumber": 31,
+                "lineNumber": 25,
               },
               "alternate": null,
-              "child": FiberNode {
-                "_debugID": 10,
-                "_debugIsCurrentlyTiming": false,
-                "_debugOwner": [Circular],
-                "_debugSource": Object {
-                  "fileName": "/Users/alex/Ada/react/inspiration-board/src/components/Card.js",
-                  "lineNumber": 32,
-                },
-                "alternate": null,
-                "child": null,
-                "effectTag": 0,
-                "expirationTime": 0,
-                "firstEffect": null,
-                "index": 0,
-                "key": null,
-                "lastEffect": null,
-                "memoizedProps": Object {
-                  "children": undefined,
-                  "className": "content-text",
-                },
-                "memoizedState": null,
-                "mode": 0,
-                "nextEffect": null,
-                "pendingProps": Object {
-                  "children": undefined,
-                  "className": "content-text",
-                },
-                "ref": null,
-                "return": [Circular],
-                "selfBaseTime": 0,
-                "sibling": null,
-                "stateNode": <p
-                  class="content-text"
-/>,
-                "tag": 5,
-                "treeBaseTime": 0,
-                "type": "p",
-                "updateQueue": null,
-              },
+              "child": null,
               "effectTag": 0,
               "expirationTime": 0,
               "firstEffect": null,
@@ -404,52 +366,44 @@ ReactWrapper {
               "key": null,
               "lastEffect": null,
               "memoizedProps": Object {
-                "children": Array [
-                  <p
-                    className="content-text"
-/>,
-                  undefined,
-                ],
-                "className": "content",
+                "children": "x",
+                "className": "card__delete",
+                "id": undefined,
+                "onClick": [Function],
               },
               "memoizedState": null,
               "mode": 0,
               "nextEffect": null,
               "pendingProps": Object {
-                "children": Array [
-                  <p
-                    className="content-text"
-/>,
-                  undefined,
-                ],
-                "className": "content",
+                "children": "x",
+                "className": "card__delete",
+                "id": undefined,
+                "onClick": [Function],
               },
               "ref": null,
               "return": [Circular],
               "selfBaseTime": 0,
               "sibling": null,
-              "stateNode": <div
-                class="content"
+              "stateNode": <span
+                class="card__delete"
 >
-                <p
-                                class="content-text"
-                />
-</div>,
+                x
+</span>,
               "tag": 5,
               "treeBaseTime": 0,
-              "type": "div",
+              "type": "span",
               "updateQueue": null,
             },
-            "stateNode": <button
-              class="delete"
+            "stateNode": <div
+              class="card__content"
 >
-              <span>
-                            x
-              </span>
-</button>,
+              <p
+                            class="card__content-text"
+              />
+</div>,
             "tag": 5,
             "treeBaseTime": 0,
-            "type": "button",
+            "type": "div",
             "updateQueue": null,
           },
           "effectTag": 0,
@@ -460,22 +414,20 @@ ReactWrapper {
           "lastEffect": null,
           "memoizedProps": Object {
             "children": Array [
-              <button
-                className="delete"
+              <div
+                className="card__content"
+>
+                <p
+                                className="card__content-text"
+                />
+</div>,
+              <span
+                className="card__delete"
                 id={undefined}
                 onClick={[Function]}
 >
-                <span>
-                                x
-                </span>
-</button>,
-              <div
-                className="content"
->
-                <p
-                                className="content-text"
-                />
-</div>,
+                x
+</span>,
             ],
             "className": "card",
           },
@@ -484,22 +436,20 @@ ReactWrapper {
           "nextEffect": null,
           "pendingProps": Object {
             "children": Array [
-              <button
-                className="delete"
+              <div
+                className="card__content"
+>
+                <p
+                                className="card__content-text"
+                />
+</div>,
+              <span
+                className="card__delete"
                 id={undefined}
                 onClick={[Function]}
 >
-                <span>
-                                x
-                </span>
-</button>,
-              <div
-                className="content"
->
-                <p
-                                className="content-text"
-                />
-</div>,
+                x
+</span>,
             ],
             "className": "card",
           },
@@ -510,20 +460,18 @@ ReactWrapper {
           "stateNode": <article
             class="card"
 >
-            <button
-                        class="delete"
-            >
-                        <span>
-                                    x
-                        </span>
-            </button>
             <div
-                        class="content"
+                        class="card__content"
             >
                         <p
-                                    class="content-text"
+                                    class="card__content-text"
                         />
             </div>
+            <span
+                        class="card__delete"
+            >
+                        x
+            </span>
 </article>,
           "tag": 5,
           "treeBaseTime": 0,
@@ -537,7 +485,7 @@ ReactWrapper {
         "key": null,
         "lastEffect": null,
         "memoizedProps": Object {},
-        "memoizedState": Object {},
+        "memoizedState": null,
         "mode": 0,
         "nextEffect": null,
         "pendingProps": Object {},
@@ -605,20 +553,18 @@ ReactWrapper {
                   <article
                                     class="card"
                   >
-                                    <button
-                                                      class="delete"
-                                    >
-                                                      <span>
-                                                                        x
-                                                      </span>
-                                    </button>
                                     <div
-                                                      class="content"
+                                                      class="card__content"
                                     >
                                                       <p
-                                                                        class="content-text"
+                                                                        class="card__content-text"
                                                       />
                                     </div>
+                                    <span
+                                                      class="card__delete"
+                                    >
+                                                      x
+                                    </span>
                   </article>
 </div>,
                 "context": Object {},
@@ -706,20 +652,18 @@ ReactWrapper {
                 <article
                                 class="card"
                 >
-                                <button
-                                                class="delete"
-                                >
-                                                <span>
-                                                                x
-                                                </span>
-                                </button>
                                 <div
-                                                class="content"
+                                                class="card__content"
                                 >
                                                 <p
-                                                                class="content-text"
+                                                                class="card__content-text"
                                                 />
                                 </div>
+                                <span
+                                                class="card__delete"
+                                >
+                                                x
+                                </span>
                 </article>
 </div>,
               "context": Object {},
@@ -803,7 +747,7 @@ ReactWrapper {
       "getEmoji": [Function],
       "props": Object {},
       "refs": Object {},
-      "state": Object {},
+      "state": null,
       "updater": Object {
         "enqueueForceUpdate": [Function],
         "enqueueReplaceState": [Function],
@@ -819,90 +763,48 @@ ReactWrapper {
       "instance": <article
         class="card"
 >
-        <button
-                class="delete"
-        >
-                <span>
-                        x
-                </span>
-        </button>
         <div
-                class="content"
+                class="card__content"
         >
                 <p
-                        class="content-text"
+                        class="card__content-text"
                 />
         </div>
+        <span
+                class="card__delete"
+        >
+                x
+        </span>
 </article>,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <button
-            className="delete"
+          <div
+            className="card__content"
+>
+            <p
+                        className="card__content-text"
+            />
+</div>,
+          <span
+            className="card__delete"
             id={undefined}
             onClick={[Function]}
 >
-            <span>
-                        x
-            </span>
-</button>,
-          <div
-            className="content"
->
-            <p
-                        className="content-text"
-            />
-</div>,
+            x
+</span>,
         ],
         "className": "card",
       },
       "ref": null,
       "rendered": Array [
         Object {
-          "instance": <button
-            class="delete"
->
-            <span>
-                        x
-            </span>
-</button>,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <span>
-              x
-</span>,
-            "className": "delete",
-            "id": undefined,
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": <span>
-                x
-</span>,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "x",
-              },
-              "ref": null,
-              "rendered": Array [
-                "x",
-              ],
-              "type": "span",
-            },
-          ],
-          "type": "button",
-        },
-        Object {
           "instance": <div
-            class="content"
+            class="card__content"
 >
             <p
-                        class="content-text"
+                        class="card__content-text"
             />
 </div>,
           "key": undefined,
@@ -910,23 +812,23 @@ ReactWrapper {
           "props": Object {
             "children": Array [
               <p
-                className="content-text"
+                className="card__content-text"
 />,
               undefined,
             ],
-            "className": "content",
+            "className": "card__content",
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": <p
-                class="content-text"
+                class="card__content-text"
 />,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": undefined,
-                "className": "content-text",
+                "className": "card__content-text",
               },
               "ref": null,
               "rendered": Array [
@@ -936,6 +838,26 @@ ReactWrapper {
             },
           ],
           "type": "div",
+        },
+        Object {
+          "instance": <span
+            class="card__delete"
+>
+            x
+</span>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "x",
+            "className": "card__delete",
+            "id": undefined,
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            "x",
+          ],
+          "type": "span",
         },
       ],
       "type": "article",
@@ -1011,20 +933,18 @@ ReactWrapper {
                     <article
                                         class="card"
                     >
-                                        <button
-                                                            class="delete"
-                                        >
-                                                            <span>
-                                                                                x
-                                                            </span>
-                                        </button>
                                         <div
-                                                            class="content"
+                                                            class="card__content"
                                         >
                                                             <p
-                                                                                class="content-text"
+                                                                                class="card__content-text"
                                                             />
                                         </div>
+                                        <span
+                                                            class="card__delete"
+                                        >
+                                                            x
+                                        </span>
                     </article>
 </div>,
                   "context": Object {},
@@ -1112,20 +1032,18 @@ ReactWrapper {
                   <article
                                     class="card"
                   >
-                                    <button
-                                                      class="delete"
-                                    >
-                                                      <span>
-                                                                        x
-                                                      </span>
-                                    </button>
                                     <div
-                                                      class="content"
+                                                      class="card__content"
                                     >
                                                       <p
-                                                                        class="content-text"
+                                                                        class="card__content-text"
                                                       />
                                     </div>
+                                    <span
+                                                      class="card__delete"
+                                    >
+                                                      x
+                                    </span>
                   </article>
 </div>,
                 "context": Object {},
@@ -1203,7 +1121,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/Users/alex/Ada/react/inspiration-board/src/components/Card.js",
-              "lineNumber": 27,
+              "lineNumber": 20,
             },
             "alternate": null,
             "child": FiberNode {
@@ -1212,7 +1130,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/Users/alex/Ada/react/inspiration-board/src/components/Card.js",
-                "lineNumber": 28,
+                "lineNumber": 21,
               },
               "alternate": null,
               "child": FiberNode {
@@ -1221,7 +1139,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/Users/alex/Ada/react/inspiration-board/src/components/Card.js",
-                  "lineNumber": 29,
+                  "lineNumber": 22,
                 },
                 "alternate": null,
                 "child": null,
@@ -1232,24 +1150,26 @@ ReactWrapper {
                 "key": null,
                 "lastEffect": null,
                 "memoizedProps": Object {
-                  "children": "x",
+                  "children": undefined,
+                  "className": "card__content-text",
                 },
                 "memoizedState": null,
                 "mode": 0,
                 "nextEffect": null,
                 "pendingProps": Object {
-                  "children": "x",
+                  "children": undefined,
+                  "className": "card__content-text",
                 },
                 "ref": null,
                 "return": [Circular],
                 "selfBaseTime": 0,
                 "sibling": null,
-                "stateNode": <span>
-                  x
-</span>,
+                "stateNode": <p
+                  class="card__content-text"
+/>,
                 "tag": 5,
                 "treeBaseTime": 0,
-                "type": "span",
+                "type": "p",
                 "updateQueue": null,
               },
               "effectTag": 0,
@@ -1259,23 +1179,25 @@ ReactWrapper {
               "key": null,
               "lastEffect": null,
               "memoizedProps": Object {
-                "children": <span>
-                  x
-</span>,
-                "className": "delete",
-                "id": undefined,
-                "onClick": [Function],
+                "children": Array [
+                  <p
+                    className="card__content-text"
+/>,
+                  undefined,
+                ],
+                "className": "card__content",
               },
               "memoizedState": null,
               "mode": 0,
               "nextEffect": null,
               "pendingProps": Object {
-                "children": <span>
-                  x
-</span>,
-                "className": "delete",
-                "id": undefined,
-                "onClick": [Function],
+                "children": Array [
+                  <p
+                    className="card__content-text"
+/>,
+                  undefined,
+                ],
+                "className": "card__content",
               },
               "ref": null,
               "return": [Circular],
@@ -1286,48 +1208,10 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/Users/alex/Ada/react/inspiration-board/src/components/Card.js",
-                  "lineNumber": 31,
+                  "lineNumber": 25,
                 },
                 "alternate": null,
-                "child": FiberNode {
-                  "_debugID": 10,
-                  "_debugIsCurrentlyTiming": false,
-                  "_debugOwner": [Circular],
-                  "_debugSource": Object {
-                    "fileName": "/Users/alex/Ada/react/inspiration-board/src/components/Card.js",
-                    "lineNumber": 32,
-                  },
-                  "alternate": null,
-                  "child": null,
-                  "effectTag": 0,
-                  "expirationTime": 0,
-                  "firstEffect": null,
-                  "index": 0,
-                  "key": null,
-                  "lastEffect": null,
-                  "memoizedProps": Object {
-                    "children": undefined,
-                    "className": "content-text",
-                  },
-                  "memoizedState": null,
-                  "mode": 0,
-                  "nextEffect": null,
-                  "pendingProps": Object {
-                    "children": undefined,
-                    "className": "content-text",
-                  },
-                  "ref": null,
-                  "return": [Circular],
-                  "selfBaseTime": 0,
-                  "sibling": null,
-                  "stateNode": <p
-                    class="content-text"
-/>,
-                  "tag": 5,
-                  "treeBaseTime": 0,
-                  "type": "p",
-                  "updateQueue": null,
-                },
+                "child": null,
                 "effectTag": 0,
                 "expirationTime": 0,
                 "firstEffect": null,
@@ -1335,52 +1219,44 @@ ReactWrapper {
                 "key": null,
                 "lastEffect": null,
                 "memoizedProps": Object {
-                  "children": Array [
-                    <p
-                      className="content-text"
-/>,
-                    undefined,
-                  ],
-                  "className": "content",
+                  "children": "x",
+                  "className": "card__delete",
+                  "id": undefined,
+                  "onClick": [Function],
                 },
                 "memoizedState": null,
                 "mode": 0,
                 "nextEffect": null,
                 "pendingProps": Object {
-                  "children": Array [
-                    <p
-                      className="content-text"
-/>,
-                    undefined,
-                  ],
-                  "className": "content",
+                  "children": "x",
+                  "className": "card__delete",
+                  "id": undefined,
+                  "onClick": [Function],
                 },
                 "ref": null,
                 "return": [Circular],
                 "selfBaseTime": 0,
                 "sibling": null,
-                "stateNode": <div
-                  class="content"
+                "stateNode": <span
+                  class="card__delete"
 >
-                  <p
-                                    class="content-text"
-                  />
-</div>,
+                  x
+</span>,
                 "tag": 5,
                 "treeBaseTime": 0,
-                "type": "div",
+                "type": "span",
                 "updateQueue": null,
               },
-              "stateNode": <button
-                class="delete"
+              "stateNode": <div
+                class="card__content"
 >
-                <span>
-                                x
-                </span>
-</button>,
+                <p
+                                class="card__content-text"
+                />
+</div>,
               "tag": 5,
               "treeBaseTime": 0,
-              "type": "button",
+              "type": "div",
               "updateQueue": null,
             },
             "effectTag": 0,
@@ -1391,22 +1267,20 @@ ReactWrapper {
             "lastEffect": null,
             "memoizedProps": Object {
               "children": Array [
-                <button
-                  className="delete"
+                <div
+                  className="card__content"
+>
+                  <p
+                                    className="card__content-text"
+                  />
+</div>,
+                <span
+                  className="card__delete"
                   id={undefined}
                   onClick={[Function]}
 >
-                  <span>
-                                    x
-                  </span>
-</button>,
-                <div
-                  className="content"
->
-                  <p
-                                    className="content-text"
-                  />
-</div>,
+                  x
+</span>,
               ],
               "className": "card",
             },
@@ -1415,22 +1289,20 @@ ReactWrapper {
             "nextEffect": null,
             "pendingProps": Object {
               "children": Array [
-                <button
-                  className="delete"
+                <div
+                  className="card__content"
+>
+                  <p
+                                    className="card__content-text"
+                  />
+</div>,
+                <span
+                  className="card__delete"
                   id={undefined}
                   onClick={[Function]}
 >
-                  <span>
-                                    x
-                  </span>
-</button>,
-                <div
-                  className="content"
->
-                  <p
-                                    className="content-text"
-                  />
-</div>,
+                  x
+</span>,
               ],
               "className": "card",
             },
@@ -1441,20 +1313,18 @@ ReactWrapper {
             "stateNode": <article
               class="card"
 >
-              <button
-                            class="delete"
-              >
-                            <span>
-                                          x
-                            </span>
-              </button>
               <div
-                            class="content"
+                            class="card__content"
               >
                             <p
-                                          class="content-text"
+                                          class="card__content-text"
                             />
               </div>
+              <span
+                            class="card__delete"
+              >
+                            x
+              </span>
 </article>,
             "tag": 5,
             "treeBaseTime": 0,
@@ -1468,7 +1338,7 @@ ReactWrapper {
           "key": null,
           "lastEffect": null,
           "memoizedProps": Object {},
-          "memoizedState": Object {},
+          "memoizedState": null,
           "mode": 0,
           "nextEffect": null,
           "pendingProps": Object {},
@@ -1536,20 +1406,18 @@ ReactWrapper {
                     <article
                                         class="card"
                     >
-                                        <button
-                                                            class="delete"
-                                        >
-                                                            <span>
-                                                                                x
-                                                            </span>
-                                        </button>
                                         <div
-                                                            class="content"
+                                                            class="card__content"
                                         >
                                                             <p
-                                                                                class="content-text"
+                                                                                class="card__content-text"
                                                             />
                                         </div>
+                                        <span
+                                                            class="card__delete"
+                                        >
+                                                            x
+                                        </span>
                     </article>
 </div>,
                   "context": Object {},
@@ -1637,20 +1505,18 @@ ReactWrapper {
                   <article
                                     class="card"
                   >
-                                    <button
-                                                      class="delete"
-                                    >
-                                                      <span>
-                                                                        x
-                                                      </span>
-                                    </button>
                                     <div
-                                                      class="content"
+                                                      class="card__content"
                                     >
                                                       <p
-                                                                        class="content-text"
+                                                                        class="card__content-text"
                                                       />
                                     </div>
+                                    <span
+                                                      class="card__delete"
+                                    >
+                                                      x
+                                    </span>
                   </article>
 </div>,
                 "context": Object {},
@@ -1734,7 +1600,7 @@ ReactWrapper {
         "getEmoji": [Function],
         "props": Object {},
         "refs": Object {},
-        "state": Object {},
+        "state": null,
         "updater": Object {
           "enqueueForceUpdate": [Function],
           "enqueueReplaceState": [Function],
@@ -1750,90 +1616,48 @@ ReactWrapper {
         "instance": <article
           class="card"
 >
-          <button
-                    class="delete"
-          >
-                    <span>
-                              x
-                    </span>
-          </button>
           <div
-                    class="content"
+                    class="card__content"
           >
                     <p
-                              class="content-text"
+                              class="card__content-text"
                     />
           </div>
+          <span
+                    class="card__delete"
+          >
+                    x
+          </span>
 </article>,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <button
-              className="delete"
+            <div
+              className="card__content"
+>
+              <p
+                            className="card__content-text"
+              />
+</div>,
+            <span
+              className="card__delete"
               id={undefined}
               onClick={[Function]}
 >
-              <span>
-                            x
-              </span>
-</button>,
-            <div
-              className="content"
->
-              <p
-                            className="content-text"
-              />
-</div>,
+              x
+</span>,
           ],
           "className": "card",
         },
         "ref": null,
         "rendered": Array [
           Object {
-            "instance": <button
-              class="delete"
->
-              <span>
-                            x
-              </span>
-</button>,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <span>
-                x
-</span>,
-              "className": "delete",
-              "id": undefined,
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": <span>
-                  x
-</span>,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "x",
-                },
-                "ref": null,
-                "rendered": Array [
-                  "x",
-                ],
-                "type": "span",
-              },
-            ],
-            "type": "button",
-          },
-          Object {
             "instance": <div
-              class="content"
+              class="card__content"
 >
               <p
-                            class="content-text"
+                            class="card__content-text"
               />
 </div>,
             "key": undefined,
@@ -1841,23 +1665,23 @@ ReactWrapper {
             "props": Object {
               "children": Array [
                 <p
-                  className="content-text"
+                  className="card__content-text"
 />,
                 undefined,
               ],
-              "className": "content",
+              "className": "card__content",
             },
             "ref": null,
             "rendered": Array [
               Object {
                 "instance": <p
-                  class="content-text"
+                  class="card__content-text"
 />,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
                   "children": undefined,
-                  "className": "content-text",
+                  "className": "card__content-text",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -1867,6 +1691,26 @@ ReactWrapper {
               },
             ],
             "type": "div",
+          },
+          Object {
+            "instance": <span
+              class="card__delete"
+>
+              x
+</span>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "x",
+              "className": "card__delete",
+              "id": undefined,
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              "x",
+            ],
+            "type": "span",
           },
         ],
         "type": "article",

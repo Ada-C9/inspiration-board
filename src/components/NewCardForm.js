@@ -9,10 +9,7 @@ class NewCardForm extends Component {
   constructor() {
     super()
 
-    this.state = {
-      text: '',
-      emoji: '',
-    }
+    this.state = { text: '', emoji: '' }
   }
 
   onFieldChange = (event) => {
@@ -47,10 +44,7 @@ class NewCardForm extends Component {
 
   clearForm = () => {
     console.log('inside clear form');
-    this.setState({
-      text: '',
-      emoji: '',
-    });
+    this.setState({ text: '', emoji: '' });
   }
 
   onFormSubmit = (event) => {
@@ -63,7 +57,6 @@ class NewCardForm extends Component {
     return (
       <section className="new-card-form">
         <form className="new-card-form__form" onSubmit={this.onFormSubmit}>
-        
           <label className="new-card-form__form-label" htmlFor="text">Message:</label>
           <input className="new-card-form__form-textarea"
             name="text"
@@ -78,7 +71,6 @@ class NewCardForm extends Component {
           </select>
 
           <input type="submit" value="Add Card" className="new-card-form__form-button" />
-
         </form>
       </section>
     )

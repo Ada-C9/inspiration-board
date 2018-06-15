@@ -5,23 +5,19 @@ import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
 
-const URL = 'https://inspiration-board.herokuapp.com/boards/alexandriaz/cards/'
+const URL = 'https://inspiration-board.herokuapp.com/boards/alexandriam/cards/'
 
 class Board extends Component {
   constructor() {
     super();
 
-    this.state = {
-      cards: [],
-    };
+    this.state = { cards: [] };
   }
 
   componentDidMount = () => {
     axios.get(URL)
       .then((response) => {
-        this.setState({
-          cards: response.data
-        })
+        this.setState({ cards: response.data })
       })
       .catch((error) => {
         this.setState({
@@ -37,14 +33,10 @@ class Board extends Component {
         let updatedCards = cards.filter(function(i) {
           return i.card.id !== response.data.card.id;
         });
-        this.setState({
-          cards: updatedCards
-        })
+        this.setState({ cards: updatedCards })
       })
       .catch((error) => {
-        this.setState({
-          error: error.message
-        })
+        this.setState({ error: error.message })
       });
   }
 
@@ -59,11 +51,8 @@ class Board extends Component {
         });
       })
       .catch((error) => {
-        this.setState({
-          error: error.message,
-        });
+        this.setState({ error: error.message });
       })
-
   }
 
   renderCardList = () => {

@@ -4,13 +4,6 @@ import emoji from 'emoji-dictionary';
 import './Card.css';
 
 class Card extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-    }
-  }
-
   getEmoji = () => {
     if (this.props.emoji) {
       this.emoji = emoji.getUnicode(this.props.emoji);
