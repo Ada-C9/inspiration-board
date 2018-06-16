@@ -9,7 +9,7 @@ import Card from './Card';
 import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
-const BOARD_URL = "https://inspiration-board.herokuapp.com/boards/karinna/cards"
+const BOARD_URL = "https:/inspiration-board.herokuapp.com/boards/karinna/cards"
 
 class Board extends Component {
 	static propTypes = {
@@ -28,14 +28,15 @@ class Board extends Component {
 		axios.get(BOARD_URL)
 
 		.then((response) =>{
-			this.props.updateStatusCallback("Successfully loaded board", "Success")
+			this.props.updateStatusCallback("Successfully loaded board", "success")
 
 			this.setState({
 				cards: response.data
 			})
 		})
+		
 		.catch((error) => {
-			this.props.updateStatusCallback(`Failed to load: ${error.message}`)
+			this.props.updateStatusCallback(`Failed to load: ${error.message}`, "failure")
 		});
 
 	}
@@ -49,9 +50,10 @@ class Board extends Component {
 			let updatedCards = this.state.cards;
 			updatedCards.push({card});
 			this.setState({ cards: updatedCards });
+			this.props.updateStatusCallback(`Successfully added card`, "success")
 		})
 		.catch((error) => {
-			this.props.updateStatusCallback(`Failed to add Card: ${error.message}`)
+			this.props.updateStatusCallback(`Failed to add Card: ${error.message}`, "failure")
 		});
 
 	}
@@ -60,7 +62,7 @@ class Board extends Component {
 		console.log(card);
 		axios.delete(`${BOARD_URL}/${card.props.id}`)
 		.then((response) => {
-			this.props.updateStatusCallback("Successfully Deleted Card", "Success")
+			this.props.updateStatusCallback("Successfully Deleted Card", "success")
 			let updatedCards = this.state.cards;
 
 			updatedCards.splice(card.props.index,1)
@@ -72,7 +74,7 @@ class Board extends Component {
 
 		})
 		.catch((error) => {
-			this.props.updateStatusCallback(`Failed to add card: ${error.message}`)
+			this.props.updateStatusCallback(`Failed to add card: ${error.message}`, "failure")
 		});
 	}
 

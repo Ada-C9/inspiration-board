@@ -8,10 +8,8 @@ class Status extends React.Component {
 	}
 	render(){
 		return (
-			<div>
-				<h2>THIS IS A STATUS</h2>
-				<h2>and message: {this.props.message}</h2>
-				<h2>and type: {this.props.type}</h2>
+			<div className={`validation-errors-display ${this.props.type}`}>
+				<h2>{this.props.message}</h2>
 			</div>
 		)
 	}

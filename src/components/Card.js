@@ -9,7 +9,8 @@ class Card extends Component {
 	static propTypes = {
 		index: PropTypes.number,
 		text: PropTypes.string,
-		emoji: PropTypes.string
+		emoji: PropTypes.string,
+		deleteCardCallback: PropTypes.func.isRequired
 	}
 
 	getEmoji = () => {

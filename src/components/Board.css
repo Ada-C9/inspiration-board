@@ -12,3 +12,13 @@
   list-style-type: none;
   padding: 0;
 }
+
+.success {
+  background-color: grey;
+  color: darkgreen;
+}
+
+.failure {
+  background-color: grey;
+  color: darkred;
+}

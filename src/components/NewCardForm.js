@@ -3,7 +3,19 @@ import PropTypes from 'prop-types';
 import emoji from 'emoji-dictionary';
 import './NewCardForm.css';
 
-const EMOJI_LIST = ["", "heart_eyes", "beer", "pizza", "laughing", "kissing_heart", "taco", "sparkling_heart", "bug", "sunflower", "dog"]
+const EMOJI_LIST = [
+	"",
+	"heart_eyes",
+	"beer",
+	"pizza",
+	"laughing",
+	"kissing_heart",
+	"taco",
+	"sparkling_heart",
+	"bug",
+	"sunflower",
+	"dog"
+]
 
 class NewCardForm extends Component {
 
@@ -39,7 +51,7 @@ class NewCardForm extends Component {
 	render(){
 
 		const emojiInput = EMOJI_LIST.map((emo, key) => {
-			return <option key={key} name={emo} onChange={this.onInputChange} value={this.state[emo]}>
+			return <option key={key} name="emoji" value={emo} onChange={this.onInputChange} value={this.state[emo]}>
 				{emoji.getUnicode(emo)}
 			</option>
 		});
