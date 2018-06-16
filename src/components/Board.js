@@ -58,9 +58,9 @@ class Board extends Component {
       const cardObject = {
         card: response.data.card,
       }
-      
+      console.log(cardObject);
       cardList.push(cardObject);
-
+      console.log(cardList);
       this.setState({
         message: `Sucessfully added card`,
         cards: cardList,
@@ -78,8 +78,8 @@ class Board extends Component {
       return (
           <Card
             key={index}
-            quote={card.text}
-            emoji={card.emoji}
+            quote={card.card.text}
+            emoji={card.card.emoji}
             removeCard={this.removeCard}
             index={index}
           />
