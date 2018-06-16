@@ -6,7 +6,8 @@ const BOARD_LIST = ["wini", "brenda", "angelica", "dikla", "ari", "maria", "tor"
 
 class ChooseBoardForm extends Component {
 static propTypes = {
-getBoardNameCallback: PropTypes.func.isRequired
+getBoardNameCallback: PropTypes.func.isRequired,
+boards: PropTypes.array.isRequired
 }
 
   constructor(){
@@ -39,15 +40,14 @@ getBoardNameCallback: PropTypes.func.isRequired
 
   render(){
 
-console.log(this.props.boards);
 
-let boardOptions = BOARD_LIST.map((my_board, key) => {
-return <option key ={key} value={my_board} >{my_board}</option>
-})
-
+    let boardOptions = this.props.boards.map((my_board, key) => {
+    return <option key ={key} value={my_board} >{my_board}</option>
+    })
 
 
 
+ console.log()
     return (
       <form onSubmit={this.onFormSubmit}>
         <div>

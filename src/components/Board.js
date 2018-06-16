@@ -36,7 +36,7 @@ class Board extends Component {
     const boards_list_url = "https://inspiration-board.herokuapp.com/boards"
     axios.get(boards_list_url).then((response)=> {
       const my_boards = response.data.map((board) => {
-        return board.board
+        return board.board;
       })
 
       this.setState({
@@ -109,7 +109,7 @@ deleteFromApi = (id) => {
   }
 
   addCard = (card) => {
-    let url_boards = this.props.url;
+    let url_boards = this.props.url
     let board_name = this.state.boardName;
     let updatedCards = this.state.cards;
     console.log(`${url_boards}${board_name}/cards`);
@@ -141,11 +141,15 @@ deleteFromApi = (id) => {
       />
     }
   )
-  console.log(this.state.boards)
+
+const all_boards = this.state.boards.map((board) => {
+  return board.name});
+
+
 
   return (
     <main>
-    <ChooseBoardForm getBoardNameCallback={this.getBoardName} boards={this.state.boards} />
+    <ChooseBoardForm getBoardNameCallback={this.getBoardName} boards={all_boards} />
     <NewCardForm addCardCallback={this.addCard}/>
     <div className="board">
     {cards}
