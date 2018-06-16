@@ -5,7 +5,6 @@ import './Board.css';
 import Card from './Card';
 import './Card.css';
 import NewCardForm from './NewCardForm';
-import CARD_DATA from '../data/card-data.json';
 import Foundation,{Callout,Colors} from 'react-foundation';
 
 
@@ -52,7 +51,6 @@ class Board extends Component {
   }
 
   addCard = (newCard) => {
-    // is this ok to do?
     const cardObject = {
       card: newCard,
     }
@@ -74,11 +72,6 @@ class Board extends Component {
       })
     });
   }
-
-  timedRefresh = () => {
-    
-  }
-// call get request every 2 minutes to update the api data as well
 
   showCards = () => {
     const list = this.state.cards.map((card, index) => {

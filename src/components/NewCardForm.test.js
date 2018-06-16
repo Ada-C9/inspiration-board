@@ -9,29 +9,23 @@ describe('NewCardForm', () => {
   });
 
   test('when a user enters text in the text field the field is updated', () => {
-    // Arrange
-    /// can use shallow b/c there is no subfields in NewCardForm
+
     const wrapper = shallow( <NewCardForm
       addCard={() => {} } />);
 
-    //find the inputfield
     let nameField = wrapper.find('input[name="text"]');
 
-    // Act
-    //simulates the event we are listening for
     nameField.simulate('change', {
       target: {
         value: 'testing out a positive note',
         name: 'text',
       },
     });
-    //forces the on change event
+
     wrapper.update();
 
-    //b/c re-rendered in the DOM have to look for nameField again
     nameField = wrapper.find('input[name="text"]');
-    //Assert
-    //.props here is only getting the properties on the the inputfield
+  
     expect(nameField.getElement().props.value).toEqual('testing out a positive note');
   });
 
