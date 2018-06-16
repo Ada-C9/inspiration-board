@@ -8,125 +8,56 @@ import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
 class Board extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       cards: [],
-      // cards: [
-      //   {
-      //     text:"foo",
-      //     emoji:'grinning'
-      //   },
-      //   {
-      //     text:"bar",
-      //     emoji:'cry'
-      //   }
-      // ],
     };
   }
 
-//   fields.forEach(({field, value}) => {
-//
-//   // let nameField = wrapper.find(`[name="${field}"]`);
-//   let nameField = wrapper.find(`input[name="${field}"]`);
-//   nameField.simulate('change', {target: {
-//       name: field,
-//       value,
-//     }});
-//   wrapper.update();
-//   // nameField = wrapper.find(`[name="${field}"]`);
-//   nameField = wrapper.find(`input[name="${field}"]`);
-//   expect(nameField.getElement().props.value).toEqual(value);
-// });
   componentDidMount() {
     axios.get('https://inspiration-board.herokuapp.com/boards/kirsten/cards')
       .then((response) => {
         console.log(response.data);
         const cards = response.data.map(inputCard => inputCard.card);
-
-        this.setState({
-          cards: cards
-        });
+        this.setState({ cards });
       })
       .catch((error) => {
-        this.setState({
-          error: error.message
-        });
+        this.setState({ error: error.message});
       });
   }
+  addCard = (event) => {
+    console.log(event);
 
-  // componentDidMount() {
-  //   axios.get('https://inspiration-board.herokuapp.com/boards/kirsten/cards')
-  //     .then((response) => {
-  //       console.log(response.data);
-  //
-  //       const cards = response.data.map(inputCard => inputCard.card);
-  //       console.log(cards);
-  //       this.setState({
-  //         cards: response.data
-  //       });
-  //     })
-  //     .catch((error) => {
-  //       this.setState({
-  //         error: error.message
-  //       });
-  //     });
-  //   // console.log("foo");
-  //   // console.log(this.state.cards.valueOf());
-  //   // console.log(this.state.cards);
-  // }
-  // componentDidMount() {
-  //   axios.get('https://inspiration-board.herokuapp.com/boards/kirsten/cards')
-  //     .then((response) => {
-  //       // console.log("bar");
-  //       const cards = response.data.map(thing => thing.card);
-  //       console.log(cards);
-  //
-  //       let cardsBuilding = new Map();
-  //
-  //
-  //       cards.forEach((inputCard) => {
-  //         // console.log(Object.values(inputCard)[0]['id']);
-  //         cardsBuilding.set(inputCard['id'], Object.values(inputCard));
-  //       });
-  //
-  //       // console.log({cardsBuilding});
-  //       // this.    ssetState({
-  //       //   cardsBuilding,
-  //       // });
-  //       //
-  //       // console.log(this.state.cardsBuilding);
-  //     })
-  // }
+    // const currCard = this.state.cards[index];
+    axios.post(`https://inspiration-board.herokuapp.com/boards/kirsten/cards/`)
+      .then((response) => {
+        console.log(response);
+        let updatedData = this.state.cards;
+        // updatedData.add(index, 1);
+        // console.log(updatedData);
+        // this.setState({cards: updatedData});
+      })
+      .catch((error) => {
+        this.setState({ error: error.message });
+      });
+  };
+
   removeCard = (index) => {
-    console.log(index);
-
     const currCard = this.state.cards[index];
-    console.log('fooooo');
-    console.log(currCard.values);
       axios.delete(`https://inspiration-board.herokuapp.com/boards/kirsten/cards/${currCard['id']}`)
         .then((response) => {
-          // We can update the state so we don't need to make another GET request
-          let updatedData = this.state.cards.splice(currCard['id'], currCard['id']);
+          let updatedData = this.state.cards;
+          updatedData.splice(index, 1);
+          // console.log(updatedData);
           this.setState({cards: updatedData});
         })
         .catch((error) => {
-          // Use the same idea we had in our GET request
           this.setState({ error: error.message });
         });
     };
-  // renderCardsList = () => {
-  //   return this.state.cards.map((card, index) => {
-  //     return (
-  //       <Card
-  //         key={index}
-  //         text={card.card.text}
-  //         emoji={card.card.emoji}
-  //       />
-  //     )
-  //   });
-  // };
+
   renderCardsList = () => {
     // console.log(this.state.cards);
     return this.state.cards.map((card, index) => {
@@ -134,7 +65,7 @@ class Board extends Component {
 
       return (
         <Card
-          key={index}
+          key={card.id}
           index={index}
           text={card.text}
           emoji={card.emoji}
@@ -147,6 +78,9 @@ class Board extends Component {
   render() {
     return (
       <div className="board">
+        {<NewCardForm
+          addCardCallback={this.addCard}
+        />}
         {this.renderCardsList()}
         </div>
     )

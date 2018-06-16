@@ -7,27 +7,17 @@ import axios from 'axios/index';
 
 class Card extends Component {
 
-  onClickX = (event) => {
-    console.log(this.props.index);
-      this.props.removeCardCallback(this.props.index);
 
-
+  removeThisCard = () => {
+    this.props.removeCardCallback(this.props.index);
   };
-  // removeCard = event => {
-  //   // event.preventDefault();
-  //
-  //   axios.delete(`https://inspiration-board.herokuapp.com/boards/kirsten/cards/${this.props.id}`)
-  //     .then((response) => {
-  //       console.log(response);
-  //       console.log(response.data);
-  //     })
-  // };
+
   render() {
    const getEmoji = this.props.emoji ? emoji.getUnicode(this.props.emoji) : "";
     return (
       <article className="card">
-        <p onClick={this.onClickX}
-              className="card__delete">x</p>
+        <p onClick={this.removeThisCard}
+           className="card__delete">x</p>
         <section className="card__content">
           <p className="card__content-text">{this.props.text}</p>
           <p className="card__content-emoji">{getEmoji}</p>
