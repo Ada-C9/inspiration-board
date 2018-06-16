@@ -5,7 +5,6 @@ import './Board.css';
 import Card from './Card';
 import './Card.css';
 import NewCardForm from './NewCardForm';
-import Foundation,{Callout,Colors} from 'react-foundation';
 
 
 class Board extends Component {
@@ -45,7 +44,6 @@ class Board extends Component {
     .catch(() => {
       this.setState({
         error: 'Unable to delete card'
-
       })
     });
   }
@@ -94,12 +92,12 @@ class Board extends Component {
     return (
       <div>
         <div className="callout-colors-example">
-          <Callout color={Colors.WARNING}>
+          <div className="warning">
             <h5>{this.state.error}</h5>
-          </Callout>
-          <Callout color={Colors.WARNING}>
+          </div>
+          <div className="message">
             <h5>{this.state.message}</h5>
-          </Callout>
+          </div>
           <NewCardForm
             addCard={this.addCard}/>
         </div>

@@ -9,8 +9,13 @@ class Card extends Component {
     return (
       <div className="card">
         <div className="card__content">
-          {this.props.quote} {emoji.getUnicode(`${this.props.emoji}`)}
-          <button onClick={ () => {
+          <div className="card__content-text">
+          {this.props.quote}
+          </div>
+          <div className="card__content-emoji">
+          {emoji.getUnicode(`${this.props.emoji}`)}
+          </div>
+          <button className="card__delete" onClick={ () => {
             this.props.removeCard(this.props.index)
           } }>
             delete

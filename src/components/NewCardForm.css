@@ -28,13 +28,23 @@
 .new-card-form__form-textarea,
 .new-card-form__form-button {
   font-family: 'Raleway', sans-serif;
-  font-size: 1.25em;
+  font-size: 0.75em;
   grid-column: controls;
   grid-row: auto;
 }
 
+#emoji_form{
+  background-color: #ccffe6;
+}
+
+#text_form{
+  background-color: #c6b3ff;
+}
+
 .new-card-form__form-button {
-  background-color: inherit;
-  border: 1px solid black;
-  font-size: 1em;
+  background-color: #009999;
+  color: white;
+  font-family: 'Permanent Marker', Helvetica, sans-serif;
+  font-size: 1.5em;
+  border-radius: 10rem;
 }

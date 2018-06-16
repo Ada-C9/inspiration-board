@@ -12,3 +12,15 @@
   list-style-type: none;
   padding: 0;
 }
+
+.message{
+  color: purple;
+  padding-left: 1rem;
+  font-size: 1em;
+}
+
+.warning{
+  color:red;
+  padding-left: 1rem;
+  font-size: 1em;
+}

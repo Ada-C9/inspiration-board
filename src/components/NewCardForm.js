@@ -37,25 +37,27 @@ class NewCardForm extends Component {
   render() {
     return (
       <form onSubmit={this.onFormSubmit} className="new-card-form">
-        <div>
-          <label htmlFor="text">Text: </label>
+        <div className="new-card-form__form">
+          <label className="new-card-form__form-label" htmlFor="text">Text: </label>
           <input
+            className="new-card-form__form-textarea"
            name="text"
            value={this.state.text}
            onChange={this.onFieldChange}
-           type="text" />
+           type="text" id="text_form"/>
         </div>
-        <div>
+        <div className="new-card-form__form">
           <label htmlFor="emoji">Emoji: </label>
           <input
           name="emoji"
           value={this.state.emoji}
           onChange={this.onFieldChange}
-          type="text" />
+          type="text"
+          className="new-card-form__form-textarea" id="emoji_form"/>
         </div>
 
         <input
-          className="button success"
+          className="new-card-form__form-button"
           type="submit"
           value="Inspire"
         />
@@ -65,6 +67,7 @@ class NewCardForm extends Component {
 }
 
 NewCardForm.propTypes = {
+  // why doesn't it work with the callback func proptype for addCard...it is not set to required but breaks my removeCard functionality
 }
 
 export default NewCardForm;
