@@ -49,31 +49,28 @@ class NewCardForm extends Component {
 
   render() {
     return (
-  <div className="new-card-form">
 
-    <h2 className="new-card-form__header">Write a new Card</h2>
-    <div className="validation-errors">
-      {this.state.errorMessages}
-    </div>
-    <div >
-      <form onSubmit={this.onFormSubmit} className="new-card-form__form" >
-        <label htmlFor="text" className="new-card-form__form-label">Write a note <FaPencil/><FaPencil/>
-        <FaPencil/></label>
-          <textarea name="text" onChange={this.onInputChange} value={this.state.text}
-          className="new-card-form__form-textarea" />
-        <label htmlFor="emoji" className="new-card-form__form-label">Emoji</label>
-          <select name="emoji" onChange={this.onInputChange} value={this.state.emoji}
-          className="new-card-form__form-select">
-          {this.emojis()}
+      <section className="new-card-form">
+        <h2 className="new-card-form__header">Write a new Card</h2>
 
-        </select>
-        <button type="submit" className="new-card-form__form-button">Submit Card</button>
-      </form>
-    </div>
+        <div >
+          <form onSubmit={this.onFormSubmit} className="new-card-form__form" >
+            <label htmlFor="text" className="new-card-form__form-label">Write a note <FaPencil/><FaPencil/>
+            <FaPencil/></label>
+            <textarea name="text" onChange={this.onInputChange} value={this.state.text}
+            className="new-card-form__form-textarea" />
+            <label htmlFor="emoji" className="new-card-form__form-label">Emoji</label>
+            <select name="emoji" onChange={this.onInputChange} value={this.state.emoji}
+              className="new-card-form__form-select">
+              {this.emojis()}
+              </select>
+              <button type="submit" className="new-card-form__form-button">Submit Card</button>
+          </form>
+        </div>
 
-  </div>
-);
-}
+      </section>
+    );
+  }
 }
 
 NewCardForm.propTypes = {

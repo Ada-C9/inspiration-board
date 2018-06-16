@@ -89,7 +89,7 @@ class Board extends Component {
     .then((response) => {
 
       this.props.updateStatusCallback(`Sucessfully added a new card!` , 'success');
-    
+
 
       card.id = response.data.card.id;
       updatedCards.push(card);
@@ -116,12 +116,10 @@ class Board extends Component {
     }
   )
   return (
-    <div className="board">
-
-
-    <NewCardForm addCardCallback={this.addCard}/>
-    {cards}
-    </div>
+    <section className="board">
+      <NewCardForm addCardCallback={this.addCard}/>
+        {cards}
+    </section>
   )
 }
 

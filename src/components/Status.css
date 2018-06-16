@@ -1,0 +1,12 @@
+.status {
+  display: block;
+  color: red;
+}
+
+.error {
+  background-color: lightcoral;
+}
+
+.success {
+  background-color: lightgreen;
+}

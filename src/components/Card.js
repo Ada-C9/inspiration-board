@@ -13,21 +13,19 @@ class Card extends Component {
   }
 
   deleteThisCard = (event) => {
-      event.preventDefault();
-      this.props.deleteCardCallback(this.props.id);
-    };
+    event.preventDefault();
+    this.props.deleteCardCallback(this.props.id);
+  };
 
   render() {
     return (
       <div className="card">
         <div onClick={this.deleteThisCard} className='card__delete'><FaTrash/></div>
           <section className="card__content">
-            < p className="card_content-text">{this.props.text}</p>
-            <div className="card_content-emoji">
-              {this.getEmoji()}
-            </div>
-            </section>
-        </div>
+            <p className="card_content-text">{this.props.text}</p>
+            <div className="card_content-emoji">{this.getEmoji()}</div>
+          </section>
+      </div>
 
     )
   }
