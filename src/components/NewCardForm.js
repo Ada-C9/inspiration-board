@@ -65,7 +65,6 @@ class NewCardForm extends Component {
 }
 
 NewCardForm.propTypes = {
-  addCard: PropTypes.func
 }
 
 export default NewCardForm;
