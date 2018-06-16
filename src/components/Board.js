@@ -58,9 +58,8 @@ class Board extends Component {
       const cardObject = {
         card: response.data.card,
       }
-      console.log(cardObject);
+
       cardList.push(cardObject);
-      console.log(cardList);
       this.setState({
         message: `Sucessfully added card`,
         cards: cardList,
@@ -85,22 +84,20 @@ class Board extends Component {
           />
       );
     });
+
     return componentList
   }
 
   render() {
     return (
       <div className="board">
-        <section>
-          <div className="warning">
-            <h5>{this.state.error}</h5>
-          </div>
+        <div className="warning">
+          <h5>{this.state.error}</h5>
+        </div>
 
-          <div className="message">
-            <h5>{this.state.message}</h5>
-          </div>
-
-        </section>
+        <div className="message">
+          <h5>{this.state.message}</h5>
+        </div>
         <NewCardForm
           addCard={this.addCard}/>
           {this.showCards()}

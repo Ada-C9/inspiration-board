@@ -67,7 +67,7 @@ class NewCardForm extends Component {
 }
 
 NewCardForm.propTypes = {
-  // why doesn't it work with the callback func proptype for addCard...it is not set to required but breaks my removeCard functionality
+  addCard: PropTypes.func,
 }
 
 export default NewCardForm;
