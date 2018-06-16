@@ -21,8 +21,8 @@ describe('NewCardForm', () => {
     //simulates the event we are listening for
     nameField.simulate('change', {
       target: {
-        text: 'testing out a positive note',
-        emoji: 'heart_eyes',
+        value: 'testing out a positive note',
+        name: 'text',
       },
     });
     //forces the on change event
@@ -32,7 +32,7 @@ describe('NewCardForm', () => {
     nameField = wrapper.find('input[name="text"]');
     //Assert
     //.props here is only getting the properties on the the inputfield
-    expect(nameField.getElement().props.value.toEqual('testing out a positive note'))
+    expect(nameField.getElement().props.value).toEqual('testing out a positive note');
   });
 
   test('when a user enters text in the emoji field the field is updated', () => {
@@ -44,8 +44,8 @@ describe('NewCardForm', () => {
 
     nameField.simulate('change', {
       target: {
-        text: 'testing out a positive note',
-        emoji: 'heart_eyes',
+        value: 'heart_eyes',
+        name: 'emoji',
       },
     });
 
@@ -53,7 +53,7 @@ describe('NewCardForm', () => {
 
     nameField = wrapper.find('input[name="emoji"]');
 
-    expect(nameField.getElement().props.value.toEqual('heart_eyes'))
+    expect(nameField.getElement().props.value).toEqual('heart_eyes');
   });
 
 });
