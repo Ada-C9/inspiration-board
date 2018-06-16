@@ -10,7 +10,6 @@ import CARD_DATA from '../data/card-data.json';
 class Board extends Component {
   constructor() {
     super();
-
     this.state = {
       cards: [],
       boardName: null
@@ -33,8 +32,9 @@ class Board extends Component {
       });
   }
 
-  componentWillReceiveProps(newProps) {
-    if(this.props.boardName !== newProps.boardName) {
+  componentDidUpdate(prevProps, prevState) {
+    // debugger
+    if(prevProps.boardName !== this.props.boardName) {
       this.props.updateStatusCallback(`Loading board: ${this.props.boardName}`, 'success');
       axios.get(`${this.props.url}${this.props.boardName}/cards`)
         .then((response) => {
