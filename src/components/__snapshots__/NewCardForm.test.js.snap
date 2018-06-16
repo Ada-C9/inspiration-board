@@ -5,26 +5,35 @@ exports[`NewCardForm that it matches an existing snapshot 1`] = `
   className="new-card-form"
   onSubmit={[Function]}
 >
-  <div>
+  <div
+    className="new-card-form__form"
+  >
     <label
+      className="new-card-form__form-label"
       htmlFor="text"
     >
       Text: 
     </label>
     <input
+      className="new-card-form__form-textarea"
+      id="text_form"
       name="text"
       onChange={[Function]}
       type="text"
       value=""
     />
   </div>
-  <div>
+  <div
+    className="new-card-form__form"
+  >
     <label
       htmlFor="emoji"
     >
       Emoji: 
     </label>
     <input
+      className="new-card-form__form-textarea"
+      id="emoji_form"
       name="emoji"
       onChange={[Function]}
       type="text"
@@ -32,7 +41,7 @@ exports[`NewCardForm that it matches an existing snapshot 1`] = `
     />
   </div>
   <input
-    className="button success"
+    className="new-card-form__form-button"
     type="submit"
     value="Inspire"
   />
