@@ -56,6 +56,10 @@ class Board extends Component {
     const updatedCardList = this.state.cards;
     updatedCardList.push(cardObject);
 
+    this.setState({
+      message: `Creating new inspiration...`,
+    });
+
     axios.post(`https://inspiration-board.herokuapp.com/boards/<Abinnet-Ainalem>/cards`, newCard)
 
     .then (() => {
@@ -63,6 +67,7 @@ class Board extends Component {
         message: `Sucessfully added card`,
         cards: updatedCardList,
       });
+      // I want the page to refresh, b/c I cant delete a recently added card without refreshing the page...even though i wait a couple of minutes for the api call to post
     })
     .catch(() => {
       this.setState({
@@ -87,6 +92,13 @@ class Board extends Component {
     return list
   }
 
+//says I have reached the max num of setStates...I just want to clear the state messages/error after they have been called
+  // clearMessages () {
+  //   this.setState({
+  //     error: '',
+  //     message: '',
+  //   });
+  // }
 
   render() {
     return (
