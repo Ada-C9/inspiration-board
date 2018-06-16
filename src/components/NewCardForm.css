@@ -4,6 +4,7 @@
   width: 50%;
   margin: auto;
   padding-bottom: 4rem;
+  background-color: #f3e6ff;
 }
 
 .new-card-form__header {
@@ -12,7 +13,11 @@
 }
 
 .new-card-form__form {
-  font-size: 1.5em;
+
+  display: block;
+  margin: 0 15%;
+  width: 70%;
+  font-size: 1em;
   display: grid;
   grid-template-columns: [labels] auto [controls] 1fr;
   grid-auto-flow: row;
@@ -20,6 +25,7 @@
 }
 
 .new-card-form__form-label  {
+
   grid-column: labels;
   grid-row: auto;
 }
@@ -34,7 +40,8 @@
 }
 
 .new-card-form__form-button {
-  background-color: inherit;
+  background-color: #7700e6;
+  color: white;
   border: 1px solid black;
   font-size: 1em;
 }

@@ -1,5 +1,5 @@
 .card {
-  background-color: #F4FF81;
+  background-color: #e6ccff;
 
   padding: 1em 0;
   margin: 0.5rem;
@@ -18,7 +18,7 @@
 .card__content {
   grid-column-start: 2;
 
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   justify-content: space-around;
 

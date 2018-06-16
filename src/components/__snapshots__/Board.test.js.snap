@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Board shallow mount 1`] = `
-<div
+<section
   className="board"
 >
   <NewCardForm
     addCardCallback={[Function]}
   />
-</div>
+</section>
 `;

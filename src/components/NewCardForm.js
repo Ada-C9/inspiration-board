@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import emoji from 'emoji-dictionary';
 import FaPencil from 'react-icons/lib/fa/pencil'
 import './NewCardForm.css';
+import './Card.css';
 
 const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog"]
 
@@ -64,7 +65,7 @@ class NewCardForm extends Component {
               className="new-card-form__form-select">
               {this.emojis()}
               </select>
-              <button type="submit" className="new-card-form__form-button">Submit Card</button>
+              <button type="submit" className="new-card-form__form-button">Add Card</button>
           </form>
         </div>
 
