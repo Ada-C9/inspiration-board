@@ -11,8 +11,6 @@ const BOARDS_URL = 'https://inspiration-board.herokuapp.com/boards/Emilce/cards'
 
 const DELETE_URL = 'https://inspiration-board.herokuapp.com/boards/Emilce/cards/';
 
- // https://inspiration-board.herokuapp.com/boards/:board_name/cards/:card_id
-
 const CARD_URL = 'https://inspiration-board.herokuapp.com/boards/Emilce/cards';
 
 class Board extends Component {
@@ -60,16 +58,22 @@ class Board extends Component {
   }
 
   componentDidMount() {
+    this.props.updateStatusCallback('Loading cards...', 'success');
+
     axios.get(BOARDS_URL)
     .then((response)=> {
       console.log("getting board data");
       console.log(response);
 
+      this.props.updateStatusCallback('Successfully loaded cards!', 'success');
+
       const data = response.data.slice(0,100);
       this.setState({cards: data})
     })
     .catch((error) => {
-      this.setState({ error: error.message})
+      console.log(error);
+      // this.setState({ error: error.message})
+      this.props.updateStatusCallback(error.message, 'error');
     })
   }
 
@@ -95,8 +99,7 @@ class Board extends Component {
       <NewCardForm addCardCallback={this.addCard}/>
       </div>
 
-      <div>
-      Board
+      <div className="board">
 
       { cards }
       </div>
@@ -108,7 +111,8 @@ class Board extends Component {
 }
 
 Board.propTypes = {
-  deleteCard: PropTypes.func.isRequired
+  deleteCard: PropTypes.func.isRequired,
+  updateStatusCallback: PropTypes.func.isRequired
 };
 
 export default Board;

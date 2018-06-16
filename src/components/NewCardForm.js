@@ -20,9 +20,6 @@ class NewCardForm extends Component {
   }
 
   onInputChange = (event) => {
-    // let updatedInput = {};
-    // updatedInput["text"] = event.target.value;
-
     this.setState({text: event.target.value})
 ;  }
 
@@ -40,42 +37,41 @@ class NewCardForm extends Component {
     console.log(this.state);
   }
 
-  // {EMOJI_LIST.map(function(emoji, index){
-  //    return <option key={ index } >{emoji.getUnicode(emoji)}</option>
-  // })}
-
-  // <option>{emoji.getUnicode("heart_eyes_cat")}</option>
-
   render() {
     const emojiList = EMOJI_LIST.map((emojiWord, index) => {
      return <option key={index} value= {emojiWord}>{ emoji.getUnicode(emojiWord)}</option> })
 
     return (
-      <form onSubmit={this.onFormSubmit}>
-        <div>
-          <label
-          htmlFor="text">Message</label>
-          <input type="text"
-          id="text"
-          value={this.state.text}
-          onChange={this.onInputChange}/>
+      <form className="new-card-form" onSubmit={this.onFormSubmit}>
+
+        <div className="new-card-form__header">Add a card
         </div>
 
-        <div>
-          <label
-          htmlFor="emoji">Emoji</label>
-          <select
-          name="emoji"
-          value={this.state.emoji}
-          onChange={this.onInputChange}
-          className="new-card-form_form-select">
-            {emojiList}
-          </select>
+          <div className="new-card-form__form">
+            <label className="new-class-form__form-label"
+            htmlFor="text">Message</label>
+            <input
+            className="new-class-form__form-textarea"
+            type="text"
+            id="text"
+            value={this.state.text}
+            onChange={this.onInputChange}/>
+          </div>
+
+          <div className="new-card-form__form">
+            <label className="new-class-form__form-label"
+            htmlFor="emoji">Emoji</label>
+            <select
+            className="new-card-form_form-select">
+            name="emoji"
+            value={this.state.emoji}
+            onChange={this.onInputChange}
+              {emojiList}
+            </select>
+          </div>
+
+        <div><input className="new-class-form__form-button" type="submit"/>
         </div>
-        <br></br>
-        <div><input type="submit"/>
-        </div>
-        <br></br>
       </form>
     );
   }
