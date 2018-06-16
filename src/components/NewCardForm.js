@@ -6,8 +6,8 @@ import './NewCardForm.css';
 const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog"]
 
 class NewCardForm extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = { text: '', emoji: '' }
   }
@@ -43,7 +43,6 @@ class NewCardForm extends Component {
   }
 
   clearForm = () => {
-    console.log('inside clear form');
     this.setState({ text: '', emoji: '' });
   }
 

@@ -5,7 +5,7 @@ import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
 
-const URL = 'https://inspiration-board.herokuapp.com/boards/alexandriam/cards/'
+const URL = 'https://inspiration-board.herokuapp.com/boards/alexandriax/cards/'
 
 class Board extends Component {
   constructor() {
@@ -26,18 +26,29 @@ class Board extends Component {
       });
   }
 
+  updateCallback = () => {
+    this.props.notificationCallback(this.state);
+  }
+
   deleteCard = (cardId) => {
     axios.delete(URL + cardId)
       .then((response) => {
+        console.log(response.data.card.id);
         let cards = this.state.cards
         let updatedCards = cards.filter(function(i) {
           return i.card.id !== response.data.card.id;
         });
-        this.setState({ cards: updatedCards })
+        this.setState({
+          cards: updatedCards,
+          message: 'Card successfully deleted.'
+        });
+        this.updateCallback();
       })
       .catch((error) => {
         this.setState({ error: error.message })
+        this.updateCallback();
       });
+
   }
 
   addCard = (card) => {
@@ -49,9 +60,11 @@ class Board extends Component {
           cards: updatedCards,
           message: 'Card successfully added!'
         });
+        this.updateCallback();
       })
       .catch((error) => {
         this.setState({ error: error.message });
+        this.updateCallback();
       })
   }
 
