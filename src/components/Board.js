@@ -13,6 +13,7 @@ class Board extends Component {
 
     this.state = {
       cards: [],
+      boardName: null
     };
   }
 
@@ -22,13 +23,32 @@ class Board extends Component {
       .then((response) => {
         this.props.updateStatusCallback(`Board "${this.props.boardName}" successfully loaded` , 'success');
         this.setState({
-          cards: response.data
+          cards: response.data,
+          boardName: this.props.boardName
         });
       })
 
       .catch((error) => {
         this.props.updateStatusCallback(error.message, 'error');
       });
+  }
+
+  componentWillReceiveProps(newProps) {
+    if(this.props.boardName !== newProps.boardName) {
+      this.props.updateStatusCallback(`Loading board: ${this.props.boardName}`, 'success');
+      axios.get(`${this.props.url}${this.props.boardName}/cards`)
+        .then((response) => {
+          this.props.updateStatusCallback(`Board "${this.props.boardName}" successfully loaded` , 'success');
+          this.setState({
+            cards: response.data,
+            boardName: this.props.boardName
+          });
+        })
+
+      .catch((error) => {
+        this.props.updateStatusCallback(error.message, 'error');
+      });
+    }
   }
 
   addCard = (newCard) => {

@@ -17,6 +17,12 @@ class App extends Component {
     }
   }
 
+  updateBoard = (name) => {
+    this.setState({
+      currentBoard: name
+    });
+  }
+
   updateStatus = (message, type) => {
     this.setState({
       status: {
@@ -33,10 +39,10 @@ class App extends Component {
         <header className="header">
           <h1 className="header__h1"><span className="header__text">Inspiration Board</span></h1>
         </header>
-        <Dropdown />
+        <Dropdown updateBoardCallback={ this.updateBoard } />
         <Status
-          message={this.state.status.message}
-          type={this.state.status.type}
+          message={ this.state.status.message }
+          type={ this.state.status.type }
         />
         <Board
         url="https://inspiration-board.herokuapp.com/boards/"

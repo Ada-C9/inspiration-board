@@ -1,6 +1,7 @@
 .success {
   background-color: #98FB98;
   padding: 1em;
+  margin: .75em;
   border: 1px solid #006400;
   color: #006400;
 }
@@ -8,6 +9,7 @@
 .error {
   background-color: #FF6347;
   padding: 1em;
+  margin: .75em;
   border: 1px solid #800000;
   color: #800000;
 }
