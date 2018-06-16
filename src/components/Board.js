@@ -12,11 +12,14 @@ import CARD_DATA from '../data/card-data.json';
 const BOARD_URL = "https://inspiration-board.herokuapp.com/boards/karinna/cards"
 
 class Board extends Component {
+	static propTypes = {
+		updateStatusCallback: PropTypes.func
+	}
 	constructor() {
 		super();
 
 		this.state = {
-			cards: [],
+			cards: []
 		};
 	}
 
@@ -25,15 +28,14 @@ class Board extends Component {
 		axios.get(BOARD_URL)
 
 		.then((response) =>{
-			console.log(response.data);
+			this.props.updateStatusCallback("Successfully loaded board", "Success")
 
 			this.setState({
 				cards: response.data
-
 			})
 		})
 		.catch((error) => {
-
+			this.props.updateStatusCallback(`Failed to load: ${error.message}`)
 		});
 
 	}
@@ -49,7 +51,7 @@ class Board extends Component {
 			this.setState({ cards: updatedCards });
 		})
 		.catch((error) => {
-
+			this.props.updateStatusCallback(`Failed to add Card: ${error.message}`)
 		});
 
 	}
@@ -58,7 +60,7 @@ class Board extends Component {
 		console.log(card);
 		axios.delete(`${BOARD_URL}/${card.props.id}`)
 		.then((response) => {
-			console.log("IT WORKED");
+			this.props.updateStatusCallback("Successfully Deleted Card", "Success")
 			let updatedCards = this.state.cards;
 
 			updatedCards.splice(card.props.index,1)
@@ -70,8 +72,7 @@ class Board extends Component {
 
 		})
 		.catch((error) => {
-			console.log("IT DID NOT WORK :(");
-
+			this.props.updateStatusCallback(`Failed to add card: ${error.message}`)
 		});
 	}
 
