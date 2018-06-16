@@ -49,25 +49,22 @@ class Board extends Component {
   }
 
   addCard = (newCard) => {
-    const cardObject = {
-      card: newCard,
-    }
-
-    const updatedCardList = this.state.cards;
-    updatedCardList.push(cardObject);
-
-    this.setState({
-      message: `Creating new inspiration...`,
-    });
 
     axios.post(`https://inspiration-board.herokuapp.com/boards/<Abinnet-Ainalem>/cards`, newCard)
 
-    .then (() => {
+    .then ((response) => {
+      const cardList = this.state.cards;
+
+      const cardObject = {
+        card: response.data.card,
+      }
+      
+      cardList.push(cardObject);
+
       this.setState({
         message: `Sucessfully added card`,
-        cards: updatedCardList,
+        cards: cardList,
       });
-      // I want the page to refresh, b/c I cant delete a recently added card without refreshing the page...even though i wait a couple of minutes for the api call to post
     })
     .catch(() => {
       this.setState({
@@ -77,45 +74,36 @@ class Board extends Component {
   }
 
   showCards = () => {
-    const list = this.state.cards.map((card, index) => {
+    const componentList = this.state.cards.map((card, index) => {
       return (
-        <div key={index + 1}>
           <Card
-            quote={card.card.text}
-            emoji={card.card.emoji}
+            key={index}
+            quote={card.text}
+            emoji={card.emoji}
             removeCard={this.removeCard}
             index={index}
           />
-        </div>
       );
     });
-    return list
+    return componentList
   }
-
-//says I have reached the max num of setStates...I just want to clear the state messages/error after they have been called
-  // clearMessages () {
-  //   this.setState({
-  //     error: '',
-  //     message: '',
-  //   });
-  // }
 
   render() {
     return (
-      <div>
-        <div className="callout-colors-example">
+      <div className="board">
+        <section>
           <div className="warning">
             <h5>{this.state.error}</h5>
           </div>
+
           <div className="message">
             <h5>{this.state.message}</h5>
           </div>
-          <NewCardForm
-            addCard={this.addCard}/>
-        </div>
-        <div className="board">
+
+        </section>
+        <NewCardForm
+          addCard={this.addCard}/>
           {this.showCards()}
-        </div>
       </div>
     )
   }
