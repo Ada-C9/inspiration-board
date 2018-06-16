@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Status.css';
 
 class Status extends React.Component {
   static propTypes = {

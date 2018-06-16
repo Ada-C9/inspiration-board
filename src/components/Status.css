@@ -1,12 +1,13 @@
 .status {
   display: block;
-  color: red;
+  width: 40%;
+  font-style: italic;
 }
 
 .error {
-  background-color: lightcoral;
+  color: red;
 }
 
 .success {
-  background-color: lightgreen;
+  color: blue;
 }
