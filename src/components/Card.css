@@ -11,7 +11,7 @@
   border-radius: 5px;
 
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   align-items: center;
 }
 
@@ -43,5 +43,7 @@
 
 .card__delete {
   align-self: start;
+  border: 2px solid black;
+  border-radius: 5px;
   font-family: 'Permanent Marker', Helvetica, sans-serif;
 }

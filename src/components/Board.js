@@ -15,22 +15,10 @@ class Board extends Component {
     };
   }
 
-
-
-
-
   componentDidMount() {
     axios.get('https://inspiration-board.herokuapp.com/boards/victoria/cards')
       .then((response) => {
-        console.log('Here is the response');
-        console.log(response);
         this.setState({ cards: response.data });
-        console.log('now reporting state:')
-        console.log(this.state.cards)
-        console.log('now reporting the first state element:')
-        console.log(this.state.cards[0])
-        console.log('now trying to dig:')
-        console.log(this.state.cards[0]["card"]["id"])
       })
       .catch((error) => {
         this.setState({ error: error.message });
@@ -52,6 +40,7 @@ class Board extends Component {
       return (
         <li key = {card.cardId} >
           <Card
+            cardID = {card.cardId}
             cardText = {card.cardTxt}
             cardEmoji = {card.cardEmo}
           />
@@ -65,7 +54,7 @@ class Board extends Component {
     console.log(cardComponents)
 
     return (
-      <div>
+      <div className = "board" >
         {cardComponents}
       </div>
     )
