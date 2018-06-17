@@ -1,12 +1,10 @@
 import React from 'react';
-import NewCardForm from './NewCardForm';
+import Card from './Card';
 import { shallow } from 'enzyme';
 
-describe('NewCardForm', () => {
+describe('Card', () => {
   test('that it matches an existing snapshot', () => {
-    const wrapper = shallow(<NewCardForm
-      addCardCallback={() => {}}
-      />);
+    const wrapper = shallow(<Card />);
 
     expect(wrapper).toMatchSnapshot();
 
