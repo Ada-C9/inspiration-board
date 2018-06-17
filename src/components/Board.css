@@ -12,3 +12,10 @@
   list-style-type: none;
   padding: 0;
 }
+
+.board-dropdown {
+  width: 50%;
+  margin: auto;
+  padding-bottom: 0;
+  text-align: center;
+}
