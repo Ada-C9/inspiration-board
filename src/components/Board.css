@@ -12,3 +12,15 @@
   list-style-type: none;
   padding: 0;
 }
+
+select.change-board-form__form-select {
+    border: none;
+    background: inherit;
+    font-family: 'Permanent Marker', Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+.change-board-form {
+    position: absolute;
+    top: 0;
+}

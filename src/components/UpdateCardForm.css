@@ -1,7 +1,6 @@
 /* The Modal (background) */
-
-.new-card {
-  background-color: rgb(244, 255, 129);
+.update-card {
+  background-color: rgb(229, 236, 215);
 
   padding: 1em 0;
   margin: 0.5rem;
@@ -15,11 +14,9 @@
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   align-items: center;
-
-  box-shadow: 4px 8px 0px 0px rgb(229, 241, 113);
 }
 
-.new-card__content {
+.update-card__content {
   grid-column-start: 2;
 
   display: flex;
@@ -31,7 +28,7 @@
   overflow: hidden;
 }
 
-.new-card__content-text {
+.update-card__content-text {
   max-height: 115px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -45,22 +42,20 @@
   text-align: center;
 }
 
-.new-card-form__form-select,
-.new-card-form__form-textarea,
-.new-card-form__form-button {
+.update-card-form__form-select,
+.update-card-form__form-textarea,
+.update-card-form__form-button {
   font-family: 'Raleway', sans-serif;
   font-size: 1.25em;
 }
 
-.new-card-form__form-select {
+.update-card-form__form-select {
   background: inherit;
   font-size: 3em;
   border: none;
-  width: 55%;
-  align-self: center;
 }
 
-.new-card-form__form-button {
+.update-card-form__form-button {
   background-color: inherit;
   border: 1px solid black;
   font-size: 1em;
