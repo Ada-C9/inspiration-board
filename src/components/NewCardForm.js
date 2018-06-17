@@ -20,8 +20,17 @@ class NewCardForm extends Component {
   }
 
   onInputChange = (event) => {
-    this.setState({text: event.target.value})
-;  }
+    // this doesn't work for multiple keys
+    // this.setState({
+    //   text: event.target.value,
+    //   emoji: event.target.value});
+    const key = event.target.name;
+    let value = event.target.value;
+
+    const updatedInput= {};
+    updatedInput[key] = value;
+    this.setState(updatedInput);
+  }
 
   onFormSubmit = (event) => {
     event.preventDefault();
@@ -39,7 +48,7 @@ class NewCardForm extends Component {
 
   render() {
     const emojiList = EMOJI_LIST.map((emojiWord, index) => {
-     return <option key={index} value= {emojiWord}>{ emoji.getUnicode(emojiWord)}</option> })
+     return <option key={index} value={emojiWord}>{ emoji.getUnicode(emojiWord)}</option> })
 
     return (
       <form className="new-card-form" onSubmit={this.onFormSubmit}>
@@ -47,28 +56,28 @@ class NewCardForm extends Component {
         <div className="new-card-form__header">Add a card
         </div>
 
-          <div className="new-card-form__form">
-            <label className="new-class-form__form-label"
+        <div>
+          <label className="new-class-form__form-label"
             htmlFor="text">Message</label>
             <input
             className="new-class-form__form-textarea"
             type="text"
-            id="text"
+            name="text"
             value={this.state.text}
             onChange={this.onInputChange}/>
-          </div>
+        </div>
 
-          <div className="new-card-form__form">
-            <label className="new-class-form__form-label"
+        <div>
+          <label className="new-class-form__form-label"
             htmlFor="emoji">Emoji</label>
-            <select
-            className="new-card-form_form-select">
+          <select
+            className="new-card-form_form-select"
             name="emoji"
             value={this.state.emoji}
-            onChange={this.onInputChange}
+            onChange={this.onInputChange}>
               {emojiList}
-            </select>
-          </div>
+          </select>
+        </div>
 
         <div><input className="new-class-form__form-button" type="submit"/>
         </div>

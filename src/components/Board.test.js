@@ -2,9 +2,11 @@ import React from 'react';
 import Board from './Board';
 import { mount, shallow } from 'enzyme';
 
+import NewCardForm from './NewCardForm';
+
 describe('Board', () => {
-  test('deep mount', () => {
-    const petCollection = mount(
+  test('shallow mount', () => {
+    const board = shallow(
       <Board updateStatusCallback={()=>{}} />
     );
 
@@ -13,11 +15,21 @@ describe('Board', () => {
     board.unmount();
   });
 
-  test('shallow mount', () => {
-    const board = shallow(
-      <Board updateStatusCallback={()=>{}} />
+  test('render a new card form', () =>{
+    const form = shallow(
+      <NewCardForm />
+    );
+    expect(form).toMatchSnapshot();
+  });
+
+  test('render a new card form', () =>{
+    const form = shallow(
+      <NewCardForm addCardCallback={()=>{}} />
     );
 
-    expect(board).toMatchSnapshot();
+    expect(form).toMatchSnapshot();
+
+    form.unmount();
   });
+
 });

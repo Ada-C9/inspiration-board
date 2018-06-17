@@ -1,5 +1,183 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Board render a new card form 1`] = `
+<form
+  className="new-card-form"
+  onSubmit={[Function]}
+>
+  <div
+    className="new-card-form__header"
+  >
+    Add a card
+  </div>
+  <div>
+    <label
+      className="new-class-form__form-label"
+      htmlFor="text"
+    >
+      Message
+    </label>
+    <input
+      className="new-class-form__form-textarea"
+      name="text"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+  </div>
+  <div>
+    <label
+      className="new-class-form__form-label"
+      htmlFor="emoji"
+    >
+      Emoji
+    </label>
+    <select
+      className="new-card-form_form-select"
+      name="emoji"
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        key="0"
+        value=""
+      />
+      <option
+        key="1"
+        value="heart_eyes"
+      >
+        😍
+      </option>
+      <option
+        key="2"
+        value="beer"
+      >
+        🍺
+      </option>
+      <option
+        key="3"
+        value="clap"
+      >
+        👏
+      </option>
+      <option
+        key="4"
+        value="sparkling_heart"
+      >
+        💖
+      </option>
+      <option
+        key="5"
+        value="heart_eyes_cat"
+      >
+        😻
+      </option>
+      <option
+        key="6"
+        value="dog"
+      >
+        🐶
+      </option>
+    </select>
+  </div>
+  <div>
+    <input
+      className="new-class-form__form-button"
+      type="submit"
+    />
+  </div>
+</form>
+`;
+
+exports[`Board render a new card form 2`] = `
+<form
+  className="new-card-form"
+  onSubmit={[Function]}
+>
+  <div
+    className="new-card-form__header"
+  >
+    Add a card
+  </div>
+  <div>
+    <label
+      className="new-class-form__form-label"
+      htmlFor="text"
+    >
+      Message
+    </label>
+    <input
+      className="new-class-form__form-textarea"
+      name="text"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+  </div>
+  <div>
+    <label
+      className="new-class-form__form-label"
+      htmlFor="emoji"
+    >
+      Emoji
+    </label>
+    <select
+      className="new-card-form_form-select"
+      name="emoji"
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        key="0"
+        value=""
+      />
+      <option
+        key="1"
+        value="heart_eyes"
+      >
+        😍
+      </option>
+      <option
+        key="2"
+        value="beer"
+      >
+        🍺
+      </option>
+      <option
+        key="3"
+        value="clap"
+      >
+        👏
+      </option>
+      <option
+        key="4"
+        value="sparkling_heart"
+      >
+        💖
+      </option>
+      <option
+        key="5"
+        value="heart_eyes_cat"
+      >
+        😻
+      </option>
+      <option
+        key="6"
+        value="dog"
+      >
+        🐶
+      </option>
+    </select>
+  </div>
+  <div>
+    <input
+      className="new-class-form__form-button"
+      type="submit"
+    />
+  </div>
+</form>
+`;
+
 exports[`Board shallow mount 1`] = `
 <section>
   <div>

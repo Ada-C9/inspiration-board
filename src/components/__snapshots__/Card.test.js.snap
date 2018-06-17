@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card onClick handler working 1`] = `
+<button
+  onClick={[Function]}
+  type="submit"
+/>
+`;
