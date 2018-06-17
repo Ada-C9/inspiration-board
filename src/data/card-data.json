@@ -2,7 +2,8 @@
 {
   "cards": [
     {
-      "text": "Make sure you pet a dog this week!"
+      "text": "Make sure you pet a dog this week!",
+      "emoji": "heart_eyes"
     },
     {
       "text": "",

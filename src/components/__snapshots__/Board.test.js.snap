@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Board that it matches an existing snapshot 1`] = `
+<div
+  className="board"
+>
+  <div
+    className="warning"
+  >
+    <h5 />
+  </div>
+  <div
+    className="message"
+  >
+    <h5 />
+  </div>
+  <NewCardForm
+    addCard={[Function]}
+  />
+</div>
+`;
