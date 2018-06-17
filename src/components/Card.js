@@ -7,11 +7,13 @@ import './Card.css';
 
 class Card extends Component {
   static propTypes = {
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
+    // emoji: PropTypes.emoji.isRequired
   };
 
   render() {
     return (
+      // <h2>{ this.props.emoji}</h2>
       <div className="card">
         <section className="card__content">
         <article className=".card__content-text">
