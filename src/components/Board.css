@@ -1,6 +1,12 @@
 .board {
   display: flex;
   flex-wrap: wrap;
+
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .validation-errors-display {

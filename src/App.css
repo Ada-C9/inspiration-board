@@ -25,11 +25,12 @@ h1, h2 {
   padding: 1rem;
 
   display: inline-block;
-  background-color: #222;
-  color: white;
+  background-color: teal;
+  color: black;
   text-transform: uppercase;
   font-weight: 800;
   font-size: 3rem;
+
 
   transform: rotate(-3deg) skew(-3deg);
 }
