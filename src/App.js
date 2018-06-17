@@ -7,11 +7,11 @@ class App extends Component {
     return (
       <section>
         <header className="header">
-          <h1 className="header__h1"><span className="header__text">Inspiration Board</span></h1>
+          <h1 className="header__h1"><span className="header__text">Go Team!</span></h1>
         </header>
         <Board
           url="https://inspiration-board.herokuapp.com/boards/"
-          boardName={`Ada-Lovelace`}
+          boardName={`cheer`}
           />
       </section>
     );
