@@ -16,15 +16,23 @@ class Card extends Component {
     }
   }
 
-  handleSubmit = event => {
+  handleDelete = event => {
+    event.preventDefault();
     let deleteURL = `https://inspiration-board.herokuapp.com/boards/victoria/cards/${this.props.cardID}`
+    console.log('In the delete handler: ')
     console.log(deleteURL)
     axios.delete(deleteURL)
       .then(response => {
+        console.log('response to API request is happening')
         console.log(response);
         console.log(response.data);
+        console.log("about to reload")
+        console.log(window.parent.location.href)
+        window.parent.location.reload()
       })
   }
+
+
 
   render() {
 
@@ -43,7 +51,7 @@ class Card extends Component {
           <div className="card_content-emoji">{displayEmoji}</div>
           <div className="card_contentid">{this.state.cardId}</div>
         </div>
-        <form onSubmit={this.handleSubmit} className="card_delete">
+        <form onSubmit={this.handleDelete} className="card_delete">
           <button type="submit">Delete This Card?</button>
         </form>
       </div>
