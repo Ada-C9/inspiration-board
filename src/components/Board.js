@@ -36,16 +36,17 @@ class Board extends Component {
       });
   }
 
-  addCard = (card) => {
-    axios.post(this.props.url + this.props.boardName + '/cards', card)
+  addCard = (input_text, input_emoji) => {
+    axios.post(this.props.url + this.props.boardName + '/cards', {text: input_text, emoji: input_emoji})
       .then((response) => {
+        console.log(response)
         this.props.updateStatusCallback(`Successfully added card ${ response.data.card.id }!`, 'success');
 
         let updatedCards = this.state.cards;
-        updatedCards.push({ card: card });
+        updatedCards.push({ card: {id: response.data.card.id, text: input_text, emoji: input_emoji} });
 
         this.setState({ cards: updatedCards });
-        console.log(this.state);
+        console.log(this.state.cards);
       })
       .catch((error) => {
         console.log('Error :(');
