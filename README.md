@@ -115,3 +115,76 @@ addCardEmoji = (emoji) => {
     );
   }
 }
+
+
+componentDidMount() {
+  axios.get(`https://jsonplaceholder.typicode.com/users`)
+    .then(res => {
+      const persons = res.data;
+      this.setState({ persons });
+    })
+}
+
+const cardComponents = Object.keys(this.state.cards).map(card =>
+  ({
+    cardId: card["id"],
+    cardText: card["text"],
+    cardEmoji: card["emoji"],
+  })
+)
+
+
+
+render() {
+   return (
+       <div>
+           {Object.keys(this.state.dataGoal.milestones).map((milestone) =>{
+                 return {this.state.dataGoal.milestones[milestone].tasks.map((task, idx)=>{
+         return (
+                //whatever you wish to do with the task item
+          )
+})
+           })}
+
+       </div>
+   )
+}
+
+const cardComponents = this.state.cards.map((card, index) => {
+  return (
+    <li key={ index }>
+      <Card
+         cardText= {card.keys(card)}
+      />
+    </li>
+  );
+});
+
+axios.get(allTripsUrl)
+  .then((response) => {
+    reportStatus(`Successfully loaded ${response.data.length} trips`);
+    response.data.forEach((trip) => {
+      allTrips.append(`<li id="${trip.id}">${trip.name}</li>`);
+    });
+  })
+  .catch((error) => {
+    reportStatus(`Encountered an error while loading trips: ${error.message}`);
+    console.log(error);
+  });
+};
+
+
+this.state = {
+  cards: [
+    {
+      text: 'Be Here Now.',
+    },
+    {
+      text: 'Ok, now be somewhere else.',
+    },
+    {
+      text: 'Being present in the present is the greatest present you can present to yourself.',
+      emoji: 'gift',
+    },
+  ],
+};

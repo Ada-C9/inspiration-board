@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import emoji from 'emoji-dictionary';
 import axios from 'axios';
 import './Board.css';
 import Card from './Card';
@@ -12,46 +11,62 @@ class Board extends Component {
     super();
 
     this.state = {
-      cards: [
-        {
-          inspoText: 'Be Here Now.',
-
-        },
-        {
-          inspoText: 'Ok, now be somewhere else',
-
-        },
-        {
-          inspoText: 'Being present in the present is the greatest present you can give yourself',
-          inspoEmoji: 'gift',
-        },
-      ],
+      cards: [],
     };
   }
 
 
+
+
+
+  componentDidMount() {
+    axios.get('https://inspiration-board.herokuapp.com/boards/victoria/cards')
+      .then((response) => {
+        console.log('Here is the response');
+        console.log(response);
+        this.setState({ cards: response.data });
+        console.log('now reporting state:')
+        console.log(this.state.cards)
+        console.log('now reporting the first state element:')
+        console.log(this.state.cards[0])
+        console.log('now trying to dig:')
+        console.log(this.state.cards[0]["card"]["id"])
+      })
+      .catch((error) => {
+        this.setState({ error: error.message });
+      });
+  }
+
   render() {
 
-    console.log("In render function, this is the current set of cards, before converting to card components:");
+    const cardKeysAttempt = Object.keys(this.state.cards).map(
+      key =>
+      ({
+        cardId: this.state.cards[key]["card"]["id"],
+        cardTxt: this.state.cards[key]["card"]["text"],
+        cardEmo: this.state.cards[key]["card"]["emoji"]
+      })
+    )
 
-    console.log(this.state.cards);
-
-    const cardComponents = this.state.cards.map((card, index) => {
+    const cardComponents = cardKeysAttempt.map((card) => {
       return (
-        <li key={ index }>
+        <li key = {card.cardId} >
           <Card
-             cardText={card.inspoText}
-             cardEmoji={card.inspoEmoji}
+            cardText = {card.cardTxt}
+            cardEmoji = {card.cardEmo}
           />
         </li>
-      );
+      )
     });
+
+    console.log('Here is cardKeysAttempt')
+    console.log(cardKeysAttempt)
+    console.log('Here is cardComponents')
+    console.log(cardComponents)
 
     return (
       <div>
-        <ul>
-          {cardComponents}
-        </ul>
+        {cardComponents}
       </div>
     )
   }

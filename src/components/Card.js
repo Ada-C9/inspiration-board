@@ -6,12 +6,10 @@ import './Card.css';
 
 class Card extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   render() {
 
+    const cardIdent = this.props.cardId
+    const cardWords = this.props.cardText
     const hasEmoji = this.props.cardEmoji;
     let displayEmoji;
     if (hasEmoji) {
@@ -22,7 +20,7 @@ class Card extends Component {
       <div className="card">
         <div className="card_content" >
           <div className="card_content-text" >
-            <p>{this.props.cardText}</p>
+            <p>{cardWords}</p>
           </div>
           <div className="card_content-emoji" >
             <p>{displayEmoji}</p>
@@ -34,6 +32,7 @@ class Card extends Component {
 }
 
 Card.propTypes = {
+  cardId: PropTypes.number,
   cardText: PropTypes.string.isRequired,
   cardEmoji: PropTypes.string,
 };
