@@ -1,0 +1,431 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewCardForm that it matches an existing snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <NewCardForm
+    addCardCallback={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div>
+          <h4
+                    className="new-card-form__header"
+          >
+                    Add some Inspo
+          </h4>
+          <label
+                    className="new-card-form__form-textarea"
+                    htmlFor="text"
+          >
+                    Inspiration: 
+          </label>
+          <textarea
+                    name="text"
+                    onChange={[Function]}
+                    value=""
+          />
+</div>,
+        <Dropdown
+          baseClassName="Dropdown"
+          name="emoji"
+          onChange={[Function]}
+          options={
+                    Array [
+                              Object {
+                                "label": "Select an option",
+                                "value": "",
+                              },
+                              Object {
+                                "label": "😍",
+                                "value": "heart_eyes",
+                              },
+                              Object {
+                                "label": "🍺",
+                                "value": "beer",
+                              },
+                              Object {
+                                "label": "👏",
+                                "value": "clap",
+                              },
+                              Object {
+                                "label": "💖",
+                                "value": "sparkling_heart",
+                              },
+                              Object {
+                                "label": "😻",
+                                "value": "heart_eyes_cat",
+                              },
+                              Object {
+                                "label": "🐶",
+                                "value": "dog",
+                              },
+                            ]
+          }
+          placeholder="Select an Emoji"
+          value={undefined}
+/>,
+        <input
+          className="new-card-form__form-button"
+          type="submit"
+          value="Add Card"
+/>,
+      ],
+      "className": "new-card-form",
+      "onSubmit": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h4
+              className="new-card-form__header"
+>
+              Add some Inspo
+</h4>,
+            <label
+              className="new-card-form__form-textarea"
+              htmlFor="text"
+>
+              Inspiration: 
+</label>,
+            <textarea
+              name="text"
+              onChange={[Function]}
+              value=""
+/>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Add some Inspo",
+              "className": "new-card-form__header",
+            },
+            "ref": null,
+            "rendered": "Add some Inspo",
+            "type": "h4",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Inspiration: ",
+              "className": "new-card-form__form-textarea",
+              "htmlFor": "text",
+            },
+            "ref": null,
+            "rendered": "Inspiration: ",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "name": "text",
+              "onChange": [Function],
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "textarea",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "baseClassName": "Dropdown",
+          "name": "emoji",
+          "onChange": [Function],
+          "options": Array [
+            Object {
+              "label": "Select an option",
+              "value": "",
+            },
+            Object {
+              "label": "😍",
+              "value": "heart_eyes",
+            },
+            Object {
+              "label": "🍺",
+              "value": "beer",
+            },
+            Object {
+              "label": "👏",
+              "value": "clap",
+            },
+            Object {
+              "label": "💖",
+              "value": "sparkling_heart",
+            },
+            Object {
+              "label": "😻",
+              "value": "heart_eyes_cat",
+            },
+            Object {
+              "label": "🐶",
+              "value": "dog",
+            },
+          ],
+          "placeholder": "Select an Emoji",
+          "value": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "new-card-form__form-button",
+          "type": "submit",
+          "value": "Add Card",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+    ],
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div>
+            <h4
+                        className="new-card-form__header"
+            >
+                        Add some Inspo
+            </h4>
+            <label
+                        className="new-card-form__form-textarea"
+                        htmlFor="text"
+            >
+                        Inspiration: 
+            </label>
+            <textarea
+                        name="text"
+                        onChange={[Function]}
+                        value=""
+            />
+</div>,
+          <Dropdown
+            baseClassName="Dropdown"
+            name="emoji"
+            onChange={[Function]}
+            options={
+                        Array [
+                                    Object {
+                                      "label": "Select an option",
+                                      "value": "",
+                                    },
+                                    Object {
+                                      "label": "😍",
+                                      "value": "heart_eyes",
+                                    },
+                                    Object {
+                                      "label": "🍺",
+                                      "value": "beer",
+                                    },
+                                    Object {
+                                      "label": "👏",
+                                      "value": "clap",
+                                    },
+                                    Object {
+                                      "label": "💖",
+                                      "value": "sparkling_heart",
+                                    },
+                                    Object {
+                                      "label": "😻",
+                                      "value": "heart_eyes_cat",
+                                    },
+                                    Object {
+                                      "label": "🐶",
+                                      "value": "dog",
+                                    },
+                                  ]
+            }
+            placeholder="Select an Emoji"
+            value={undefined}
+/>,
+          <input
+            className="new-card-form__form-button"
+            type="submit"
+            value="Add Card"
+/>,
+        ],
+        "className": "new-card-form",
+        "onSubmit": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h4
+                className="new-card-form__header"
+>
+                Add some Inspo
+</h4>,
+              <label
+                className="new-card-form__form-textarea"
+                htmlFor="text"
+>
+                Inspiration: 
+</label>,
+              <textarea
+                name="text"
+                onChange={[Function]}
+                value=""
+/>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Add some Inspo",
+                "className": "new-card-form__header",
+              },
+              "ref": null,
+              "rendered": "Add some Inspo",
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Inspiration: ",
+                "className": "new-card-form__form-textarea",
+                "htmlFor": "text",
+              },
+              "ref": null,
+              "rendered": "Inspiration: ",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "name": "text",
+                "onChange": [Function],
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "textarea",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "baseClassName": "Dropdown",
+            "name": "emoji",
+            "onChange": [Function],
+            "options": Array [
+              Object {
+                "label": "Select an option",
+                "value": "",
+              },
+              Object {
+                "label": "😍",
+                "value": "heart_eyes",
+              },
+              Object {
+                "label": "🍺",
+                "value": "beer",
+              },
+              Object {
+                "label": "👏",
+                "value": "clap",
+              },
+              Object {
+                "label": "💖",
+                "value": "sparkling_heart",
+              },
+              Object {
+                "label": "😻",
+                "value": "heart_eyes_cat",
+              },
+              Object {
+                "label": "🐶",
+                "value": "dog",
+              },
+            ],
+            "placeholder": "Select an Emoji",
+            "value": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "new-card-form__form-button",
+            "type": "submit",
+            "value": "Add Card",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+      ],
+      "type": "form",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
