@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Board with a working URL 1`] = `
+<section>
+  <div
+    className="validation-errors-display"
+  >
+    <ul
+      className="validation-errors-display__list"
+    />
+  </div>
+  <NewCardForm
+    onSubmitForm={[Function]}
+  />
+  <div
+    className="board"
+  />
+</section>
+`;
+
+exports[`Board with not a working URL 1`] = `
+<section>
+  <div
+    className="validation-errors-display"
+  >
+    <ul
+      className="validation-errors-display__list"
+    />
+  </div>
+  <NewCardForm
+    onSubmitForm={[Function]}
+  />
+  <div
+    className="board"
+  />
+</section>
+`;

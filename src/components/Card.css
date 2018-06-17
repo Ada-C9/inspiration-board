@@ -42,6 +42,7 @@
 }
 
 .card__delete {
+  grid-column-start: 3;
   align-self: start;
   font-family: 'Permanent Marker', Helvetica, sans-serif;
 }
