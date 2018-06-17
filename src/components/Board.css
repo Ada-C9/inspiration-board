@@ -12,3 +12,10 @@
   list-style-type: none;
   padding: 0;
 }
+
+.board-name__header {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  font-family: 'Raleway', sans-serif;
+}
