@@ -53,14 +53,17 @@ class Board extends Component {
 
     // then update state to updated cards collection
     this.setState({ cards: updatedCards });
+    card.emoji = 
 
     axios.post(CARDS_URL, card)
       .then((response) => {
-
+        console.log(response);
+        this.props.updateStatusCallback('Successfully added card', 'success');
       })
 
       .catch((error) => {
-
+        this.props.updateStatusCallback('Error adding card', 'error');
+        console.log(error);
       });
   }
 
