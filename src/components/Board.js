@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 
 import '../styles/Board.css';
@@ -89,7 +89,7 @@ deleteCard = (index, id) => {
 // end of class
 
 Board.propTypes = {
-
+  updateStatusCallback: PropTypes.func.isRequired
 };
 
 export default Board;

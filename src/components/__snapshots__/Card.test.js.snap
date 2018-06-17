@@ -1,12 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`shallow mount 1`] = `
-<section>
-  <NewCardForm
-    addCardcallback={[Function]}
+<div
+  className="card"
+>
+  <p
+    className="card__content card__content-text"
   />
-  <section
-    className="board"
+  <p
+    className="card__content card__content-emoji"
   />
-</section>
+  <p>
+    <button
+      className="card__delete "
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </p>
+</div>
 `;

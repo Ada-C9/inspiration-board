@@ -6,13 +6,13 @@ describe('NewCardForm', () => {
   test('that it matches an existing snapshot', () => {
     // First Mount the Component in the testing DOM
     // Arrange
-    const NewCardForm = mount( <NewCardForm addCardcallback={() => {} } />);
+    const newCardForm = mount( <NewCardForm addCardcallback={() => {} } />);
 
     // Assert that it looks like the last snapshot
-    expect(NewCardForm).toMatchSnapshot();
+    expect(newCardForm).toMatchSnapshot();
 
     // Remove the component from the DOM (save memory and prevent side effects).
-    NewCardForm.unmount();
+    newCardForm.unmount();
   });
 
   test('Keeps track of user input',() => {
@@ -21,7 +21,7 @@ describe('NewCardForm', () => {
     );
 
     let affirmationInput = cardForm.find('input[name="text"]');
-    let emojiInput = cardForm.find('input[name="emoji"]');
+
 
     affirmationInput.simulate('change', {
       target: {
@@ -29,19 +29,14 @@ describe('NewCardForm', () => {
         value: 'a new affirmation',
       }
     });
-    emojiInput.simulate('change', {
-      target: {
-        name: 'emoji',
-        value: 'heart_eyes',
-      }
-    });
+
 
     cardForm.update();
 
     affirmationInput = cardForm.find('input[name="text"]');
-    emojiInput = cardForm.find('input[name="emoji"]');
+
     expect(affirmationInput.getElement().props.value).toBe('a new affirmation');
-    expect(emojiInput.getElement().props.value).toBe('heart_eyes');
+    
   });
 
   test('Invokes callback on form submission', () => {
@@ -61,8 +56,6 @@ describe('NewCardForm', () => {
       emoji: '',
     });
 
-    // Check that the second argument was the word 'fish'
-    expect(callback.mock.calls[0][1]).toEqual('fish');
   })
 
 });

@@ -4,13 +4,12 @@ import {mount, shallow} from 'enzyme';
 
 describe('Board', () => {
   test('shallow mount', ()=>{
-    const Board = shallow(
+    const board = shallow(
       <Board updateStatusCallback={()=>{}} />
     );
 
-    expect(Board).toMatchSnapshot();
+    expect(board).toMatchSnapshot();
 
-    Board.unmount();
   });
 
 

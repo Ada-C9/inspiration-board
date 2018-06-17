@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import emoji from 'emoji-dictionary';
 import '../styles/NewCardForm.css';
 
@@ -39,7 +39,7 @@ class NewCardForm extends Component {
       <section>
       <form onSubmit={this.onFormSubmit} className="new-card-form">
 
-        <h3 className="new-card-form__header">Add a card</h3>
+        <h3 className="new-card-form__form-label">Add a card</h3>
 
         <div>
         <label htmlFor="content">Card Content</label>
@@ -54,7 +54,7 @@ class NewCardForm extends Component {
         </div>
 
         <div>
-        <button type="submit">Add!</button>
+        <button className="new-card-form__form-button" type="submit">Add!</button>
         </div>
       </form>
       </section>
@@ -62,5 +62,8 @@ class NewCardForm extends Component {
   }
 }
 
+NewCardForm.propTypes = {
+  addCardcallback: PropTypes.func.isRequired
+};
 
 export default NewCardForm;

@@ -1,12 +1,12 @@
 import React from 'react';
-import Board from './Board';
+import Card from './Card';
 import {mount, shallow} from 'enzyme';
 
 test('shallow mount', () => {
-  const Card = shallow(
+  const card = shallow(
     <Card deleteCallBack={()=>{}} />
   );
 
-  expect(Card).toMatchSnapshot();
+  expect(card).toMatchSnapshot();
 
 });
