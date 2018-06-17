@@ -12,14 +12,20 @@ class Board extends Component {
     super();
 
     this.state = {
-      cards: [],
+      cards: [
+        <Card />,
+        <Card />,
+        <Card />,
+      ],
     };
   }
+
+
 
   render() {
     return (
       <div>
-        Board
+        {this.state.cards}
       </div>
     )
   }

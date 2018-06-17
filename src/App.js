@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
+import Card from './components/Card';
 import Board from './components/Board';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <section>
@@ -11,8 +17,9 @@ class App extends Component {
         </header>
         <Board
           url="https://inspiration-board.herokuapp.com/boards/"
-          boardName={`Ada-Lovelace`}
+          boardName={`Lasiorhine`}
           />
+
       </section>
     );
   }
