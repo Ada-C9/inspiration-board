@@ -6,7 +6,9 @@
     "axios": "^0.18.0",
     "emoji-dictionary": "^1.0.9",
     "react": "^16.4.0",
+    "react-confirm-alert": "^2.0.2",
     "react-dom": "^16.4.0",
+    "react-dropdown": "^1.5.0",
     "react-scripts": "1.1.4"
   },
   "scripts": {
@@ -20,7 +22,13 @@
   "devDependencies": {
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
     "gh-pages": "^1.2.0"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "homepage": "http://adagold.github.io/inspiration-board"
 }
