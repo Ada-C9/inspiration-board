@@ -75,3 +75,43 @@ Possible optional enhancements include:
 
 ## What we're looking for
 You can see what your instructors are looking for [here](./feedback.md)
+
+
+#### CODE PARKING LOT:
+
+render() {
+  return (
+    <div className="card">
+      <div className="card_content" >
+        <div className="card_content-text" >
+          <p>{this.props.cardText}</p>
+        </div>
+        <div className="card_content-emoji" >
+          {this.addCardEmoji}
+        </div>
+      </div>
+    </div>
+  )
+}
+}
+
+
+
+constructor(props) {
+  super(props);
+
+  this.state = {
+     cardText: this.props.cardText,
+  }
+}
+
+
+addCardEmoji = (emoji) => {
+  if (this.props.emojiDesc){
+    this.setState(
+      {
+        cardEmoji: emoji.getUnicode(this.props.emojiDesc)
+      }
+    );
+  }
+}
