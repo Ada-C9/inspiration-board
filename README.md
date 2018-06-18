@@ -75,3 +75,43 @@ Possible optional enhancements include:
 
 ## What we're looking for
 You can see what your instructors are looking for [here](./feedback.md)
+
+
+#### CODE PARKING LOT:
+
+this.state = {
+  cards: [
+    {
+      text: 'Be Here Now.',
+    },
+    {
+      text: 'Ok, now be somewhere else.',
+    },
+    {
+      text: 'Being present in the present is the greatest present you can present to yourself.',
+      emoji: 'gift',
+    },
+  ],
+};
+
+test('addPetCallback prop is called when the form is submitted', () => {
+  // Arrange
+  const mockAddPetCallback = jest.fn();
+  const wrapper = shallow(<NewPetForm addPetCallback={mockAddPetCallback} />);
+  const form = wrapper.find('form');
+
+  // Act
+  form.simulate('submit', {
+    preventDefault: () => {},
+  });
+  wrapper.update();
+
+  // Assert
+  expect(mockAddPetCallback).toHaveBeenCalled();
+  expect(mockAddPetCallback.mock.calls[0][0]).toEqual({
+    name: '',
+    age: '',
+    breed: '',
+    about: '',
+  });
+});

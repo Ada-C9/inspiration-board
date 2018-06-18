@@ -11,7 +11,7 @@
   border-radius: 5px;
 
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   align-items: center;
 }
 
@@ -36,6 +36,10 @@
   font-size: 3rem;
 }
 
+.card_content-id {
+  font-size: 1rem;
+}
+
 .card__content-text, .card__content-emoji {
   padding: 0;
   margin: 0;
@@ -43,5 +47,7 @@
 
 .card__delete {
   align-self: start;
+  border: 2px solid black;
+  border-radius: 5px;
   font-family: 'Permanent Marker', Helvetica, sans-serif;
 }
