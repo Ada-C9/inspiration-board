@@ -1,10 +1,10 @@
 import React from 'react';
-import Board from './Board';
+import Card from './Card';
 import { mount } from 'enzyme';
 
-describe('Board', () => {
+describe('Card', () => {
   test('that it matches an existing snapshot', () => {
-    const wrapper = mount(<Board/>);
+    const wrapper = mount(<Card/>);
 
     expect(wrapper).toMatchSnapshot();
 
