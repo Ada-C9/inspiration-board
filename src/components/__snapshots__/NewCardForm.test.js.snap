@@ -1,0 +1,825 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`that it matches an existing snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <NewCardForm
+    addCardCallback={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div>
+          <label
+                    htmlFor="text"
+          >
+                    Text: 
+          </label>
+          <input
+                    name="text"
+                    onChange={[Function]}
+                    type="text"
+                    value=""
+          />
+</div>,
+        <div>
+          <label
+                    htmlFor="emoji"
+          >
+                    Emoji: 
+          </label>
+          <select
+                    name="emoji"
+                    onChange={[Function]}
+          >
+                    <option>
+                               
+                              
+                               
+                    </option>
+                    <option>
+                               
+                              heart_eyes
+                               
+                    </option>
+                    <option>
+                               
+                              beer
+                               
+                    </option>
+                    <option>
+                               
+                              clap
+                               
+                    </option>
+                    <option>
+                               
+                              sparkling_heart
+                               
+                    </option>
+                    <option>
+                               
+                              heart_eyes_cat
+                               
+                    </option>
+                    <option>
+                               
+                              dog
+                               
+                    </option>
+                    ;
+          </select>
+</div>,
+        <input
+          type="submit"
+          value="Add Card"
+/>,
+      ],
+      "onSubmit": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <label
+              htmlFor="text"
+>
+              Text: 
+</label>,
+            <input
+              name="text"
+              onChange={[Function]}
+              type="text"
+              value=""
+/>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Text: ",
+              "htmlFor": "text",
+            },
+            "ref": null,
+            "rendered": "Text: ",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "name": "text",
+              "onChange": [Function],
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <label
+              htmlFor="emoji"
+>
+              Emoji: 
+</label>,
+            <select
+              name="emoji"
+              onChange={[Function]}
+>
+              <option>
+                             
+                            
+                             
+              </option>
+              <option>
+                             
+                            heart_eyes
+                             
+              </option>
+              <option>
+                             
+                            beer
+                             
+              </option>
+              <option>
+                             
+                            clap
+                             
+              </option>
+              <option>
+                             
+                            sparkling_heart
+                             
+              </option>
+              <option>
+                             
+                            heart_eyes_cat
+                             
+              </option>
+              <option>
+                             
+                            dog
+                             
+              </option>
+              ;
+</select>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Emoji: ",
+              "htmlFor": "emoji",
+            },
+            "ref": null,
+            "rendered": "Emoji: ",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                Array [
+                  <option>
+                     
+                    
+                     
+</option>,
+                  <option>
+                     
+                    heart_eyes
+                     
+</option>,
+                  <option>
+                     
+                    beer
+                     
+</option>,
+                  <option>
+                     
+                    clap
+                     
+</option>,
+                  <option>
+                     
+                    sparkling_heart
+                     
+</option>,
+                  <option>
+                     
+                    heart_eyes_cat
+                     
+</option>,
+                  <option>
+                     
+                    dog
+                     
+</option>,
+                ],
+                ";",
+              ],
+              "name": "emoji",
+              "onChange": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "0",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "",
+                    " ",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "",
+                  " ",
+                ],
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "1",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "heart_eyes",
+                    " ",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "heart_eyes",
+                  " ",
+                ],
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "2",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "beer",
+                    " ",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "beer",
+                  " ",
+                ],
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "3",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "clap",
+                    " ",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "clap",
+                  " ",
+                ],
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "4",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "sparkling_heart",
+                    " ",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "sparkling_heart",
+                  " ",
+                ],
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "5",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "heart_eyes_cat",
+                    " ",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "heart_eyes_cat",
+                  " ",
+                ],
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "6",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "dog",
+                    " ",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "dog",
+                  " ",
+                ],
+                "type": "option",
+              },
+              ";",
+            ],
+            "type": "select",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "type": "submit",
+          "value": "Add Card",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+    ],
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div>
+            <label
+                        htmlFor="text"
+            >
+                        Text: 
+            </label>
+            <input
+                        name="text"
+                        onChange={[Function]}
+                        type="text"
+                        value=""
+            />
+</div>,
+          <div>
+            <label
+                        htmlFor="emoji"
+            >
+                        Emoji: 
+            </label>
+            <select
+                        name="emoji"
+                        onChange={[Function]}
+            >
+                        <option>
+                                     
+                                    
+                                     
+                        </option>
+                        <option>
+                                     
+                                    heart_eyes
+                                     
+                        </option>
+                        <option>
+                                     
+                                    beer
+                                     
+                        </option>
+                        <option>
+                                     
+                                    clap
+                                     
+                        </option>
+                        <option>
+                                     
+                                    sparkling_heart
+                                     
+                        </option>
+                        <option>
+                                     
+                                    heart_eyes_cat
+                                     
+                        </option>
+                        <option>
+                                     
+                                    dog
+                                     
+                        </option>
+                        ;
+            </select>
+</div>,
+          <input
+            type="submit"
+            value="Add Card"
+/>,
+        ],
+        "onSubmit": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <label
+                htmlFor="text"
+>
+                Text: 
+</label>,
+              <input
+                name="text"
+                onChange={[Function]}
+                type="text"
+                value=""
+/>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Text: ",
+                "htmlFor": "text",
+              },
+              "ref": null,
+              "rendered": "Text: ",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "name": "text",
+                "onChange": [Function],
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <label
+                htmlFor="emoji"
+>
+                Emoji: 
+</label>,
+              <select
+                name="emoji"
+                onChange={[Function]}
+>
+                <option>
+                                 
+                                
+                                 
+                </option>
+                <option>
+                                 
+                                heart_eyes
+                                 
+                </option>
+                <option>
+                                 
+                                beer
+                                 
+                </option>
+                <option>
+                                 
+                                clap
+                                 
+                </option>
+                <option>
+                                 
+                                sparkling_heart
+                                 
+                </option>
+                <option>
+                                 
+                                heart_eyes_cat
+                                 
+                </option>
+                <option>
+                                 
+                                dog
+                                 
+                </option>
+                ;
+</select>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Emoji: ",
+                "htmlFor": "emoji",
+              },
+              "ref": null,
+              "rendered": "Emoji: ",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    <option>
+                       
+                      
+                       
+</option>,
+                    <option>
+                       
+                      heart_eyes
+                       
+</option>,
+                    <option>
+                       
+                      beer
+                       
+</option>,
+                    <option>
+                       
+                      clap
+                       
+</option>,
+                    <option>
+                       
+                      sparkling_heart
+                       
+</option>,
+                    <option>
+                       
+                      heart_eyes_cat
+                       
+</option>,
+                    <option>
+                       
+                      dog
+                       
+</option>,
+                  ],
+                  ";",
+                ],
+                "name": "emoji",
+                "onChange": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "0",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "",
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "",
+                    " ",
+                  ],
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "1",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "heart_eyes",
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "heart_eyes",
+                    " ",
+                  ],
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "2",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "beer",
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "beer",
+                    " ",
+                  ],
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "3",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "clap",
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "clap",
+                    " ",
+                  ],
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "4",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "sparkling_heart",
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "sparkling_heart",
+                    " ",
+                  ],
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "5",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "heart_eyes_cat",
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "heart_eyes_cat",
+                    " ",
+                  ],
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "6",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "dog",
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "dog",
+                    " ",
+                  ],
+                  "type": "option",
+                },
+                ";",
+              ],
+              "type": "select",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "type": "submit",
+            "value": "Add Card",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+      ],
+      "type": "form",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

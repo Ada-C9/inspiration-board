@@ -50,8 +50,16 @@ class Board extends Component {
     });
   }
 
-  addCard = (card) => {
-     //do a post request
+  addCard = (cardInfo) => {
+    console.log(cardInfo)
+   axios.post('https://inspiration-board.herokuapp.com/boards/steffany/cards', cardInfo)
+     .then((response) => {
+
+       this.componentDidMount()
+     })
+     .catch((error) => {
+       this.setState({ error: error.message });
+     });
   }
 
   renderCardList = () => {
