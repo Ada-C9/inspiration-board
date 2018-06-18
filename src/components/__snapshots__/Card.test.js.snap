@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card that it renders Card with shallow rendering 1`] = `
+<div
+  className="card"
+>
+  <button
+    className="card__delete"
+    onClick={[Function]}
+    type="button"
+  >
+    x
+  </button>
+  <div
+    className="card__content"
+  />
+</div>
+`;

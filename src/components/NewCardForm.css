@@ -2,6 +2,8 @@
 
 .new-card-form {
   width: 50%;
+  max-width: 350px;
+  min-width: 250px;
   margin: auto;
   padding-bottom: 4rem;
 }
@@ -31,6 +33,10 @@
   font-size: 1.25em;
   grid-column: controls;
   grid-row: auto;
+}
+
+.new-card-form__form-textarea{
+  height: 50px;
 }
 
 .new-card-form__form-button {

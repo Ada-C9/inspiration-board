@@ -1,6 +1,7 @@
 .board {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .validation-errors-display {

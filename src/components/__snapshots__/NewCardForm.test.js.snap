@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewCardForm that it renders NewCardForm with shallow rendering 1`] = `
+<section
+  className="new-card-form"
+>
+  <h3
+    className="new-card-form__header"
+  >
+    Create a New Inspiration
+  </h3>
+  <form
+    className="new-card-form__form"
+    onSubmit={[Function]}
+  >
+    <label
+      className="new-card-form__form-label"
+      htmlFor="text"
+    >
+      Message: 
+    </label>
+    <textarea
+      className="new-card-form__form-textarea"
+      name="text"
+      onChange={[Function]}
+      value=""
+    />
+    <label
+      className="new-card-form__form-label"
+      htmlFor="emoji"
+    >
+      Emoji: 
+    </label>
+    <select
+      className="new-card-form__form-select"
+      name="emoji"
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        key="0"
+        value=""
+      />
+      <option
+        key="1"
+        value="heart_eyes"
+      >
+        😍
+      </option>
+      <option
+        key="2"
+        value="beer"
+      >
+        🍺
+      </option>
+      <option
+        key="3"
+        value="clap"
+      >
+        👏
+      </option>
+      <option
+        key="4"
+        value="sparkling_heart"
+      >
+        💖
+      </option>
+      <option
+        key="5"
+        value="heart_eyes_cat"
+      >
+        😻
+      </option>
+      <option
+        key="6"
+        value="dog"
+      >
+        🐶
+      </option>
+    </select>
+    <input
+      className="new-card-form__form-button"
+      type="submit"
+      value="create card"
+    />
+  </form>
+</section>
+`;
