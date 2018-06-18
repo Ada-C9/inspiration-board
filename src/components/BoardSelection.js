@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import './BoardSelection.css';
 
 class BoardSelection extends React.Component {
 
@@ -48,10 +49,10 @@ class BoardSelection extends React.Component {
 
 		return (
 			<select
+				className="selection"
 				onChange={this.onBoardUpdate}
 				selected={this.props.board}
 				>
-				<option value="" disabled selected hidden>Choose a Board</option>
 				{selectOptions}
 			</select>
 		)

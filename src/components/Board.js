@@ -22,7 +22,6 @@ class Board extends Component {
 
 		this.state = {
 			cards: [],
-			name: null
 		};
 
 	}
