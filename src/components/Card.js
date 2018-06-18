@@ -5,7 +5,6 @@ import emoji from 'emoji-dictionary';
 import './Card.css';
 import axios from 'axios/index';
 
-toEmoji = ()
 
 class Card extends Component {
 

@@ -13,13 +13,14 @@ class Board extends Component {
 
     this.state = {
       cards: [],
+      message: 'has done nothing',
+      error: "nothing is broken"
     };
   }
 
   componentDidMount() {
-    axios.get('https://inspiration-board.herokuapp.com/boards/kirsten/cards')
+    axios.get(`${this.props.url}`)
       .then((response) => {
-        console.log(response.data);
         const cards = response.data.map(inputCard => inputCard.card);
         this.setState({ cards });
       })
@@ -28,17 +29,14 @@ class Board extends Component {
       });
   }
 
-  addCard = (event) => {
-    console.log(event);
+  addCard = (card) => {
 
-    // const currCard = this.state.cards[index];
-    axios.post(`https://inspiration-board.herokuapp.com/boards/kirsten/cards?text=foooobar&emoji=beer`)
+    axios.post(`${this.props.url}`, card)
       .then((response) => {
-        // console.log(response);
-        let updatedData = this.state.cards;
-        // updatedData.add(index, 1);
-        // console.log(updatedData);
-        // this.setState({cards: updatedData});
+        let cards = this.state.cards;
+        cards.push(response.data.card);
+        this.setState({cards,
+        message: 'working'});
       })
       .catch((error) => {
         this.setState({ error: error.message });
@@ -47,11 +45,10 @@ class Board extends Component {
 
   removeCard = (index) => {
     const currCard = this.state.cards[index];
-      axios.delete(`https://inspiration-board.herokuapp.com/boards/kirsten/cards/${currCard['id']}`)
+      axios.delete(`${this.props.url}${currCard['id']}`)
         .then((response) => {
           let updatedData = this.state.cards;
           updatedData.splice(index, 1);
-          // console.log(updatedData);
           this.setState({cards: updatedData});
         })
         .catch((error) => {
@@ -60,9 +57,7 @@ class Board extends Component {
     };
 
   renderCardsList = () => {
-    // console.log(this.state.cards);
     return this.state.cards.map((card, index) => {
-      console.log(card);
 
       return (
         <Card
@@ -89,7 +84,7 @@ class Board extends Component {
 }
 
 Board.propTypes = {
-
+  url: PropTypes.string.isRequired,
 };
 
 export default Board;
