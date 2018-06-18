@@ -16,7 +16,6 @@ class Card extends Component {
 
   handleDeleteClick = (event) => {
     console.log('Delete Button Clicked');
-    console.log(event.target.value);
     let index = event.target.value;
     let id = event.target.id;
     this.props.deleteCardCallback( index, id);
@@ -33,11 +32,14 @@ class Card extends Component {
             <h2 className="card__content-emoji">{face}</h2>
           </article>
         </section>
-        <button className="card__delete"
+        <button
+        className="card__delete"
         onClick={this.handleDeleteClick}
         id={this.props.id}
         value={this.props.index}
-        >Delete</button>
+        >
+        Delete
+        </button>
       </div>
     )
   }

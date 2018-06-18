@@ -46,9 +46,11 @@ class Board extends Component {
     });
   }
 
+  // FIXME: This portion of functionality is not working. I keep receiving a 404 Not Found, and need to turn it in.
+
   // need a callback function that we will then pass to the NewCardForm
   // Call back function for deleting card
-  deleteCard = (index, id) => {
+  deleteCard = ( index, id) => {
     axios.delete(CARDS_URL + `${id}`)
     .then((response) => {
       console.log(response);
@@ -63,8 +65,8 @@ class Board extends Component {
     })
 
     .catch((error) => {
-      this.props.updateStatusCallback('Error deleting card', 'error');
       console.log(error);
+      this.props.updateStatusCallback('Error deleting card', 'error');
     });
   }
 
