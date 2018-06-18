@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Status matches snapshot with error type 1`] = `
+<section
+  className="status error"
+>
+  There was a problem: 
+  test status
+</section>
+`;
+
+exports[`Status matches snapshot with non-error type 1`] = `
+<section
+  className="status success"
+>
+  test status
+</section>
+`;
