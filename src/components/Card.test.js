@@ -1,12 +1,12 @@
 import React from 'react';
-import Board from './Board';
-import { mount,shallow } from 'enzyme';
+import Card from './Board';
+import { mount, shallow } from 'enzyme';
 
-describe('Board', () => {
+describe('Card', () => {
   test('that it matches an existing snapshot', () => {
     // First Mount the Component in the testing DOM
     // Arrange
-    const wrapper = mount( <Board updateStatusCallback={() => {} } />);
+    const wrapper = mount( <Card updateStatusCallback={() => {} } />);
 
     // Assert that it looks like the last snapshot
     expect(wrapper).toMatchSnapshot();
@@ -15,7 +15,7 @@ describe('Board', () => {
     wrapper.unmount();
   });
   test('idk', () => {
-    const wrapper = shallow(<Board />);
+    const wrapper = shallow(<Card />);
 
     expect(wrapper).toMatchSnapshot();
   });
