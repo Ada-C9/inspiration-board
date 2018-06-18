@@ -27,13 +27,14 @@ class Board extends Component {
         this.setState({ error: error.message});
       });
   }
+
   addCard = (event) => {
     console.log(event);
 
     // const currCard = this.state.cards[index];
-    axios.post(`https://inspiration-board.herokuapp.com/boards/kirsten/cards/`)
+    axios.post(`https://inspiration-board.herokuapp.com/boards/kirsten/cards?text=foooobar&emoji=beer`)
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         let updatedData = this.state.cards;
         // updatedData.add(index, 1);
         // console.log(updatedData);
