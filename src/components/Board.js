@@ -9,24 +9,28 @@ import Card from './Card';
 import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
-const BOARD_URL = "https:/inspiration-board.herokuapp.com/boards/karinna/cards"
 
 class Board extends Component {
+
 	static propTypes = {
-		updateStatusCallback: PropTypes.func
+		updateStatusCallback: PropTypes.func,
+		url: PropTypes.string,
+		name: PropTypes.string
 	}
 	constructor() {
 		super();
 
 		this.state = {
-			cards: []
+			cards: [],
+			name: null
 		};
+
 	}
 
+
+
 	componentDidMount(){
-
-		axios.get(BOARD_URL)
-
+		axios.get(`${this.props.url}/${this.props.name}/cards`)
 		.then((response) =>{
 			this.props.updateStatusCallback("Successfully loaded board", "success")
 
@@ -34,17 +38,33 @@ class Board extends Component {
 				cards: response.data
 			})
 		})
-		
 		.catch((error) => {
 			this.props.updateStatusCallback(`Failed to load: ${error.message}`, "failure")
 		});
 
 	}
 
+	componentDidUpdate(prop, state) {
+		if (prop.name !== this.props.name) {
+			axios.get(`${this.props.url}/${prop.name}/cards`)
+			.then((response) =>{
+				this.props.updateStatusCallback("Successfully loaded board", "success")
+
+				this.setState({
+					cards: response.data,
+					name: prop.name
+				})
+			})
+			.catch((error) => {
+				this.props.updateStatusCallback(`Failed to load: ${error.message}`, "failure")
+			});
+		}
+	}
+
 	addCard = (card) => {
 		card.emoji = emoji.getName(card.emoji)
 
-		axios.post(BOARD_URL, card)
+		axios.post(`${this.props.url}/${this.props.name}/cards`, card)
 
 		.then((response) => {
 			let updatedCards = this.state.cards;
@@ -60,18 +80,14 @@ class Board extends Component {
 
 	deleteCard = (card) => {
 		console.log(card);
-		axios.delete(`${BOARD_URL}/${card.props.id}`)
+		axios.delete(`${this.props.url}/${this.props.name}/cards/${card.props.id}`)
 		.then((response) => {
 			this.props.updateStatusCallback("Successfully Deleted Card", "success")
 			let updatedCards = this.state.cards;
-
 			updatedCards.splice(card.props.index,1)
-
-
 			this.setState({
 				cards: updatedCards
 			})
-
 		})
 		.catch((error) => {
 			this.props.updateStatusCallback(`Failed to add card: ${error.message}`, "failure")
