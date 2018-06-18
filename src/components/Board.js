@@ -28,17 +28,9 @@ class Board extends Component {
     axios.post('https://inspiration-board.herokuapp.com/boards/victoria/cards',
               card)
       .then((response) => {
-        console.log('Post attempt is happening')
-        console.log(response)
-        console.log(response.data)
         this.setState({
           message: `Successfully Added A Card!`
         });
-        console.log('HREF for current window:')
-        console.log(window.location.HREF)
-        console.log('HREF for parent window:')
-        console.log(window.parent.location.href)
-        console.log('Now trying to reload')
         window.parent.location.reload()
       })
       .catch((error) => {
@@ -71,11 +63,6 @@ class Board extends Component {
         </li>
       )
     });
-
-    console.log('Here is cardKeysAttempt')
-    console.log(cardKeysAttempt)
-    console.log('Here is cardComponents')
-    console.log(cardComponents)
 
     return (
       <section className = "board">

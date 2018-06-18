@@ -19,7 +19,6 @@ describe('Board', () => {
   test('That it can render without crashing', () => {
 
     const testRenderer = TestRenderer.create( <Board
-
       />);
 
     expect(testRenderer.toJSON()).toMatchSnapshot();

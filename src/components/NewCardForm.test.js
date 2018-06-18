@@ -68,4 +68,24 @@ describe('NewCardForm', () => {
     expect(emojiField.getElement().props.value).toEqual('clap');
   });
 
+  test('addCardCallback prop is called when the form is submitted', () => {
+
+    const mockAddCardCallback = jest.fn();
+    const wrapper = shallow(<NewCardForm  addCardCallback={mockAddCardCallback}  />);
+
+    const form = wrapper.find('form');
+
+    wrapper.setState({
+      text: 'Porkchop',
+      emoji: 'beer',
+    })
+
+    // Act
+    form.simulate('submit', {
+      preventDefault: () => {},
+    });
+    wrapper.update();
+    // Assert
+    expect(mockAddCardCallback).toHaveBeenCalled();
+
 });
