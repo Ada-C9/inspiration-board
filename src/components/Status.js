@@ -6,10 +6,11 @@ class Status extends React.Component {
     message: PropTypes.string,
     type: PropTypes.string
   }
+  
   render() {
     return (
       <ul className="validation-errors-display__list">
-        <li className="validation-errors-display">{this.props.type}: {this.props.message}</li>
+        <li className="validation-errors-display">{this.props.message}</li>
       </ul>
     );
   }
