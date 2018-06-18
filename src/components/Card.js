@@ -1,20 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import emoji from 'emoji-dictionary';
-
 import './Card.css';
-import axios from 'axios/index';
-
 
 class Card extends Component {
-
 
   removeThisCard = () => {
     this.props.removeCardCallback(this.props.index);
   };
 
   render() {
-   const getEmoji = this.props.emoji ? emoji.getUnicode(this.props.emoji) : "";
+   const getEmoji = this.props.emoji.toEmoji();
     return (
       <article className="card">
         <p onClick={this.removeThisCard}

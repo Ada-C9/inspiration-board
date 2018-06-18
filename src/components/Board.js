@@ -5,7 +5,6 @@ import axios from 'axios';
 import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
-import CARD_DATA from '../data/card-data.json';
 
 class Board extends Component {
   constructor(props) {
@@ -58,7 +57,6 @@ class Board extends Component {
 
   renderCardsList = () => {
     return this.state.cards.map((card, index) => {
-
       return (
         <Card
           key={card.id}
@@ -73,12 +71,10 @@ class Board extends Component {
 
   render() {
     return (
-      <div className="board">
-        {<NewCardForm
-          addCardCallback={this.addCard}
-        />}
+      <section className="board">
+        {<NewCardForm addCardCallback={this.addCard} />}
         {this.renderCardsList()}
-        </div>
+      </section>
     )
   }
 }
