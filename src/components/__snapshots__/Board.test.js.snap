@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Board that it matches the snapshot with cards 1`] = `
+<Board
+  data={
+    Array [
+      Object {
+        "text": "Inspirational Stuff",
+      },
+      Object {
+        "text": "Calming Words",
+      },
+    ]
+  }
+>
+  <div
+    className="board"
+  >
+    <Card
+      key="0"
+      text="Inspirational Stuff"
+    >
+      <div
+        className="card"
+      >
+        <section
+          className="card__content"
+        >
+          <article
+            className=".card__content-text"
+          >
+            <h3>
+              Inspirational Stuff
+            </h3>
+          </article>
+        </section>
+      </div>
+    </Card>
+    <Card
+      key="1"
+      text="Calming Words"
+    >
+      <div
+        className="card"
+      >
+        <section
+          className="card__content"
+        >
+          <article
+            className=".card__content-text"
+          >
+            <h3>
+              Calming Words
+            </h3>
+          </article>
+        </section>
+      </div>
+    </Card>
+    <section
+      className="new-card-form"
+    >
+      <NewCardForm
+        addCardCallback={[Function]}
+      >
+        <article
+          className="new-card-form"
+        >
+          <h2
+            className="new-card-form__header"
+          >
+            Create New Card
+          </h2>
+          <form
+            className="new-card-form__form"
+            onSubmit={[Function]}
+          >
+            <div>
+              <label
+                className="new-card-form__form-label"
+                htmlFor="text"
+              >
+                Words: 
+              </label>
+              <input
+                name="text"
+                onChange={[Function]}
+                type="text"
+                value=""
+              />
+            </div>
+            <div>
+              <input
+                className="new-card-form__form-button"
+                type="submit"
+              />
+            </div>
+          </form>
+        </article>
+      </NewCardForm>
+    </section>
+  </div>
+</Board>
+`;
+
+exports[`Board that it matches the snapshot with no cards 1`] = `
+<Board
+  data={Array []}
+>
+  <div
+    className="board"
+  >
+    <section
+      className="new-card-form"
+    >
+      <NewCardForm
+        addCardCallback={[Function]}
+      >
+        <article
+          className="new-card-form"
+        >
+          <h2
+            className="new-card-form__header"
+          >
+            Create New Card
+          </h2>
+          <form
+            className="new-card-form__form"
+            onSubmit={[Function]}
+          >
+            <div>
+              <label
+                className="new-card-form__form-label"
+                htmlFor="text"
+              >
+                Words: 
+              </label>
+              <input
+                name="text"
+                onChange={[Function]}
+                type="text"
+                value=""
+              />
+            </div>
+            <div>
+              <input
+                className="new-card-form__form-button"
+                type="submit"
+              />
+            </div>
+          </form>
+        </article>
+      </NewCardForm>
+    </section>
+  </div>
+</Board>
+`;

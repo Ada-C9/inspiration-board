@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card that it matches an existing snapshot 1`] = `
+<Card
+  text="Inspirational Stuff"
+>
+  <div
+    className="card"
+  >
+    <section
+      className="card__content"
+    >
+      <article
+        className=".card__content-text"
+      >
+        <h3>
+          Inspirational Stuff
+        </h3>
+      </article>
+    </section>
+  </div>
+</Card>
+`;
