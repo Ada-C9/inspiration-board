@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App that it renders App with shallow rendering 1`] = `
+<section>
+  <header
+    className="header"
+  >
+    <h1
+      className="header__h1"
+    >
+      <span
+        className="header__text"
+      >
+        Inspiration Board
+      </span>
+    </h1>
+  </header>
+  <Board
+    boardName="lily-sky"
+    url="https://inspiration-board.herokuapp.com/boards/"
+  />
+</section>
+`;
