@@ -5,7 +5,7 @@ import axios from 'axios';
 import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
-// import CARD_DATA from '../data/card-data.json';
+import CARD_DATA from '../data/card-data.json';
 
 // NOTE: WILL RENDER OUT A LIST OF CARDS
 
@@ -54,12 +54,13 @@ class Board extends Component {
     .then((response) => {
       console.log(response);
       console.log(response.data);
-      this.props.updateStatusCallback('Successfully Deleted Card', 'success');
+      this.props.updateStatusCallback(`Successfully Deleted Card ${response.data.card.text}`, 'success');
 
       let updatedCards = this.state.cards
       console.log(updatedCards);
+
       updatedCards.splice(index,1);
-      this.setState( {cards: updatedCards });
+      this.setState({cards: updatedCards });
     })
 
     .catch((error) => {
@@ -80,7 +81,7 @@ class Board extends Component {
 
     axios.post(CARDS_URL, card)
     .then((response) => {
-      console.log(response);
+      console.log(response.data);
       this.props.updateStatusCallback('Successfully added card', 'success');
     })
 
@@ -95,9 +96,12 @@ class Board extends Component {
     const cards = this.state.cards.map((card, index) => {
       // console.log(card)
       // console.log(card.card.text)
-      return <Card key={index}
-      text={card.card.text}
-      id={card.card.id}
+      return <Card
+      key={ index }
+      index={ index }
+      text={ card.card.text }
+      id={ card.card.id }
+      emoji={ card.card.emoji }
       deleteCardCallback={ this.deleteCard }
       />
     });
