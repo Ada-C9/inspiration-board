@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewCardForm shallow mount 1`] = `
+<form
+  className="new-card-form__form"
+  onSubmit={[Function]}
+>
+  <input
+    className="new-card-form__form-textarea"
+    name="text"
+    onChange={[Function]}
+    placeholder="Post-It Text"
+    type="text"
+    value=""
+  />
+  <select
+    className="new-card-form__form-select"
+    name="emoji"
+    onChange={[Function]}
+    value=""
+  >
+    <option
+      key="0"
+      name="emoji"
+      onChange={[Function]}
+    />
+    <option
+      key="1"
+      name="emoji"
+      onChange={[Function]}
+    >
+      😍
+    </option>
+    <option
+      key="2"
+      name="emoji"
+      onChange={[Function]}
+    >
+      🍺
+    </option>
+    <option
+      key="3"
+      name="emoji"
+      onChange={[Function]}
+    >
+      🍕
+    </option>
+    <option
+      key="4"
+      name="emoji"
+      onChange={[Function]}
+    >
+      😆
+    </option>
+    <option
+      key="5"
+      name="emoji"
+      onChange={[Function]}
+    >
+      😘
+    </option>
+    <option
+      key="6"
+      name="emoji"
+      onChange={[Function]}
+    >
+      🌮
+    </option>
+    <option
+      key="7"
+      name="emoji"
+      onChange={[Function]}
+    >
+      💖
+    </option>
+    <option
+      key="8"
+      name="emoji"
+      onChange={[Function]}
+    >
+      🐛
+    </option>
+    <option
+      key="9"
+      name="emoji"
+      onChange={[Function]}
+    >
+      🌻
+    </option>
+    <option
+      key="10"
+      name="emoji"
+      onChange={[Function]}
+    >
+      🐶
+    </option>
+  </select>
+  <input
+    className="new-card-form__form-button"
+    type="submit"
+    value="Make New Card"
+  />
+</form>
+`;
