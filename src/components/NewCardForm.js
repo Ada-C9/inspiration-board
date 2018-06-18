@@ -65,7 +65,9 @@ class NewCardForm extends Component {
             {EMOJI_LIST.map(x => <option key={x} value={x}>{emoji.getUnicode(x)}</option>)};
           </select>
         </div>
+        <div>
         <input type="submit" value="Add Card" className="new-card-form__form-button" />
+        </div>
       </form>
       </div>
     );
