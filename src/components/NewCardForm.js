@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import emoji from 'emoji-dictionary';
+import PropTypes from 'prop-types';
 import './NewCardForm.css';
 
-const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog"]
+// const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog"]
 
 class NewCardForm extends Component {
   constructor() {
@@ -30,7 +30,7 @@ class NewCardForm extends Component {
     this.setState({
       text: '',
       emoji: ''
-    }); 
+    });
   }
 
   render() {
@@ -66,5 +66,10 @@ class NewCardForm extends Component {
     );
   }
 }
+
+NewCardForm.propTypes = {
+  addCardCallback: PropTypes.func.isRequired,
+
+};
 
 export default NewCardForm;

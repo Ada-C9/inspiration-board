@@ -34,7 +34,7 @@ class App extends Component {
         </header>
         <Status
           message={this.state.status.message}
-          types={this.state.status.type}
+          type={this.state.status.type}
         />
         <Board
           url="https://inspiration-board.herokuapp.com/boards/"

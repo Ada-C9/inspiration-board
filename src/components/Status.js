@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class Status extends React.Component {
-  propTypes = {
+  static propTypes = {
     message: PropTypes.string,
     type: PropTypes.strings
   }
