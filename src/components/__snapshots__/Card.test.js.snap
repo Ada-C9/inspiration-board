@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card shallow mount 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card__delete"
+    onClick={[Function]}
+  >
+    X
+  </div>
+  <div
+    className="card__content"
+  >
+    <h1
+      className="card__content-text"
+    />
+    <h1
+      className="card__content-emoji"
+    />
+  </div>
+</div>
+`;
