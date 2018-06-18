@@ -19,8 +19,6 @@ class Card extends Component {
   handleDelete = event => {
     event.preventDefault();
     let deleteURL = `https://inspiration-board.herokuapp.com/boards/victoria/cards/${this.props.cardID}`
-    console.log('In the delete handler: ')
-    console.log(deleteURL)
     axios.delete(deleteURL)
       .then(response => {
         console.log('response to API request is happening')
@@ -30,6 +28,9 @@ class Card extends Component {
         console.log(window.parent.location.href)
         window.parent.location.reload()
       })
+      .catch((error) => {
+        this.setState({ error: error.message });
+      });
   }
 
 

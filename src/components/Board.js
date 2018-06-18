@@ -25,6 +25,31 @@ class Board extends Component {
       });
   }
 
+  addCard = (card) => {
+    axios.post('https://inspiration-board.herokuapp.com/boards/victoria/cards',
+              card)
+      .then((response) => {
+        console.log('Post attempt is happening')
+        console.log(response)
+        console.log(response.data)
+        this.setState({
+          message: `Successfully Added A Card!`
+        });
+        console.log('HREF for current window:')
+        console.log(window.location.HREF)
+        console.log('HREF for parent window:')
+        console.log(window.parent.location.href)
+        console.log('Now trying to reload')
+        window.parent.location.reload()
+      })
+      .catch((error) => {
+        console.log(error.message);
+        this.setState({
+          message: error.message,
+        });
+      });
+  }
+
   render() {
 
     const cardKeysAttempt = Object.keys(this.state.cards).map(
@@ -54,16 +79,19 @@ class Board extends Component {
     console.log(cardComponents)
 
     return (
-      <div className = "board" >
+      <section className = "board">
+        <header>
+          {this.state.message ? this.state.message: ""  }
+        </header>
         {cardComponents}
-      </div>
+        <NewCardForm addCardCallback={this.addCard} />
+      </section>
     )
   }
 
 }
 
 Board.propTypes = {
-
 };
 
 export default Board;
