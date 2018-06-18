@@ -51,16 +51,16 @@ onFormSubmit = (event) => {
   render(){
     return(
       <form className="new-card-form"  onSubmit={this.onFormSubmit}>
-        <div>
-          <label htmlFor="text">Text: </label>
-          <input
+        <div className ="new-card-form__form">
+          <label className="new-card-form__form-label" htmlFor="text">Text: </label>
+          <input className="new-card-form__form-textarea"
             name="text"
             value={this.state.text}
             onChange={this.onFieldChange}
             type="text"
                         />
         </div>
-        <div>
+        <div className="new-card-form__form">
         <select name="emoji" value={this.state.emoji} onChange={this.onFieldChange}>
           {this.populateDropdown()}
         </select>

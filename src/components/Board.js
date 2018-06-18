@@ -91,6 +91,7 @@ class Board extends Component {
   render() {
     return (
       <div className="board">
+        <h3 className="warning">{this.state.error}</h3>
         <NewCardForm addCardcallBack={this.addCard}/>
         {this.renderCommentList()}
       </div>

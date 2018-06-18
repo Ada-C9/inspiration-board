@@ -88,19 +88,25 @@ ReactWrapper {
                   <form
                                     class="new-card-form"
                   >
-                                    <div>
+                                    <div
+                                                      class="new-card-form__form"
+                                    >
                                                       <label
+                                                                        class="new-card-form__form-label"
                                                                         for="text"
                                                       >
                                                                         Text: 
                                                       </label>
                                                       <input
+                                                                        class="new-card-form__form-textarea"
                                                                         name="text"
                                                                         type="text"
                                                                         value=""
                                                       />
                                     </div>
-                                    <div>
+                                    <div
+                                                      class="new-card-form__form"
+                                    >
                                                       <select
                                                                         name="emoji"
                                                       >
@@ -242,19 +248,25 @@ ReactWrapper {
                 <form
                                 class="new-card-form"
                 >
-                                <div>
+                                <div
+                                                class="new-card-form__form"
+                                >
                                                 <label
+                                                                class="new-card-form__form-label"
                                                                 for="text"
                                                 >
                                                                 Text: 
                                                 </label>
                                                 <input
+                                                                class="new-card-form__form-textarea"
                                                                 name="text"
                                                                 type="text"
                                                                 value=""
                                                 />
                                 </div>
-                                <div>
+                                <div
+                                                class="new-card-form__form"
+                                >
                                                 <select
                                                                 name="emoji"
                                                 >
@@ -412,6 +424,7 @@ ReactWrapper {
               "lastEffect": null,
               "memoizedProps": Object {
                 "children": "Text: ",
+                "className": "new-card-form__form-label",
                 "htmlFor": "text",
               },
               "memoizedState": null,
@@ -419,6 +432,7 @@ ReactWrapper {
               "nextEffect": null,
               "pendingProps": Object {
                 "children": "Text: ",
+                "className": "new-card-form__form-label",
                 "htmlFor": "text",
               },
               "ref": null,
@@ -441,6 +455,7 @@ ReactWrapper {
                 "key": null,
                 "lastEffect": null,
                 "memoizedProps": Object {
+                  "className": "new-card-form__form-textarea",
                   "name": "text",
                   "onChange": [Function],
                   "type": "text",
@@ -450,6 +465,7 @@ ReactWrapper {
                 "mode": 0,
                 "nextEffect": null,
                 "pendingProps": Object {
+                  "className": "new-card-form__form-textarea",
                   "name": "text",
                   "onChange": [Function],
                   "type": "text",
@@ -460,6 +476,7 @@ ReactWrapper {
                 "selfBaseTime": 0,
                 "sibling": null,
                 "stateNode": <input
+                  class="new-card-form__form-textarea"
                   name="text"
                   type="text"
                   value=""
@@ -470,6 +487,7 @@ ReactWrapper {
                 "updateQueue": null,
               },
               "stateNode": <label
+                class="new-card-form__form-label"
                 for="text"
 >
                 Text: 
@@ -488,17 +506,20 @@ ReactWrapper {
             "memoizedProps": Object {
               "children": Array [
                 <label
+                  className="new-card-form__form-label"
                   htmlFor="text"
 >
                   Text: 
 </label>,
                 <input
+                  className="new-card-form__form-textarea"
                   name="text"
                   onChange={[Function]}
                   type="text"
                   value=""
 />,
               ],
+              "className": "new-card-form__form",
             },
             "memoizedState": null,
             "mode": 0,
@@ -506,17 +527,20 @@ ReactWrapper {
             "pendingProps": Object {
               "children": Array [
                 <label
+                  className="new-card-form__form-label"
                   htmlFor="text"
 >
                   Text: 
 </label>,
                 <input
+                  className="new-card-form__form-textarea"
                   name="text"
                   onChange={[Function]}
                   type="text"
                   value=""
 />,
               ],
+              "className": "new-card-form__form",
             },
             "ref": null,
             "return": [Circular],
@@ -999,6 +1023,7 @@ ReactWrapper {
                                     🐶
                   </option>
 </select>,
+                "className": "new-card-form__form",
               },
               "memoizedState": null,
               "mode": 0,
@@ -1043,6 +1068,7 @@ ReactWrapper {
                                     🐶
                   </option>
 </select>,
+                "className": "new-card-form__form",
               },
               "ref": null,
               "return": [Circular],
@@ -1087,7 +1113,9 @@ ReactWrapper {
                 "type": "input",
                 "updateQueue": null,
               },
-              "stateNode": <div>
+              "stateNode": <div
+                class="new-card-form__form"
+>
                 <select
                                 name="emoji"
                 >
@@ -1131,13 +1159,17 @@ ReactWrapper {
               "type": "div",
               "updateQueue": null,
             },
-            "stateNode": <div>
+            "stateNode": <div
+              class="new-card-form__form"
+>
               <label
+                            class="new-card-form__form-label"
                             for="text"
               >
                             Text: 
               </label>
               <input
+                            class="new-card-form__form-textarea"
                             name="text"
                             type="text"
                             value=""
@@ -1156,20 +1188,26 @@ ReactWrapper {
           "lastEffect": null,
           "memoizedProps": Object {
             "children": Array [
-              <div>
+              <div
+                className="new-card-form__form"
+>
                 <label
+                                className="new-card-form__form-label"
                                 htmlFor="text"
                 >
                                 Text: 
                 </label>
                 <input
+                                className="new-card-form__form-textarea"
                                 name="text"
                                 onChange={[Function]}
                                 type="text"
                                 value=""
                 />
 </div>,
-              <div>
+              <div
+                className="new-card-form__form"
+>
                 <select
                                 name="emoji"
                                 onChange={[Function]}
@@ -1223,20 +1261,26 @@ ReactWrapper {
           "nextEffect": null,
           "pendingProps": Object {
             "children": Array [
-              <div>
+              <div
+                className="new-card-form__form"
+>
                 <label
+                                className="new-card-form__form-label"
                                 htmlFor="text"
                 >
                                 Text: 
                 </label>
                 <input
+                                className="new-card-form__form-textarea"
                                 name="text"
                                 onChange={[Function]}
                                 type="text"
                                 value=""
                 />
 </div>,
-              <div>
+              <div
+                className="new-card-form__form"
+>
                 <select
                                 name="emoji"
                                 onChange={[Function]}
@@ -1292,19 +1336,25 @@ ReactWrapper {
           "stateNode": <form
             class="new-card-form"
 >
-            <div>
+            <div
+                        class="new-card-form__form"
+            >
                         <label
+                                    class="new-card-form__form-label"
                                     for="text"
                         >
                                     Text: 
                         </label>
                         <input
+                                    class="new-card-form__form-textarea"
                                     name="text"
                                     type="text"
                                     value=""
                         />
             </div>
-            <div>
+            <div
+                        class="new-card-form__form"
+            >
                         <select
                                     name="emoji"
                         >
@@ -1441,19 +1491,25 @@ ReactWrapper {
                   <form
                                     class="new-card-form"
                   >
-                                    <div>
+                                    <div
+                                                      class="new-card-form__form"
+                                    >
                                                       <label
+                                                                        class="new-card-form__form-label"
                                                                         for="text"
                                                       >
                                                                         Text: 
                                                       </label>
                                                       <input
+                                                                        class="new-card-form__form-textarea"
                                                                         name="text"
                                                                         type="text"
                                                                         value=""
                                                       />
                                     </div>
-                                    <div>
+                                    <div
+                                                      class="new-card-form__form"
+                                    >
                                                       <select
                                                                         name="emoji"
                                                       >
@@ -1595,19 +1651,25 @@ ReactWrapper {
                 <form
                                 class="new-card-form"
                 >
-                                <div>
+                                <div
+                                                class="new-card-form__form"
+                                >
                                                 <label
+                                                                class="new-card-form__form-label"
                                                                 for="text"
                                                 >
                                                                 Text: 
                                                 </label>
                                                 <input
+                                                                class="new-card-form__form-textarea"
                                                                 name="text"
                                                                 type="text"
                                                                 value=""
                                                 />
                                 </div>
-                                <div>
+                                <div
+                                                class="new-card-form__form"
+                                >
                                                 <select
                                                                 name="emoji"
                                                 >
@@ -1766,19 +1828,25 @@ ReactWrapper {
       "instance": <form
         class="new-card-form"
 >
-        <div>
+        <div
+                class="new-card-form__form"
+        >
                 <label
+                        class="new-card-form__form-label"
                         for="text"
                 >
                         Text: 
                 </label>
                 <input
+                        class="new-card-form__form-textarea"
                         name="text"
                         type="text"
                         value=""
                 />
         </div>
-        <div>
+        <div
+                class="new-card-form__form"
+        >
                 <select
                         name="emoji"
                 >
@@ -1826,20 +1894,26 @@ ReactWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <div>
+          <div
+            className="new-card-form__form"
+>
             <label
+                        className="new-card-form__form-label"
                         htmlFor="text"
             >
                         Text: 
             </label>
             <input
+                        className="new-card-form__form-textarea"
                         name="text"
                         onChange={[Function]}
                         type="text"
                         value=""
             />
 </div>,
-          <div>
+          <div
+            className="new-card-form__form"
+>
             <select
                         name="emoji"
                         onChange={[Function]}
@@ -1891,13 +1965,17 @@ ReactWrapper {
       "ref": null,
       "rendered": Array [
         Object {
-          "instance": <div>
+          "instance": <div
+            class="new-card-form__form"
+>
             <label
+                        class="new-card-form__form-label"
                         for="text"
             >
                         Text: 
             </label>
             <input
+                        class="new-card-form__form-textarea"
                         name="text"
                         type="text"
                         value=""
@@ -1908,22 +1986,26 @@ ReactWrapper {
           "props": Object {
             "children": Array [
               <label
+                className="new-card-form__form-label"
                 htmlFor="text"
 >
                 Text: 
 </label>,
               <input
+                className="new-card-form__form-textarea"
                 name="text"
                 onChange={[Function]}
                 type="text"
                 value=""
 />,
             ],
+            "className": "new-card-form__form",
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": <label
+                class="new-card-form__form-label"
                 for="text"
 >
                 Text: 
@@ -1932,6 +2014,7 @@ ReactWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Text: ",
+                "className": "new-card-form__form-label",
                 "htmlFor": "text",
               },
               "ref": null,
@@ -1942,6 +2025,7 @@ ReactWrapper {
             },
             Object {
               "instance": <input
+                class="new-card-form__form-textarea"
                 name="text"
                 type="text"
                 value=""
@@ -1949,6 +2033,7 @@ ReactWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "className": "new-card-form__form-textarea",
                 "name": "text",
                 "onChange": [Function],
                 "type": "text",
@@ -1964,7 +2049,9 @@ ReactWrapper {
           "type": "div",
         },
         Object {
-          "instance": <div>
+          "instance": <div
+            class="new-card-form__form"
+>
             <select
                         name="emoji"
             >
@@ -2045,6 +2132,7 @@ ReactWrapper {
                             🐶
               </option>
 </select>,
+            "className": "new-card-form__form",
           },
           "ref": null,
           "rendered": Array [
@@ -2357,19 +2445,25 @@ ReactWrapper {
                     <form
                                         class="new-card-form"
                     >
-                                        <div>
+                                        <div
+                                                            class="new-card-form__form"
+                                        >
                                                             <label
+                                                                                class="new-card-form__form-label"
                                                                                 for="text"
                                                             >
                                                                                 Text: 
                                                             </label>
                                                             <input
+                                                                                class="new-card-form__form-textarea"
                                                                                 name="text"
                                                                                 type="text"
                                                                                 value=""
                                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                                            class="new-card-form__form"
+                                        >
                                                             <select
                                                                                 name="emoji"
                                                             >
@@ -2511,19 +2605,25 @@ ReactWrapper {
                   <form
                                     class="new-card-form"
                   >
-                                    <div>
+                                    <div
+                                                      class="new-card-form__form"
+                                    >
                                                       <label
+                                                                        class="new-card-form__form-label"
                                                                         for="text"
                                                       >
                                                                         Text: 
                                                       </label>
                                                       <input
+                                                                        class="new-card-form__form-textarea"
                                                                         name="text"
                                                                         type="text"
                                                                         value=""
                                                       />
                                     </div>
-                                    <div>
+                                    <div
+                                                      class="new-card-form__form"
+                                    >
                                                       <select
                                                                         name="emoji"
                                                       >
@@ -2681,6 +2781,7 @@ ReactWrapper {
                 "lastEffect": null,
                 "memoizedProps": Object {
                   "children": "Text: ",
+                  "className": "new-card-form__form-label",
                   "htmlFor": "text",
                 },
                 "memoizedState": null,
@@ -2688,6 +2789,7 @@ ReactWrapper {
                 "nextEffect": null,
                 "pendingProps": Object {
                   "children": "Text: ",
+                  "className": "new-card-form__form-label",
                   "htmlFor": "text",
                 },
                 "ref": null,
@@ -2710,6 +2812,7 @@ ReactWrapper {
                   "key": null,
                   "lastEffect": null,
                   "memoizedProps": Object {
+                    "className": "new-card-form__form-textarea",
                     "name": "text",
                     "onChange": [Function],
                     "type": "text",
@@ -2719,6 +2822,7 @@ ReactWrapper {
                   "mode": 0,
                   "nextEffect": null,
                   "pendingProps": Object {
+                    "className": "new-card-form__form-textarea",
                     "name": "text",
                     "onChange": [Function],
                     "type": "text",
@@ -2729,6 +2833,7 @@ ReactWrapper {
                   "selfBaseTime": 0,
                   "sibling": null,
                   "stateNode": <input
+                    class="new-card-form__form-textarea"
                     name="text"
                     type="text"
                     value=""
@@ -2739,6 +2844,7 @@ ReactWrapper {
                   "updateQueue": null,
                 },
                 "stateNode": <label
+                  class="new-card-form__form-label"
                   for="text"
 >
                   Text: 
@@ -2757,17 +2863,20 @@ ReactWrapper {
               "memoizedProps": Object {
                 "children": Array [
                   <label
+                    className="new-card-form__form-label"
                     htmlFor="text"
 >
                     Text: 
 </label>,
                   <input
+                    className="new-card-form__form-textarea"
                     name="text"
                     onChange={[Function]}
                     type="text"
                     value=""
 />,
                 ],
+                "className": "new-card-form__form",
               },
               "memoizedState": null,
               "mode": 0,
@@ -2775,17 +2884,20 @@ ReactWrapper {
               "pendingProps": Object {
                 "children": Array [
                   <label
+                    className="new-card-form__form-label"
                     htmlFor="text"
 >
                     Text: 
 </label>,
                   <input
+                    className="new-card-form__form-textarea"
                     name="text"
                     onChange={[Function]}
                     type="text"
                     value=""
 />,
                 ],
+                "className": "new-card-form__form",
               },
               "ref": null,
               "return": [Circular],
@@ -3268,6 +3380,7 @@ ReactWrapper {
                                         🐶
                     </option>
 </select>,
+                  "className": "new-card-form__form",
                 },
                 "memoizedState": null,
                 "mode": 0,
@@ -3312,6 +3425,7 @@ ReactWrapper {
                                         🐶
                     </option>
 </select>,
+                  "className": "new-card-form__form",
                 },
                 "ref": null,
                 "return": [Circular],
@@ -3356,7 +3470,9 @@ ReactWrapper {
                   "type": "input",
                   "updateQueue": null,
                 },
-                "stateNode": <div>
+                "stateNode": <div
+                  class="new-card-form__form"
+>
                   <select
                                     name="emoji"
                   >
@@ -3400,13 +3516,17 @@ ReactWrapper {
                 "type": "div",
                 "updateQueue": null,
               },
-              "stateNode": <div>
+              "stateNode": <div
+                class="new-card-form__form"
+>
                 <label
+                                class="new-card-form__form-label"
                                 for="text"
                 >
                                 Text: 
                 </label>
                 <input
+                                class="new-card-form__form-textarea"
                                 name="text"
                                 type="text"
                                 value=""
@@ -3425,20 +3545,26 @@ ReactWrapper {
             "lastEffect": null,
             "memoizedProps": Object {
               "children": Array [
-                <div>
+                <div
+                  className="new-card-form__form"
+>
                   <label
+                                    className="new-card-form__form-label"
                                     htmlFor="text"
                   >
                                     Text: 
                   </label>
                   <input
+                                    className="new-card-form__form-textarea"
                                     name="text"
                                     onChange={[Function]}
                                     type="text"
                                     value=""
                   />
 </div>,
-                <div>
+                <div
+                  className="new-card-form__form"
+>
                   <select
                                     name="emoji"
                                     onChange={[Function]}
@@ -3492,20 +3618,26 @@ ReactWrapper {
             "nextEffect": null,
             "pendingProps": Object {
               "children": Array [
-                <div>
+                <div
+                  className="new-card-form__form"
+>
                   <label
+                                    className="new-card-form__form-label"
                                     htmlFor="text"
                   >
                                     Text: 
                   </label>
                   <input
+                                    className="new-card-form__form-textarea"
                                     name="text"
                                     onChange={[Function]}
                                     type="text"
                                     value=""
                   />
 </div>,
-                <div>
+                <div
+                  className="new-card-form__form"
+>
                   <select
                                     name="emoji"
                                     onChange={[Function]}
@@ -3561,19 +3693,25 @@ ReactWrapper {
             "stateNode": <form
               class="new-card-form"
 >
-              <div>
+              <div
+                            class="new-card-form__form"
+              >
                             <label
+                                          class="new-card-form__form-label"
                                           for="text"
                             >
                                           Text: 
                             </label>
                             <input
+                                          class="new-card-form__form-textarea"
                                           name="text"
                                           type="text"
                                           value=""
                             />
               </div>
-              <div>
+              <div
+                            class="new-card-form__form"
+              >
                             <select
                                           name="emoji"
                             >
@@ -3710,19 +3848,25 @@ ReactWrapper {
                     <form
                                         class="new-card-form"
                     >
-                                        <div>
+                                        <div
+                                                            class="new-card-form__form"
+                                        >
                                                             <label
+                                                                                class="new-card-form__form-label"
                                                                                 for="text"
                                                             >
                                                                                 Text: 
                                                             </label>
                                                             <input
+                                                                                class="new-card-form__form-textarea"
                                                                                 name="text"
                                                                                 type="text"
                                                                                 value=""
                                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                                            class="new-card-form__form"
+                                        >
                                                             <select
                                                                                 name="emoji"
                                                             >
@@ -3864,19 +4008,25 @@ ReactWrapper {
                   <form
                                     class="new-card-form"
                   >
-                                    <div>
+                                    <div
+                                                      class="new-card-form__form"
+                                    >
                                                       <label
+                                                                        class="new-card-form__form-label"
                                                                         for="text"
                                                       >
                                                                         Text: 
                                                       </label>
                                                       <input
+                                                                        class="new-card-form__form-textarea"
                                                                         name="text"
                                                                         type="text"
                                                                         value=""
                                                       />
                                     </div>
-                                    <div>
+                                    <div
+                                                      class="new-card-form__form"
+                                    >
                                                       <select
                                                                         name="emoji"
                                                       >
@@ -4035,19 +4185,25 @@ ReactWrapper {
         "instance": <form
           class="new-card-form"
 >
-          <div>
+          <div
+                    class="new-card-form__form"
+          >
                     <label
+                              class="new-card-form__form-label"
                               for="text"
                     >
                               Text: 
                     </label>
                     <input
+                              class="new-card-form__form-textarea"
                               name="text"
                               type="text"
                               value=""
                     />
           </div>
-          <div>
+          <div
+                    class="new-card-form__form"
+          >
                     <select
                               name="emoji"
                     >
@@ -4095,20 +4251,26 @@ ReactWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <div>
+            <div
+              className="new-card-form__form"
+>
               <label
+                            className="new-card-form__form-label"
                             htmlFor="text"
               >
                             Text: 
               </label>
               <input
+                            className="new-card-form__form-textarea"
                             name="text"
                             onChange={[Function]}
                             type="text"
                             value=""
               />
 </div>,
-            <div>
+            <div
+              className="new-card-form__form"
+>
               <select
                             name="emoji"
                             onChange={[Function]}
@@ -4160,13 +4322,17 @@ ReactWrapper {
         "ref": null,
         "rendered": Array [
           Object {
-            "instance": <div>
+            "instance": <div
+              class="new-card-form__form"
+>
               <label
+                            class="new-card-form__form-label"
                             for="text"
               >
                             Text: 
               </label>
               <input
+                            class="new-card-form__form-textarea"
                             name="text"
                             type="text"
                             value=""
@@ -4177,22 +4343,26 @@ ReactWrapper {
             "props": Object {
               "children": Array [
                 <label
+                  className="new-card-form__form-label"
                   htmlFor="text"
 >
                   Text: 
 </label>,
                 <input
+                  className="new-card-form__form-textarea"
                   name="text"
                   onChange={[Function]}
                   type="text"
                   value=""
 />,
               ],
+              "className": "new-card-form__form",
             },
             "ref": null,
             "rendered": Array [
               Object {
                 "instance": <label
+                  class="new-card-form__form-label"
                   for="text"
 >
                   Text: 
@@ -4201,6 +4371,7 @@ ReactWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Text: ",
+                  "className": "new-card-form__form-label",
                   "htmlFor": "text",
                 },
                 "ref": null,
@@ -4211,6 +4382,7 @@ ReactWrapper {
               },
               Object {
                 "instance": <input
+                  class="new-card-form__form-textarea"
                   name="text"
                   type="text"
                   value=""
@@ -4218,6 +4390,7 @@ ReactWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "className": "new-card-form__form-textarea",
                   "name": "text",
                   "onChange": [Function],
                   "type": "text",
@@ -4233,7 +4406,9 @@ ReactWrapper {
             "type": "div",
           },
           Object {
-            "instance": <div>
+            "instance": <div
+              class="new-card-form__form"
+>
               <select
                             name="emoji"
               >
@@ -4314,6 +4489,7 @@ ReactWrapper {
                                 🐶
                 </option>
 </select>,
+              "className": "new-card-form__form",
             },
             "ref": null,
             "rendered": Array [
