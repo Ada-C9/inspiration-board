@@ -1,0 +1,4739 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewCardForm that it matches an existing snapshot 1`] = `
+ReactWrapper {
+  "length": 1,
+  Symbol(enzyme.__unrendered__): <NewCardForm
+    addCardcallBack={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": NewCardForm {
+      "_reactInternalFiber": FiberNode {
+        "_debugID": 5,
+        "_debugIsCurrentlyTiming": false,
+        "_debugOwner": FiberNode {
+          "_debugID": 4,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": null,
+          "_debugSource": null,
+          "alternate": null,
+          "child": [Circular],
+          "effectTag": 1,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "addCardcallBack": [Function],
+            },
+          },
+          "memoizedState": Object {
+            "context": null,
+            "mount": true,
+            "props": Object {
+              "addCardcallBack": [Function],
+            },
+          },
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "addCardcallBack": [Function],
+            },
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 1,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "alternate": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "alternate": [Circular],
+              "child": null,
+              "effectTag": 0,
+              "expirationTime": 1,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": null,
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <form
+                                    class="new-card-form"
+                  >
+                                    <div
+                                                      class="new-card-form__form"
+                                    >
+                                                      <label
+                                                                        class="new-card-form__form-label"
+                                                                        for="text"
+                                                      >
+                                                                        Text: 
+                                                      </label>
+                                                      <input
+                                                                        class="new-card-form__form-textarea"
+                                                                        name="text"
+                                                                        type="text"
+                                                                        value=""
+                                                      />
+                                    </div>
+                                    <div
+                                                      class="new-card-form__form"
+                                    >
+                                                      <select
+                                                                        name="emoji"
+                                                      >
+                                                                        <option
+                                                                                          value=""
+                                                                        />
+                                                                        <option
+                                                                                          value="heart_eyes"
+                                                                        >
+                                                                                          😍
+                                                                        </option>
+                                                                        <option
+                                                                                          value="beer"
+                                                                        >
+                                                                                          🍺
+                                                                        </option>
+                                                                        <option
+                                                                                          value="clap"
+                                                                        >
+                                                                                          👏
+                                                                        </option>
+                                                                        <option
+                                                                                          value="sparkling_heart"
+                                                                        >
+                                                                                          💖
+                                                                        </option>
+                                                                        <option
+                                                                                          value="heart_eyes_cat"
+                                                                        >
+                                                                                          😻
+                                                                        </option>
+                                                                        <option
+                                                                                          value="dog"
+                                                                        >
+                                                                                          🐶
+                                                                        </option>
+                                                      </select>
+                                    </div>
+                                    <input
+                                                      type="submit"
+                                                      value="Add Message"
+                                    />
+                  </form>
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": null,
+                "expirationTime": 1,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "addCardcallBack": [Function],
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "addCardcallBack": [Function],
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+              },
+            },
+            "child": [Circular],
+            "effectTag": 32,
+            "expirationTime": 0,
+            "firstEffect": [Circular],
+            "index": 0,
+            "key": null,
+            "lastEffect": [Circular],
+            "memoizedProps": null,
+            "memoizedState": Object {
+              "element": <WrapperComponent
+                Component={[Function]}
+                context={null}
+                props={
+                                Object {
+                                                "addCardcallBack": [Function],
+                                              }
+                }
+/>,
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": null,
+            "ref": null,
+            "return": null,
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": Object {
+              "containerInfo": <div>
+                <form
+                                class="new-card-form"
+                >
+                                <div
+                                                class="new-card-form__form"
+                                >
+                                                <label
+                                                                class="new-card-form__form-label"
+                                                                for="text"
+                                                >
+                                                                Text: 
+                                                </label>
+                                                <input
+                                                                class="new-card-form__form-textarea"
+                                                                name="text"
+                                                                type="text"
+                                                                value=""
+                                                />
+                                </div>
+                                <div
+                                                class="new-card-form__form"
+                                >
+                                                <select
+                                                                name="emoji"
+                                                >
+                                                                <option
+                                                                                value=""
+                                                                />
+                                                                <option
+                                                                                value="heart_eyes"
+                                                                >
+                                                                                😍
+                                                                </option>
+                                                                <option
+                                                                                value="beer"
+                                                                >
+                                                                                🍺
+                                                                </option>
+                                                                <option
+                                                                                value="clap"
+                                                                >
+                                                                                👏
+                                                                </option>
+                                                                <option
+                                                                                value="sparkling_heart"
+                                                                >
+                                                                                💖
+                                                                </option>
+                                                                <option
+                                                                                value="heart_eyes_cat"
+                                                                >
+                                                                                😻
+                                                                </option>
+                                                                <option
+                                                                                value="dog"
+                                                                >
+                                                                                🐶
+                                                                </option>
+                                                </select>
+                                </div>
+                                <input
+                                                type="submit"
+                                                value="Add Message"
+                                />
+                </form>
+</div>,
+              "context": Object {},
+              "current": [Circular],
+              "earliestPendingTime": 0,
+              "earliestSuspendedTime": 0,
+              "finishedWork": null,
+              "firstBatch": null,
+              "hydrate": false,
+              "latestPendingTime": 0,
+              "latestPingedTime": 0,
+              "latestSuspendedTime": 0,
+              "nextScheduledRoot": null,
+              "pendingChildren": null,
+              "pendingCommitExpirationTime": 0,
+              "pendingContext": null,
+              "remainingExpirationTime": 0,
+            },
+            "tag": 3,
+            "treeBaseTime": 0,
+            "type": null,
+            "updateQueue": Object {
+              "baseState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "addCardcallBack": [Function],
+                                                    }
+                  }
+/>,
+              },
+              "expirationTime": 0,
+              "firstCapturedEffect": null,
+              "firstCapturedUpdate": null,
+              "firstEffect": null,
+              "firstUpdate": null,
+              "lastCapturedEffect": null,
+              "lastCapturedUpdate": null,
+              "lastEffect": null,
+              "lastUpdate": null,
+            },
+          },
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": WrapperComponent {
+            "_reactInternalFiber": [Circular],
+            "_reactInternalInstance": Object {},
+            "context": Object {},
+            "props": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "addCardcallBack": [Function],
+              },
+            },
+            "refs": Object {},
+            "state": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "addCardcallBack": [Function],
+              },
+            },
+            "updater": Object {
+              "enqueueForceUpdate": [Function],
+              "enqueueReplaceState": [Function],
+              "enqueueSetState": [Function],
+              "isMounted": [Function],
+            },
+          },
+          "tag": 2,
+          "treeBaseTime": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "_debugSource": null,
+        "alternate": null,
+        "child": FiberNode {
+          "_debugID": 6,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": [Circular],
+          "_debugSource": Object {
+            "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+            "lineNumber": 53,
+          },
+          "alternate": null,
+          "child": FiberNode {
+            "_debugID": 7,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": [Circular],
+            "_debugSource": Object {
+              "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+              "lineNumber": 54,
+            },
+            "alternate": null,
+            "child": FiberNode {
+              "_debugID": 10,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": [Circular],
+              "_debugSource": Object {
+                "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                "lineNumber": 55,
+              },
+              "alternate": null,
+              "child": null,
+              "effectTag": 0,
+              "expirationTime": 0,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": Object {
+                "children": "Text: ",
+                "className": "new-card-form__form-label",
+                "htmlFor": "text",
+              },
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": Object {
+                "children": "Text: ",
+                "className": "new-card-form__form-label",
+                "htmlFor": "text",
+              },
+              "ref": null,
+              "return": [Circular],
+              "selfBaseTime": 0,
+              "sibling": FiberNode {
+                "_debugID": 11,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": [Circular],
+                "_debugSource": Object {
+                  "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                  "lineNumber": 56,
+                },
+                "alternate": null,
+                "child": null,
+                "effectTag": 0,
+                "expirationTime": 0,
+                "firstEffect": null,
+                "index": 1,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": Object {
+                  "className": "new-card-form__form-textarea",
+                  "name": "text",
+                  "onChange": [Function],
+                  "type": "text",
+                  "value": "",
+                },
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": Object {
+                  "className": "new-card-form__form-textarea",
+                  "name": "text",
+                  "onChange": [Function],
+                  "type": "text",
+                  "value": "",
+                },
+                "ref": null,
+                "return": [Circular],
+                "selfBaseTime": 0,
+                "sibling": null,
+                "stateNode": <input
+                  class="new-card-form__form-textarea"
+                  name="text"
+                  type="text"
+                  value=""
+/>,
+                "tag": 5,
+                "treeBaseTime": 0,
+                "type": "input",
+                "updateQueue": null,
+              },
+              "stateNode": <label
+                class="new-card-form__form-label"
+                for="text"
+>
+                Text: 
+</label>,
+              "tag": 5,
+              "treeBaseTime": 0,
+              "type": "label",
+              "updateQueue": null,
+            },
+            "effectTag": 0,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "children": Array [
+                <label
+                  className="new-card-form__form-label"
+                  htmlFor="text"
+>
+                  Text: 
+</label>,
+                <input
+                  className="new-card-form__form-textarea"
+                  name="text"
+                  onChange={[Function]}
+                  type="text"
+                  value=""
+/>,
+              ],
+              "className": "new-card-form__form",
+            },
+            "memoizedState": null,
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "children": Array [
+                <label
+                  className="new-card-form__form-label"
+                  htmlFor="text"
+>
+                  Text: 
+</label>,
+                <input
+                  className="new-card-form__form-textarea"
+                  name="text"
+                  onChange={[Function]}
+                  type="text"
+                  value=""
+/>,
+              ],
+              "className": "new-card-form__form",
+            },
+            "ref": null,
+            "return": [Circular],
+            "selfBaseTime": 0,
+            "sibling": FiberNode {
+              "_debugID": 8,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": [Circular],
+              "_debugSource": Object {
+                "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                "lineNumber": 63,
+              },
+              "alternate": null,
+              "child": FiberNode {
+                "_debugID": 12,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": [Circular],
+                "_debugSource": Object {
+                  "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                  "lineNumber": 64,
+                },
+                "alternate": null,
+                "child": FiberNode {
+                  "_debugID": 13,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": [Circular],
+                  "_debugSource": Object {
+                    "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                    "lineNumber": 22,
+                  },
+                  "alternate": null,
+                  "child": null,
+                  "effectTag": 0,
+                  "expirationTime": 0,
+                  "firstEffect": null,
+                  "index": 0,
+                  "key": "",
+                  "lastEffect": null,
+                  "memoizedProps": Object {
+                    "children": undefined,
+                    "value": "",
+                  },
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": Object {
+                    "children": undefined,
+                    "value": "",
+                  },
+                  "ref": null,
+                  "return": [Circular],
+                  "selfBaseTime": 0,
+                  "sibling": FiberNode {
+                    "_debugID": 14,
+                    "_debugIsCurrentlyTiming": false,
+                    "_debugOwner": [Circular],
+                    "_debugSource": Object {
+                      "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                      "lineNumber": 22,
+                    },
+                    "alternate": null,
+                    "child": null,
+                    "effectTag": 0,
+                    "expirationTime": 0,
+                    "firstEffect": null,
+                    "index": 1,
+                    "key": "heart_eyes",
+                    "lastEffect": null,
+                    "memoizedProps": Object {
+                      "children": "😍",
+                      "value": "heart_eyes",
+                    },
+                    "memoizedState": null,
+                    "mode": 0,
+                    "nextEffect": null,
+                    "pendingProps": Object {
+                      "children": "😍",
+                      "value": "heart_eyes",
+                    },
+                    "ref": null,
+                    "return": [Circular],
+                    "selfBaseTime": 0,
+                    "sibling": FiberNode {
+                      "_debugID": 15,
+                      "_debugIsCurrentlyTiming": false,
+                      "_debugOwner": [Circular],
+                      "_debugSource": Object {
+                        "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                        "lineNumber": 22,
+                      },
+                      "alternate": null,
+                      "child": null,
+                      "effectTag": 0,
+                      "expirationTime": 0,
+                      "firstEffect": null,
+                      "index": 2,
+                      "key": "beer",
+                      "lastEffect": null,
+                      "memoizedProps": Object {
+                        "children": "🍺",
+                        "value": "beer",
+                      },
+                      "memoizedState": null,
+                      "mode": 0,
+                      "nextEffect": null,
+                      "pendingProps": Object {
+                        "children": "🍺",
+                        "value": "beer",
+                      },
+                      "ref": null,
+                      "return": [Circular],
+                      "selfBaseTime": 0,
+                      "sibling": FiberNode {
+                        "_debugID": 16,
+                        "_debugIsCurrentlyTiming": false,
+                        "_debugOwner": [Circular],
+                        "_debugSource": Object {
+                          "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                          "lineNumber": 22,
+                        },
+                        "alternate": null,
+                        "child": null,
+                        "effectTag": 0,
+                        "expirationTime": 0,
+                        "firstEffect": null,
+                        "index": 3,
+                        "key": "clap",
+                        "lastEffect": null,
+                        "memoizedProps": Object {
+                          "children": "👏",
+                          "value": "clap",
+                        },
+                        "memoizedState": null,
+                        "mode": 0,
+                        "nextEffect": null,
+                        "pendingProps": Object {
+                          "children": "👏",
+                          "value": "clap",
+                        },
+                        "ref": null,
+                        "return": [Circular],
+                        "selfBaseTime": 0,
+                        "sibling": FiberNode {
+                          "_debugID": 17,
+                          "_debugIsCurrentlyTiming": false,
+                          "_debugOwner": [Circular],
+                          "_debugSource": Object {
+                            "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                            "lineNumber": 22,
+                          },
+                          "alternate": null,
+                          "child": null,
+                          "effectTag": 0,
+                          "expirationTime": 0,
+                          "firstEffect": null,
+                          "index": 4,
+                          "key": "sparkling_heart",
+                          "lastEffect": null,
+                          "memoizedProps": Object {
+                            "children": "💖",
+                            "value": "sparkling_heart",
+                          },
+                          "memoizedState": null,
+                          "mode": 0,
+                          "nextEffect": null,
+                          "pendingProps": Object {
+                            "children": "💖",
+                            "value": "sparkling_heart",
+                          },
+                          "ref": null,
+                          "return": [Circular],
+                          "selfBaseTime": 0,
+                          "sibling": FiberNode {
+                            "_debugID": 18,
+                            "_debugIsCurrentlyTiming": false,
+                            "_debugOwner": [Circular],
+                            "_debugSource": Object {
+                              "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                              "lineNumber": 22,
+                            },
+                            "alternate": null,
+                            "child": null,
+                            "effectTag": 0,
+                            "expirationTime": 0,
+                            "firstEffect": null,
+                            "index": 5,
+                            "key": "heart_eyes_cat",
+                            "lastEffect": null,
+                            "memoizedProps": Object {
+                              "children": "😻",
+                              "value": "heart_eyes_cat",
+                            },
+                            "memoizedState": null,
+                            "mode": 0,
+                            "nextEffect": null,
+                            "pendingProps": Object {
+                              "children": "😻",
+                              "value": "heart_eyes_cat",
+                            },
+                            "ref": null,
+                            "return": [Circular],
+                            "selfBaseTime": 0,
+                            "sibling": FiberNode {
+                              "_debugID": 19,
+                              "_debugIsCurrentlyTiming": false,
+                              "_debugOwner": [Circular],
+                              "_debugSource": Object {
+                                "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                                "lineNumber": 22,
+                              },
+                              "alternate": null,
+                              "child": null,
+                              "effectTag": 0,
+                              "expirationTime": 0,
+                              "firstEffect": null,
+                              "index": 6,
+                              "key": "dog",
+                              "lastEffect": null,
+                              "memoizedProps": Object {
+                                "children": "🐶",
+                                "value": "dog",
+                              },
+                              "memoizedState": null,
+                              "mode": 0,
+                              "nextEffect": null,
+                              "pendingProps": Object {
+                                "children": "🐶",
+                                "value": "dog",
+                              },
+                              "ref": null,
+                              "return": [Circular],
+                              "selfBaseTime": 0,
+                              "sibling": null,
+                              "stateNode": <option
+                                value="dog"
+>
+                                🐶
+</option>,
+                              "tag": 5,
+                              "treeBaseTime": 0,
+                              "type": "option",
+                              "updateQueue": null,
+                            },
+                            "stateNode": <option
+                              value="heart_eyes_cat"
+>
+                              😻
+</option>,
+                            "tag": 5,
+                            "treeBaseTime": 0,
+                            "type": "option",
+                            "updateQueue": null,
+                          },
+                          "stateNode": <option
+                            value="sparkling_heart"
+>
+                            💖
+</option>,
+                          "tag": 5,
+                          "treeBaseTime": 0,
+                          "type": "option",
+                          "updateQueue": null,
+                        },
+                        "stateNode": <option
+                          value="clap"
+>
+                          👏
+</option>,
+                        "tag": 5,
+                        "treeBaseTime": 0,
+                        "type": "option",
+                        "updateQueue": null,
+                      },
+                      "stateNode": <option
+                        value="beer"
+>
+                        🍺
+</option>,
+                      "tag": 5,
+                      "treeBaseTime": 0,
+                      "type": "option",
+                      "updateQueue": null,
+                    },
+                    "stateNode": <option
+                      value="heart_eyes"
+>
+                      😍
+</option>,
+                    "tag": 5,
+                    "treeBaseTime": 0,
+                    "type": "option",
+                    "updateQueue": null,
+                  },
+                  "stateNode": <option
+                    value=""
+/>,
+                  "tag": 5,
+                  "treeBaseTime": 0,
+                  "type": "option",
+                  "updateQueue": null,
+                },
+                "effectTag": 0,
+                "expirationTime": 0,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": Object {
+                  "children": Array [
+                    <option
+                      value=""
+/>,
+                    <option
+                      value="heart_eyes"
+>
+                      😍
+</option>,
+                    <option
+                      value="beer"
+>
+                      🍺
+</option>,
+                    <option
+                      value="clap"
+>
+                      👏
+</option>,
+                    <option
+                      value="sparkling_heart"
+>
+                      💖
+</option>,
+                    <option
+                      value="heart_eyes_cat"
+>
+                      😻
+</option>,
+                    <option
+                      value="dog"
+>
+                      🐶
+</option>,
+                  ],
+                  "name": "emoji",
+                  "onChange": [Function],
+                  "value": "",
+                },
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": Object {
+                  "children": Array [
+                    <option
+                      value=""
+/>,
+                    <option
+                      value="heart_eyes"
+>
+                      😍
+</option>,
+                    <option
+                      value="beer"
+>
+                      🍺
+</option>,
+                    <option
+                      value="clap"
+>
+                      👏
+</option>,
+                    <option
+                      value="sparkling_heart"
+>
+                      💖
+</option>,
+                    <option
+                      value="heart_eyes_cat"
+>
+                      😻
+</option>,
+                    <option
+                      value="dog"
+>
+                      🐶
+</option>,
+                  ],
+                  "name": "emoji",
+                  "onChange": [Function],
+                  "value": "",
+                },
+                "ref": null,
+                "return": [Circular],
+                "selfBaseTime": 0,
+                "sibling": null,
+                "stateNode": <select
+                  name="emoji"
+>
+                  <option
+                                    value=""
+                  />
+                  <option
+                                    value="heart_eyes"
+                  >
+                                    😍
+                  </option>
+                  <option
+                                    value="beer"
+                  >
+                                    🍺
+                  </option>
+                  <option
+                                    value="clap"
+                  >
+                                    👏
+                  </option>
+                  <option
+                                    value="sparkling_heart"
+                  >
+                                    💖
+                  </option>
+                  <option
+                                    value="heart_eyes_cat"
+                  >
+                                    😻
+                  </option>
+                  <option
+                                    value="dog"
+                  >
+                                    🐶
+                  </option>
+</select>,
+                "tag": 5,
+                "treeBaseTime": 0,
+                "type": "select",
+                "updateQueue": null,
+              },
+              "effectTag": 0,
+              "expirationTime": 0,
+              "firstEffect": null,
+              "index": 1,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": Object {
+                "children": <select
+                  name="emoji"
+                  onChange={[Function]}
+                  value=""
+>
+                  <option
+                                    value=""
+                  />
+                  <option
+                                    value="heart_eyes"
+                  >
+                                    😍
+                  </option>
+                  <option
+                                    value="beer"
+                  >
+                                    🍺
+                  </option>
+                  <option
+                                    value="clap"
+                  >
+                                    👏
+                  </option>
+                  <option
+                                    value="sparkling_heart"
+                  >
+                                    💖
+                  </option>
+                  <option
+                                    value="heart_eyes_cat"
+                  >
+                                    😻
+                  </option>
+                  <option
+                                    value="dog"
+                  >
+                                    🐶
+                  </option>
+</select>,
+                "className": "new-card-form__form",
+              },
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": Object {
+                "children": <select
+                  name="emoji"
+                  onChange={[Function]}
+                  value=""
+>
+                  <option
+                                    value=""
+                  />
+                  <option
+                                    value="heart_eyes"
+                  >
+                                    😍
+                  </option>
+                  <option
+                                    value="beer"
+                  >
+                                    🍺
+                  </option>
+                  <option
+                                    value="clap"
+                  >
+                                    👏
+                  </option>
+                  <option
+                                    value="sparkling_heart"
+                  >
+                                    💖
+                  </option>
+                  <option
+                                    value="heart_eyes_cat"
+                  >
+                                    😻
+                  </option>
+                  <option
+                                    value="dog"
+                  >
+                                    🐶
+                  </option>
+</select>,
+                "className": "new-card-form__form",
+              },
+              "ref": null,
+              "return": [Circular],
+              "selfBaseTime": 0,
+              "sibling": FiberNode {
+                "_debugID": 9,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": [Circular],
+                "_debugSource": Object {
+                  "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                  "lineNumber": 68,
+                },
+                "alternate": null,
+                "child": null,
+                "effectTag": 0,
+                "expirationTime": 0,
+                "firstEffect": null,
+                "index": 2,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": Object {
+                  "type": "submit",
+                  "value": "Add Message",
+                },
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": Object {
+                  "type": "submit",
+                  "value": "Add Message",
+                },
+                "ref": null,
+                "return": [Circular],
+                "selfBaseTime": 0,
+                "sibling": null,
+                "stateNode": <input
+                  type="submit"
+                  value="Add Message"
+/>,
+                "tag": 5,
+                "treeBaseTime": 0,
+                "type": "input",
+                "updateQueue": null,
+              },
+              "stateNode": <div
+                class="new-card-form__form"
+>
+                <select
+                                name="emoji"
+                >
+                                <option
+                                                value=""
+                                />
+                                <option
+                                                value="heart_eyes"
+                                >
+                                                😍
+                                </option>
+                                <option
+                                                value="beer"
+                                >
+                                                🍺
+                                </option>
+                                <option
+                                                value="clap"
+                                >
+                                                👏
+                                </option>
+                                <option
+                                                value="sparkling_heart"
+                                >
+                                                💖
+                                </option>
+                                <option
+                                                value="heart_eyes_cat"
+                                >
+                                                😻
+                                </option>
+                                <option
+                                                value="dog"
+                                >
+                                                🐶
+                                </option>
+                </select>
+</div>,
+              "tag": 5,
+              "treeBaseTime": 0,
+              "type": "div",
+              "updateQueue": null,
+            },
+            "stateNode": <div
+              class="new-card-form__form"
+>
+              <label
+                            class="new-card-form__form-label"
+                            for="text"
+              >
+                            Text: 
+              </label>
+              <input
+                            class="new-card-form__form-textarea"
+                            name="text"
+                            type="text"
+                            value=""
+              />
+</div>,
+            "tag": 5,
+            "treeBaseTime": 0,
+            "type": "div",
+            "updateQueue": null,
+          },
+          "effectTag": 0,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "children": Array [
+              <div
+                className="new-card-form__form"
+>
+                <label
+                                className="new-card-form__form-label"
+                                htmlFor="text"
+                >
+                                Text: 
+                </label>
+                <input
+                                className="new-card-form__form-textarea"
+                                name="text"
+                                onChange={[Function]}
+                                type="text"
+                                value=""
+                />
+</div>,
+              <div
+                className="new-card-form__form"
+>
+                <select
+                                name="emoji"
+                                onChange={[Function]}
+                                value=""
+                >
+                                <option
+                                                value=""
+                                />
+                                <option
+                                                value="heart_eyes"
+                                >
+                                                😍
+                                </option>
+                                <option
+                                                value="beer"
+                                >
+                                                🍺
+                                </option>
+                                <option
+                                                value="clap"
+                                >
+                                                👏
+                                </option>
+                                <option
+                                                value="sparkling_heart"
+                                >
+                                                💖
+                                </option>
+                                <option
+                                                value="heart_eyes_cat"
+                                >
+                                                😻
+                                </option>
+                                <option
+                                                value="dog"
+                                >
+                                                🐶
+                                </option>
+                </select>
+</div>,
+              <input
+                type="submit"
+                value="Add Message"
+/>,
+            ],
+            "className": "new-card-form",
+            "onSubmit": [Function],
+          },
+          "memoizedState": null,
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "children": Array [
+              <div
+                className="new-card-form__form"
+>
+                <label
+                                className="new-card-form__form-label"
+                                htmlFor="text"
+                >
+                                Text: 
+                </label>
+                <input
+                                className="new-card-form__form-textarea"
+                                name="text"
+                                onChange={[Function]}
+                                type="text"
+                                value=""
+                />
+</div>,
+              <div
+                className="new-card-form__form"
+>
+                <select
+                                name="emoji"
+                                onChange={[Function]}
+                                value=""
+                >
+                                <option
+                                                value=""
+                                />
+                                <option
+                                                value="heart_eyes"
+                                >
+                                                😍
+                                </option>
+                                <option
+                                                value="beer"
+                                >
+                                                🍺
+                                </option>
+                                <option
+                                                value="clap"
+                                >
+                                                👏
+                                </option>
+                                <option
+                                                value="sparkling_heart"
+                                >
+                                                💖
+                                </option>
+                                <option
+                                                value="heart_eyes_cat"
+                                >
+                                                😻
+                                </option>
+                                <option
+                                                value="dog"
+                                >
+                                                🐶
+                                </option>
+                </select>
+</div>,
+              <input
+                type="submit"
+                value="Add Message"
+/>,
+            ],
+            "className": "new-card-form",
+            "onSubmit": [Function],
+          },
+          "ref": null,
+          "return": [Circular],
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": <form
+            class="new-card-form"
+>
+            <div
+                        class="new-card-form__form"
+            >
+                        <label
+                                    class="new-card-form__form-label"
+                                    for="text"
+                        >
+                                    Text: 
+                        </label>
+                        <input
+                                    class="new-card-form__form-textarea"
+                                    name="text"
+                                    type="text"
+                                    value=""
+                        />
+            </div>
+            <div
+                        class="new-card-form__form"
+            >
+                        <select
+                                    name="emoji"
+                        >
+                                    <option
+                                                value=""
+                                    />
+                                    <option
+                                                value="heart_eyes"
+                                    >
+                                                😍
+                                    </option>
+                                    <option
+                                                value="beer"
+                                    >
+                                                🍺
+                                    </option>
+                                    <option
+                                                value="clap"
+                                    >
+                                                👏
+                                    </option>
+                                    <option
+                                                value="sparkling_heart"
+                                    >
+                                                💖
+                                    </option>
+                                    <option
+                                                value="heart_eyes_cat"
+                                    >
+                                                😻
+                                    </option>
+                                    <option
+                                                value="dog"
+                                    >
+                                                🐶
+                                    </option>
+                        </select>
+            </div>
+            <input
+                        type="submit"
+                        value="Add Message"
+            />
+</form>,
+          "tag": 5,
+          "treeBaseTime": 0,
+          "type": "form",
+          "updateQueue": null,
+        },
+        "effectTag": 1,
+        "expirationTime": 0,
+        "firstEffect": null,
+        "index": 0,
+        "key": null,
+        "lastEffect": null,
+        "memoizedProps": Object {
+          "addCardcallBack": [Function],
+        },
+        "memoizedState": Object {
+          "emoji": "",
+          "text": "",
+        },
+        "mode": 0,
+        "nextEffect": null,
+        "pendingProps": Object {
+          "addCardcallBack": [Function],
+        },
+        "ref": null,
+        "return": FiberNode {
+          "_debugID": 4,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": null,
+          "_debugSource": null,
+          "alternate": null,
+          "child": [Circular],
+          "effectTag": 1,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "addCardcallBack": [Function],
+            },
+          },
+          "memoizedState": Object {
+            "context": null,
+            "mount": true,
+            "props": Object {
+              "addCardcallBack": [Function],
+            },
+          },
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "addCardcallBack": [Function],
+            },
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 1,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "alternate": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "alternate": [Circular],
+              "child": null,
+              "effectTag": 0,
+              "expirationTime": 1,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": null,
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <form
+                                    class="new-card-form"
+                  >
+                                    <div
+                                                      class="new-card-form__form"
+                                    >
+                                                      <label
+                                                                        class="new-card-form__form-label"
+                                                                        for="text"
+                                                      >
+                                                                        Text: 
+                                                      </label>
+                                                      <input
+                                                                        class="new-card-form__form-textarea"
+                                                                        name="text"
+                                                                        type="text"
+                                                                        value=""
+                                                      />
+                                    </div>
+                                    <div
+                                                      class="new-card-form__form"
+                                    >
+                                                      <select
+                                                                        name="emoji"
+                                                      >
+                                                                        <option
+                                                                                          value=""
+                                                                        />
+                                                                        <option
+                                                                                          value="heart_eyes"
+                                                                        >
+                                                                                          😍
+                                                                        </option>
+                                                                        <option
+                                                                                          value="beer"
+                                                                        >
+                                                                                          🍺
+                                                                        </option>
+                                                                        <option
+                                                                                          value="clap"
+                                                                        >
+                                                                                          👏
+                                                                        </option>
+                                                                        <option
+                                                                                          value="sparkling_heart"
+                                                                        >
+                                                                                          💖
+                                                                        </option>
+                                                                        <option
+                                                                                          value="heart_eyes_cat"
+                                                                        >
+                                                                                          😻
+                                                                        </option>
+                                                                        <option
+                                                                                          value="dog"
+                                                                        >
+                                                                                          🐶
+                                                                        </option>
+                                                      </select>
+                                    </div>
+                                    <input
+                                                      type="submit"
+                                                      value="Add Message"
+                                    />
+                  </form>
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": null,
+                "expirationTime": 1,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "addCardcallBack": [Function],
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "addCardcallBack": [Function],
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+              },
+            },
+            "child": [Circular],
+            "effectTag": 32,
+            "expirationTime": 0,
+            "firstEffect": [Circular],
+            "index": 0,
+            "key": null,
+            "lastEffect": [Circular],
+            "memoizedProps": null,
+            "memoizedState": Object {
+              "element": <WrapperComponent
+                Component={[Function]}
+                context={null}
+                props={
+                                Object {
+                                                "addCardcallBack": [Function],
+                                              }
+                }
+/>,
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": null,
+            "ref": null,
+            "return": null,
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": Object {
+              "containerInfo": <div>
+                <form
+                                class="new-card-form"
+                >
+                                <div
+                                                class="new-card-form__form"
+                                >
+                                                <label
+                                                                class="new-card-form__form-label"
+                                                                for="text"
+                                                >
+                                                                Text: 
+                                                </label>
+                                                <input
+                                                                class="new-card-form__form-textarea"
+                                                                name="text"
+                                                                type="text"
+                                                                value=""
+                                                />
+                                </div>
+                                <div
+                                                class="new-card-form__form"
+                                >
+                                                <select
+                                                                name="emoji"
+                                                >
+                                                                <option
+                                                                                value=""
+                                                                />
+                                                                <option
+                                                                                value="heart_eyes"
+                                                                >
+                                                                                😍
+                                                                </option>
+                                                                <option
+                                                                                value="beer"
+                                                                >
+                                                                                🍺
+                                                                </option>
+                                                                <option
+                                                                                value="clap"
+                                                                >
+                                                                                👏
+                                                                </option>
+                                                                <option
+                                                                                value="sparkling_heart"
+                                                                >
+                                                                                💖
+                                                                </option>
+                                                                <option
+                                                                                value="heart_eyes_cat"
+                                                                >
+                                                                                😻
+                                                                </option>
+                                                                <option
+                                                                                value="dog"
+                                                                >
+                                                                                🐶
+                                                                </option>
+                                                </select>
+                                </div>
+                                <input
+                                                type="submit"
+                                                value="Add Message"
+                                />
+                </form>
+</div>,
+              "context": Object {},
+              "current": [Circular],
+              "earliestPendingTime": 0,
+              "earliestSuspendedTime": 0,
+              "finishedWork": null,
+              "firstBatch": null,
+              "hydrate": false,
+              "latestPendingTime": 0,
+              "latestPingedTime": 0,
+              "latestSuspendedTime": 0,
+              "nextScheduledRoot": null,
+              "pendingChildren": null,
+              "pendingCommitExpirationTime": 0,
+              "pendingContext": null,
+              "remainingExpirationTime": 0,
+            },
+            "tag": 3,
+            "treeBaseTime": 0,
+            "type": null,
+            "updateQueue": Object {
+              "baseState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "addCardcallBack": [Function],
+                                                    }
+                  }
+/>,
+              },
+              "expirationTime": 0,
+              "firstCapturedEffect": null,
+              "firstCapturedUpdate": null,
+              "firstEffect": null,
+              "firstUpdate": null,
+              "lastCapturedEffect": null,
+              "lastCapturedUpdate": null,
+              "lastEffect": null,
+              "lastUpdate": null,
+            },
+          },
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": WrapperComponent {
+            "_reactInternalFiber": [Circular],
+            "_reactInternalInstance": Object {},
+            "context": Object {},
+            "props": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "addCardcallBack": [Function],
+              },
+            },
+            "refs": Object {},
+            "state": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "addCardcallBack": [Function],
+              },
+            },
+            "updater": Object {
+              "enqueueForceUpdate": [Function],
+              "enqueueReplaceState": [Function],
+              "enqueueSetState": [Function],
+              "isMounted": [Function],
+            },
+          },
+          "tag": 2,
+          "treeBaseTime": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "selfBaseTime": 0,
+        "sibling": null,
+        "stateNode": [Circular],
+        "tag": 2,
+        "treeBaseTime": 0,
+        "type": [Function],
+        "updateQueue": null,
+      },
+      "_reactInternalInstance": Object {},
+      "clearForm": [Function],
+      "context": Object {},
+      "onFieldChange": [Function],
+      "onFormSubmit": [Function],
+      "populateDropdown": [Function],
+      "props": Object {
+        "addCardcallBack": [Function],
+      },
+      "refs": Object {},
+      "state": Object {
+        "emoji": "",
+        "text": "",
+      },
+      "updater": Object {
+        "enqueueForceUpdate": [Function],
+        "enqueueReplaceState": [Function],
+        "enqueueSetState": [Function],
+        "isMounted": [Function],
+      },
+    },
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "addCardcallBack": [Function],
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <form
+        class="new-card-form"
+>
+        <div
+                class="new-card-form__form"
+        >
+                <label
+                        class="new-card-form__form-label"
+                        for="text"
+                >
+                        Text: 
+                </label>
+                <input
+                        class="new-card-form__form-textarea"
+                        name="text"
+                        type="text"
+                        value=""
+                />
+        </div>
+        <div
+                class="new-card-form__form"
+        >
+                <select
+                        name="emoji"
+                >
+                        <option
+                                value=""
+                        />
+                        <option
+                                value="heart_eyes"
+                        >
+                                😍
+                        </option>
+                        <option
+                                value="beer"
+                        >
+                                🍺
+                        </option>
+                        <option
+                                value="clap"
+                        >
+                                👏
+                        </option>
+                        <option
+                                value="sparkling_heart"
+                        >
+                                💖
+                        </option>
+                        <option
+                                value="heart_eyes_cat"
+                        >
+                                😻
+                        </option>
+                        <option
+                                value="dog"
+                        >
+                                🐶
+                        </option>
+                </select>
+        </div>
+        <input
+                type="submit"
+                value="Add Message"
+        />
+</form>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="new-card-form__form"
+>
+            <label
+                        className="new-card-form__form-label"
+                        htmlFor="text"
+            >
+                        Text: 
+            </label>
+            <input
+                        className="new-card-form__form-textarea"
+                        name="text"
+                        onChange={[Function]}
+                        type="text"
+                        value=""
+            />
+</div>,
+          <div
+            className="new-card-form__form"
+>
+            <select
+                        name="emoji"
+                        onChange={[Function]}
+                        value=""
+            >
+                        <option
+                                    value=""
+                        />
+                        <option
+                                    value="heart_eyes"
+                        >
+                                    😍
+                        </option>
+                        <option
+                                    value="beer"
+                        >
+                                    🍺
+                        </option>
+                        <option
+                                    value="clap"
+                        >
+                                    👏
+                        </option>
+                        <option
+                                    value="sparkling_heart"
+                        >
+                                    💖
+                        </option>
+                        <option
+                                    value="heart_eyes_cat"
+                        >
+                                    😻
+                        </option>
+                        <option
+                                    value="dog"
+                        >
+                                    🐶
+                        </option>
+            </select>
+</div>,
+          <input
+            type="submit"
+            value="Add Message"
+/>,
+        ],
+        "className": "new-card-form",
+        "onSubmit": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <div
+            class="new-card-form__form"
+>
+            <label
+                        class="new-card-form__form-label"
+                        for="text"
+            >
+                        Text: 
+            </label>
+            <input
+                        class="new-card-form__form-textarea"
+                        name="text"
+                        type="text"
+                        value=""
+            />
+</div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <label
+                className="new-card-form__form-label"
+                htmlFor="text"
+>
+                Text: 
+</label>,
+              <input
+                className="new-card-form__form-textarea"
+                name="text"
+                onChange={[Function]}
+                type="text"
+                value=""
+/>,
+            ],
+            "className": "new-card-form__form",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <label
+                class="new-card-form__form-label"
+                for="text"
+>
+                Text: 
+</label>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Text: ",
+                "className": "new-card-form__form-label",
+                "htmlFor": "text",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Text: ",
+              ],
+              "type": "label",
+            },
+            Object {
+              "instance": <input
+                class="new-card-form__form-textarea"
+                name="text"
+                type="text"
+                value=""
+/>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "new-card-form__form-textarea",
+                "name": "text",
+                "onChange": [Function],
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "input",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": <div
+            class="new-card-form__form"
+>
+            <select
+                        name="emoji"
+            >
+                        <option
+                                    value=""
+                        />
+                        <option
+                                    value="heart_eyes"
+                        >
+                                    😍
+                        </option>
+                        <option
+                                    value="beer"
+                        >
+                                    🍺
+                        </option>
+                        <option
+                                    value="clap"
+                        >
+                                    👏
+                        </option>
+                        <option
+                                    value="sparkling_heart"
+                        >
+                                    💖
+                        </option>
+                        <option
+                                    value="heart_eyes_cat"
+                        >
+                                    😻
+                        </option>
+                        <option
+                                    value="dog"
+                        >
+                                    🐶
+                        </option>
+            </select>
+</div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <select
+              name="emoji"
+              onChange={[Function]}
+              value=""
+>
+              <option
+                            value=""
+              />
+              <option
+                            value="heart_eyes"
+              >
+                            😍
+              </option>
+              <option
+                            value="beer"
+              >
+                            🍺
+              </option>
+              <option
+                            value="clap"
+              >
+                            👏
+              </option>
+              <option
+                            value="sparkling_heart"
+              >
+                            💖
+              </option>
+              <option
+                            value="heart_eyes_cat"
+              >
+                            😻
+              </option>
+              <option
+                            value="dog"
+              >
+                            🐶
+              </option>
+</select>,
+            "className": "new-card-form__form",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <select
+                name="emoji"
+>
+                <option
+                                value=""
+                />
+                <option
+                                value="heart_eyes"
+                >
+                                😍
+                </option>
+                <option
+                                value="beer"
+                >
+                                🍺
+                </option>
+                <option
+                                value="clap"
+                >
+                                👏
+                </option>
+                <option
+                                value="sparkling_heart"
+                >
+                                💖
+                </option>
+                <option
+                                value="heart_eyes_cat"
+                >
+                                😻
+                </option>
+                <option
+                                value="dog"
+                >
+                                🐶
+                </option>
+</select>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <option
+                    value=""
+/>,
+                  <option
+                    value="heart_eyes"
+>
+                    😍
+</option>,
+                  <option
+                    value="beer"
+>
+                    🍺
+</option>,
+                  <option
+                    value="clap"
+>
+                    👏
+</option>,
+                  <option
+                    value="sparkling_heart"
+>
+                    💖
+</option>,
+                  <option
+                    value="heart_eyes_cat"
+>
+                    😻
+</option>,
+                  <option
+                    value="dog"
+>
+                    🐶
+</option>,
+                ],
+                "name": "emoji",
+                "onChange": [Function],
+                "value": "",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <option
+                    value=""
+/>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    undefined,
+                  ],
+                  "type": "option",
+                },
+                Object {
+                  "instance": <option
+                    value="heart_eyes"
+>
+                    😍
+</option>,
+                  "key": "heart_eyes",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😍",
+                    "value": "heart_eyes",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "😍",
+                  ],
+                  "type": "option",
+                },
+                Object {
+                  "instance": <option
+                    value="beer"
+>
+                    🍺
+</option>,
+                  "key": "beer",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🍺",
+                    "value": "beer",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "🍺",
+                  ],
+                  "type": "option",
+                },
+                Object {
+                  "instance": <option
+                    value="clap"
+>
+                    👏
+</option>,
+                  "key": "clap",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "👏",
+                    "value": "clap",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "👏",
+                  ],
+                  "type": "option",
+                },
+                Object {
+                  "instance": <option
+                    value="sparkling_heart"
+>
+                    💖
+</option>,
+                  "key": "sparkling_heart",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "💖",
+                    "value": "sparkling_heart",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "💖",
+                  ],
+                  "type": "option",
+                },
+                Object {
+                  "instance": <option
+                    value="heart_eyes_cat"
+>
+                    😻
+</option>,
+                  "key": "heart_eyes_cat",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😻",
+                    "value": "heart_eyes_cat",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "😻",
+                  ],
+                  "type": "option",
+                },
+                Object {
+                  "instance": <option
+                    value="dog"
+>
+                    🐶
+</option>,
+                  "key": "dog",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "🐶",
+                    "value": "dog",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "🐶",
+                  ],
+                  "type": "option",
+                },
+              ],
+              "type": "select",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": <input
+            type="submit"
+            value="Add Message"
+/>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "type": "submit",
+            "value": "Add Message",
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+          ],
+          "type": "input",
+        },
+      ],
+      "type": "form",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": NewCardForm {
+        "_reactInternalFiber": FiberNode {
+          "_debugID": 5,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": FiberNode {
+            "_debugID": 4,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "alternate": null,
+            "child": [Circular],
+            "effectTag": 1,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "addCardcallBack": [Function],
+              },
+            },
+            "memoizedState": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "addCardcallBack": [Function],
+              },
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "addCardcallBack": [Function],
+              },
+            },
+            "ref": null,
+            "return": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "alternate": FiberNode {
+                "_debugID": 1,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "alternate": [Circular],
+                "child": null,
+                "effectTag": 0,
+                "expirationTime": 1,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": null,
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "selfBaseTime": 0,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": <div>
+                    <form
+                                        class="new-card-form"
+                    >
+                                        <div
+                                                            class="new-card-form__form"
+                                        >
+                                                            <label
+                                                                                class="new-card-form__form-label"
+                                                                                for="text"
+                                                            >
+                                                                                Text: 
+                                                            </label>
+                                                            <input
+                                                                                class="new-card-form__form-textarea"
+                                                                                name="text"
+                                                                                type="text"
+                                                                                value=""
+                                                            />
+                                        </div>
+                                        <div
+                                                            class="new-card-form__form"
+                                        >
+                                                            <select
+                                                                                name="emoji"
+                                                            >
+                                                                                <option
+                                                                                                    value=""
+                                                                                />
+                                                                                <option
+                                                                                                    value="heart_eyes"
+                                                                                >
+                                                                                                    😍
+                                                                                </option>
+                                                                                <option
+                                                                                                    value="beer"
+                                                                                >
+                                                                                                    🍺
+                                                                                </option>
+                                                                                <option
+                                                                                                    value="clap"
+                                                                                >
+                                                                                                    👏
+                                                                                </option>
+                                                                                <option
+                                                                                                    value="sparkling_heart"
+                                                                                >
+                                                                                                    💖
+                                                                                </option>
+                                                                                <option
+                                                                                                    value="heart_eyes_cat"
+                                                                                >
+                                                                                                    😻
+                                                                                </option>
+                                                                                <option
+                                                                                                    value="dog"
+                                                                                >
+                                                                                                    🐶
+                                                                                </option>
+                                                            </select>
+                                        </div>
+                                        <input
+                                                            type="submit"
+                                                            value="Add Message"
+                                        />
+                    </form>
+</div>,
+                  "context": Object {},
+                  "current": [Circular],
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "remainingExpirationTime": 0,
+                },
+                "tag": 3,
+                "treeBaseTime": 0,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": null,
+                  "expirationTime": 1,
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "addCardcallBack": [Function],
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "addCardcallBack": [Function],
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                },
+              },
+              "child": [Circular],
+              "effectTag": 32,
+              "expirationTime": 0,
+              "firstEffect": [Circular],
+              "index": 0,
+              "key": null,
+              "lastEffect": [Circular],
+              "memoizedProps": null,
+              "memoizedState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "addCardcallBack": [Function],
+                                                    }
+                  }
+/>,
+              },
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <form
+                                    class="new-card-form"
+                  >
+                                    <div
+                                                      class="new-card-form__form"
+                                    >
+                                                      <label
+                                                                        class="new-card-form__form-label"
+                                                                        for="text"
+                                                      >
+                                                                        Text: 
+                                                      </label>
+                                                      <input
+                                                                        class="new-card-form__form-textarea"
+                                                                        name="text"
+                                                                        type="text"
+                                                                        value=""
+                                                      />
+                                    </div>
+                                    <div
+                                                      class="new-card-form__form"
+                                    >
+                                                      <select
+                                                                        name="emoji"
+                                                      >
+                                                                        <option
+                                                                                          value=""
+                                                                        />
+                                                                        <option
+                                                                                          value="heart_eyes"
+                                                                        >
+                                                                                          😍
+                                                                        </option>
+                                                                        <option
+                                                                                          value="beer"
+                                                                        >
+                                                                                          🍺
+                                                                        </option>
+                                                                        <option
+                                                                                          value="clap"
+                                                                        >
+                                                                                          👏
+                                                                        </option>
+                                                                        <option
+                                                                                          value="sparkling_heart"
+                                                                        >
+                                                                                          💖
+                                                                        </option>
+                                                                        <option
+                                                                                          value="heart_eyes_cat"
+                                                                        >
+                                                                                          😻
+                                                                        </option>
+                                                                        <option
+                                                                                          value="dog"
+                                                                        >
+                                                                                          🐶
+                                                                        </option>
+                                                      </select>
+                                    </div>
+                                    <input
+                                                      type="submit"
+                                                      value="Add Message"
+                                    />
+                  </form>
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": Object {
+                  "element": <WrapperComponent
+                    Component={[Function]}
+                    context={null}
+                    props={
+                                        Object {
+                                                            "addCardcallBack": [Function],
+                                                          }
+                    }
+/>,
+                },
+                "expirationTime": 0,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": null,
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": null,
+              },
+            },
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": WrapperComponent {
+              "_reactInternalFiber": [Circular],
+              "_reactInternalInstance": Object {},
+              "context": Object {},
+              "props": Object {
+                "Component": [Function],
+                "context": null,
+                "props": Object {
+                  "addCardcallBack": [Function],
+                },
+              },
+              "refs": Object {},
+              "state": Object {
+                "context": null,
+                "mount": true,
+                "props": Object {
+                  "addCardcallBack": [Function],
+                },
+              },
+              "updater": Object {
+                "enqueueForceUpdate": [Function],
+                "enqueueReplaceState": [Function],
+                "enqueueSetState": [Function],
+                "isMounted": [Function],
+              },
+            },
+            "tag": 2,
+            "treeBaseTime": 0,
+            "type": [Function],
+            "updateQueue": null,
+          },
+          "_debugSource": null,
+          "alternate": null,
+          "child": FiberNode {
+            "_debugID": 6,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": [Circular],
+            "_debugSource": Object {
+              "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+              "lineNumber": 53,
+            },
+            "alternate": null,
+            "child": FiberNode {
+              "_debugID": 7,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": [Circular],
+              "_debugSource": Object {
+                "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                "lineNumber": 54,
+              },
+              "alternate": null,
+              "child": FiberNode {
+                "_debugID": 10,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": [Circular],
+                "_debugSource": Object {
+                  "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                  "lineNumber": 55,
+                },
+                "alternate": null,
+                "child": null,
+                "effectTag": 0,
+                "expirationTime": 0,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": Object {
+                  "children": "Text: ",
+                  "className": "new-card-form__form-label",
+                  "htmlFor": "text",
+                },
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": Object {
+                  "children": "Text: ",
+                  "className": "new-card-form__form-label",
+                  "htmlFor": "text",
+                },
+                "ref": null,
+                "return": [Circular],
+                "selfBaseTime": 0,
+                "sibling": FiberNode {
+                  "_debugID": 11,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": [Circular],
+                  "_debugSource": Object {
+                    "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                    "lineNumber": 56,
+                  },
+                  "alternate": null,
+                  "child": null,
+                  "effectTag": 0,
+                  "expirationTime": 0,
+                  "firstEffect": null,
+                  "index": 1,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": Object {
+                    "className": "new-card-form__form-textarea",
+                    "name": "text",
+                    "onChange": [Function],
+                    "type": "text",
+                    "value": "",
+                  },
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": Object {
+                    "className": "new-card-form__form-textarea",
+                    "name": "text",
+                    "onChange": [Function],
+                    "type": "text",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "return": [Circular],
+                  "selfBaseTime": 0,
+                  "sibling": null,
+                  "stateNode": <input
+                    class="new-card-form__form-textarea"
+                    name="text"
+                    type="text"
+                    value=""
+/>,
+                  "tag": 5,
+                  "treeBaseTime": 0,
+                  "type": "input",
+                  "updateQueue": null,
+                },
+                "stateNode": <label
+                  class="new-card-form__form-label"
+                  for="text"
+>
+                  Text: 
+</label>,
+                "tag": 5,
+                "treeBaseTime": 0,
+                "type": "label",
+                "updateQueue": null,
+              },
+              "effectTag": 0,
+              "expirationTime": 0,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": Object {
+                "children": Array [
+                  <label
+                    className="new-card-form__form-label"
+                    htmlFor="text"
+>
+                    Text: 
+</label>,
+                  <input
+                    className="new-card-form__form-textarea"
+                    name="text"
+                    onChange={[Function]}
+                    type="text"
+                    value=""
+/>,
+                ],
+                "className": "new-card-form__form",
+              },
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": Object {
+                "children": Array [
+                  <label
+                    className="new-card-form__form-label"
+                    htmlFor="text"
+>
+                    Text: 
+</label>,
+                  <input
+                    className="new-card-form__form-textarea"
+                    name="text"
+                    onChange={[Function]}
+                    type="text"
+                    value=""
+/>,
+                ],
+                "className": "new-card-form__form",
+              },
+              "ref": null,
+              "return": [Circular],
+              "selfBaseTime": 0,
+              "sibling": FiberNode {
+                "_debugID": 8,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": [Circular],
+                "_debugSource": Object {
+                  "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                  "lineNumber": 63,
+                },
+                "alternate": null,
+                "child": FiberNode {
+                  "_debugID": 12,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": [Circular],
+                  "_debugSource": Object {
+                    "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                    "lineNumber": 64,
+                  },
+                  "alternate": null,
+                  "child": FiberNode {
+                    "_debugID": 13,
+                    "_debugIsCurrentlyTiming": false,
+                    "_debugOwner": [Circular],
+                    "_debugSource": Object {
+                      "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                      "lineNumber": 22,
+                    },
+                    "alternate": null,
+                    "child": null,
+                    "effectTag": 0,
+                    "expirationTime": 0,
+                    "firstEffect": null,
+                    "index": 0,
+                    "key": "",
+                    "lastEffect": null,
+                    "memoizedProps": Object {
+                      "children": undefined,
+                      "value": "",
+                    },
+                    "memoizedState": null,
+                    "mode": 0,
+                    "nextEffect": null,
+                    "pendingProps": Object {
+                      "children": undefined,
+                      "value": "",
+                    },
+                    "ref": null,
+                    "return": [Circular],
+                    "selfBaseTime": 0,
+                    "sibling": FiberNode {
+                      "_debugID": 14,
+                      "_debugIsCurrentlyTiming": false,
+                      "_debugOwner": [Circular],
+                      "_debugSource": Object {
+                        "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                        "lineNumber": 22,
+                      },
+                      "alternate": null,
+                      "child": null,
+                      "effectTag": 0,
+                      "expirationTime": 0,
+                      "firstEffect": null,
+                      "index": 1,
+                      "key": "heart_eyes",
+                      "lastEffect": null,
+                      "memoizedProps": Object {
+                        "children": "😍",
+                        "value": "heart_eyes",
+                      },
+                      "memoizedState": null,
+                      "mode": 0,
+                      "nextEffect": null,
+                      "pendingProps": Object {
+                        "children": "😍",
+                        "value": "heart_eyes",
+                      },
+                      "ref": null,
+                      "return": [Circular],
+                      "selfBaseTime": 0,
+                      "sibling": FiberNode {
+                        "_debugID": 15,
+                        "_debugIsCurrentlyTiming": false,
+                        "_debugOwner": [Circular],
+                        "_debugSource": Object {
+                          "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                          "lineNumber": 22,
+                        },
+                        "alternate": null,
+                        "child": null,
+                        "effectTag": 0,
+                        "expirationTime": 0,
+                        "firstEffect": null,
+                        "index": 2,
+                        "key": "beer",
+                        "lastEffect": null,
+                        "memoizedProps": Object {
+                          "children": "🍺",
+                          "value": "beer",
+                        },
+                        "memoizedState": null,
+                        "mode": 0,
+                        "nextEffect": null,
+                        "pendingProps": Object {
+                          "children": "🍺",
+                          "value": "beer",
+                        },
+                        "ref": null,
+                        "return": [Circular],
+                        "selfBaseTime": 0,
+                        "sibling": FiberNode {
+                          "_debugID": 16,
+                          "_debugIsCurrentlyTiming": false,
+                          "_debugOwner": [Circular],
+                          "_debugSource": Object {
+                            "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                            "lineNumber": 22,
+                          },
+                          "alternate": null,
+                          "child": null,
+                          "effectTag": 0,
+                          "expirationTime": 0,
+                          "firstEffect": null,
+                          "index": 3,
+                          "key": "clap",
+                          "lastEffect": null,
+                          "memoizedProps": Object {
+                            "children": "👏",
+                            "value": "clap",
+                          },
+                          "memoizedState": null,
+                          "mode": 0,
+                          "nextEffect": null,
+                          "pendingProps": Object {
+                            "children": "👏",
+                            "value": "clap",
+                          },
+                          "ref": null,
+                          "return": [Circular],
+                          "selfBaseTime": 0,
+                          "sibling": FiberNode {
+                            "_debugID": 17,
+                            "_debugIsCurrentlyTiming": false,
+                            "_debugOwner": [Circular],
+                            "_debugSource": Object {
+                              "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                              "lineNumber": 22,
+                            },
+                            "alternate": null,
+                            "child": null,
+                            "effectTag": 0,
+                            "expirationTime": 0,
+                            "firstEffect": null,
+                            "index": 4,
+                            "key": "sparkling_heart",
+                            "lastEffect": null,
+                            "memoizedProps": Object {
+                              "children": "💖",
+                              "value": "sparkling_heart",
+                            },
+                            "memoizedState": null,
+                            "mode": 0,
+                            "nextEffect": null,
+                            "pendingProps": Object {
+                              "children": "💖",
+                              "value": "sparkling_heart",
+                            },
+                            "ref": null,
+                            "return": [Circular],
+                            "selfBaseTime": 0,
+                            "sibling": FiberNode {
+                              "_debugID": 18,
+                              "_debugIsCurrentlyTiming": false,
+                              "_debugOwner": [Circular],
+                              "_debugSource": Object {
+                                "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                                "lineNumber": 22,
+                              },
+                              "alternate": null,
+                              "child": null,
+                              "effectTag": 0,
+                              "expirationTime": 0,
+                              "firstEffect": null,
+                              "index": 5,
+                              "key": "heart_eyes_cat",
+                              "lastEffect": null,
+                              "memoizedProps": Object {
+                                "children": "😻",
+                                "value": "heart_eyes_cat",
+                              },
+                              "memoizedState": null,
+                              "mode": 0,
+                              "nextEffect": null,
+                              "pendingProps": Object {
+                                "children": "😻",
+                                "value": "heart_eyes_cat",
+                              },
+                              "ref": null,
+                              "return": [Circular],
+                              "selfBaseTime": 0,
+                              "sibling": FiberNode {
+                                "_debugID": 19,
+                                "_debugIsCurrentlyTiming": false,
+                                "_debugOwner": [Circular],
+                                "_debugSource": Object {
+                                  "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                                  "lineNumber": 22,
+                                },
+                                "alternate": null,
+                                "child": null,
+                                "effectTag": 0,
+                                "expirationTime": 0,
+                                "firstEffect": null,
+                                "index": 6,
+                                "key": "dog",
+                                "lastEffect": null,
+                                "memoizedProps": Object {
+                                  "children": "🐶",
+                                  "value": "dog",
+                                },
+                                "memoizedState": null,
+                                "mode": 0,
+                                "nextEffect": null,
+                                "pendingProps": Object {
+                                  "children": "🐶",
+                                  "value": "dog",
+                                },
+                                "ref": null,
+                                "return": [Circular],
+                                "selfBaseTime": 0,
+                                "sibling": null,
+                                "stateNode": <option
+                                  value="dog"
+>
+                                  🐶
+</option>,
+                                "tag": 5,
+                                "treeBaseTime": 0,
+                                "type": "option",
+                                "updateQueue": null,
+                              },
+                              "stateNode": <option
+                                value="heart_eyes_cat"
+>
+                                😻
+</option>,
+                              "tag": 5,
+                              "treeBaseTime": 0,
+                              "type": "option",
+                              "updateQueue": null,
+                            },
+                            "stateNode": <option
+                              value="sparkling_heart"
+>
+                              💖
+</option>,
+                            "tag": 5,
+                            "treeBaseTime": 0,
+                            "type": "option",
+                            "updateQueue": null,
+                          },
+                          "stateNode": <option
+                            value="clap"
+>
+                            👏
+</option>,
+                          "tag": 5,
+                          "treeBaseTime": 0,
+                          "type": "option",
+                          "updateQueue": null,
+                        },
+                        "stateNode": <option
+                          value="beer"
+>
+                          🍺
+</option>,
+                        "tag": 5,
+                        "treeBaseTime": 0,
+                        "type": "option",
+                        "updateQueue": null,
+                      },
+                      "stateNode": <option
+                        value="heart_eyes"
+>
+                        😍
+</option>,
+                      "tag": 5,
+                      "treeBaseTime": 0,
+                      "type": "option",
+                      "updateQueue": null,
+                    },
+                    "stateNode": <option
+                      value=""
+/>,
+                    "tag": 5,
+                    "treeBaseTime": 0,
+                    "type": "option",
+                    "updateQueue": null,
+                  },
+                  "effectTag": 0,
+                  "expirationTime": 0,
+                  "firstEffect": null,
+                  "index": 0,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": Object {
+                    "children": Array [
+                      <option
+                        value=""
+/>,
+                      <option
+                        value="heart_eyes"
+>
+                        😍
+</option>,
+                      <option
+                        value="beer"
+>
+                        🍺
+</option>,
+                      <option
+                        value="clap"
+>
+                        👏
+</option>,
+                      <option
+                        value="sparkling_heart"
+>
+                        💖
+</option>,
+                      <option
+                        value="heart_eyes_cat"
+>
+                        😻
+</option>,
+                      <option
+                        value="dog"
+>
+                        🐶
+</option>,
+                    ],
+                    "name": "emoji",
+                    "onChange": [Function],
+                    "value": "",
+                  },
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": Object {
+                    "children": Array [
+                      <option
+                        value=""
+/>,
+                      <option
+                        value="heart_eyes"
+>
+                        😍
+</option>,
+                      <option
+                        value="beer"
+>
+                        🍺
+</option>,
+                      <option
+                        value="clap"
+>
+                        👏
+</option>,
+                      <option
+                        value="sparkling_heart"
+>
+                        💖
+</option>,
+                      <option
+                        value="heart_eyes_cat"
+>
+                        😻
+</option>,
+                      <option
+                        value="dog"
+>
+                        🐶
+</option>,
+                    ],
+                    "name": "emoji",
+                    "onChange": [Function],
+                    "value": "",
+                  },
+                  "ref": null,
+                  "return": [Circular],
+                  "selfBaseTime": 0,
+                  "sibling": null,
+                  "stateNode": <select
+                    name="emoji"
+>
+                    <option
+                                        value=""
+                    />
+                    <option
+                                        value="heart_eyes"
+                    >
+                                        😍
+                    </option>
+                    <option
+                                        value="beer"
+                    >
+                                        🍺
+                    </option>
+                    <option
+                                        value="clap"
+                    >
+                                        👏
+                    </option>
+                    <option
+                                        value="sparkling_heart"
+                    >
+                                        💖
+                    </option>
+                    <option
+                                        value="heart_eyes_cat"
+                    >
+                                        😻
+                    </option>
+                    <option
+                                        value="dog"
+                    >
+                                        🐶
+                    </option>
+</select>,
+                  "tag": 5,
+                  "treeBaseTime": 0,
+                  "type": "select",
+                  "updateQueue": null,
+                },
+                "effectTag": 0,
+                "expirationTime": 0,
+                "firstEffect": null,
+                "index": 1,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": Object {
+                  "children": <select
+                    name="emoji"
+                    onChange={[Function]}
+                    value=""
+>
+                    <option
+                                        value=""
+                    />
+                    <option
+                                        value="heart_eyes"
+                    >
+                                        😍
+                    </option>
+                    <option
+                                        value="beer"
+                    >
+                                        🍺
+                    </option>
+                    <option
+                                        value="clap"
+                    >
+                                        👏
+                    </option>
+                    <option
+                                        value="sparkling_heart"
+                    >
+                                        💖
+                    </option>
+                    <option
+                                        value="heart_eyes_cat"
+                    >
+                                        😻
+                    </option>
+                    <option
+                                        value="dog"
+                    >
+                                        🐶
+                    </option>
+</select>,
+                  "className": "new-card-form__form",
+                },
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": Object {
+                  "children": <select
+                    name="emoji"
+                    onChange={[Function]}
+                    value=""
+>
+                    <option
+                                        value=""
+                    />
+                    <option
+                                        value="heart_eyes"
+                    >
+                                        😍
+                    </option>
+                    <option
+                                        value="beer"
+                    >
+                                        🍺
+                    </option>
+                    <option
+                                        value="clap"
+                    >
+                                        👏
+                    </option>
+                    <option
+                                        value="sparkling_heart"
+                    >
+                                        💖
+                    </option>
+                    <option
+                                        value="heart_eyes_cat"
+                    >
+                                        😻
+                    </option>
+                    <option
+                                        value="dog"
+                    >
+                                        🐶
+                    </option>
+</select>,
+                  "className": "new-card-form__form",
+                },
+                "ref": null,
+                "return": [Circular],
+                "selfBaseTime": 0,
+                "sibling": FiberNode {
+                  "_debugID": 9,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": [Circular],
+                  "_debugSource": Object {
+                    "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/NewCardForm.js",
+                    "lineNumber": 68,
+                  },
+                  "alternate": null,
+                  "child": null,
+                  "effectTag": 0,
+                  "expirationTime": 0,
+                  "firstEffect": null,
+                  "index": 2,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": Object {
+                    "type": "submit",
+                    "value": "Add Message",
+                  },
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": Object {
+                    "type": "submit",
+                    "value": "Add Message",
+                  },
+                  "ref": null,
+                  "return": [Circular],
+                  "selfBaseTime": 0,
+                  "sibling": null,
+                  "stateNode": <input
+                    type="submit"
+                    value="Add Message"
+/>,
+                  "tag": 5,
+                  "treeBaseTime": 0,
+                  "type": "input",
+                  "updateQueue": null,
+                },
+                "stateNode": <div
+                  class="new-card-form__form"
+>
+                  <select
+                                    name="emoji"
+                  >
+                                    <option
+                                                      value=""
+                                    />
+                                    <option
+                                                      value="heart_eyes"
+                                    >
+                                                      😍
+                                    </option>
+                                    <option
+                                                      value="beer"
+                                    >
+                                                      🍺
+                                    </option>
+                                    <option
+                                                      value="clap"
+                                    >
+                                                      👏
+                                    </option>
+                                    <option
+                                                      value="sparkling_heart"
+                                    >
+                                                      💖
+                                    </option>
+                                    <option
+                                                      value="heart_eyes_cat"
+                                    >
+                                                      😻
+                                    </option>
+                                    <option
+                                                      value="dog"
+                                    >
+                                                      🐶
+                                    </option>
+                  </select>
+</div>,
+                "tag": 5,
+                "treeBaseTime": 0,
+                "type": "div",
+                "updateQueue": null,
+              },
+              "stateNode": <div
+                class="new-card-form__form"
+>
+                <label
+                                class="new-card-form__form-label"
+                                for="text"
+                >
+                                Text: 
+                </label>
+                <input
+                                class="new-card-form__form-textarea"
+                                name="text"
+                                type="text"
+                                value=""
+                />
+</div>,
+              "tag": 5,
+              "treeBaseTime": 0,
+              "type": "div",
+              "updateQueue": null,
+            },
+            "effectTag": 0,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "children": Array [
+                <div
+                  className="new-card-form__form"
+>
+                  <label
+                                    className="new-card-form__form-label"
+                                    htmlFor="text"
+                  >
+                                    Text: 
+                  </label>
+                  <input
+                                    className="new-card-form__form-textarea"
+                                    name="text"
+                                    onChange={[Function]}
+                                    type="text"
+                                    value=""
+                  />
+</div>,
+                <div
+                  className="new-card-form__form"
+>
+                  <select
+                                    name="emoji"
+                                    onChange={[Function]}
+                                    value=""
+                  >
+                                    <option
+                                                      value=""
+                                    />
+                                    <option
+                                                      value="heart_eyes"
+                                    >
+                                                      😍
+                                    </option>
+                                    <option
+                                                      value="beer"
+                                    >
+                                                      🍺
+                                    </option>
+                                    <option
+                                                      value="clap"
+                                    >
+                                                      👏
+                                    </option>
+                                    <option
+                                                      value="sparkling_heart"
+                                    >
+                                                      💖
+                                    </option>
+                                    <option
+                                                      value="heart_eyes_cat"
+                                    >
+                                                      😻
+                                    </option>
+                                    <option
+                                                      value="dog"
+                                    >
+                                                      🐶
+                                    </option>
+                  </select>
+</div>,
+                <input
+                  type="submit"
+                  value="Add Message"
+/>,
+              ],
+              "className": "new-card-form",
+              "onSubmit": [Function],
+            },
+            "memoizedState": null,
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "children": Array [
+                <div
+                  className="new-card-form__form"
+>
+                  <label
+                                    className="new-card-form__form-label"
+                                    htmlFor="text"
+                  >
+                                    Text: 
+                  </label>
+                  <input
+                                    className="new-card-form__form-textarea"
+                                    name="text"
+                                    onChange={[Function]}
+                                    type="text"
+                                    value=""
+                  />
+</div>,
+                <div
+                  className="new-card-form__form"
+>
+                  <select
+                                    name="emoji"
+                                    onChange={[Function]}
+                                    value=""
+                  >
+                                    <option
+                                                      value=""
+                                    />
+                                    <option
+                                                      value="heart_eyes"
+                                    >
+                                                      😍
+                                    </option>
+                                    <option
+                                                      value="beer"
+                                    >
+                                                      🍺
+                                    </option>
+                                    <option
+                                                      value="clap"
+                                    >
+                                                      👏
+                                    </option>
+                                    <option
+                                                      value="sparkling_heart"
+                                    >
+                                                      💖
+                                    </option>
+                                    <option
+                                                      value="heart_eyes_cat"
+                                    >
+                                                      😻
+                                    </option>
+                                    <option
+                                                      value="dog"
+                                    >
+                                                      🐶
+                                    </option>
+                  </select>
+</div>,
+                <input
+                  type="submit"
+                  value="Add Message"
+/>,
+              ],
+              "className": "new-card-form",
+              "onSubmit": [Function],
+            },
+            "ref": null,
+            "return": [Circular],
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": <form
+              class="new-card-form"
+>
+              <div
+                            class="new-card-form__form"
+              >
+                            <label
+                                          class="new-card-form__form-label"
+                                          for="text"
+                            >
+                                          Text: 
+                            </label>
+                            <input
+                                          class="new-card-form__form-textarea"
+                                          name="text"
+                                          type="text"
+                                          value=""
+                            />
+              </div>
+              <div
+                            class="new-card-form__form"
+              >
+                            <select
+                                          name="emoji"
+                            >
+                                          <option
+                                                        value=""
+                                          />
+                                          <option
+                                                        value="heart_eyes"
+                                          >
+                                                        😍
+                                          </option>
+                                          <option
+                                                        value="beer"
+                                          >
+                                                        🍺
+                                          </option>
+                                          <option
+                                                        value="clap"
+                                          >
+                                                        👏
+                                          </option>
+                                          <option
+                                                        value="sparkling_heart"
+                                          >
+                                                        💖
+                                          </option>
+                                          <option
+                                                        value="heart_eyes_cat"
+                                          >
+                                                        😻
+                                          </option>
+                                          <option
+                                                        value="dog"
+                                          >
+                                                        🐶
+                                          </option>
+                            </select>
+              </div>
+              <input
+                            type="submit"
+                            value="Add Message"
+              />
+</form>,
+            "tag": 5,
+            "treeBaseTime": 0,
+            "type": "form",
+            "updateQueue": null,
+          },
+          "effectTag": 1,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "addCardcallBack": [Function],
+          },
+          "memoizedState": Object {
+            "emoji": "",
+            "text": "",
+          },
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "addCardcallBack": [Function],
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 4,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "alternate": null,
+            "child": [Circular],
+            "effectTag": 1,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "addCardcallBack": [Function],
+              },
+            },
+            "memoizedState": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "addCardcallBack": [Function],
+              },
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "addCardcallBack": [Function],
+              },
+            },
+            "ref": null,
+            "return": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "alternate": FiberNode {
+                "_debugID": 1,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "alternate": [Circular],
+                "child": null,
+                "effectTag": 0,
+                "expirationTime": 1,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": null,
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "selfBaseTime": 0,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": <div>
+                    <form
+                                        class="new-card-form"
+                    >
+                                        <div
+                                                            class="new-card-form__form"
+                                        >
+                                                            <label
+                                                                                class="new-card-form__form-label"
+                                                                                for="text"
+                                                            >
+                                                                                Text: 
+                                                            </label>
+                                                            <input
+                                                                                class="new-card-form__form-textarea"
+                                                                                name="text"
+                                                                                type="text"
+                                                                                value=""
+                                                            />
+                                        </div>
+                                        <div
+                                                            class="new-card-form__form"
+                                        >
+                                                            <select
+                                                                                name="emoji"
+                                                            >
+                                                                                <option
+                                                                                                    value=""
+                                                                                />
+                                                                                <option
+                                                                                                    value="heart_eyes"
+                                                                                >
+                                                                                                    😍
+                                                                                </option>
+                                                                                <option
+                                                                                                    value="beer"
+                                                                                >
+                                                                                                    🍺
+                                                                                </option>
+                                                                                <option
+                                                                                                    value="clap"
+                                                                                >
+                                                                                                    👏
+                                                                                </option>
+                                                                                <option
+                                                                                                    value="sparkling_heart"
+                                                                                >
+                                                                                                    💖
+                                                                                </option>
+                                                                                <option
+                                                                                                    value="heart_eyes_cat"
+                                                                                >
+                                                                                                    😻
+                                                                                </option>
+                                                                                <option
+                                                                                                    value="dog"
+                                                                                >
+                                                                                                    🐶
+                                                                                </option>
+                                                            </select>
+                                        </div>
+                                        <input
+                                                            type="submit"
+                                                            value="Add Message"
+                                        />
+                    </form>
+</div>,
+                  "context": Object {},
+                  "current": [Circular],
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "remainingExpirationTime": 0,
+                },
+                "tag": 3,
+                "treeBaseTime": 0,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": null,
+                  "expirationTime": 1,
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "addCardcallBack": [Function],
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "addCardcallBack": [Function],
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                },
+              },
+              "child": [Circular],
+              "effectTag": 32,
+              "expirationTime": 0,
+              "firstEffect": [Circular],
+              "index": 0,
+              "key": null,
+              "lastEffect": [Circular],
+              "memoizedProps": null,
+              "memoizedState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "addCardcallBack": [Function],
+                                                    }
+                  }
+/>,
+              },
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <form
+                                    class="new-card-form"
+                  >
+                                    <div
+                                                      class="new-card-form__form"
+                                    >
+                                                      <label
+                                                                        class="new-card-form__form-label"
+                                                                        for="text"
+                                                      >
+                                                                        Text: 
+                                                      </label>
+                                                      <input
+                                                                        class="new-card-form__form-textarea"
+                                                                        name="text"
+                                                                        type="text"
+                                                                        value=""
+                                                      />
+                                    </div>
+                                    <div
+                                                      class="new-card-form__form"
+                                    >
+                                                      <select
+                                                                        name="emoji"
+                                                      >
+                                                                        <option
+                                                                                          value=""
+                                                                        />
+                                                                        <option
+                                                                                          value="heart_eyes"
+                                                                        >
+                                                                                          😍
+                                                                        </option>
+                                                                        <option
+                                                                                          value="beer"
+                                                                        >
+                                                                                          🍺
+                                                                        </option>
+                                                                        <option
+                                                                                          value="clap"
+                                                                        >
+                                                                                          👏
+                                                                        </option>
+                                                                        <option
+                                                                                          value="sparkling_heart"
+                                                                        >
+                                                                                          💖
+                                                                        </option>
+                                                                        <option
+                                                                                          value="heart_eyes_cat"
+                                                                        >
+                                                                                          😻
+                                                                        </option>
+                                                                        <option
+                                                                                          value="dog"
+                                                                        >
+                                                                                          🐶
+                                                                        </option>
+                                                      </select>
+                                    </div>
+                                    <input
+                                                      type="submit"
+                                                      value="Add Message"
+                                    />
+                  </form>
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": Object {
+                  "element": <WrapperComponent
+                    Component={[Function]}
+                    context={null}
+                    props={
+                                        Object {
+                                                            "addCardcallBack": [Function],
+                                                          }
+                    }
+/>,
+                },
+                "expirationTime": 0,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": null,
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": null,
+              },
+            },
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": WrapperComponent {
+              "_reactInternalFiber": [Circular],
+              "_reactInternalInstance": Object {},
+              "context": Object {},
+              "props": Object {
+                "Component": [Function],
+                "context": null,
+                "props": Object {
+                  "addCardcallBack": [Function],
+                },
+              },
+              "refs": Object {},
+              "state": Object {
+                "context": null,
+                "mount": true,
+                "props": Object {
+                  "addCardcallBack": [Function],
+                },
+              },
+              "updater": Object {
+                "enqueueForceUpdate": [Function],
+                "enqueueReplaceState": [Function],
+                "enqueueSetState": [Function],
+                "isMounted": [Function],
+              },
+            },
+            "tag": 2,
+            "treeBaseTime": 0,
+            "type": [Function],
+            "updateQueue": null,
+          },
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": [Circular],
+          "tag": 2,
+          "treeBaseTime": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "_reactInternalInstance": Object {},
+        "clearForm": [Function],
+        "context": Object {},
+        "onFieldChange": [Function],
+        "onFormSubmit": [Function],
+        "populateDropdown": [Function],
+        "props": Object {
+          "addCardcallBack": [Function],
+        },
+        "refs": Object {},
+        "state": Object {
+          "emoji": "",
+          "text": "",
+        },
+        "updater": Object {
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+        },
+      },
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "addCardcallBack": [Function],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <form
+          class="new-card-form"
+>
+          <div
+                    class="new-card-form__form"
+          >
+                    <label
+                              class="new-card-form__form-label"
+                              for="text"
+                    >
+                              Text: 
+                    </label>
+                    <input
+                              class="new-card-form__form-textarea"
+                              name="text"
+                              type="text"
+                              value=""
+                    />
+          </div>
+          <div
+                    class="new-card-form__form"
+          >
+                    <select
+                              name="emoji"
+                    >
+                              <option
+                                        value=""
+                              />
+                              <option
+                                        value="heart_eyes"
+                              >
+                                        😍
+                              </option>
+                              <option
+                                        value="beer"
+                              >
+                                        🍺
+                              </option>
+                              <option
+                                        value="clap"
+                              >
+                                        👏
+                              </option>
+                              <option
+                                        value="sparkling_heart"
+                              >
+                                        💖
+                              </option>
+                              <option
+                                        value="heart_eyes_cat"
+                              >
+                                        😻
+                              </option>
+                              <option
+                                        value="dog"
+                              >
+                                        🐶
+                              </option>
+                    </select>
+          </div>
+          <input
+                    type="submit"
+                    value="Add Message"
+          />
+</form>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="new-card-form__form"
+>
+              <label
+                            className="new-card-form__form-label"
+                            htmlFor="text"
+              >
+                            Text: 
+              </label>
+              <input
+                            className="new-card-form__form-textarea"
+                            name="text"
+                            onChange={[Function]}
+                            type="text"
+                            value=""
+              />
+</div>,
+            <div
+              className="new-card-form__form"
+>
+              <select
+                            name="emoji"
+                            onChange={[Function]}
+                            value=""
+              >
+                            <option
+                                          value=""
+                            />
+                            <option
+                                          value="heart_eyes"
+                            >
+                                          😍
+                            </option>
+                            <option
+                                          value="beer"
+                            >
+                                          🍺
+                            </option>
+                            <option
+                                          value="clap"
+                            >
+                                          👏
+                            </option>
+                            <option
+                                          value="sparkling_heart"
+                            >
+                                          💖
+                            </option>
+                            <option
+                                          value="heart_eyes_cat"
+                            >
+                                          😻
+                            </option>
+                            <option
+                                          value="dog"
+                            >
+                                          🐶
+                            </option>
+              </select>
+</div>,
+            <input
+              type="submit"
+              value="Add Message"
+/>,
+          ],
+          "className": "new-card-form",
+          "onSubmit": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <div
+              class="new-card-form__form"
+>
+              <label
+                            class="new-card-form__form-label"
+                            for="text"
+              >
+                            Text: 
+              </label>
+              <input
+                            class="new-card-form__form-textarea"
+                            name="text"
+                            type="text"
+                            value=""
+              />
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <label
+                  className="new-card-form__form-label"
+                  htmlFor="text"
+>
+                  Text: 
+</label>,
+                <input
+                  className="new-card-form__form-textarea"
+                  name="text"
+                  onChange={[Function]}
+                  type="text"
+                  value=""
+/>,
+              ],
+              "className": "new-card-form__form",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <label
+                  class="new-card-form__form-label"
+                  for="text"
+>
+                  Text: 
+</label>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Text: ",
+                  "className": "new-card-form__form-label",
+                  "htmlFor": "text",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Text: ",
+                ],
+                "type": "label",
+              },
+              Object {
+                "instance": <input
+                  class="new-card-form__form-textarea"
+                  name="text"
+                  type="text"
+                  value=""
+/>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "new-card-form__form-textarea",
+                  "name": "text",
+                  "onChange": [Function],
+                  "type": "text",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "input",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": <div
+              class="new-card-form__form"
+>
+              <select
+                            name="emoji"
+              >
+                            <option
+                                          value=""
+                            />
+                            <option
+                                          value="heart_eyes"
+                            >
+                                          😍
+                            </option>
+                            <option
+                                          value="beer"
+                            >
+                                          🍺
+                            </option>
+                            <option
+                                          value="clap"
+                            >
+                                          👏
+                            </option>
+                            <option
+                                          value="sparkling_heart"
+                            >
+                                          💖
+                            </option>
+                            <option
+                                          value="heart_eyes_cat"
+                            >
+                                          😻
+                            </option>
+                            <option
+                                          value="dog"
+                            >
+                                          🐶
+                            </option>
+              </select>
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <select
+                name="emoji"
+                onChange={[Function]}
+                value=""
+>
+                <option
+                                value=""
+                />
+                <option
+                                value="heart_eyes"
+                >
+                                😍
+                </option>
+                <option
+                                value="beer"
+                >
+                                🍺
+                </option>
+                <option
+                                value="clap"
+                >
+                                👏
+                </option>
+                <option
+                                value="sparkling_heart"
+                >
+                                💖
+                </option>
+                <option
+                                value="heart_eyes_cat"
+                >
+                                😻
+                </option>
+                <option
+                                value="dog"
+                >
+                                🐶
+                </option>
+</select>,
+              "className": "new-card-form__form",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <select
+                  name="emoji"
+>
+                  <option
+                                    value=""
+                  />
+                  <option
+                                    value="heart_eyes"
+                  >
+                                    😍
+                  </option>
+                  <option
+                                    value="beer"
+                  >
+                                    🍺
+                  </option>
+                  <option
+                                    value="clap"
+                  >
+                                    👏
+                  </option>
+                  <option
+                                    value="sparkling_heart"
+                  >
+                                    💖
+                  </option>
+                  <option
+                                    value="heart_eyes_cat"
+                  >
+                                    😻
+                  </option>
+                  <option
+                                    value="dog"
+                  >
+                                    🐶
+                  </option>
+</select>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <option
+                      value=""
+/>,
+                    <option
+                      value="heart_eyes"
+>
+                      😍
+</option>,
+                    <option
+                      value="beer"
+>
+                      🍺
+</option>,
+                    <option
+                      value="clap"
+>
+                      👏
+</option>,
+                    <option
+                      value="sparkling_heart"
+>
+                      💖
+</option>,
+                    <option
+                      value="heart_eyes_cat"
+>
+                      😻
+</option>,
+                    <option
+                      value="dog"
+>
+                      🐶
+</option>,
+                  ],
+                  "name": "emoji",
+                  "onChange": [Function],
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <option
+                      value=""
+/>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": undefined,
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      undefined,
+                    ],
+                    "type": "option",
+                  },
+                  Object {
+                    "instance": <option
+                      value="heart_eyes"
+>
+                      😍
+</option>,
+                    "key": "heart_eyes",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "😍",
+                      "value": "heart_eyes",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "😍",
+                    ],
+                    "type": "option",
+                  },
+                  Object {
+                    "instance": <option
+                      value="beer"
+>
+                      🍺
+</option>,
+                    "key": "beer",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "🍺",
+                      "value": "beer",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "🍺",
+                    ],
+                    "type": "option",
+                  },
+                  Object {
+                    "instance": <option
+                      value="clap"
+>
+                      👏
+</option>,
+                    "key": "clap",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "👏",
+                      "value": "clap",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "👏",
+                    ],
+                    "type": "option",
+                  },
+                  Object {
+                    "instance": <option
+                      value="sparkling_heart"
+>
+                      💖
+</option>,
+                    "key": "sparkling_heart",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "💖",
+                      "value": "sparkling_heart",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "💖",
+                    ],
+                    "type": "option",
+                  },
+                  Object {
+                    "instance": <option
+                      value="heart_eyes_cat"
+>
+                      😻
+</option>,
+                    "key": "heart_eyes_cat",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "😻",
+                      "value": "heart_eyes_cat",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "😻",
+                    ],
+                    "type": "option",
+                  },
+                  Object {
+                    "instance": <option
+                      value="dog"
+>
+                      🐶
+</option>,
+                    "key": "dog",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "🐶",
+                      "value": "dog",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "🐶",
+                    ],
+                    "type": "option",
+                  },
+                ],
+                "type": "select",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": <input
+              type="submit"
+              value="Add Message"
+/>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "type": "submit",
+              "value": "Add Message",
+            },
+            "ref": null,
+            "rendered": Array [
+              undefined,
+            ],
+            "type": "input",
+          },
+        ],
+        "type": "form",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
