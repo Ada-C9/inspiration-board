@@ -50,7 +50,6 @@ class Board extends Component {
   // Call back function for deleting card
   deleteCard = (index, id) => {
     axios.delete(CARDS_URL + `${id}`)
-
     .then((response) => {
       console.log(response);
       console.log(response.data);
@@ -70,18 +69,17 @@ class Board extends Component {
   }
 
 
-  addCard = (card) => {
-    // assuming card is a JS object with all neccessary parts for a card
-    let updatedCards = this.state.cards;
-    updatedCards.push(card);
-
-    // then update state to updated cards collection
-    this.setState({ cards: updatedCards });
-    // card.emoji =
-
-    axios.post(CARDS_URL, card)
+  addCard = (props) => {
+    axios.post(CARDS_URL, props)
     .then((response) => {
       console.log(response.data);
+
+      let updatedCards = this.state.cards;
+      updatedCards.push(response.data);
+
+      // then update state to updated cards collection
+      this.setState({ cards: updatedCards });
+
       this.props.updateStatusCallback('Successfully added card', 'success');
     })
 
@@ -108,9 +106,9 @@ class Board extends Component {
     return (
       <div className="board">
       { cards }
-      <section className="new-card-form">
-      <NewCardForm addCardCallback={this.addCard}/>
-      </section>
+        <section className="new-card-form">
+          <NewCardForm addCardCallback={this.addCard}/>
+        </section>
       </div>
     )
   }

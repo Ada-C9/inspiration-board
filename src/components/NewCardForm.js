@@ -8,12 +8,10 @@ const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_
 class NewCardForm extends Component {
   static propTypes = {
     addCardCallback: PropTypes.func.isRequired,
-    text: PropTypes.string
   };
   // initial state of form input field
   constructor() {
     super();
-
     this.state = {
       text: '',
       emoji: ''
@@ -22,21 +20,23 @@ class NewCardForm extends Component {
 
   // event handler fxn is an arrow fxn that takes an event
   onInputChange = (event) => {
+    const key = event.target.name;
+    let value = event.target.value;
+
     let updatedInput = {};
-    updatedInput[event.target.name] = event.target.value
-    this.setState( updatedInput );
+    updatedInput[key] = value;
+    this.setState(updatedInput);
   }
 
   onFormSubmit = (event) => {
     event.preventDefault();
-    // console.log(this.state);
+    console.log(this.state);
     // here we connect the collection of cards on the Board and the form itself via callback and callback fxn
-    this.props.addCardCallback({
-      card: {
-        text: this.state.text,
-        emoji: this.state.emoji
-      }
-    });
+    // card: {
+    //   text: this.state.text,
+    //   emoji: this.state.emoji
+    // }
+    this.props.addCardCallback(this.state);
     // want to clear out form after submitting update, so reset state to default
     this.setState({
       text: '',
