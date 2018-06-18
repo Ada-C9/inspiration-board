@@ -1,0 +1,13 @@
+.status {
+  display: block;
+  width: 40%;
+  font-style: italic;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: #5c00b3;
+}
