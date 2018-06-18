@@ -14,8 +14,6 @@ function convertToemoji(anEmoji){
 
 class Card extends Component {
    findID = () => {
-      console.log(this.props.id)
-      console.log('hello')
      this.props.deleteCard(this.props.id)
   }
 

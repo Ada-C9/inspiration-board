@@ -1,0 +1,2553 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card shallow mount 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    deleteCard={[Function]}
+    emoji="heart_eyes"
+    id={1}
+    text="hey, friend"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <section
+        className="card__content"
+>
+        <button
+                className="card__delete"
+                onClick={[Function]}
+        >
+                x
+        </button>
+        <p
+                className="card__content-text"
+        >
+                hey, friend
+        </p>
+        <p
+                className="card__content-emoji"
+        >
+                😍
+        </p>
+</section>,
+      "className": "card",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            className="card__delete"
+            onClick={[Function]}
+>
+            x
+</button>,
+          <p
+            className="card__content-text"
+>
+            hey, friend
+</p>,
+          <p
+            className="card__content-emoji"
+>
+            😍
+</p>,
+        ],
+        "className": "card__content",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "x",
+            "className": "card__delete",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "x",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "hey, friend",
+            "className": "card__content-text",
+          },
+          "ref": null,
+          "rendered": "hey, friend",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "😍",
+            "className": "card__content-emoji",
+          },
+          "ref": null,
+          "rendered": "😍",
+          "type": "p",
+        },
+      ],
+      "type": "section",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <section
+          className="card__content"
+>
+          <button
+                    className="card__delete"
+                    onClick={[Function]}
+          >
+                    x
+          </button>
+          <p
+                    className="card__content-text"
+          >
+                    hey, friend
+          </p>
+          <p
+                    className="card__content-emoji"
+          >
+                    😍
+          </p>
+</section>,
+        "className": "card",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <button
+              className="card__delete"
+              onClick={[Function]}
+>
+              x
+</button>,
+            <p
+              className="card__content-text"
+>
+              hey, friend
+</p>,
+            <p
+              className="card__content-emoji"
+>
+              😍
+</p>,
+          ],
+          "className": "card__content",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "x",
+              "className": "card__delete",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "x",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "hey, friend",
+              "className": "card__content-text",
+            },
+            "ref": null,
+            "rendered": "hey, friend",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "😍",
+              "className": "card__content-emoji",
+            },
+            "ref": null,
+            "rendered": "😍",
+            "type": "p",
+          },
+        ],
+        "type": "section",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Card that it matches an existing snapshot 1`] = `
+ReactWrapper {
+  "length": 1,
+  Symbol(enzyme.__unrendered__): <Card
+    deleteCard={[Function]}
+    emoji="heart_eyes"
+    id={1}
+    text="hey, friend"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": Card {
+      "_reactInternalFiber": FiberNode {
+        "_debugID": 5,
+        "_debugIsCurrentlyTiming": false,
+        "_debugOwner": FiberNode {
+          "_debugID": 4,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": null,
+          "_debugSource": null,
+          "alternate": null,
+          "child": [Circular],
+          "effectTag": 1,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "deleteCard": [Function],
+              "emoji": "heart_eyes",
+              "id": 1,
+              "text": "hey, friend",
+            },
+          },
+          "memoizedState": Object {
+            "context": null,
+            "mount": true,
+            "props": Object {
+              "deleteCard": [Function],
+              "emoji": "heart_eyes",
+              "id": 1,
+              "text": "hey, friend",
+            },
+          },
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "deleteCard": [Function],
+              "emoji": "heart_eyes",
+              "id": 1,
+              "text": "hey, friend",
+            },
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 1,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "alternate": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "alternate": [Circular],
+              "child": null,
+              "effectTag": 0,
+              "expirationTime": 1,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": null,
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <div
+                                    class="card"
+                  >
+                                    <section
+                                                      class="card__content"
+                                    >
+                                                      <button
+                                                                        class="card__delete"
+                                                      >
+                                                                        x
+                                                      </button>
+                                                      <p
+                                                                        class="card__content-text"
+                                                      >
+                                                                        hey, friend
+                                                      </p>
+                                                      <p
+                                                                        class="card__content-emoji"
+                                                      >
+                                                                        😍
+                                                      </p>
+                                    </section>
+                  </div>
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": null,
+                "expirationTime": 1,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "deleteCard": [Function],
+                                                                  "emoji": "heart_eyes",
+                                                                  "id": 1,
+                                                                  "text": "hey, friend",
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "deleteCard": [Function],
+                                                                  "emoji": "heart_eyes",
+                                                                  "id": 1,
+                                                                  "text": "hey, friend",
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+              },
+            },
+            "child": [Circular],
+            "effectTag": 32,
+            "expirationTime": 0,
+            "firstEffect": [Circular],
+            "index": 0,
+            "key": null,
+            "lastEffect": [Circular],
+            "memoizedProps": null,
+            "memoizedState": Object {
+              "element": <WrapperComponent
+                Component={[Function]}
+                context={null}
+                props={
+                                Object {
+                                                "deleteCard": [Function],
+                                                "emoji": "heart_eyes",
+                                                "id": 1,
+                                                "text": "hey, friend",
+                                              }
+                }
+/>,
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": null,
+            "ref": null,
+            "return": null,
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": Object {
+              "containerInfo": <div>
+                <div
+                                class="card"
+                >
+                                <section
+                                                class="card__content"
+                                >
+                                                <button
+                                                                class="card__delete"
+                                                >
+                                                                x
+                                                </button>
+                                                <p
+                                                                class="card__content-text"
+                                                >
+                                                                hey, friend
+                                                </p>
+                                                <p
+                                                                class="card__content-emoji"
+                                                >
+                                                                😍
+                                                </p>
+                                </section>
+                </div>
+</div>,
+              "context": Object {},
+              "current": [Circular],
+              "earliestPendingTime": 0,
+              "earliestSuspendedTime": 0,
+              "finishedWork": null,
+              "firstBatch": null,
+              "hydrate": false,
+              "latestPendingTime": 0,
+              "latestPingedTime": 0,
+              "latestSuspendedTime": 0,
+              "nextScheduledRoot": null,
+              "pendingChildren": null,
+              "pendingCommitExpirationTime": 0,
+              "pendingContext": null,
+              "remainingExpirationTime": 0,
+            },
+            "tag": 3,
+            "treeBaseTime": 0,
+            "type": null,
+            "updateQueue": Object {
+              "baseState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "deleteCard": [Function],
+                                                      "emoji": "heart_eyes",
+                                                      "id": 1,
+                                                      "text": "hey, friend",
+                                                    }
+                  }
+/>,
+              },
+              "expirationTime": 0,
+              "firstCapturedEffect": null,
+              "firstCapturedUpdate": null,
+              "firstEffect": null,
+              "firstUpdate": null,
+              "lastCapturedEffect": null,
+              "lastCapturedUpdate": null,
+              "lastEffect": null,
+              "lastUpdate": null,
+            },
+          },
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": WrapperComponent {
+            "_reactInternalFiber": [Circular],
+            "_reactInternalInstance": Object {},
+            "context": Object {},
+            "props": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "deleteCard": [Function],
+                "emoji": "heart_eyes",
+                "id": 1,
+                "text": "hey, friend",
+              },
+            },
+            "refs": Object {},
+            "state": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "deleteCard": [Function],
+                "emoji": "heart_eyes",
+                "id": 1,
+                "text": "hey, friend",
+              },
+            },
+            "updater": Object {
+              "enqueueForceUpdate": [Function],
+              "enqueueReplaceState": [Function],
+              "enqueueSetState": [Function],
+              "isMounted": [Function],
+            },
+          },
+          "tag": 2,
+          "treeBaseTime": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "_debugSource": null,
+        "alternate": null,
+        "child": FiberNode {
+          "_debugID": 6,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": [Circular],
+          "_debugSource": Object {
+            "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/Card.js",
+            "lineNumber": 22,
+          },
+          "alternate": null,
+          "child": FiberNode {
+            "_debugID": 7,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": [Circular],
+            "_debugSource": Object {
+              "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/Card.js",
+              "lineNumber": 23,
+            },
+            "alternate": null,
+            "child": FiberNode {
+              "_debugID": 8,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": [Circular],
+              "_debugSource": Object {
+                "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/Card.js",
+                "lineNumber": 24,
+              },
+              "alternate": null,
+              "child": null,
+              "effectTag": 0,
+              "expirationTime": 0,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": Object {
+                "children": "x",
+                "className": "card__delete",
+                "onClick": [Function],
+              },
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": Object {
+                "children": "x",
+                "className": "card__delete",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "return": [Circular],
+              "selfBaseTime": 0,
+              "sibling": FiberNode {
+                "_debugID": 9,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": [Circular],
+                "_debugSource": Object {
+                  "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/Card.js",
+                  "lineNumber": 25,
+                },
+                "alternate": null,
+                "child": null,
+                "effectTag": 0,
+                "expirationTime": 0,
+                "firstEffect": null,
+                "index": 1,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": Object {
+                  "children": "hey, friend",
+                  "className": "card__content-text",
+                },
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": Object {
+                  "children": "hey, friend",
+                  "className": "card__content-text",
+                },
+                "ref": null,
+                "return": [Circular],
+                "selfBaseTime": 0,
+                "sibling": FiberNode {
+                  "_debugID": 10,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": [Circular],
+                  "_debugSource": Object {
+                    "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/Card.js",
+                    "lineNumber": 26,
+                  },
+                  "alternate": null,
+                  "child": null,
+                  "effectTag": 0,
+                  "expirationTime": 0,
+                  "firstEffect": null,
+                  "index": 2,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": Object {
+                    "children": "😍",
+                    "className": "card__content-emoji",
+                  },
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": Object {
+                    "children": "😍",
+                    "className": "card__content-emoji",
+                  },
+                  "ref": null,
+                  "return": [Circular],
+                  "selfBaseTime": 0,
+                  "sibling": null,
+                  "stateNode": <p
+                    class="card__content-emoji"
+>
+                    😍
+</p>,
+                  "tag": 5,
+                  "treeBaseTime": 0,
+                  "type": "p",
+                  "updateQueue": null,
+                },
+                "stateNode": <p
+                  class="card__content-text"
+>
+                  hey, friend
+</p>,
+                "tag": 5,
+                "treeBaseTime": 0,
+                "type": "p",
+                "updateQueue": null,
+              },
+              "stateNode": <button
+                class="card__delete"
+>
+                x
+</button>,
+              "tag": 5,
+              "treeBaseTime": 0,
+              "type": "button",
+              "updateQueue": null,
+            },
+            "effectTag": 0,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "children": Array [
+                <button
+                  className="card__delete"
+                  onClick={[Function]}
+>
+                  x
+</button>,
+                <p
+                  className="card__content-text"
+>
+                  hey, friend
+</p>,
+                <p
+                  className="card__content-emoji"
+>
+                  😍
+</p>,
+              ],
+              "className": "card__content",
+            },
+            "memoizedState": null,
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "children": Array [
+                <button
+                  className="card__delete"
+                  onClick={[Function]}
+>
+                  x
+</button>,
+                <p
+                  className="card__content-text"
+>
+                  hey, friend
+</p>,
+                <p
+                  className="card__content-emoji"
+>
+                  😍
+</p>,
+              ],
+              "className": "card__content",
+            },
+            "ref": null,
+            "return": [Circular],
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": <section
+              class="card__content"
+>
+              <button
+                            class="card__delete"
+              >
+                            x
+              </button>
+              <p
+                            class="card__content-text"
+              >
+                            hey, friend
+              </p>
+              <p
+                            class="card__content-emoji"
+              >
+                            😍
+              </p>
+</section>,
+            "tag": 5,
+            "treeBaseTime": 0,
+            "type": "section",
+            "updateQueue": null,
+          },
+          "effectTag": 0,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "children": <section
+              className="card__content"
+>
+              <button
+                            className="card__delete"
+                            onClick={[Function]}
+              >
+                            x
+              </button>
+              <p
+                            className="card__content-text"
+              >
+                            hey, friend
+              </p>
+              <p
+                            className="card__content-emoji"
+              >
+                            😍
+              </p>
+</section>,
+            "className": "card",
+          },
+          "memoizedState": null,
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "children": <section
+              className="card__content"
+>
+              <button
+                            className="card__delete"
+                            onClick={[Function]}
+              >
+                            x
+              </button>
+              <p
+                            className="card__content-text"
+              >
+                            hey, friend
+              </p>
+              <p
+                            className="card__content-emoji"
+              >
+                            😍
+              </p>
+</section>,
+            "className": "card",
+          },
+          "ref": null,
+          "return": [Circular],
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": <div
+            class="card"
+>
+            <section
+                        class="card__content"
+            >
+                        <button
+                                    class="card__delete"
+                        >
+                                    x
+                        </button>
+                        <p
+                                    class="card__content-text"
+                        >
+                                    hey, friend
+                        </p>
+                        <p
+                                    class="card__content-emoji"
+                        >
+                                    😍
+                        </p>
+            </section>
+</div>,
+          "tag": 5,
+          "treeBaseTime": 0,
+          "type": "div",
+          "updateQueue": null,
+        },
+        "effectTag": 1,
+        "expirationTime": 0,
+        "firstEffect": null,
+        "index": 0,
+        "key": null,
+        "lastEffect": null,
+        "memoizedProps": Object {
+          "deleteCard": [Function],
+          "emoji": "heart_eyes",
+          "id": 1,
+          "text": "hey, friend",
+        },
+        "memoizedState": null,
+        "mode": 0,
+        "nextEffect": null,
+        "pendingProps": Object {
+          "deleteCard": [Function],
+          "emoji": "heart_eyes",
+          "id": 1,
+          "text": "hey, friend",
+        },
+        "ref": null,
+        "return": FiberNode {
+          "_debugID": 4,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": null,
+          "_debugSource": null,
+          "alternate": null,
+          "child": [Circular],
+          "effectTag": 1,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "deleteCard": [Function],
+              "emoji": "heart_eyes",
+              "id": 1,
+              "text": "hey, friend",
+            },
+          },
+          "memoizedState": Object {
+            "context": null,
+            "mount": true,
+            "props": Object {
+              "deleteCard": [Function],
+              "emoji": "heart_eyes",
+              "id": 1,
+              "text": "hey, friend",
+            },
+          },
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "deleteCard": [Function],
+              "emoji": "heart_eyes",
+              "id": 1,
+              "text": "hey, friend",
+            },
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 1,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "alternate": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "alternate": [Circular],
+              "child": null,
+              "effectTag": 0,
+              "expirationTime": 1,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": null,
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <div
+                                    class="card"
+                  >
+                                    <section
+                                                      class="card__content"
+                                    >
+                                                      <button
+                                                                        class="card__delete"
+                                                      >
+                                                                        x
+                                                      </button>
+                                                      <p
+                                                                        class="card__content-text"
+                                                      >
+                                                                        hey, friend
+                                                      </p>
+                                                      <p
+                                                                        class="card__content-emoji"
+                                                      >
+                                                                        😍
+                                                      </p>
+                                    </section>
+                  </div>
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": null,
+                "expirationTime": 1,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "deleteCard": [Function],
+                                                                  "emoji": "heart_eyes",
+                                                                  "id": 1,
+                                                                  "text": "hey, friend",
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "deleteCard": [Function],
+                                                                  "emoji": "heart_eyes",
+                                                                  "id": 1,
+                                                                  "text": "hey, friend",
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+              },
+            },
+            "child": [Circular],
+            "effectTag": 32,
+            "expirationTime": 0,
+            "firstEffect": [Circular],
+            "index": 0,
+            "key": null,
+            "lastEffect": [Circular],
+            "memoizedProps": null,
+            "memoizedState": Object {
+              "element": <WrapperComponent
+                Component={[Function]}
+                context={null}
+                props={
+                                Object {
+                                                "deleteCard": [Function],
+                                                "emoji": "heart_eyes",
+                                                "id": 1,
+                                                "text": "hey, friend",
+                                              }
+                }
+/>,
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": null,
+            "ref": null,
+            "return": null,
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": Object {
+              "containerInfo": <div>
+                <div
+                                class="card"
+                >
+                                <section
+                                                class="card__content"
+                                >
+                                                <button
+                                                                class="card__delete"
+                                                >
+                                                                x
+                                                </button>
+                                                <p
+                                                                class="card__content-text"
+                                                >
+                                                                hey, friend
+                                                </p>
+                                                <p
+                                                                class="card__content-emoji"
+                                                >
+                                                                😍
+                                                </p>
+                                </section>
+                </div>
+</div>,
+              "context": Object {},
+              "current": [Circular],
+              "earliestPendingTime": 0,
+              "earliestSuspendedTime": 0,
+              "finishedWork": null,
+              "firstBatch": null,
+              "hydrate": false,
+              "latestPendingTime": 0,
+              "latestPingedTime": 0,
+              "latestSuspendedTime": 0,
+              "nextScheduledRoot": null,
+              "pendingChildren": null,
+              "pendingCommitExpirationTime": 0,
+              "pendingContext": null,
+              "remainingExpirationTime": 0,
+            },
+            "tag": 3,
+            "treeBaseTime": 0,
+            "type": null,
+            "updateQueue": Object {
+              "baseState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "deleteCard": [Function],
+                                                      "emoji": "heart_eyes",
+                                                      "id": 1,
+                                                      "text": "hey, friend",
+                                                    }
+                  }
+/>,
+              },
+              "expirationTime": 0,
+              "firstCapturedEffect": null,
+              "firstCapturedUpdate": null,
+              "firstEffect": null,
+              "firstUpdate": null,
+              "lastCapturedEffect": null,
+              "lastCapturedUpdate": null,
+              "lastEffect": null,
+              "lastUpdate": null,
+            },
+          },
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": WrapperComponent {
+            "_reactInternalFiber": [Circular],
+            "_reactInternalInstance": Object {},
+            "context": Object {},
+            "props": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "deleteCard": [Function],
+                "emoji": "heart_eyes",
+                "id": 1,
+                "text": "hey, friend",
+              },
+            },
+            "refs": Object {},
+            "state": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "deleteCard": [Function],
+                "emoji": "heart_eyes",
+                "id": 1,
+                "text": "hey, friend",
+              },
+            },
+            "updater": Object {
+              "enqueueForceUpdate": [Function],
+              "enqueueReplaceState": [Function],
+              "enqueueSetState": [Function],
+              "isMounted": [Function],
+            },
+          },
+          "tag": 2,
+          "treeBaseTime": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "selfBaseTime": 0,
+        "sibling": null,
+        "stateNode": [Circular],
+        "tag": 2,
+        "treeBaseTime": 0,
+        "type": [Function],
+        "updateQueue": null,
+      },
+      "_reactInternalInstance": Object {},
+      "context": Object {},
+      "findID": [Function],
+      "props": Object {
+        "deleteCard": [Function],
+        "emoji": "heart_eyes",
+        "id": 1,
+        "text": "hey, friend",
+      },
+      "refs": Object {},
+      "state": null,
+      "updater": Object {
+        "enqueueForceUpdate": [Function],
+        "enqueueReplaceState": [Function],
+        "enqueueSetState": [Function],
+        "isMounted": [Function],
+      },
+    },
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "deleteCard": [Function],
+      "emoji": "heart_eyes",
+      "id": 1,
+      "text": "hey, friend",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="card"
+>
+        <section
+                class="card__content"
+        >
+                <button
+                        class="card__delete"
+                >
+                        x
+                </button>
+                <p
+                        class="card__content-text"
+                >
+                        hey, friend
+                </p>
+                <p
+                        class="card__content-emoji"
+                >
+                        😍
+                </p>
+        </section>
+</div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <section
+          className="card__content"
+>
+          <button
+                    className="card__delete"
+                    onClick={[Function]}
+          >
+                    x
+          </button>
+          <p
+                    className="card__content-text"
+          >
+                    hey, friend
+          </p>
+          <p
+                    className="card__content-emoji"
+          >
+                    😍
+          </p>
+</section>,
+        "className": "card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <section
+            class="card__content"
+>
+            <button
+                        class="card__delete"
+            >
+                        x
+            </button>
+            <p
+                        class="card__content-text"
+            >
+                        hey, friend
+            </p>
+            <p
+                        class="card__content-emoji"
+            >
+                        😍
+            </p>
+</section>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <button
+                className="card__delete"
+                onClick={[Function]}
+>
+                x
+</button>,
+              <p
+                className="card__content-text"
+>
+                hey, friend
+</p>,
+              <p
+                className="card__content-emoji"
+>
+                😍
+</p>,
+            ],
+            "className": "card__content",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <button
+                class="card__delete"
+>
+                x
+</button>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "x",
+                "className": "card__delete",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                "x",
+              ],
+              "type": "button",
+            },
+            Object {
+              "instance": <p
+                class="card__content-text"
+>
+                hey, friend
+</p>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "hey, friend",
+                "className": "card__content-text",
+              },
+              "ref": null,
+              "rendered": Array [
+                "hey, friend",
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": <p
+                class="card__content-emoji"
+>
+                😍
+</p>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "😍",
+                "className": "card__content-emoji",
+              },
+              "ref": null,
+              "rendered": Array [
+                "😍",
+              ],
+              "type": "p",
+            },
+          ],
+          "type": "section",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": Card {
+        "_reactInternalFiber": FiberNode {
+          "_debugID": 5,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": FiberNode {
+            "_debugID": 4,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "alternate": null,
+            "child": [Circular],
+            "effectTag": 1,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "deleteCard": [Function],
+                "emoji": "heart_eyes",
+                "id": 1,
+                "text": "hey, friend",
+              },
+            },
+            "memoizedState": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "deleteCard": [Function],
+                "emoji": "heart_eyes",
+                "id": 1,
+                "text": "hey, friend",
+              },
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "deleteCard": [Function],
+                "emoji": "heart_eyes",
+                "id": 1,
+                "text": "hey, friend",
+              },
+            },
+            "ref": null,
+            "return": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "alternate": FiberNode {
+                "_debugID": 1,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "alternate": [Circular],
+                "child": null,
+                "effectTag": 0,
+                "expirationTime": 1,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": null,
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "selfBaseTime": 0,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": <div>
+                    <div
+                                        class="card"
+                    >
+                                        <section
+                                                            class="card__content"
+                                        >
+                                                            <button
+                                                                                class="card__delete"
+                                                            >
+                                                                                x
+                                                            </button>
+                                                            <p
+                                                                                class="card__content-text"
+                                                            >
+                                                                                hey, friend
+                                                            </p>
+                                                            <p
+                                                                                class="card__content-emoji"
+                                                            >
+                                                                                😍
+                                                            </p>
+                                        </section>
+                    </div>
+</div>,
+                  "context": Object {},
+                  "current": [Circular],
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "remainingExpirationTime": 0,
+                },
+                "tag": 3,
+                "treeBaseTime": 0,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": null,
+                  "expirationTime": 1,
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "deleteCard": [Function],
+                                                                        "emoji": "heart_eyes",
+                                                                        "id": 1,
+                                                                        "text": "hey, friend",
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "deleteCard": [Function],
+                                                                        "emoji": "heart_eyes",
+                                                                        "id": 1,
+                                                                        "text": "hey, friend",
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                },
+              },
+              "child": [Circular],
+              "effectTag": 32,
+              "expirationTime": 0,
+              "firstEffect": [Circular],
+              "index": 0,
+              "key": null,
+              "lastEffect": [Circular],
+              "memoizedProps": null,
+              "memoizedState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "deleteCard": [Function],
+                                                      "emoji": "heart_eyes",
+                                                      "id": 1,
+                                                      "text": "hey, friend",
+                                                    }
+                  }
+/>,
+              },
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <div
+                                    class="card"
+                  >
+                                    <section
+                                                      class="card__content"
+                                    >
+                                                      <button
+                                                                        class="card__delete"
+                                                      >
+                                                                        x
+                                                      </button>
+                                                      <p
+                                                                        class="card__content-text"
+                                                      >
+                                                                        hey, friend
+                                                      </p>
+                                                      <p
+                                                                        class="card__content-emoji"
+                                                      >
+                                                                        😍
+                                                      </p>
+                                    </section>
+                  </div>
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": Object {
+                  "element": <WrapperComponent
+                    Component={[Function]}
+                    context={null}
+                    props={
+                                        Object {
+                                                            "deleteCard": [Function],
+                                                            "emoji": "heart_eyes",
+                                                            "id": 1,
+                                                            "text": "hey, friend",
+                                                          }
+                    }
+/>,
+                },
+                "expirationTime": 0,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": null,
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": null,
+              },
+            },
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": WrapperComponent {
+              "_reactInternalFiber": [Circular],
+              "_reactInternalInstance": Object {},
+              "context": Object {},
+              "props": Object {
+                "Component": [Function],
+                "context": null,
+                "props": Object {
+                  "deleteCard": [Function],
+                  "emoji": "heart_eyes",
+                  "id": 1,
+                  "text": "hey, friend",
+                },
+              },
+              "refs": Object {},
+              "state": Object {
+                "context": null,
+                "mount": true,
+                "props": Object {
+                  "deleteCard": [Function],
+                  "emoji": "heart_eyes",
+                  "id": 1,
+                  "text": "hey, friend",
+                },
+              },
+              "updater": Object {
+                "enqueueForceUpdate": [Function],
+                "enqueueReplaceState": [Function],
+                "enqueueSetState": [Function],
+                "isMounted": [Function],
+              },
+            },
+            "tag": 2,
+            "treeBaseTime": 0,
+            "type": [Function],
+            "updateQueue": null,
+          },
+          "_debugSource": null,
+          "alternate": null,
+          "child": FiberNode {
+            "_debugID": 6,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": [Circular],
+            "_debugSource": Object {
+              "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/Card.js",
+              "lineNumber": 22,
+            },
+            "alternate": null,
+            "child": FiberNode {
+              "_debugID": 7,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": [Circular],
+              "_debugSource": Object {
+                "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/Card.js",
+                "lineNumber": 23,
+              },
+              "alternate": null,
+              "child": FiberNode {
+                "_debugID": 8,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": [Circular],
+                "_debugSource": Object {
+                  "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/Card.js",
+                  "lineNumber": 24,
+                },
+                "alternate": null,
+                "child": null,
+                "effectTag": 0,
+                "expirationTime": 0,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": Object {
+                  "children": "x",
+                  "className": "card__delete",
+                  "onClick": [Function],
+                },
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": Object {
+                  "children": "x",
+                  "className": "card__delete",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "return": [Circular],
+                "selfBaseTime": 0,
+                "sibling": FiberNode {
+                  "_debugID": 9,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": [Circular],
+                  "_debugSource": Object {
+                    "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/Card.js",
+                    "lineNumber": 25,
+                  },
+                  "alternate": null,
+                  "child": null,
+                  "effectTag": 0,
+                  "expirationTime": 0,
+                  "firstEffect": null,
+                  "index": 1,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": Object {
+                    "children": "hey, friend",
+                    "className": "card__content-text",
+                  },
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": Object {
+                    "children": "hey, friend",
+                    "className": "card__content-text",
+                  },
+                  "ref": null,
+                  "return": [Circular],
+                  "selfBaseTime": 0,
+                  "sibling": FiberNode {
+                    "_debugID": 10,
+                    "_debugIsCurrentlyTiming": false,
+                    "_debugOwner": [Circular],
+                    "_debugSource": Object {
+                      "fileName": "/Users/owner/Documents/ada/homework/react/inspiration-board/src/components/Card.js",
+                      "lineNumber": 26,
+                    },
+                    "alternate": null,
+                    "child": null,
+                    "effectTag": 0,
+                    "expirationTime": 0,
+                    "firstEffect": null,
+                    "index": 2,
+                    "key": null,
+                    "lastEffect": null,
+                    "memoizedProps": Object {
+                      "children": "😍",
+                      "className": "card__content-emoji",
+                    },
+                    "memoizedState": null,
+                    "mode": 0,
+                    "nextEffect": null,
+                    "pendingProps": Object {
+                      "children": "😍",
+                      "className": "card__content-emoji",
+                    },
+                    "ref": null,
+                    "return": [Circular],
+                    "selfBaseTime": 0,
+                    "sibling": null,
+                    "stateNode": <p
+                      class="card__content-emoji"
+>
+                      😍
+</p>,
+                    "tag": 5,
+                    "treeBaseTime": 0,
+                    "type": "p",
+                    "updateQueue": null,
+                  },
+                  "stateNode": <p
+                    class="card__content-text"
+>
+                    hey, friend
+</p>,
+                  "tag": 5,
+                  "treeBaseTime": 0,
+                  "type": "p",
+                  "updateQueue": null,
+                },
+                "stateNode": <button
+                  class="card__delete"
+>
+                  x
+</button>,
+                "tag": 5,
+                "treeBaseTime": 0,
+                "type": "button",
+                "updateQueue": null,
+              },
+              "effectTag": 0,
+              "expirationTime": 0,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": Object {
+                "children": Array [
+                  <button
+                    className="card__delete"
+                    onClick={[Function]}
+>
+                    x
+</button>,
+                  <p
+                    className="card__content-text"
+>
+                    hey, friend
+</p>,
+                  <p
+                    className="card__content-emoji"
+>
+                    😍
+</p>,
+                ],
+                "className": "card__content",
+              },
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": Object {
+                "children": Array [
+                  <button
+                    className="card__delete"
+                    onClick={[Function]}
+>
+                    x
+</button>,
+                  <p
+                    className="card__content-text"
+>
+                    hey, friend
+</p>,
+                  <p
+                    className="card__content-emoji"
+>
+                    😍
+</p>,
+                ],
+                "className": "card__content",
+              },
+              "ref": null,
+              "return": [Circular],
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": <section
+                class="card__content"
+>
+                <button
+                                class="card__delete"
+                >
+                                x
+                </button>
+                <p
+                                class="card__content-text"
+                >
+                                hey, friend
+                </p>
+                <p
+                                class="card__content-emoji"
+                >
+                                😍
+                </p>
+</section>,
+              "tag": 5,
+              "treeBaseTime": 0,
+              "type": "section",
+              "updateQueue": null,
+            },
+            "effectTag": 0,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "children": <section
+                className="card__content"
+>
+                <button
+                                className="card__delete"
+                                onClick={[Function]}
+                >
+                                x
+                </button>
+                <p
+                                className="card__content-text"
+                >
+                                hey, friend
+                </p>
+                <p
+                                className="card__content-emoji"
+                >
+                                😍
+                </p>
+</section>,
+              "className": "card",
+            },
+            "memoizedState": null,
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "children": <section
+                className="card__content"
+>
+                <button
+                                className="card__delete"
+                                onClick={[Function]}
+                >
+                                x
+                </button>
+                <p
+                                className="card__content-text"
+                >
+                                hey, friend
+                </p>
+                <p
+                                className="card__content-emoji"
+                >
+                                😍
+                </p>
+</section>,
+              "className": "card",
+            },
+            "ref": null,
+            "return": [Circular],
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": <div
+              class="card"
+>
+              <section
+                            class="card__content"
+              >
+                            <button
+                                          class="card__delete"
+                            >
+                                          x
+                            </button>
+                            <p
+                                          class="card__content-text"
+                            >
+                                          hey, friend
+                            </p>
+                            <p
+                                          class="card__content-emoji"
+                            >
+                                          😍
+                            </p>
+              </section>
+</div>,
+            "tag": 5,
+            "treeBaseTime": 0,
+            "type": "div",
+            "updateQueue": null,
+          },
+          "effectTag": 1,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "deleteCard": [Function],
+            "emoji": "heart_eyes",
+            "id": 1,
+            "text": "hey, friend",
+          },
+          "memoizedState": null,
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "deleteCard": [Function],
+            "emoji": "heart_eyes",
+            "id": 1,
+            "text": "hey, friend",
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 4,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "alternate": null,
+            "child": [Circular],
+            "effectTag": 1,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "deleteCard": [Function],
+                "emoji": "heart_eyes",
+                "id": 1,
+                "text": "hey, friend",
+              },
+            },
+            "memoizedState": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "deleteCard": [Function],
+                "emoji": "heart_eyes",
+                "id": 1,
+                "text": "hey, friend",
+              },
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "deleteCard": [Function],
+                "emoji": "heart_eyes",
+                "id": 1,
+                "text": "hey, friend",
+              },
+            },
+            "ref": null,
+            "return": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "alternate": FiberNode {
+                "_debugID": 1,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "alternate": [Circular],
+                "child": null,
+                "effectTag": 0,
+                "expirationTime": 1,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": null,
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "selfBaseTime": 0,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": <div>
+                    <div
+                                        class="card"
+                    >
+                                        <section
+                                                            class="card__content"
+                                        >
+                                                            <button
+                                                                                class="card__delete"
+                                                            >
+                                                                                x
+                                                            </button>
+                                                            <p
+                                                                                class="card__content-text"
+                                                            >
+                                                                                hey, friend
+                                                            </p>
+                                                            <p
+                                                                                class="card__content-emoji"
+                                                            >
+                                                                                😍
+                                                            </p>
+                                        </section>
+                    </div>
+</div>,
+                  "context": Object {},
+                  "current": [Circular],
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "remainingExpirationTime": 0,
+                },
+                "tag": 3,
+                "treeBaseTime": 0,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": null,
+                  "expirationTime": 1,
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "deleteCard": [Function],
+                                                                        "emoji": "heart_eyes",
+                                                                        "id": 1,
+                                                                        "text": "hey, friend",
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "deleteCard": [Function],
+                                                                        "emoji": "heart_eyes",
+                                                                        "id": 1,
+                                                                        "text": "hey, friend",
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                },
+              },
+              "child": [Circular],
+              "effectTag": 32,
+              "expirationTime": 0,
+              "firstEffect": [Circular],
+              "index": 0,
+              "key": null,
+              "lastEffect": [Circular],
+              "memoizedProps": null,
+              "memoizedState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "deleteCard": [Function],
+                                                      "emoji": "heart_eyes",
+                                                      "id": 1,
+                                                      "text": "hey, friend",
+                                                    }
+                  }
+/>,
+              },
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <div
+                                    class="card"
+                  >
+                                    <section
+                                                      class="card__content"
+                                    >
+                                                      <button
+                                                                        class="card__delete"
+                                                      >
+                                                                        x
+                                                      </button>
+                                                      <p
+                                                                        class="card__content-text"
+                                                      >
+                                                                        hey, friend
+                                                      </p>
+                                                      <p
+                                                                        class="card__content-emoji"
+                                                      >
+                                                                        😍
+                                                      </p>
+                                    </section>
+                  </div>
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": Object {
+                  "element": <WrapperComponent
+                    Component={[Function]}
+                    context={null}
+                    props={
+                                        Object {
+                                                            "deleteCard": [Function],
+                                                            "emoji": "heart_eyes",
+                                                            "id": 1,
+                                                            "text": "hey, friend",
+                                                          }
+                    }
+/>,
+                },
+                "expirationTime": 0,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": null,
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": null,
+              },
+            },
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": WrapperComponent {
+              "_reactInternalFiber": [Circular],
+              "_reactInternalInstance": Object {},
+              "context": Object {},
+              "props": Object {
+                "Component": [Function],
+                "context": null,
+                "props": Object {
+                  "deleteCard": [Function],
+                  "emoji": "heart_eyes",
+                  "id": 1,
+                  "text": "hey, friend",
+                },
+              },
+              "refs": Object {},
+              "state": Object {
+                "context": null,
+                "mount": true,
+                "props": Object {
+                  "deleteCard": [Function],
+                  "emoji": "heart_eyes",
+                  "id": 1,
+                  "text": "hey, friend",
+                },
+              },
+              "updater": Object {
+                "enqueueForceUpdate": [Function],
+                "enqueueReplaceState": [Function],
+                "enqueueSetState": [Function],
+                "isMounted": [Function],
+              },
+            },
+            "tag": 2,
+            "treeBaseTime": 0,
+            "type": [Function],
+            "updateQueue": null,
+          },
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": [Circular],
+          "tag": 2,
+          "treeBaseTime": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "_reactInternalInstance": Object {},
+        "context": Object {},
+        "findID": [Function],
+        "props": Object {
+          "deleteCard": [Function],
+          "emoji": "heart_eyes",
+          "id": 1,
+          "text": "hey, friend",
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+        },
+      },
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "deleteCard": [Function],
+        "emoji": "heart_eyes",
+        "id": 1,
+        "text": "hey, friend",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="card"
+>
+          <section
+                    class="card__content"
+          >
+                    <button
+                              class="card__delete"
+                    >
+                              x
+                    </button>
+                    <p
+                              class="card__content-text"
+                    >
+                              hey, friend
+                    </p>
+                    <p
+                              class="card__content-emoji"
+                    >
+                              😍
+                    </p>
+          </section>
+</div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <section
+            className="card__content"
+>
+            <button
+                        className="card__delete"
+                        onClick={[Function]}
+            >
+                        x
+            </button>
+            <p
+                        className="card__content-text"
+            >
+                        hey, friend
+            </p>
+            <p
+                        className="card__content-emoji"
+            >
+                        😍
+            </p>
+</section>,
+          "className": "card",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <section
+              class="card__content"
+>
+              <button
+                            class="card__delete"
+              >
+                            x
+              </button>
+              <p
+                            class="card__content-text"
+              >
+                            hey, friend
+              </p>
+              <p
+                            class="card__content-emoji"
+              >
+                            😍
+              </p>
+</section>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <button
+                  className="card__delete"
+                  onClick={[Function]}
+>
+                  x
+</button>,
+                <p
+                  className="card__content-text"
+>
+                  hey, friend
+</p>,
+                <p
+                  className="card__content-emoji"
+>
+                  😍
+</p>,
+              ],
+              "className": "card__content",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <button
+                  class="card__delete"
+>
+                  x
+</button>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "x",
+                  "className": "card__delete",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "x",
+                ],
+                "type": "button",
+              },
+              Object {
+                "instance": <p
+                  class="card__content-text"
+>
+                  hey, friend
+</p>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "hey, friend",
+                  "className": "card__content-text",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "hey, friend",
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": <p
+                  class="card__content-emoji"
+>
+                  😍
+</p>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "😍",
+                  "className": "card__content-emoji",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "😍",
+                ],
+                "type": "p",
+              },
+            ],
+            "type": "section",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

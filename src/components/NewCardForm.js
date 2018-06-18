@@ -16,8 +16,7 @@ class NewCardForm extends Component {
     };
   }
 
-
-  populateDropdown = () =>{
+populateDropdown = () =>{
     const popItems = EMOJI_LIST.map((anEmoji) =>{
       return(
       <option key={anEmoji} value={anEmoji}>{emoji.getUnicode(anEmoji)}</option>
@@ -38,7 +37,6 @@ class NewCardForm extends Component {
   this.setState({
     text: '',
     emoji: '',
-    id: 0,
   });
 }
 
@@ -46,7 +44,6 @@ class NewCardForm extends Component {
 onFormSubmit = (event) => {
   event.preventDefault();
   this.props.addCardcallBack(this.state)
-
   this.clearForm();
 }
 
@@ -72,8 +69,6 @@ onFormSubmit = (event) => {
       </form>
     )
   }
-
-
 
 }
 

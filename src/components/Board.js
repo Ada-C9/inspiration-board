@@ -17,28 +17,25 @@ class Board extends Component {
 
   addCard = (aCard) => {
     const cards = this.state.cards;
-    let newCardID = cards.length + 1;
     axios.post('https://inspiration-board.herokuapp.com/boards/sainalem/cards',aCard)
-    .then(() => {
-        cards.push({card:{id:newCardID, text:aCard.text, emoji:aCard.emoji}})
-        console.log(cards)
+    .then((response) => {
+        cards.push(response.data)
         this.setState({
           cards,
           message: 'New card has been added'
         });
     })
     .catch((error) => {
-      // cards.push(card)
-      // console.log(cards)
-      // console.log(error)
-      // this.setState({
-      //   message:error.message,
-      // });
+      console.log(error)
+      this.setState({
+        message:error.message,
+      });
     });
 
   }
 
   deleteMessage = (messageID) => {
+    console.log(this.state.cards)
       axios.delete(`https://inspiration-board.herokuapp.com/boards/sainalem/cards/${messageID}`)
         .then(() => {
           let counter = 0
@@ -53,6 +50,7 @@ class Board extends Component {
             });
         })
         .catch((error) => {
+          console.log(messageID)
             this.setState({
               error: error.message
             })
@@ -86,6 +84,7 @@ class Board extends Component {
         />
     );
   });
+
   return componentList
 }
 
