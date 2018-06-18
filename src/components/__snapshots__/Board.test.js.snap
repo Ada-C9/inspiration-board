@@ -1,5 +1,88 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Board That it can render without crashing 1`] = `
+<section
+  className="board"
+>
+  <header>
+    
+  </header>
+  <section>
+    <h3>
+      Add An Edifying Post-It of Your Very Own: 
+    </h3>
+    <form
+      onSubmit={[Function]}
+    >
+      <div>
+        <label>
+          Concoct a Heart-Stirring Message:
+          <textarea
+            id="text"
+            name="text"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </label>
+      </div>
+      <div>
+        <label>
+          Choose The Emoji That Best Represents the Current State of Your Soul:
+          <select
+            id="emoji"
+            name="emoji"
+            onChange={[Function]}
+            type="text"
+            value=""
+          >
+            <option
+              value=""
+            >
+              
+            </option>
+            <option
+              value="heart_eyes"
+            >
+              heart_eyes
+            </option>
+            <option
+              value="beer"
+            >
+              beer
+            </option>
+            <option
+              value="clap"
+            >
+              clap
+            </option>
+            <option
+              value="sparkling_heart"
+            >
+              sparkling_heart
+            </option>
+            <option
+              value="heart_eyes_cat"
+            >
+              heart_eyes_cat
+            </option>
+            <option
+              value="dog"
+            >
+              dog
+            </option>
+          </select>
+        </label>
+      </div>
+      <input
+        type="submit"
+        value="Inspire!"
+      />
+    </form>
+  </section>
+</section>
+`;
+
 exports[`Board that it matches an existing snapshot 1`] = `
 <Board>
   <section

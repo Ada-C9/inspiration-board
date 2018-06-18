@@ -9,7 +9,6 @@ import CARD_DATA from '../data/card-data.json';
 class Board extends Component {
   constructor() {
     super();
-
     this.state = {
       cards: [],
     };

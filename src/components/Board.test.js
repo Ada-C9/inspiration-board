@@ -1,5 +1,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
+import TestRenderer from 'react-test-renderer';
 import Board from './Board';
 
 describe('Board', () => {
@@ -13,6 +14,15 @@ describe('Board', () => {
 
     // Remove the component from the DOM (save memory and prevent side effects).
     wrapper.unmount();
+  });
+
+  test('That it can render without crashing', () => {
+
+    const testRenderer = TestRenderer.create( <Board
+
+      />);
+
+    expect(testRenderer.toJSON()).toMatchSnapshot();
   });
 
 });

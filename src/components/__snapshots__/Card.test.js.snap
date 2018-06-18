@@ -1,5 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Card That it can render without crashing 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card_content"
+  >
+    <div
+      className="card_content-text"
+    />
+    <div
+      className="card_content-emoji"
+    >
+      
+    </div>
+    <div
+      className="card_content-id"
+    >
+      This is Quantum of Inspiration Number: 
+    </div>
+  </div>
+  <form
+    className="card_delete"
+    onSubmit={[Function]}
+  >
+    <button
+      type="submit"
+    >
+      Delete This Card?
+    </button>
+  </form>
+</div>
+`;
+
 exports[`Card that it matches an existing snapshot 1`] = `
 <Card>
   <div

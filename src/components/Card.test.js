@@ -1,5 +1,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
+import TestRenderer from 'react-test-renderer';
 import Card from './Card';
 
 describe('Card', () => {
@@ -15,6 +16,14 @@ describe('Card', () => {
     wrapper.unmount();
   });
 
-  
+  test('That it can render without crashing', () => {
 
+    const testRenderer = TestRenderer.create( <Card
+
+      text="Let an umbrella be your smile."
+      emoji="beer"
+      />);
+
+    expect(testRenderer.toJSON()).toMatchSnapshot();
+  });
 });

@@ -25,7 +25,6 @@ describe('NewCardForm', () => {
     // find the input field
     let textField =
         wrapper.find('textarea[name="text"]');
-        console.log(textField)
 
     // Act
     textField.simulate('change', {
@@ -34,15 +33,39 @@ describe('NewCardForm', () => {
         value: 'Porkchop Power!',
       },
     });
-    console.log(textField)
 
     wrapper.update();
 
     textField = wrapper.find('textarea[name="text"]');
-    console.log(textField)
 
     expect(textField.getElement().props.value).toEqual('Porkchop Power!');
 
+  });
+
+  test('When a user selects an emoji name from the dropdown, the relevant field is updated', () => {
+    // Arrange
+    // Shallow Mounted the wrapper
+    const wrapper = shallow(<NewCardForm
+      addCardCallback={() => {} }
+      />);
+
+    // find the input field
+    let emojiField =
+        wrapper.find('select[name="emoji"]');
+
+    // Act
+    emojiField.simulate('change', {
+      target: {
+        name: 'emoji',
+        value: 'clap',
+      },
+    });
+
+    wrapper.update();
+
+    emojiField = wrapper.find('select[name="emoji"]');
+
+    expect(emojiField.getElement().props.value).toEqual('clap');
   });
 
 });

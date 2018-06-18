@@ -94,28 +94,24 @@ this.state = {
   ],
 };
 
+test('addPetCallback prop is called when the form is submitted', () => {
+  // Arrange
+  const mockAddPetCallback = jest.fn();
+  const wrapper = shallow(<NewPetForm addPetCallback={mockAddPetCallback} />);
+  const form = wrapper.find('form');
 
-<label>
-  Essay:
-  <textarea value={this.state.value} onChange={this.handleChange} />
-</label>
+  // Act
+  form.simulate('submit', {
+    preventDefault: () => {},
+  });
+  wrapper.update();
 
-
-
-
-
-
-
-
-
-
-<div>
-  <label htmlFor="text">Inspiring Message: </label>
-  <input
-    name="text"
-    value={this.state.text}
-    onChange={this.onFieldChange}
-    type="text"
-    id="text"
-    />
-</div>
+  // Assert
+  expect(mockAddPetCallback).toHaveBeenCalled();
+  expect(mockAddPetCallback.mock.calls[0][0]).toEqual({
+    name: '',
+    age: '',
+    breed: '',
+    about: '',
+  });
+});
