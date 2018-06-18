@@ -1,18 +1,25 @@
 /* The Modal (background) */
 
 .new-card-form {
-  width: 50%;
+  min-width: 400px;
   margin: auto;
-  padding-bottom: 4rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
 .new-card-form__header {
   text-align: center;
   text-transform: uppercase;
+  font-size: 1.5em;
+  padding-bottom: 1em;
+  font-weight: bold;
 }
 
 .new-card-form__form {
-  font-size: 1.5em;
+  width: 100%;
+  font-size: 1.2em;
   display: grid;
   grid-template-columns: [labels] auto [controls] 1fr;
   grid-auto-flow: row;
@@ -31,10 +38,14 @@
   font-size: 1.25em;
   grid-column: controls;
   grid-row: auto;
+  padding: 5px 0;
 }
 
 .new-card-form__form-button {
-  background-color: inherit;
+  background-color: black;
+  color: white;
   border: 1px solid black;
   font-size: 1em;
+  width: 100px;
+  margin-top: 20px;
 }
