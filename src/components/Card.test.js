@@ -5,14 +5,19 @@ import { shallow } from 'enzyme';
 
 describe('Card', () => {
   test('that it matches an existing snapshot', () => {
-    // First Mount the Component in the testing DOM
-    // Arrange
-    const card = shallow( <Card addPetCallback={() => {} } />);
+  
+    const callback = jest.fn();
+    const card = shallow(
+      <Card
+      id= '100'
+      text="test text"
+      emoji="grinning"
+      deleteCardCallback={callback}
+       />
+    )
 
-    // Assert that it looks like the last snapshot
     expect(card).toMatchSnapshot();
 
     // Remove the component from the DOM (save memory and prevent side effects).
-    card.unmount();
   });
 });

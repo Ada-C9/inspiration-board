@@ -30,7 +30,7 @@ class NewCardForm extends Component {
     this.setState({
       text: '',
       emoji: ''
-    });
+    }); 
   }
 
   render() {

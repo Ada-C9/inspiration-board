@@ -6,11 +6,14 @@ exports[`Card that it matches an existing snapshot 1`] = `
 >
   <p
     className="card__content-text"
-  />
+  >
+    test text
+  </p>
   <p
     className="card__content-emoji"
   >
      
+    😀
   </p>
   <button
     className="card__delete"
