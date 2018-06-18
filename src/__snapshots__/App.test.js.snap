@@ -18,6 +18,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        undefined,
         <header
           className="header"
 >
@@ -31,11 +32,14 @@ ShallowWrapper {
                     </span>
           </h1>
 </header>,
-        <Board />,
+        <Board
+          notificationCallback={[Function]}
+/>,
       ],
     },
     "ref": null,
     "rendered": Array [
+      undefined,
       Object {
         "instance": null,
         "key": undefined,
@@ -86,7 +90,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "notificationCallback": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -101,6 +107,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          undefined,
           <header
             className="header"
 >
@@ -114,11 +121,14 @@ ShallowWrapper {
                         </span>
             </h1>
 </header>,
-          <Board />,
+          <Board
+            notificationCallback={[Function]}
+/>,
         ],
       },
       "ref": null,
       "rendered": Array [
+        undefined,
         Object {
           "instance": null,
           "key": undefined,
@@ -169,7 +179,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "notificationCallback": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

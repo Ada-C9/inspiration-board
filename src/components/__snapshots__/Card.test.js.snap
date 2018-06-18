@@ -368,7 +368,6 @@ ReactWrapper {
               "memoizedProps": Object {
                 "children": "x",
                 "className": "card__delete",
-                "id": undefined,
                 "onClick": [Function],
               },
               "memoizedState": null,
@@ -377,7 +376,6 @@ ReactWrapper {
               "pendingProps": Object {
                 "children": "x",
                 "className": "card__delete",
-                "id": undefined,
                 "onClick": [Function],
               },
               "ref": null,
@@ -423,7 +421,6 @@ ReactWrapper {
 </div>,
               <span
                 className="card__delete"
-                id={undefined}
                 onClick={[Function]}
 >
                 x
@@ -445,7 +442,6 @@ ReactWrapper {
 </div>,
               <span
                 className="card__delete"
-                id={undefined}
                 onClick={[Function]}
 >
                 x
@@ -789,7 +785,6 @@ ReactWrapper {
 </div>,
           <span
             className="card__delete"
-            id={undefined}
             onClick={[Function]}
 >
             x
@@ -850,7 +845,6 @@ ReactWrapper {
           "props": Object {
             "children": "x",
             "className": "card__delete",
-            "id": undefined,
             "onClick": [Function],
           },
           "ref": null,
@@ -1221,7 +1215,6 @@ ReactWrapper {
                 "memoizedProps": Object {
                   "children": "x",
                   "className": "card__delete",
-                  "id": undefined,
                   "onClick": [Function],
                 },
                 "memoizedState": null,
@@ -1230,7 +1223,6 @@ ReactWrapper {
                 "pendingProps": Object {
                   "children": "x",
                   "className": "card__delete",
-                  "id": undefined,
                   "onClick": [Function],
                 },
                 "ref": null,
@@ -1276,7 +1268,6 @@ ReactWrapper {
 </div>,
                 <span
                   className="card__delete"
-                  id={undefined}
                   onClick={[Function]}
 >
                   x
@@ -1298,7 +1289,6 @@ ReactWrapper {
 </div>,
                 <span
                   className="card__delete"
-                  id={undefined}
                   onClick={[Function]}
 >
                   x
@@ -1642,7 +1632,6 @@ ReactWrapper {
 </div>,
             <span
               className="card__delete"
-              id={undefined}
               onClick={[Function]}
 >
               x
@@ -1703,7 +1692,6 @@ ReactWrapper {
             "props": Object {
               "children": "x",
               "className": "card__delete",
-              "id": undefined,
               "onClick": [Function],
             },
             "ref": null,

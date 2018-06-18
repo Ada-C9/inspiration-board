@@ -30,6 +30,7 @@ class App extends Component {
   render() {
     return (
       <section>
+        {this.displayNotifications()}
         <header className="header">
           <h1 className="header__h1"><span className="header__text">Inspiration Board</span></h1>
         </header>

@@ -22,7 +22,7 @@ class Card extends Component {
           <p className="card__content-text">{this.props.text}</p>
           {this.getEmoji()}
         </div>
-        <span className="card__delete" id={this.props.id} onClick={this.deleteClicked}>x</span>
+        <span className="card__delete" onClick={this.deleteClicked}>x</span>
       </article>
     )
   }
