@@ -33,8 +33,6 @@ class Card extends Component {
       });
   }
 
-
-
   render() {
 
     const hasEmoji = this.state.cardEmoji;
@@ -48,7 +46,7 @@ class Card extends Component {
     return (
       <div className="card">
         <div className="card_content">
-          <div className="card_content-text">{this.state.cardWorden}</div>
+          <div  className="card_content-text">{this.state.cardWorden}</div>
           <div className="card_content-emoji">{displayEmoji}</div>
           <div className="card_content-id">This is Quantum of Inspiration Number: {this.state.cardId}</div>
         </div>

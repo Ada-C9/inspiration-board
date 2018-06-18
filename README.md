@@ -79,7 +79,6 @@ You can see what your instructors are looking for [here](./feedback.md)
 
 #### CODE PARKING LOT:
 
-
 this.state = {
   cards: [
     {
@@ -94,3 +93,29 @@ this.state = {
     },
   ],
 };
+
+
+<label>
+  Essay:
+  <textarea value={this.state.value} onChange={this.handleChange} />
+</label>
+
+
+
+
+
+
+
+
+
+
+<div>
+  <label htmlFor="text">Inspiring Message: </label>
+  <input
+    name="text"
+    value={this.state.text}
+    onChange={this.onFieldChange}
+    type="text"
+    id="text"
+    />
+</div>
