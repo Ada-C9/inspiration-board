@@ -6,7 +6,7 @@ import './Card.css';
 
 class Card extends Component {
   onClickButton = (event) => {
-    this.props.deleteCardCallback(this.props.id, this.props.index);
+    this.props.deleteCardCallback(this);
   }
 
   render() {
