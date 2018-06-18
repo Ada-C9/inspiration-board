@@ -26,26 +26,49 @@ class Board extends Component {
 
   componentDidMount() {
     this.props.updateStatusCallback('Loading Cards...', 'success');
+
     axios.get(CARDS_URL)
     .then((response) => {
       console.log('Success');
-      console.log(response);
+      // console.log(response);
 
       this.props.updateStatusCallback('Successfully loaded cards, Take one!', 'success');
       // if we wanted only a first 10 cards, pre-processing on data, additional pre-processing or logic on data would be done here
-      const cards = response.data.slice(0,10);
+      const cards = response.data
       // To get all of the cards, we reset the state with the response data (which is the cards)
       this.setState({ cards: cards });
     })
     .catch((error) => {
-      console.log('Error :(');
-      console.log(error);
+      // console.log('Error :(');
+      // console.log(error);
       // Alert user to errors on screen by altering the status we are tracking with state
       this.props.updateStatusCallback(error.message, 'error');
     });
   }
 
   // need a callback function that we will then pass to the NewCardForm
+  // Call back function for deleting card
+  deleteCard = (index, id) => {
+    axios.delete(CARDS_URL + `${id}`)
+
+    .then((response) => {
+      console.log(response);
+      console.log(response.data);
+      this.props.updateStatusCallback('Successfully Deleted Card', 'success');
+
+      let updatedCards = this.state.cards
+      console.log(updatedCards);
+      updatedCards.splice(index,1);
+      this.setState( {cards: updatedCards });
+    })
+
+    .catch((error) => {
+      this.props.updateStatusCallback('Error deleting card', 'error');
+      console.log(error);
+    });
+  }
+
+
   addCard = (card) => {
     // assuming card is a JS object with all neccessary parts for a card
     let updatedCards = this.state.cards;
@@ -53,19 +76,20 @@ class Board extends Component {
 
     // then update state to updated cards collection
     this.setState({ cards: updatedCards });
-    card.emoji = 
+    // card.emoji =
 
     axios.post(CARDS_URL, card)
-      .then((response) => {
-        console.log(response);
-        this.props.updateStatusCallback('Successfully added card', 'success');
-      })
+    .then((response) => {
+      console.log(response);
+      this.props.updateStatusCallback('Successfully added card', 'success');
+    })
 
-      .catch((error) => {
-        this.props.updateStatusCallback('Error adding card', 'error');
-        console.log(error);
-      });
+    .catch((error) => {
+      this.props.updateStatusCallback('Error adding card', 'error');
+      console.log(error);
+    });
   }
+
 
   render() {
     const cards = this.state.cards.map((card, index) => {
@@ -73,6 +97,8 @@ class Board extends Component {
       // console.log(card.card.text)
       return <Card key={index}
       text={card.card.text}
+      id={card.card.id}
+      deleteCardCallback={ this.deleteCard }
       />
     });
     return (
