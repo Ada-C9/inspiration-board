@@ -52,23 +52,14 @@ class NewCardForm extends Component {
       )
     });
 
-    console.log('reporting emojiPicker result:')
-    console.log(emojiPicker)
-
-
     return (
       <section>
         <h3>Add An Edifying Post-It of Your Very Own: </h3>
         <form onSubmit={this.onFormSubmit} >
           <div>
-            <label htmlFor="text">Inspiring Message: </label>
-            <input
-              name="text"
-              value={this.state.text}
-              onChange={this.onFieldChange}
-              type="text"
-              id="text"
-              />
+            <label>Concoct a Heart-Stirring Message:
+              <textarea name="text" value={this.state.text} type="text" id="text" onChange={this.onFieldChange} />
+            </label>
           </div>
           <div>
             <label>
