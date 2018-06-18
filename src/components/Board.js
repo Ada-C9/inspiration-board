@@ -102,10 +102,10 @@ class Board extends Component {
 
     return (
       <main>
-        <section className="board">
+        <section className='board'>
           {cards}
         </section>
-        <section className="new-card-form">
+        <section className='new-card-form'>
           <NewCardForm addCardCallback={this.addCard} />
         </section>
       </main>

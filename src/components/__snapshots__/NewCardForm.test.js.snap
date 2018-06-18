@@ -4,9 +4,7 @@ exports[`NewCardForm that it matches an existing snapshot 1`] = `
 <NewCardForm
   addCardCallback={[Function]}
 >
-  <section
-    className="new-card-form"
-  >
+  <div>
     <h2
       className="new-card-form__header"
     >
@@ -86,6 +84,6 @@ exports[`NewCardForm that it matches an existing snapshot 1`] = `
         />
       </div>
     </form>
-  </section>
+  </div>
 </NewCardForm>
 `;

@@ -5,6 +5,7 @@ exports[`Card shallow mount 1`] = `
   className="card"
 >
   <div
+    className="card__delete"
     onClick={[Function]}
   >
     X

@@ -26,7 +26,7 @@ class App extends Component {
 
   render() {
     return (
-      <section>
+      <div>
         <header className="header">
           <h1 className="header__h1"><span className="header__text">Inspiration Board</span></h1>
         </header>
@@ -39,7 +39,7 @@ class App extends Component {
           boardName={`caroline`}
           updateStatusCallback={this.updateStatus}
           />
-      </section>
+      </div>
     );
   }
 }
