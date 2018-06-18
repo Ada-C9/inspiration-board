@@ -10,7 +10,9 @@ class Card extends Component {
 
   getEmoji = () => {
     if (this.props.emoji) {
+      console.log(this.props.emoji);
       return emoji.getUnicode(this.props.emoji)
+      // || emoji.getName(this.props.emoji)
     }
   };
 

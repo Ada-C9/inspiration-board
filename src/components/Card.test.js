@@ -4,6 +4,7 @@ import Card from './Card'
 
 describe('Card', () => {
   test('that is matches an existing snapshot', () => {
+    // console.log('in just the regular ol card test durian');
     const wrapper = shallow(<Card />)
 
     expect(wrapper).toMatchSnapshot();

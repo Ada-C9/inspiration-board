@@ -91,6 +91,7 @@ class Board extends Component {
 }
 
 Board.propTypes = {
+  
 
 };
 
