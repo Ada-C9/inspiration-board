@@ -80,7 +80,7 @@ class Board extends Component {
 
     return (
       <section className = "board">
-        <header className="capybara">
+        <header >
           {this.state.message ? this.state.message: ""  }
         </header>
         {cardComponents}
