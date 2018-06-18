@@ -50,7 +50,7 @@ class Card extends Component {
         <div className="card_content">
           <div className="card_content-text">{this.state.cardWorden}</div>
           <div className="card_content-emoji">{displayEmoji}</div>
-          <div className="card_contentid">{this.state.cardId}</div>
+          <div className="card_content-id">Inspiration Quantum Number: {this.state.cardId}</div>
         </div>
         <form onSubmit={this.handleDelete} className="card_delete">
           <button type="submit">Delete This Card?</button>

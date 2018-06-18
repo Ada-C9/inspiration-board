@@ -43,7 +43,19 @@ class NewCardForm extends Component {
     }
   }
 
+
   render() {
+
+    const emojiPicker = EMOJI_LIST.map((emoj, index) => {
+      return (
+        <option key={index} value={emoj}>{emoj}</option>
+      )
+    });
+
+    console.log('reporting emojiPicker result:')
+    console.log(emojiPicker)
+
+
     return (
       <section>
         <h3>Add An Edifying Post-It of Your Very Own: </h3>
@@ -59,14 +71,12 @@ class NewCardForm extends Component {
               />
           </div>
           <div>
-            <label htmlFor="emoji">Desired Emoji: </label>
-            <input
-              name="emoji"
-              value={this.state.emoji}
-              onChange={this.onFieldChange}
-              type="text"
-              id="emoji"
-              />
+            <label>
+              Choose The Emoji That Best Represents the Current State of Your Soul:
+              <select name="emoji" value={this.state.emoji} type="text" id="emoji" onChange={this.onFieldChange}>
+                {emojiPicker}
+              </select>
+            </label>
           </div>
           <input type="submit" value="Inspire!" />
         </form>
