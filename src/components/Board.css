@@ -12,3 +12,23 @@
   list-style-type: none;
   padding: 0;
 }
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1.2rem;
+}
+
+form div {
+	margin: 10px auto;
+}
+
+button, input[type='submit'] {
+	border: solid 3px teal;
+	background: linear-gradient(rgb(216, 236, 227), rgba(68, 198, 155, 0.62))
+}
+
+input[type='submit'] {
+	font-size: 1.4rem;
+}
