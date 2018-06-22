@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Board that it matches an existing snapshot 1`] = `
+<section>
+  <NewCardForm
+    addCardCallback={[Function]}
+  />
+  <div
+    className="board"
+  />
+</section>
+`;

@@ -22,6 +22,7 @@
 .new-card-form__form-label  {
   grid-column: labels;
   grid-row: auto;
+  background-color: green;
 }
 
 .new-card-form__form-select,
@@ -37,4 +38,8 @@
   background-color: inherit;
   border: 1px solid black;
   font-size: 1em;
+}
+
+.new-card-form__form-button:hover {
+  background-color: lightyellow;
 }

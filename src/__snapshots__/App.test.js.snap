@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App that it renders App with shallow rendering 1`] = `
+<section>
+  <header
+    className="header"
+  >
+    <h1
+      className="header__h1"
+    >
+      <span
+        className="header__text"
+      >
+        Inspiration Board
+      </span>
+    </h1>
+  </header>
+  <ul
+    className="validation-errors-display"
+  >
+    <li
+      className="validation-errors-display__list"
+    >
+      <Status
+        message="loaded the page"
+        types="success"
+      />
+    </li>
+  </ul>
+  <Board
+    boardName="Brandy-Austin"
+    updateStatusCallback={[Function]}
+  />
+</section>
+`;
+
+exports[`App will match the last snapshot with deep rendering 1`] = `
+<App>
+  <section>
+    <header
+      className="header"
+    >
+      <h1
+        className="header__h1"
+      >
+        <span
+          className="header__text"
+        >
+          Inspiration Board
+        </span>
+      </h1>
+    </header>
+    <ul
+      className="validation-errors-display"
+    >
+      <li
+        className="validation-errors-display__list"
+      >
+        <Status
+          message="loaded the page"
+          types="success"
+        >
+          <section
+            className="status undefined"
+          >
+            loaded the page
+          </section>
+        </Status>
+      </li>
+    </ul>
+    <Board
+      boardName="Brandy-Austin"
+      updateStatusCallback={[Function]}
+    >
+      <section>
+        <NewCardForm
+          addCardCallback={[Function]}
+        >
+          <section
+            className="new-card-form"
+          >
+            <h2
+              className="new-card-form__header"
+            >
+              Add a Card
+            </h2>
+            <form
+              className="new-card-form__form"
+              onSubmit={[Function]}
+            >
+              <label
+                className="new-card-form__form-label"
+                htmlFor="text"
+              />
+              <input
+                className="new-card-form__form-textarea"
+                name="text"
+                onChange={[Function]}
+                placeholder="Enter message here..."
+                type="text"
+                value=""
+              />
+              <select
+                className="new-card-form__form-select"
+                name="emoji"
+                onChange={[Function]}
+                value=""
+              >
+                <option
+                  className="card__content-emoji"
+                  value=""
+                />
+                <option
+                  className="card__content-emoji"
+                  value="heart_eyes"
+                >
+                  😍
+                </option>
+                <option
+                  className="card__content-emoji"
+                  value="beer"
+                >
+                  🍺
+                </option>
+                <option
+                  className="card__content-emoji"
+                  value="clap"
+                >
+                  👏
+                </option>
+                <option
+                  className="card__content-emoji"
+                  value="sparkling_heart"
+                >
+                  💖
+                </option>
+                <option
+                  className="card__content-emoji"
+                  value="heart_eyes_cat"
+                >
+                  😻
+                </option>
+                <option
+                  className="card__content-emoji"
+                  value="dog"
+                >
+                  🐶
+                </option>
+              </select>
+              <button
+                className="new-card-form__form-button"
+                type="submit"
+              >
+                Post
+              </button>
+            </form>
+          </section>
+        </NewCardForm>
+        <div
+          className="board"
+        />
+      </section>
+    </Board>
+  </section>
+</App>
+`;
