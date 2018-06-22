@@ -1,0 +1,2540 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card shallow mount 1`] = `
+ReactWrapper {
+  "length": 1,
+  Symbol(enzyme.__unrendered__): <Card
+    emoji="grinning"
+    text="test text"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": Card {
+      "_reactInternalFiber": FiberNode {
+        "_debugID": 5,
+        "_debugIsCurrentlyTiming": false,
+        "_debugOwner": FiberNode {
+          "_debugID": 4,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": null,
+          "_debugSource": null,
+          "alternate": null,
+          "child": [Circular],
+          "effectTag": 1,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "emoji": "grinning",
+              "text": "test text",
+            },
+          },
+          "memoizedState": Object {
+            "context": null,
+            "mount": true,
+            "props": Object {
+              "emoji": "grinning",
+              "text": "test text",
+            },
+          },
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "emoji": "grinning",
+              "text": "test text",
+            },
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 1,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "alternate": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "alternate": [Circular],
+              "child": null,
+              "effectTag": 0,
+              "expirationTime": 1,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": null,
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <section>
+                                    <div
+                                                      class="card"
+                                    >
+                                                      <button
+                                                                        class="card__delete"
+                                                      >
+                                                                        Delete Card
+                                                      </button>
+                                                      <div
+                                                                        class="card__content"
+                                                      >
+                                                                        <div
+                                                                                          class="card__content-text"
+                                                                        >
+                                                                                          test text
+                                                                        </div>
+                                                                        <div
+                                                                                          class="card__content-emoji"
+                                                                        >
+                                                                                          😀
+                                                                        </div>
+                                                      </div>
+                                    </div>
+                  </section>
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": null,
+                "expirationTime": 1,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "emoji": "grinning",
+                                                                  "text": "test text",
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "emoji": "grinning",
+                                                                  "text": "test text",
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+              },
+            },
+            "child": [Circular],
+            "effectTag": 32,
+            "expirationTime": 0,
+            "firstEffect": [Circular],
+            "index": 0,
+            "key": null,
+            "lastEffect": [Circular],
+            "memoizedProps": null,
+            "memoizedState": Object {
+              "element": <WrapperComponent
+                Component={[Function]}
+                context={null}
+                props={
+                                Object {
+                                                "emoji": "grinning",
+                                                "text": "test text",
+                                              }
+                }
+/>,
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": null,
+            "ref": null,
+            "return": null,
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": Object {
+              "containerInfo": <div>
+                <section>
+                                <div
+                                                class="card"
+                                >
+                                                <button
+                                                                class="card__delete"
+                                                >
+                                                                Delete Card
+                                                </button>
+                                                <div
+                                                                class="card__content"
+                                                >
+                                                                <div
+                                                                                class="card__content-text"
+                                                                >
+                                                                                test text
+                                                                </div>
+                                                                <div
+                                                                                class="card__content-emoji"
+                                                                >
+                                                                                😀
+                                                                </div>
+                                                </div>
+                                </div>
+                </section>
+</div>,
+              "context": Object {},
+              "current": [Circular],
+              "earliestPendingTime": 0,
+              "earliestSuspendedTime": 0,
+              "finishedWork": null,
+              "firstBatch": null,
+              "hydrate": false,
+              "latestPendingTime": 0,
+              "latestPingedTime": 0,
+              "latestSuspendedTime": 0,
+              "nextScheduledRoot": null,
+              "pendingChildren": null,
+              "pendingCommitExpirationTime": 0,
+              "pendingContext": null,
+              "remainingExpirationTime": 0,
+            },
+            "tag": 3,
+            "treeBaseTime": 0,
+            "type": null,
+            "updateQueue": Object {
+              "baseState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "emoji": "grinning",
+                                                      "text": "test text",
+                                                    }
+                  }
+/>,
+              },
+              "expirationTime": 0,
+              "firstCapturedEffect": null,
+              "firstCapturedUpdate": null,
+              "firstEffect": null,
+              "firstUpdate": null,
+              "lastCapturedEffect": null,
+              "lastCapturedUpdate": null,
+              "lastEffect": null,
+              "lastUpdate": null,
+            },
+          },
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": WrapperComponent {
+            "_reactInternalFiber": [Circular],
+            "_reactInternalInstance": Object {},
+            "context": Object {},
+            "props": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "emoji": "grinning",
+                "text": "test text",
+              },
+            },
+            "refs": Object {},
+            "state": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "emoji": "grinning",
+                "text": "test text",
+              },
+            },
+            "updater": Object {
+              "enqueueForceUpdate": [Function],
+              "enqueueReplaceState": [Function],
+              "enqueueSetState": [Function],
+              "isMounted": [Function],
+            },
+          },
+          "tag": 2,
+          "treeBaseTime": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "_debugSource": null,
+        "alternate": null,
+        "child": FiberNode {
+          "_debugID": 6,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": [Circular],
+          "_debugSource": Object {
+            "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
+            "lineNumber": 20,
+          },
+          "alternate": null,
+          "child": FiberNode {
+            "_debugID": 7,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": [Circular],
+            "_debugSource": Object {
+              "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
+              "lineNumber": 21,
+            },
+            "alternate": null,
+            "child": FiberNode {
+              "_debugID": 8,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": [Circular],
+              "_debugSource": Object {
+                "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
+                "lineNumber": 22,
+              },
+              "alternate": null,
+              "child": null,
+              "effectTag": 0,
+              "expirationTime": 0,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": Object {
+                "children": "Delete Card",
+                "className": "card__delete",
+                "onClick": [Function],
+              },
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": Object {
+                "children": "Delete Card",
+                "className": "card__delete",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "return": [Circular],
+              "selfBaseTime": 0,
+              "sibling": FiberNode {
+                "_debugID": 9,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": [Circular],
+                "_debugSource": Object {
+                  "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
+                  "lineNumber": 23,
+                },
+                "alternate": null,
+                "child": FiberNode {
+                  "_debugID": 10,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": [Circular],
+                  "_debugSource": Object {
+                    "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
+                    "lineNumber": 24,
+                  },
+                  "alternate": null,
+                  "child": null,
+                  "effectTag": 0,
+                  "expirationTime": 0,
+                  "firstEffect": null,
+                  "index": 0,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": Object {
+                    "children": "test text",
+                    "className": "card__content-text",
+                  },
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": Object {
+                    "children": "test text",
+                    "className": "card__content-text",
+                  },
+                  "ref": null,
+                  "return": [Circular],
+                  "selfBaseTime": 0,
+                  "sibling": FiberNode {
+                    "_debugID": 11,
+                    "_debugIsCurrentlyTiming": false,
+                    "_debugOwner": [Circular],
+                    "_debugSource": Object {
+                      "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
+                      "lineNumber": 25,
+                    },
+                    "alternate": null,
+                    "child": null,
+                    "effectTag": 0,
+                    "expirationTime": 0,
+                    "firstEffect": null,
+                    "index": 1,
+                    "key": null,
+                    "lastEffect": null,
+                    "memoizedProps": Object {
+                      "children": "😀",
+                      "className": "card__content-emoji",
+                    },
+                    "memoizedState": null,
+                    "mode": 0,
+                    "nextEffect": null,
+                    "pendingProps": Object {
+                      "children": "😀",
+                      "className": "card__content-emoji",
+                    },
+                    "ref": null,
+                    "return": [Circular],
+                    "selfBaseTime": 0,
+                    "sibling": null,
+                    "stateNode": <div
+                      class="card__content-emoji"
+>
+                      😀
+</div>,
+                    "tag": 5,
+                    "treeBaseTime": 0,
+                    "type": "div",
+                    "updateQueue": null,
+                  },
+                  "stateNode": <div
+                    class="card__content-text"
+>
+                    test text
+</div>,
+                  "tag": 5,
+                  "treeBaseTime": 0,
+                  "type": "div",
+                  "updateQueue": null,
+                },
+                "effectTag": 0,
+                "expirationTime": 0,
+                "firstEffect": null,
+                "index": 1,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": Object {
+                  "children": Array [
+                    <div
+                      className="card__content-text"
+>
+                      test text
+</div>,
+                    <div
+                      className="card__content-emoji"
+>
+                      😀
+</div>,
+                  ],
+                  "className": "card__content",
+                },
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": Object {
+                  "children": Array [
+                    <div
+                      className="card__content-text"
+>
+                      test text
+</div>,
+                    <div
+                      className="card__content-emoji"
+>
+                      😀
+</div>,
+                  ],
+                  "className": "card__content",
+                },
+                "ref": null,
+                "return": [Circular],
+                "selfBaseTime": 0,
+                "sibling": null,
+                "stateNode": <div
+                  class="card__content"
+>
+                  <div
+                                    class="card__content-text"
+                  >
+                                    test text
+                  </div>
+                  <div
+                                    class="card__content-emoji"
+                  >
+                                    😀
+                  </div>
+</div>,
+                "tag": 5,
+                "treeBaseTime": 0,
+                "type": "div",
+                "updateQueue": null,
+              },
+              "stateNode": <button
+                class="card__delete"
+>
+                Delete Card
+</button>,
+              "tag": 5,
+              "treeBaseTime": 0,
+              "type": "button",
+              "updateQueue": null,
+            },
+            "effectTag": 0,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "children": Array [
+                <button
+                  className="card__delete"
+                  onClick={[Function]}
+>
+                  Delete Card
+</button>,
+                <div
+                  className="card__content"
+>
+                  <div
+                                    className="card__content-text"
+                  >
+                                    test text
+                  </div>
+                  <div
+                                    className="card__content-emoji"
+                  >
+                                    😀
+                  </div>
+</div>,
+              ],
+              "className": "card",
+            },
+            "memoizedState": null,
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "children": Array [
+                <button
+                  className="card__delete"
+                  onClick={[Function]}
+>
+                  Delete Card
+</button>,
+                <div
+                  className="card__content"
+>
+                  <div
+                                    className="card__content-text"
+                  >
+                                    test text
+                  </div>
+                  <div
+                                    className="card__content-emoji"
+                  >
+                                    😀
+                  </div>
+</div>,
+              ],
+              "className": "card",
+            },
+            "ref": null,
+            "return": [Circular],
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": <div
+              class="card"
+>
+              <button
+                            class="card__delete"
+              >
+                            Delete Card
+              </button>
+              <div
+                            class="card__content"
+              >
+                            <div
+                                          class="card__content-text"
+                            >
+                                          test text
+                            </div>
+                            <div
+                                          class="card__content-emoji"
+                            >
+                                          😀
+                            </div>
+              </div>
+</div>,
+            "tag": 5,
+            "treeBaseTime": 0,
+            "type": "div",
+            "updateQueue": null,
+          },
+          "effectTag": 0,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "children": <div
+              className="card"
+>
+              <button
+                            className="card__delete"
+                            onClick={[Function]}
+              >
+                            Delete Card
+              </button>
+              <div
+                            className="card__content"
+              >
+                            <div
+                                          className="card__content-text"
+                            >
+                                          test text
+                            </div>
+                            <div
+                                          className="card__content-emoji"
+                            >
+                                          😀
+                            </div>
+              </div>
+</div>,
+          },
+          "memoizedState": null,
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "children": <div
+              className="card"
+>
+              <button
+                            className="card__delete"
+                            onClick={[Function]}
+              >
+                            Delete Card
+              </button>
+              <div
+                            className="card__content"
+              >
+                            <div
+                                          className="card__content-text"
+                            >
+                                          test text
+                            </div>
+                            <div
+                                          className="card__content-emoji"
+                            >
+                                          😀
+                            </div>
+              </div>
+</div>,
+          },
+          "ref": null,
+          "return": [Circular],
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": <section>
+            <div
+                        class="card"
+            >
+                        <button
+                                    class="card__delete"
+                        >
+                                    Delete Card
+                        </button>
+                        <div
+                                    class="card__content"
+                        >
+                                    <div
+                                                class="card__content-text"
+                                    >
+                                                test text
+                                    </div>
+                                    <div
+                                                class="card__content-emoji"
+                                    >
+                                                😀
+                                    </div>
+                        </div>
+            </div>
+</section>,
+          "tag": 5,
+          "treeBaseTime": 0,
+          "type": "section",
+          "updateQueue": null,
+        },
+        "effectTag": 1,
+        "expirationTime": 0,
+        "firstEffect": null,
+        "index": 0,
+        "key": null,
+        "lastEffect": null,
+        "memoizedProps": Object {
+          "emoji": "grinning",
+          "text": "test text",
+        },
+        "memoizedState": null,
+        "mode": 0,
+        "nextEffect": null,
+        "pendingProps": Object {
+          "emoji": "grinning",
+          "text": "test text",
+        },
+        "ref": null,
+        "return": FiberNode {
+          "_debugID": 4,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": null,
+          "_debugSource": null,
+          "alternate": null,
+          "child": [Circular],
+          "effectTag": 1,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "emoji": "grinning",
+              "text": "test text",
+            },
+          },
+          "memoizedState": Object {
+            "context": null,
+            "mount": true,
+            "props": Object {
+              "emoji": "grinning",
+              "text": "test text",
+            },
+          },
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "emoji": "grinning",
+              "text": "test text",
+            },
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 1,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "alternate": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "alternate": [Circular],
+              "child": null,
+              "effectTag": 0,
+              "expirationTime": 1,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": null,
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <section>
+                                    <div
+                                                      class="card"
+                                    >
+                                                      <button
+                                                                        class="card__delete"
+                                                      >
+                                                                        Delete Card
+                                                      </button>
+                                                      <div
+                                                                        class="card__content"
+                                                      >
+                                                                        <div
+                                                                                          class="card__content-text"
+                                                                        >
+                                                                                          test text
+                                                                        </div>
+                                                                        <div
+                                                                                          class="card__content-emoji"
+                                                                        >
+                                                                                          😀
+                                                                        </div>
+                                                      </div>
+                                    </div>
+                  </section>
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": null,
+                "expirationTime": 1,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "emoji": "grinning",
+                                                                  "text": "test text",
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "emoji": "grinning",
+                                                                  "text": "test text",
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+              },
+            },
+            "child": [Circular],
+            "effectTag": 32,
+            "expirationTime": 0,
+            "firstEffect": [Circular],
+            "index": 0,
+            "key": null,
+            "lastEffect": [Circular],
+            "memoizedProps": null,
+            "memoizedState": Object {
+              "element": <WrapperComponent
+                Component={[Function]}
+                context={null}
+                props={
+                                Object {
+                                                "emoji": "grinning",
+                                                "text": "test text",
+                                              }
+                }
+/>,
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": null,
+            "ref": null,
+            "return": null,
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": Object {
+              "containerInfo": <div>
+                <section>
+                                <div
+                                                class="card"
+                                >
+                                                <button
+                                                                class="card__delete"
+                                                >
+                                                                Delete Card
+                                                </button>
+                                                <div
+                                                                class="card__content"
+                                                >
+                                                                <div
+                                                                                class="card__content-text"
+                                                                >
+                                                                                test text
+                                                                </div>
+                                                                <div
+                                                                                class="card__content-emoji"
+                                                                >
+                                                                                😀
+                                                                </div>
+                                                </div>
+                                </div>
+                </section>
+</div>,
+              "context": Object {},
+              "current": [Circular],
+              "earliestPendingTime": 0,
+              "earliestSuspendedTime": 0,
+              "finishedWork": null,
+              "firstBatch": null,
+              "hydrate": false,
+              "latestPendingTime": 0,
+              "latestPingedTime": 0,
+              "latestSuspendedTime": 0,
+              "nextScheduledRoot": null,
+              "pendingChildren": null,
+              "pendingCommitExpirationTime": 0,
+              "pendingContext": null,
+              "remainingExpirationTime": 0,
+            },
+            "tag": 3,
+            "treeBaseTime": 0,
+            "type": null,
+            "updateQueue": Object {
+              "baseState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "emoji": "grinning",
+                                                      "text": "test text",
+                                                    }
+                  }
+/>,
+              },
+              "expirationTime": 0,
+              "firstCapturedEffect": null,
+              "firstCapturedUpdate": null,
+              "firstEffect": null,
+              "firstUpdate": null,
+              "lastCapturedEffect": null,
+              "lastCapturedUpdate": null,
+              "lastEffect": null,
+              "lastUpdate": null,
+            },
+          },
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": WrapperComponent {
+            "_reactInternalFiber": [Circular],
+            "_reactInternalInstance": Object {},
+            "context": Object {},
+            "props": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "emoji": "grinning",
+                "text": "test text",
+              },
+            },
+            "refs": Object {},
+            "state": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "emoji": "grinning",
+                "text": "test text",
+              },
+            },
+            "updater": Object {
+              "enqueueForceUpdate": [Function],
+              "enqueueReplaceState": [Function],
+              "enqueueSetState": [Function],
+              "isMounted": [Function],
+            },
+          },
+          "tag": 2,
+          "treeBaseTime": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "selfBaseTime": 0,
+        "sibling": null,
+        "stateNode": [Circular],
+        "tag": 2,
+        "treeBaseTime": 0,
+        "type": [Function],
+        "updateQueue": null,
+      },
+      "_reactInternalInstance": Object {},
+      "context": Object {},
+      "getEmoji": [Function],
+      "onDelete": [Function],
+      "props": Object {
+        "emoji": "grinning",
+        "text": "test text",
+      },
+      "refs": Object {},
+      "state": null,
+      "updater": Object {
+        "enqueueForceUpdate": [Function],
+        "enqueueReplaceState": [Function],
+        "enqueueSetState": [Function],
+        "isMounted": [Function],
+      },
+    },
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "emoji": "grinning",
+      "text": "test text",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <section>
+        <div
+                class="card"
+        >
+                <button
+                        class="card__delete"
+                >
+                        Delete Card
+                </button>
+                <div
+                        class="card__content"
+                >
+                        <div
+                                class="card__content-text"
+                        >
+                                test text
+                        </div>
+                        <div
+                                class="card__content-emoji"
+                        >
+                                😀
+                        </div>
+                </div>
+        </div>
+</section>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="card"
+>
+          <button
+                    className="card__delete"
+                    onClick={[Function]}
+          >
+                    Delete Card
+          </button>
+          <div
+                    className="card__content"
+          >
+                    <div
+                              className="card__content-text"
+                    >
+                              test text
+                    </div>
+                    <div
+                              className="card__content-emoji"
+                    >
+                              😀
+                    </div>
+          </div>
+</div>,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <div
+            class="card"
+>
+            <button
+                        class="card__delete"
+            >
+                        Delete Card
+            </button>
+            <div
+                        class="card__content"
+            >
+                        <div
+                                    class="card__content-text"
+                        >
+                                    test text
+                        </div>
+                        <div
+                                    class="card__content-emoji"
+                        >
+                                    😀
+                        </div>
+            </div>
+</div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <button
+                className="card__delete"
+                onClick={[Function]}
+>
+                Delete Card
+</button>,
+              <div
+                className="card__content"
+>
+                <div
+                                className="card__content-text"
+                >
+                                test text
+                </div>
+                <div
+                                className="card__content-emoji"
+                >
+                                😀
+                </div>
+</div>,
+            ],
+            "className": "card",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <button
+                class="card__delete"
+>
+                Delete Card
+</button>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Delete Card",
+                "className": "card__delete",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Delete Card",
+              ],
+              "type": "button",
+            },
+            Object {
+              "instance": <div
+                class="card__content"
+>
+                <div
+                                class="card__content-text"
+                >
+                                test text
+                </div>
+                <div
+                                class="card__content-emoji"
+                >
+                                😀
+                </div>
+</div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="card__content-text"
+>
+                    test text
+</div>,
+                  <div
+                    className="card__content-emoji"
+>
+                    😀
+</div>,
+                ],
+                "className": "card__content",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <div
+                    class="card__content-text"
+>
+                    test text
+</div>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "test text",
+                    "className": "card__content-text",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "test text",
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": <div
+                    class="card__content-emoji"
+>
+                    😀
+</div>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "😀",
+                    "className": "card__content-emoji",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "😀",
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "section",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": Card {
+        "_reactInternalFiber": FiberNode {
+          "_debugID": 5,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": FiberNode {
+            "_debugID": 4,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "alternate": null,
+            "child": [Circular],
+            "effectTag": 1,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "emoji": "grinning",
+                "text": "test text",
+              },
+            },
+            "memoizedState": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "emoji": "grinning",
+                "text": "test text",
+              },
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "emoji": "grinning",
+                "text": "test text",
+              },
+            },
+            "ref": null,
+            "return": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "alternate": FiberNode {
+                "_debugID": 1,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "alternate": [Circular],
+                "child": null,
+                "effectTag": 0,
+                "expirationTime": 1,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": null,
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "selfBaseTime": 0,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": <div>
+                    <section>
+                                        <div
+                                                            class="card"
+                                        >
+                                                            <button
+                                                                                class="card__delete"
+                                                            >
+                                                                                Delete Card
+                                                            </button>
+                                                            <div
+                                                                                class="card__content"
+                                                            >
+                                                                                <div
+                                                                                                    class="card__content-text"
+                                                                                >
+                                                                                                    test text
+                                                                                </div>
+                                                                                <div
+                                                                                                    class="card__content-emoji"
+                                                                                >
+                                                                                                    😀
+                                                                                </div>
+                                                            </div>
+                                        </div>
+                    </section>
+</div>,
+                  "context": Object {},
+                  "current": [Circular],
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "remainingExpirationTime": 0,
+                },
+                "tag": 3,
+                "treeBaseTime": 0,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": null,
+                  "expirationTime": 1,
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "emoji": "grinning",
+                                                                        "text": "test text",
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "emoji": "grinning",
+                                                                        "text": "test text",
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                },
+              },
+              "child": [Circular],
+              "effectTag": 32,
+              "expirationTime": 0,
+              "firstEffect": [Circular],
+              "index": 0,
+              "key": null,
+              "lastEffect": [Circular],
+              "memoizedProps": null,
+              "memoizedState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "emoji": "grinning",
+                                                      "text": "test text",
+                                                    }
+                  }
+/>,
+              },
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <section>
+                                    <div
+                                                      class="card"
+                                    >
+                                                      <button
+                                                                        class="card__delete"
+                                                      >
+                                                                        Delete Card
+                                                      </button>
+                                                      <div
+                                                                        class="card__content"
+                                                      >
+                                                                        <div
+                                                                                          class="card__content-text"
+                                                                        >
+                                                                                          test text
+                                                                        </div>
+                                                                        <div
+                                                                                          class="card__content-emoji"
+                                                                        >
+                                                                                          😀
+                                                                        </div>
+                                                      </div>
+                                    </div>
+                  </section>
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": Object {
+                  "element": <WrapperComponent
+                    Component={[Function]}
+                    context={null}
+                    props={
+                                        Object {
+                                                            "emoji": "grinning",
+                                                            "text": "test text",
+                                                          }
+                    }
+/>,
+                },
+                "expirationTime": 0,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": null,
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": null,
+              },
+            },
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": WrapperComponent {
+              "_reactInternalFiber": [Circular],
+              "_reactInternalInstance": Object {},
+              "context": Object {},
+              "props": Object {
+                "Component": [Function],
+                "context": null,
+                "props": Object {
+                  "emoji": "grinning",
+                  "text": "test text",
+                },
+              },
+              "refs": Object {},
+              "state": Object {
+                "context": null,
+                "mount": true,
+                "props": Object {
+                  "emoji": "grinning",
+                  "text": "test text",
+                },
+              },
+              "updater": Object {
+                "enqueueForceUpdate": [Function],
+                "enqueueReplaceState": [Function],
+                "enqueueSetState": [Function],
+                "isMounted": [Function],
+              },
+            },
+            "tag": 2,
+            "treeBaseTime": 0,
+            "type": [Function],
+            "updateQueue": null,
+          },
+          "_debugSource": null,
+          "alternate": null,
+          "child": FiberNode {
+            "_debugID": 6,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": [Circular],
+            "_debugSource": Object {
+              "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
+              "lineNumber": 20,
+            },
+            "alternate": null,
+            "child": FiberNode {
+              "_debugID": 7,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": [Circular],
+              "_debugSource": Object {
+                "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
+                "lineNumber": 21,
+              },
+              "alternate": null,
+              "child": FiberNode {
+                "_debugID": 8,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": [Circular],
+                "_debugSource": Object {
+                  "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
+                  "lineNumber": 22,
+                },
+                "alternate": null,
+                "child": null,
+                "effectTag": 0,
+                "expirationTime": 0,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": Object {
+                  "children": "Delete Card",
+                  "className": "card__delete",
+                  "onClick": [Function],
+                },
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": Object {
+                  "children": "Delete Card",
+                  "className": "card__delete",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "return": [Circular],
+                "selfBaseTime": 0,
+                "sibling": FiberNode {
+                  "_debugID": 9,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": [Circular],
+                  "_debugSource": Object {
+                    "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
+                    "lineNumber": 23,
+                  },
+                  "alternate": null,
+                  "child": FiberNode {
+                    "_debugID": 10,
+                    "_debugIsCurrentlyTiming": false,
+                    "_debugOwner": [Circular],
+                    "_debugSource": Object {
+                      "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
+                      "lineNumber": 24,
+                    },
+                    "alternate": null,
+                    "child": null,
+                    "effectTag": 0,
+                    "expirationTime": 0,
+                    "firstEffect": null,
+                    "index": 0,
+                    "key": null,
+                    "lastEffect": null,
+                    "memoizedProps": Object {
+                      "children": "test text",
+                      "className": "card__content-text",
+                    },
+                    "memoizedState": null,
+                    "mode": 0,
+                    "nextEffect": null,
+                    "pendingProps": Object {
+                      "children": "test text",
+                      "className": "card__content-text",
+                    },
+                    "ref": null,
+                    "return": [Circular],
+                    "selfBaseTime": 0,
+                    "sibling": FiberNode {
+                      "_debugID": 11,
+                      "_debugIsCurrentlyTiming": false,
+                      "_debugOwner": [Circular],
+                      "_debugSource": Object {
+                        "fileName": "/Users/annehwatson/Desktop/ada_dev/js/inspiration-board/src/components/Card.js",
+                        "lineNumber": 25,
+                      },
+                      "alternate": null,
+                      "child": null,
+                      "effectTag": 0,
+                      "expirationTime": 0,
+                      "firstEffect": null,
+                      "index": 1,
+                      "key": null,
+                      "lastEffect": null,
+                      "memoizedProps": Object {
+                        "children": "😀",
+                        "className": "card__content-emoji",
+                      },
+                      "memoizedState": null,
+                      "mode": 0,
+                      "nextEffect": null,
+                      "pendingProps": Object {
+                        "children": "😀",
+                        "className": "card__content-emoji",
+                      },
+                      "ref": null,
+                      "return": [Circular],
+                      "selfBaseTime": 0,
+                      "sibling": null,
+                      "stateNode": <div
+                        class="card__content-emoji"
+>
+                        😀
+</div>,
+                      "tag": 5,
+                      "treeBaseTime": 0,
+                      "type": "div",
+                      "updateQueue": null,
+                    },
+                    "stateNode": <div
+                      class="card__content-text"
+>
+                      test text
+</div>,
+                    "tag": 5,
+                    "treeBaseTime": 0,
+                    "type": "div",
+                    "updateQueue": null,
+                  },
+                  "effectTag": 0,
+                  "expirationTime": 0,
+                  "firstEffect": null,
+                  "index": 1,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": Object {
+                    "children": Array [
+                      <div
+                        className="card__content-text"
+>
+                        test text
+</div>,
+                      <div
+                        className="card__content-emoji"
+>
+                        😀
+</div>,
+                    ],
+                    "className": "card__content",
+                  },
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": Object {
+                    "children": Array [
+                      <div
+                        className="card__content-text"
+>
+                        test text
+</div>,
+                      <div
+                        className="card__content-emoji"
+>
+                        😀
+</div>,
+                    ],
+                    "className": "card__content",
+                  },
+                  "ref": null,
+                  "return": [Circular],
+                  "selfBaseTime": 0,
+                  "sibling": null,
+                  "stateNode": <div
+                    class="card__content"
+>
+                    <div
+                                        class="card__content-text"
+                    >
+                                        test text
+                    </div>
+                    <div
+                                        class="card__content-emoji"
+                    >
+                                        😀
+                    </div>
+</div>,
+                  "tag": 5,
+                  "treeBaseTime": 0,
+                  "type": "div",
+                  "updateQueue": null,
+                },
+                "stateNode": <button
+                  class="card__delete"
+>
+                  Delete Card
+</button>,
+                "tag": 5,
+                "treeBaseTime": 0,
+                "type": "button",
+                "updateQueue": null,
+              },
+              "effectTag": 0,
+              "expirationTime": 0,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": Object {
+                "children": Array [
+                  <button
+                    className="card__delete"
+                    onClick={[Function]}
+>
+                    Delete Card
+</button>,
+                  <div
+                    className="card__content"
+>
+                    <div
+                                        className="card__content-text"
+                    >
+                                        test text
+                    </div>
+                    <div
+                                        className="card__content-emoji"
+                    >
+                                        😀
+                    </div>
+</div>,
+                ],
+                "className": "card",
+              },
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": Object {
+                "children": Array [
+                  <button
+                    className="card__delete"
+                    onClick={[Function]}
+>
+                    Delete Card
+</button>,
+                  <div
+                    className="card__content"
+>
+                    <div
+                                        className="card__content-text"
+                    >
+                                        test text
+                    </div>
+                    <div
+                                        className="card__content-emoji"
+                    >
+                                        😀
+                    </div>
+</div>,
+                ],
+                "className": "card",
+              },
+              "ref": null,
+              "return": [Circular],
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": <div
+                class="card"
+>
+                <button
+                                class="card__delete"
+                >
+                                Delete Card
+                </button>
+                <div
+                                class="card__content"
+                >
+                                <div
+                                                class="card__content-text"
+                                >
+                                                test text
+                                </div>
+                                <div
+                                                class="card__content-emoji"
+                                >
+                                                😀
+                                </div>
+                </div>
+</div>,
+              "tag": 5,
+              "treeBaseTime": 0,
+              "type": "div",
+              "updateQueue": null,
+            },
+            "effectTag": 0,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "children": <div
+                className="card"
+>
+                <button
+                                className="card__delete"
+                                onClick={[Function]}
+                >
+                                Delete Card
+                </button>
+                <div
+                                className="card__content"
+                >
+                                <div
+                                                className="card__content-text"
+                                >
+                                                test text
+                                </div>
+                                <div
+                                                className="card__content-emoji"
+                                >
+                                                😀
+                                </div>
+                </div>
+</div>,
+            },
+            "memoizedState": null,
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "children": <div
+                className="card"
+>
+                <button
+                                className="card__delete"
+                                onClick={[Function]}
+                >
+                                Delete Card
+                </button>
+                <div
+                                className="card__content"
+                >
+                                <div
+                                                className="card__content-text"
+                                >
+                                                test text
+                                </div>
+                                <div
+                                                className="card__content-emoji"
+                                >
+                                                😀
+                                </div>
+                </div>
+</div>,
+            },
+            "ref": null,
+            "return": [Circular],
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": <section>
+              <div
+                            class="card"
+              >
+                            <button
+                                          class="card__delete"
+                            >
+                                          Delete Card
+                            </button>
+                            <div
+                                          class="card__content"
+                            >
+                                          <div
+                                                        class="card__content-text"
+                                          >
+                                                        test text
+                                          </div>
+                                          <div
+                                                        class="card__content-emoji"
+                                          >
+                                                        😀
+                                          </div>
+                            </div>
+              </div>
+</section>,
+            "tag": 5,
+            "treeBaseTime": 0,
+            "type": "section",
+            "updateQueue": null,
+          },
+          "effectTag": 1,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "emoji": "grinning",
+            "text": "test text",
+          },
+          "memoizedState": null,
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "emoji": "grinning",
+            "text": "test text",
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 4,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "alternate": null,
+            "child": [Circular],
+            "effectTag": 1,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "emoji": "grinning",
+                "text": "test text",
+              },
+            },
+            "memoizedState": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "emoji": "grinning",
+                "text": "test text",
+              },
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "emoji": "grinning",
+                "text": "test text",
+              },
+            },
+            "ref": null,
+            "return": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "alternate": FiberNode {
+                "_debugID": 1,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "alternate": [Circular],
+                "child": null,
+                "effectTag": 0,
+                "expirationTime": 1,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": null,
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "selfBaseTime": 0,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": <div>
+                    <section>
+                                        <div
+                                                            class="card"
+                                        >
+                                                            <button
+                                                                                class="card__delete"
+                                                            >
+                                                                                Delete Card
+                                                            </button>
+                                                            <div
+                                                                                class="card__content"
+                                                            >
+                                                                                <div
+                                                                                                    class="card__content-text"
+                                                                                >
+                                                                                                    test text
+                                                                                </div>
+                                                                                <div
+                                                                                                    class="card__content-emoji"
+                                                                                >
+                                                                                                    😀
+                                                                                </div>
+                                                            </div>
+                                        </div>
+                    </section>
+</div>,
+                  "context": Object {},
+                  "current": [Circular],
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "remainingExpirationTime": 0,
+                },
+                "tag": 3,
+                "treeBaseTime": 0,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": null,
+                  "expirationTime": 1,
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "emoji": "grinning",
+                                                                        "text": "test text",
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "emoji": "grinning",
+                                                                        "text": "test text",
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                },
+              },
+              "child": [Circular],
+              "effectTag": 32,
+              "expirationTime": 0,
+              "firstEffect": [Circular],
+              "index": 0,
+              "key": null,
+              "lastEffect": [Circular],
+              "memoizedProps": null,
+              "memoizedState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "emoji": "grinning",
+                                                      "text": "test text",
+                                                    }
+                  }
+/>,
+              },
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <section>
+                                    <div
+                                                      class="card"
+                                    >
+                                                      <button
+                                                                        class="card__delete"
+                                                      >
+                                                                        Delete Card
+                                                      </button>
+                                                      <div
+                                                                        class="card__content"
+                                                      >
+                                                                        <div
+                                                                                          class="card__content-text"
+                                                                        >
+                                                                                          test text
+                                                                        </div>
+                                                                        <div
+                                                                                          class="card__content-emoji"
+                                                                        >
+                                                                                          😀
+                                                                        </div>
+                                                      </div>
+                                    </div>
+                  </section>
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": Object {
+                  "element": <WrapperComponent
+                    Component={[Function]}
+                    context={null}
+                    props={
+                                        Object {
+                                                            "emoji": "grinning",
+                                                            "text": "test text",
+                                                          }
+                    }
+/>,
+                },
+                "expirationTime": 0,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": null,
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": null,
+              },
+            },
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": WrapperComponent {
+              "_reactInternalFiber": [Circular],
+              "_reactInternalInstance": Object {},
+              "context": Object {},
+              "props": Object {
+                "Component": [Function],
+                "context": null,
+                "props": Object {
+                  "emoji": "grinning",
+                  "text": "test text",
+                },
+              },
+              "refs": Object {},
+              "state": Object {
+                "context": null,
+                "mount": true,
+                "props": Object {
+                  "emoji": "grinning",
+                  "text": "test text",
+                },
+              },
+              "updater": Object {
+                "enqueueForceUpdate": [Function],
+                "enqueueReplaceState": [Function],
+                "enqueueSetState": [Function],
+                "isMounted": [Function],
+              },
+            },
+            "tag": 2,
+            "treeBaseTime": 0,
+            "type": [Function],
+            "updateQueue": null,
+          },
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": [Circular],
+          "tag": 2,
+          "treeBaseTime": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "_reactInternalInstance": Object {},
+        "context": Object {},
+        "getEmoji": [Function],
+        "onDelete": [Function],
+        "props": Object {
+          "emoji": "grinning",
+          "text": "test text",
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+        },
+      },
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "emoji": "grinning",
+        "text": "test text",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <section>
+          <div
+                    class="card"
+          >
+                    <button
+                              class="card__delete"
+                    >
+                              Delete Card
+                    </button>
+                    <div
+                              class="card__content"
+                    >
+                              <div
+                                        class="card__content-text"
+                              >
+                                        test text
+                              </div>
+                              <div
+                                        class="card__content-emoji"
+                              >
+                                        😀
+                              </div>
+                    </div>
+          </div>
+</section>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="card"
+>
+            <button
+                        className="card__delete"
+                        onClick={[Function]}
+            >
+                        Delete Card
+            </button>
+            <div
+                        className="card__content"
+            >
+                        <div
+                                    className="card__content-text"
+                        >
+                                    test text
+                        </div>
+                        <div
+                                    className="card__content-emoji"
+                        >
+                                    😀
+                        </div>
+            </div>
+</div>,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <div
+              class="card"
+>
+              <button
+                            class="card__delete"
+              >
+                            Delete Card
+              </button>
+              <div
+                            class="card__content"
+              >
+                            <div
+                                          class="card__content-text"
+                            >
+                                          test text
+                            </div>
+                            <div
+                                          class="card__content-emoji"
+                            >
+                                          😀
+                            </div>
+              </div>
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <button
+                  className="card__delete"
+                  onClick={[Function]}
+>
+                  Delete Card
+</button>,
+                <div
+                  className="card__content"
+>
+                  <div
+                                    className="card__content-text"
+                  >
+                                    test text
+                  </div>
+                  <div
+                                    className="card__content-emoji"
+                  >
+                                    😀
+                  </div>
+</div>,
+              ],
+              "className": "card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <button
+                  class="card__delete"
+>
+                  Delete Card
+</button>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Delete Card",
+                  "className": "card__delete",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Delete Card",
+                ],
+                "type": "button",
+              },
+              Object {
+                "instance": <div
+                  class="card__content"
+>
+                  <div
+                                    class="card__content-text"
+                  >
+                                    test text
+                  </div>
+                  <div
+                                    class="card__content-emoji"
+                  >
+                                    😀
+                  </div>
+</div>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="card__content-text"
+>
+                      test text
+</div>,
+                    <div
+                      className="card__content-emoji"
+>
+                      😀
+</div>,
+                  ],
+                  "className": "card__content",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <div
+                      class="card__content-text"
+>
+                      test text
+</div>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "test text",
+                      "className": "card__content-text",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "test text",
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": <div
+                      class="card__content-emoji"
+>
+                      😀
+</div>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "😀",
+                      "className": "card__content-emoji",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "😀",
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "section",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
