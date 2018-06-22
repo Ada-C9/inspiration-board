@@ -33,3 +33,13 @@ h1, h2 {
 
   transform: rotate(-3deg) skew(-3deg);
 }
+
+.validation-errors-display {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.validation-errors-display__list {
+  list-style-type: none;
+  padding: 0;
+}
