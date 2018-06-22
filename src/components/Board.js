@@ -5,21 +5,81 @@ import axios from 'axios';
 import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
-import CARD_DATA from '../data/card-data.json';
+
+const CARDS_URL ="https://inspiration-board.herokuapp.com/boards/Cara/cards/";
+
 
 class Board extends Component {
   constructor() {
     super();
 
-    this.state = {
-      cards: [],
+    this.state ={
+       cards:[]
+
     };
   }
 
+  componentDidMount() {
+    axios.get(CARDS_URL)
+    .then((response)=> {
+      this.setState({cards: response.data});
+    })
+    .catch((error) =>{
+        this.setState({error: error.message});
+    });
+  }
+
+  removeCard = (id) =>{
+    // console.log(cardKey,'cardKey')
+    axios.delete(CARDS_URL+id)
+    .then((response) => {
+      let updatedData = this.state.cards;
+      this.setState({cards: updatedData});
+      this.componentDidMount();
+    })
+    .catch((error) => {
+      this.setState({error: error.message });
+    });
+  }
+
+
+  addCard = (cardInfo) => {
+    console.log(cardInfo, 'here');
+
+    axios.post(CARDS_URL, cardInfo)
+    .then((response) => {
+      let updatedData = this.state.cards;
+      let cardObject = {card: cardInfo};
+      updatedData.push(cardObject);
+      this.setState({cards: updatedData});
+    })
+    .catch((error) => {
+      this.setState({error: error.message });
+    });
+
+  }
+
   render() {
+
+    console.log(this.state.cards)
+
+    const cardComponents = this.state.cards.map((card, index)  =>
+  {
+    return <Card
+      text={card.card.text}
+      emoji={card.card.emoji}
+      key={ index }
+      id={card.card.id}
+      removeCardCallback={this.removeCard}
+    />
+  })
+
+  console.log(cardComponents)
     return (
       <div>
-        Board
+        {cardComponents}
+
+      < NewCardForm addCardCallback={this.addCard} />
       </div>
     )
   }
