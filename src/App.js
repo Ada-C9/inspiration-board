@@ -15,7 +15,7 @@ class App extends Component {
     // Set state to the static data from props
     this.state = {
       boardList: [],
-      boardName: undefined,
+      boardName: "Dikla",
       status: {
         message: 'loaded the page',
         type: 'success'
@@ -65,7 +65,7 @@ class App extends Component {
     return (
         <section className="body">
           <header className="header">
-            <h1 className="header__h1"><span className="header__text">Inspiration Board 🤔</span></h1>
+            <h1 className="header__h1"><span className="header__text">Inspiration Board <span> </span></span></h1>
           </header>
         <Status
         message={this.state.status.message}
