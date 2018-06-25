@@ -7,7 +7,7 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Permanent Marker', Helvetica, sans-serif;
 }
 
@@ -22,8 +22,15 @@ h1, h2 {
 }
 
 .header__text {
-  padding: 1rem;
+  background-image: url(https://hdsmileys.com/wp-content/uploads/2017/11/thinking.gif);
+  background-repeat: no-repeat, repeat;
+  background-position: right;
+  background-size: 50px 50px;
+}
 
+.header__text {
+  padding: 1.5rem;
+  padding-right: 4rem;
   display: inline-block;
   background-color: #222;
   color: white;
@@ -32,4 +39,21 @@ h1, h2 {
   font-size: 3rem;
 
   transform: rotate(-3deg) skew(-3deg);
+}
+
+.body {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV1ODadoLdK_oyD7WbF7zQWmf0jLl2Ef2JSR_fgAKJv-FV-eo0);
+}
+
+.boardList {
+  margin-left: 4em;
+  margin-bottom: 4em;
+}
+
+h3 {
+  margin: 0;
+}
+select, input[type="color" i][list] {
+    border: 1.5px solid black;
+    font-family: 'Permanent Marker', Helvetica, sans-serif;
 }
