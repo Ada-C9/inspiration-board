@@ -69,7 +69,6 @@ class Board extends Component {
         message: error.message,
       });
     })
-
   }
 
   deleteCard = (id) => {
